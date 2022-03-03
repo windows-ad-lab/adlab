@@ -81,9 +81,9 @@ These valid users can be used for AS-REP roasting or Password Spraying Attacks. 
 
 From here we can execute the following attacks to gain access to the domain:
 
-* Password Spraying
-* AS-REP Roasting
-* Checking for empty passwords
+* [Password Spraying](password-spraying.md)
+* [AS-REP Roasting](../../active-directory-attacks/as-rep-roasting.md)
+* [Checking for empty passwords](empty-password.md)
 
 ## Defending
 
