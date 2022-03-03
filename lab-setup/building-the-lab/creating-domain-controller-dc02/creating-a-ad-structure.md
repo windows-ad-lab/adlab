@@ -2,13 +2,13 @@
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Users and Computers".
 
-![](<../../../.gitbook/assets/afbeelding (52) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (52) (1) (1) (1).png>)
 
 ### Creating a Organizational Unit (OU)
 
 2\. Extend the directories and right click on "amsterdam.bank.local", select "New" and "Organizational Unit". Give it the name `Employees` and click on "OK"
 
-![](<../../../.gitbook/assets/image (61).png>)
+![](<../../../.gitbook/assets/image (36).png>)
 
 ### Creating Groups
 

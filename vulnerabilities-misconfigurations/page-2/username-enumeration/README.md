@@ -111,8 +111,8 @@ From here we can execute the following attacks to gain access to the domain:
 [empty-password.md](empty-password.md)
 {% endcontent-ref %}
 
-{% content-ref url="as-rep-roasting.md" %}
-[as-rep-roasting.md](as-rep-roasting.md)
+{% content-ref url="../../initial-access-attacks/username-enumeration/as-rep-roasting.md" %}
+[as-rep-roasting.md](../../initial-access-attacks/username-enumeration/as-rep-roasting.md)
 {% endcontent-ref %}
 
 ## Defending
