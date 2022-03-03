@@ -67,7 +67,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 2\. In the top right corner click on "Rename this PC (advanced)"
 
-![](<../../.gitbook/assets/afbeelding (19) (1).png>)
+![](<../../.gitbook/assets/afbeelding (19) (1) (1).png>)
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
@@ -75,7 +75,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 4\. Another window will pop-up called 'Computer Name/Domain Changes', within this window change the 'Domain' to "amsterdam.bank.local" and click on "OK"
 
-![](<../../.gitbook/assets/afbeelding (9) (1).png>)
+![](<../../.gitbook/assets/afbeelding (9) (1) (1).png>)
 
 5\. You will be asked to supply credentials, we will use the `administrator` account from `amsterdam.bank.local` and click on "OK"
 

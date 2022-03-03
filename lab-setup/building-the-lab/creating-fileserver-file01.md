@@ -71,7 +71,7 @@
 
 1\. Open File Explorer --> right click "This PC" --> Properties
 
-![](<../../.gitbook/assets/afbeelding (6).png>)
+![](<../../.gitbook/assets/afbeelding (6) (2).png>)
 
 2\. In the top right corner click on "Rename this PC (advanced)"
 
@@ -79,15 +79,15 @@
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
-![](<../../.gitbook/assets/afbeelding (17).png>)
+![](<../../.gitbook/assets/afbeelding (17) (2).png>)
 
 4\. Another window will pop-up called 'Computer Name/Domain Changes', within this window change the 'Domain' to "amsterdam.bank.local" and click on "OK"
 
-![](<../../.gitbook/assets/afbeelding (9).png>)
+![](<../../.gitbook/assets/afbeelding (9) (1).png>)
 
 5\. You will be asked to supply credentials, we will use the `administrator` account from `amsterdam.bank.local` and click on "OK"
 
-![](<../../.gitbook/assets/afbeelding (19).png>)
+![](<../../.gitbook/assets/afbeelding (19) (1).png>)
 
 6\. We're welcomed to the domain, click on "OK". After this message it will asks us to reboot the machine, click on "OK". Close the 'System Properties' window and restart the machine now.
 
