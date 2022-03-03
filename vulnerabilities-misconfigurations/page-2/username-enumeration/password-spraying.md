@@ -2,7 +2,7 @@
 
 ## Configuring
 
-To implement the attack we need to set a weak password for one of the users we enumerated. The easiest way is by using the `net user` command in cmd. To change the password for `john` to `Welcome2022!` and `chris` to `Summer2022!` execute the following commands:
+To implement the attack we need to set a weak password for some of the users we created and enumerated in the previous step. The easiest way is by using the `net user` command in the terminal. To change the password for `john` to `Welcome2022!` and `chris` to `Summer2022!` execute the following commands:
 
 ```
 net user john Welcome2022! /domain
