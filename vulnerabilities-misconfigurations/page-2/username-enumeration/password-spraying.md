@@ -2,7 +2,7 @@
 
 ## Configuring
 
-To implement the attack we need to set a weak password for some of the users we created and enumerated in the previous step. The easiest way is by using the `net user` command in the terminal. To change the password for `john` to `Welcome2022!` and `chris` to `Summer2022!` execute the following commands:
+To implement the attack we need to set a weak password for some of the users we created and enumerated in the previous step. The easiest way is by using the `net user` command in the terminal. To change the password for `john` to `Welcome2022!` and `chris` to `Summer2022!` execute the following commands on `DC02`:
 
 ```
 net user john Welcome2022! /domain
@@ -19,10 +19,10 @@ Password spraying is a type of brute force attack. An attacker will try a defaul
 
 A old habit what a lot of companies enforce is the requirement to change passwords every 30, 60 or 90 days. Which results in people changing their password often, forgetting it and eventually choosing a easy guessable password. Another habbit is adding a increment to the same password or using months/seasons. Which means we can easily create a password list of common passwords and things people would choose using following formats:
 
-* season+year+!
-* month+year+!
-* companyname+year+!
-* city+!
+* season+year+! (Summer2022!)
+* month+year+! (March2022!)
+* companyname+year+! (Amsterdambank2022!)
+* city+! (Amsterdam!)
 * etc.
 
 ### Tools
