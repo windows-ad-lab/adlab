@@ -19,7 +19,7 @@
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International"
 
-![](<../../.gitbook/assets/afbeelding (1) (1) (1).png>)
+![](<../../.gitbook/assets/afbeelding (1) (1) (1) (2).png>)
 
 4\. Accept the 'License terms'.
 
@@ -27,11 +27,11 @@
 
 ![](<../../.gitbook/assets/afbeelding (104).png>)
 
-6\.  Press CTRL + ALT + DEL and login with the user and password we just set.
+6\. Press CTRL + ALT + DEL and login with the user and password we just set.
 
 ## Renaming and setting a static IP
 
-1\.  Open File Explorer --> right click "This PC" --> Properties.
+1\. Open File Explorer --> right click "This PC" --> Properties.
 
 ![](<../../.gitbook/assets/afbeelding (29) (2) (2).png>)
 

@@ -31,7 +31,7 @@
 
 ## Renaming and setting a static IP
 
-1\.  Open File Explorer --> right click "This PC" --> Properties.
+1\. Open File Explorer --> right click "This PC" --> Properties.
 
 ![](<../../../.gitbook/assets/afbeelding (29) (2) (2).png>)
 
@@ -59,7 +59,7 @@
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 
-![](<../../../.gitbook/assets/afbeelding (112) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (112) (1) (1).png>)
 
 9\. Copy the following settings:
 
@@ -77,7 +77,7 @@
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
-![](<../../../.gitbook/assets/afbeelding (81) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (81) (1) (1) (1).png>)
 
 3\. Check the "Skip this page by default" box and click "Next" three times (For the steps "Before You Begin", "Installation Type" and "Server Selection".
 
@@ -145,8 +145,6 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 ![](<../../../.gitbook/assets/image (41).png>)
 
-
-
 4\. Fill in the following information and click on "Next".
 
 * First name: `Amsterdam`
@@ -183,7 +181,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 1. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
@@ -231,7 +229,7 @@ Password: `jr8Q3o97@s37AF`
 
 ![](<../../../.gitbook/assets/image (5).png>)
 
-5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next".  We will leave this default.
+5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 
 6\. At the step "Configure DHCP Options" make sure "Yes" is selected and click "Next"
 
@@ -250,14 +248,3 @@ Password: `jr8Q3o97@s37AF`
 11\. We should now see a Scope for IPV4.
 
 ![](<../../../.gitbook/assets/image (54).png>)
-
-
-
-
-
-
-
-
-
-
-

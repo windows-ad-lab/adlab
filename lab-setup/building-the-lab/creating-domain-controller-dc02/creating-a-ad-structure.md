@@ -2,7 +2,7 @@
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Users and Computers".
 
-![](<../../../.gitbook/assets/afbeelding (52) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (52) (1) (1) (1).png>)
 
 ### Creating a Organizational Unit (OU)
 

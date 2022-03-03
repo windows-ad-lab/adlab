@@ -15,7 +15,7 @@
 1. Startup the machine
 2. When asked if you copied the Virtual Machine, select "I Copied It"
 
-![](<../../.gitbook/assets/afbeelding (103) (1).png>)
+![](<../../.gitbook/assets/afbeelding (103) (1) (4).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International"
 
@@ -31,7 +31,7 @@
 
 ## Renaming and setting a static IP
 
-1\.  Open File Explorer --> right click "This PC" --> Properties.
+1\. Open File Explorer --> right click "This PC" --> Properties.
 
 ![](<../../.gitbook/assets/afbeelding (29) (2).png>)
 
@@ -51,15 +51,15 @@
 
 5\. Login again and right click in the Taskbar on the Networking Icon and select "Open Network & Internet Settings"
 
-![](<../../.gitbook/assets/afbeelding (109) (1).png>)
+![](<../../.gitbook/assets/afbeelding (109) (1) (1).png>)
 
 6\. Click on "Change adapter options".
 
-![](<../../.gitbook/assets/afbeelding (20) (1) (1).png>)
+![](<../../.gitbook/assets/afbeelding (20) (1) (1) (1).png>)
 
 7\. Right click the Ethernet adapter and select "Properties".
 
-![](<../../.gitbook/assets/afbeelding (102) (1).png>)
+![](<../../.gitbook/assets/afbeelding (102) (1) (2).png>)
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 
