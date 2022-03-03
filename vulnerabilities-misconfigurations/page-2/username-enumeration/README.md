@@ -79,6 +79,12 @@ These valid users can be used for AS-REP roasting or Password Spraying Attacks. 
 
 ![](<../../../.gitbook/assets/image (22).png>)
 
+From here we can execute the following attacks to gain access to the domain:
+
+* Password Spraying
+* AS-REP Roasting
+* Checking for empty passwords
+
 ## Defending
 
 ### Recommendations
