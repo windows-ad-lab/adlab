@@ -55,9 +55,9 @@ Get-ADUser -Filter * | Select-Object Name
 
 > _To enumerate usernames, send TGT requests with no pre-authentication. If the KDC responds with a `PRINCIPAL UNKNOWN` error, the username does not exist. However, if the KDC prompts for pre-authentication, we know the username exists._
 >
-> _Source:_ [_https://github.com/ropnop/kerbrute#user-enumeration_](https://github.com/ropnop/kerbrute#user-enumeration)__
+> _Source:_ [_https://github.com/ropnop/kerbrute#user-enumeration_](https://github.com/ropnop/kerbrute#user-enumeration)\_\_
 
-### Kerbrute
+### Executing the attack
 
 To enumarate usernames we can use the tool [Kerbrute](https://github.com/ropnop/kerbrute). To install Kerbrute on Kali download the latest [release](https://github.com/ropnop/kerbrute/releases) from GitHub and save it somewhere. I would recommend `/opt`.
 
@@ -101,9 +101,19 @@ thomas
 
 From here we can execute the following attacks to gain access to the domain:
 
-* [Password Spraying](password-spraying.md)
-* [AS-REP Roasting](../../active-directory-attacks/as-rep-roasting.md)
-* [Checking for empty passwords](empty-password.md)
+
+
+{% content-ref url="password-spraying.md" %}
+[password-spraying.md](password-spraying.md)
+{% endcontent-ref %}
+
+{% content-ref url="empty-password.md" %}
+[empty-password.md](empty-password.md)
+{% endcontent-ref %}
+
+{% content-ref url="page-1.md" %}
+[page-1.md](page-1.md)
+{% endcontent-ref %}
 
 ## Defending
 
@@ -117,3 +127,8 @@ The attack generates the Windows event ID [4768](https://www.ultimatewindowssecu
 
 **Work in Progress**
 
+## References
+
+{% embed url="https://github.com/danielmiessler/SecLists" %}
+
+{% embed url="https://github.com/ropnop/kerbrute" %}
