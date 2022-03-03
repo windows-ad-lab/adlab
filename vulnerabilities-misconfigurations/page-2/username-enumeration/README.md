@@ -103,7 +103,7 @@ From here we can execute the following attacks to gain access to the domain:
 
 * [Password Spraying](password-spraying.md)
 * [AS-REP Roasting](../../active-directory-attacks/as-rep-roasting.md)
-* [Checking for empty passwords](passwd\_not\_req.md)
+* [Checking for empty passwords](empty-password.md)
 
 ## Defending
 
