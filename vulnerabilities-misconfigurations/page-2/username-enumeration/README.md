@@ -53,9 +53,9 @@ Get-ADUser -Filter * | Select-Object Name
 
 ### How it works
 
-_To enumerate usernames, Kerbrute sends TGT requests with no pre-authentication. If the KDC responds with a `PRINCIPAL UNKNOWN` error, the username does not exist. However, if the KDC prompts for pre-authentication, we know the username exists._
-
-_Source:_ [_https://github.com/ropnop/kerbrute#user-enumeration_](https://github.com/ropnop/kerbrute#user-enumeration)__
+> _To enumerate usernames, send TGT requests with no pre-authentication. If the KDC responds with a `PRINCIPAL UNKNOWN` error, the username does not exist. However, if the KDC prompts for pre-authentication, we know the username exists._
+>
+> _Source:_ [_https://github.com/ropnop/kerbrute#user-enumeration_](https://github.com/ropnop/kerbrute#user-enumeration)__
 
 ### Kerbrute
 
