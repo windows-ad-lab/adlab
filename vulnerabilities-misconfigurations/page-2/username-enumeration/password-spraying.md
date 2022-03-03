@@ -17,7 +17,13 @@ net user chris Summer2022! /domain
 
 Password spraying is a type of brute force attack. An attacker will try a default password against a list of usernames. For example, an attacker uses the password `Welcome2022!` against many different accounts to avoid account lockout that would normally occur when brute-forcing a single account with many passwords.
 
-**\<part about common used passwords>**
+A old habit what a lot of companies enforce is the requirement to change passwords every 30, 60 or 90 days. Which results in people changing their password often, forgetting it and eventually choosing a easy guessable password. Another habbit is adding a increment to the same password or using months/seasons. Which means we can easily create a password list of common passwords and things people would choose using following formats:
+
+* season+year+!
+* month+year+!
+* companyname+year+!
+* city+!
+* etc.
 
 ### Tools
 
