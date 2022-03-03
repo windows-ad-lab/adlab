@@ -69,6 +69,10 @@ Since we don't want to lock any accounts we will try one password every 31 minut
 bash spray.sh smb 10.0.0.3 ~/adlab/users.txt ~/adlab/passwords.txt 1 31 passwordspray.txt
 ```
 
+_For demonstration purposed we used 1 minute._
+
+![](<../../../.gitbook/assets/image (23).png>)
+
 ## Defending
 
 ### Recommendations
