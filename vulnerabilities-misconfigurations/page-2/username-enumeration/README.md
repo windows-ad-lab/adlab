@@ -43,7 +43,7 @@ _Source:_ [_https://github.com/ropnop/kerbrute#user-enumeration_](https://github
 
 To enumarate usernames we can use the tool [Kerbrute](https://github.com/ropnop/kerbrute). To install Kerbrute on Kali download the latest [release](https://github.com/ropnop/kerbrute/releases) from GitHub and save it somewhere. I would recommend `/opt`.
 
-![](<../.gitbook/assets/afbeelding (31).png>)
+![](<../../../.gitbook/assets/afbeelding (31).png>)
 
 For the list of usernames download the [xato-net-10-million-usernames.txt](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/xato-net-10-million-usernames.txt) list from [SecLists](https://github.com/danielmiessler/SecLists).
 
