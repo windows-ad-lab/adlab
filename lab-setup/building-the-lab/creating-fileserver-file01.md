@@ -93,4 +93,4 @@
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
-![](<../../.gitbook/assets/afbeelding (4).png>)
+![](<../../.gitbook/assets/afbeelding (4) (2).png>)

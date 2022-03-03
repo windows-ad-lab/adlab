@@ -72,3 +72,14 @@
 10\. Click on "OK" and close all the Windows.
 
 ## Installing Web Services
+
+
+
+## Joining the domain
+
+1\. Open File Explorer --> right click "This PC" --> Properties
+
+![](<../../.gitbook/assets/afbeelding (4).png>)
+
+2\. In the top right corner click on "Rename this PC (advanced)"
+
