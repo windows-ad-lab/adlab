@@ -25,6 +25,7 @@
     * [Password Spraying](vulnerabilities-misconfigurations/page-2/username-enumeration/password-spraying.md)
     * [AS-REP Roasting](vulnerabilities-misconfigurations/page-2/username-enumeration/page-1.md)
     * [PASSWD\_NOT\_REQ](vulnerabilities-misconfigurations/page-2/username-enumeration/passwd\_not\_req.md)
+    * [Page 4](vulnerabilities-misconfigurations/page-2/username-enumeration/page-4.md)
   * [SMB Relaying](vulnerabilities-misconfigurations/page-2/smb-relaying.md)
   * [SMB Null-Session](vulnerabilities-misconfigurations/page-2/smb-null-session.md)
   * [SQL Server default login](vulnerabilities-misconfigurations/page-2/sql-server-default-login.md)
