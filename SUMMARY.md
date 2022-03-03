@@ -55,3 +55,4 @@
     * [DNS-Admins](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/dns-admins.md)
     * [Account Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/account-operators.md)
     * [Backup Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/backup-operators.md)
+  * [Page 3](vulnerabilities-misconfigurations/active-directory-attacks/page-3.md)
