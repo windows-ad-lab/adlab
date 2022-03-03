@@ -27,9 +27,27 @@ mark
 
 ### Creating users
 
-Previously we created users by using the GUI. Now we will create users using PowerShell.
+Previously we created users by using the GUI. Now we will create users using PowerShell. Create the file users.txt and place the usernames in there.
 
+```
+cd C:\
+notepad users.txt
+$password = ConvertTo-SecureString 'ReallySecurePassword123!' -AsPlainText -Force
+$files = Get-Content -Path C:\users.txt
+ForEach ($name in $files) {
+New-ADUser -Name "$name" -GivenName "$name" -SamAccountName "$name" -UserPrincipalName $name@amsterdam.bank.local -Path "OU=Employees,DC=amsterdan,DC=bank,DC=local" -AccountPassword $password -Enabled $true
+}
+```
 
+![](<../../../.gitbook/assets/image (8).png>)
+
+Run the command below to check the users are created:
+
+```
+Get-ADUser -Filter * | Select-Object Name
+```
+
+![](<../../../.gitbook/assets/image (15).png>)
 
 ## Attacking
 
