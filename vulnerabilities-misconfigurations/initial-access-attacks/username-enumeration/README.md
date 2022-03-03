@@ -111,8 +111,8 @@ From here we can execute the following attacks to gain access to the domain:
 [empty-password.md](empty-password.md)
 {% endcontent-ref %}
 
-{% content-ref url="page-1.md" %}
-[page-1.md](page-1.md)
+{% content-ref url="as-rep-roasting.md" %}
+[as-rep-roasting.md](as-rep-roasting.md)
 {% endcontent-ref %}
 
 ## Defending

@@ -21,12 +21,12 @@ Windows ISO's can be downloaded from the [Microsoft Evaluation Center](https://w
 
 ## Creating a virtual machine VMware
 
-For this lab we will be creating images which can be used to quickly clone and deploy another server or client. Hopefully you already know how to create a virtual machine in the hypervisor you are using. For demonstration I will show how to create a virtual machine in VMware Workstation.&#x20;
+For this lab we will be creating images which can be used to quickly clone and deploy another server or client. Hopefully you already know how to create a virtual machine in the hypervisor you are using. For demonstration I will show how to create a virtual machine in VMware Workstation.
 
 **I would recommend creating all virtual machine images at the same time!**
 
 1. Open VMware workstation and in the top left click on File --> New Virtual Machine and a pop-up should come up to create a new virtual machine.
-2. On the step  "What type of configuration you want" select "Typical (recommended)" and click Next.
+2. On the step "What type of configuration you want" select "Typical (recommended)" and click Next.
 3. On the step "Guest Operating System Installation" select "Installer disc image file (iso)" and select the Windows Server 2019 ISO. Click Next.
 4. On the step "Select guest Operating system" select "Microsoft Windows" and in the dropdown menu select "Windows Server 2019. Click Next.
 5. Give the the name "Windows Server 2019 Image" and click Next.
@@ -106,11 +106,11 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 1. Open explorer and click on "This PC", right click the C:\ disk and click "Properties".
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (1) (1) (1).png>)
 
 4\. Click on "Disk Cleanup", "Clean System Files", select everything and Click "OK"
 
-![](<../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (56).png>)
 
 ![](<../../../.gitbook/assets/image (62).png>)
 
@@ -131,5 +131,3 @@ To be able to clone the virtual machine without having any problems when joining
 ## Finished
 
 When the machine is fully shutdown the image is finished.
-
-&#x20;

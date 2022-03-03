@@ -24,7 +24,7 @@
   * [Username Enumeration](vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/README.md)
     * [Password Spraying](vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
     * [Empty Password](vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/empty-password.md)
-    * [AS-REP Roasting](vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/page-1.md)
+    * [AS-REP Roasting](vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/as-rep-roasting.md)
   * [SMB Relaying](vulnerabilities-misconfigurations/initial-access-attacks/smb-relaying.md)
   * [SMB Null-Session](vulnerabilities-misconfigurations/initial-access-attacks/smb-null-session.md)
   * [SQL Server default login](vulnerabilities-misconfigurations/initial-access-attacks/sql-server-default-login.md)

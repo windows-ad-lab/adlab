@@ -35,7 +35,7 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 8\. Click on "File" --> Save as --> Select "All Files" and save the file as `bginfo.bat` in `C:\BGInfo\`
 
-![](<../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (50).png>)
 
@@ -47,8 +47,6 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 ![](<../../../.gitbook/assets/image (29).png>)
 
-
-
 ## VMware tools
 
 Vmware tools is required to automatically adapt the size to the monitor and for copy & pasting etc.
@@ -59,11 +57,11 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 
 2\. A DVD Drive should show up, click on it and run setup64.exe.
 
-![](<../../../.gitbook/assets/afbeelding (91).png>)
+![](<../../../.gitbook/assets/afbeelding (95).png>)
 
 3\. Click next till you can click Install.
 
-![](<../../../.gitbook/assets/afbeelding (70).png>)
+![](<../../../.gitbook/assets/afbeelding (89).png>)
 
 ## Desktop cleanup
 
@@ -81,4 +79,3 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 1. Download [Notepad++](https://download.sysinternals.com/files/BGInfo.zip), run the installer and click next next next.
 
 ![](<../../../.gitbook/assets/image (64).png>)
-

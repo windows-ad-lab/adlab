@@ -15,7 +15,7 @@
 1. Startup the machine
 2. When asked if you copied the Virtual Machine, select "I Copied It"
 
-![](<../../.gitbook/assets/afbeelding (103) (2) (3).png>)
+![](<../../.gitbook/assets/afbeelding (103) (1) (1) (1).png>)
 
 3\. Choose your region, in our example "Netherlands" and click "Yes"
 
@@ -47,7 +47,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 1. Open File Explorer --> right click "This PC" --> Properties
 
-![](<../../.gitbook/assets/afbeelding (29) (2) (1).png>)
+![](<../../.gitbook/assets/afbeelding (17) (1) (1) (7).png>)
 
 2\. Click on "Rename this PC"
 
@@ -63,7 +63,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 1\. Open File Explorer --> right click "This PC" --> Properties
 
-![](<../../.gitbook/assets/afbeelding (17) (1) (4).png>)
+![](<../../.gitbook/assets/afbeelding (17) (1) (1) (4).png>)
 
 2\. In the top right corner click on "Rename this PC (advanced)"
 
@@ -79,10 +79,10 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 5\. You will be asked to supply credentials, we will use the `administrator` account from `amsterdam.bank.local` and click on "OK"
 
-![](<../../.gitbook/assets/afbeelding (6) (1) (1).png>)
+![](<../../.gitbook/assets/afbeelding (19).png>)
 
 6\. We're welcomed to the domain, click on "OK". After this message it will asks us to reboot the machine, click on "OK". Close the 'System Properties' window and restart the machine now.
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
-![](<../../.gitbook/assets/afbeelding (6) (1).png>)
+![](<../../.gitbook/assets/afbeelding (4).png>)

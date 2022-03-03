@@ -15,17 +15,17 @@
 1. Startup the machine.
 2. When asked if you copied the Virtual Machine, select "I Copied It".
 
-![](<../../../.gitbook/assets/afbeelding (103) (2) (2).png>)
+![](<../../../.gitbook/assets/afbeelding (103) (1) (1).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International"
 
-![](<../../../.gitbook/assets/afbeelding (1) (2).png>)
+![](<../../../.gitbook/assets/afbeelding (1) (1) (1) (1) (1).png>)
 
 4\. Accept the 'License terms'.
 
 5\. When asked to "Customize Settings" and set a password for the `Administrator` user, set the same password as before. Which was `Welcome01!`.
 
-![](<../../../.gitbook/assets/afbeelding (104).png>)
+![](<../../../.gitbook/assets/afbeelding (113).png>)
 
 6\. Press CTRL + ALT + DEL and login with the user and password we just set.
 
@@ -33,7 +33,7 @@
 
 1\. Open File Explorer --> right click "This PC" --> Properties.
 
-![](<../../../.gitbook/assets/afbeelding (29) (2) (2).png>)
+![](<../../../.gitbook/assets/afbeelding (17) (1) (1) (8).png>)
 
 2\. Click on "Rename this PC".
 
@@ -47,19 +47,19 @@
 
 5\. Login again and rightclick in the Taskbar on the Networking Icon and select "Open Network & Internet Settings".
 
-![](<../../../.gitbook/assets/afbeelding (109) (2).png>)
+![](<../../../.gitbook/assets/afbeelding (109) (1) (1) (2).png>)
 
 6\. Click on "Change adapter options".
 
-![](<../../../.gitbook/assets/afbeelding (20).png>)
+![](<../../../.gitbook/assets/afbeelding (20) (1) (1) (1) (2).png>)
 
 7\. Right click the Ethernet adapter and select "Properties".
 
-![](<../../../.gitbook/assets/afbeelding (102) (2) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (102) (1) (1) (1).png>)
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 
-![](<../../../.gitbook/assets/afbeelding (112) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (112) (1).png>)
 
 9\. Copy the following settings:
 
@@ -73,11 +73,11 @@
 
 1\. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
-![](<../../../.gitbook/assets/afbeelding (81) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (81) (1) (1).png>)
 
 3\. Check the "Skip this page by default" box and click "Next" three times (For the steps "Before You Begin", "Installation Type" and "Server Selection".
 
@@ -135,7 +135,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Users and Computers".
 
-![](<../../../.gitbook/assets/afbeelding (52) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (52) (1) (1) (1) (2).png>)
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
@@ -181,11 +181,11 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 1. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
-![](<../../../.gitbook/assets/afbeelding (81).png>)
+![](<../../../.gitbook/assets/afbeelding (81) (1) (1) (1) (2).png>)
 
 3\. Click "Next" two times (For the steps"Installation Type" and "Server Selection".
 
