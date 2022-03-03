@@ -8,7 +8,7 @@ description: >-
 
 ## Configuring
 
-To implement the attack we need to create a couple users with easy guessable usernames. To do this we can choose some usernames from a [list of usernames](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/xato-net-10-million-usernames.txt) from SecLists.
+To implement the attack we need to create a couple users with easy guessable usernames. To do this we can choose some usernames from a populair [list of usernames](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/xato-net-10-million-usernames.txt) from the [SecLists](https://github.com/danielmiessler/SecLists) repository.
 
 We will create the following users:
 
