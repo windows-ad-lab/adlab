@@ -79,11 +79,31 @@ These valid users can be used for AS-REP roasting or Password Spraying Attacks. 
 
 ![](<../../../.gitbook/assets/image (22).png>)
 
+To only get a list of usernames execute the following:
+
+```
+cat username_enum.txt | grep bank.local | cut -d " " -f 8- | cut -d "@" -f 1 | sed 's/./\L&/g' | sort -u > users.txt
+
+cat users.txt                                                                                                       
+administrator
+bank
+chris
+dave
+david
+john
+mark
+mike
+richard
+robert
+steve
+thomas
+```
+
 From here we can execute the following attacks to gain access to the domain:
 
 * [Password Spraying](password-spraying.md)
 * [AS-REP Roasting](../../active-directory-attacks/as-rep-roasting.md)
-* [Checking for empty passwords](empty-password.md)
+* [Checking for empty passwords](passwd\_not\_req.md)
 
 ## Defending
 
