@@ -10,7 +10,7 @@ description: >-
 
 Show general info on the background:
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 1. Download [BGinfo](https://docs.microsoft.com/en-us/sysinternals/downloads/bginfo) from the Sysinternals Suite from Microsoft in the VM.
 2. Go to the Download folder and unzip the BGInfo zip.

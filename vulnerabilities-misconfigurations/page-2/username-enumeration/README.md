@@ -72,12 +72,12 @@ wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/
 After downloading the tool and the username list run Kerbrute against the domain `amsterdam.bank.local`. Pipe the command to tee to save the output to a txt file.
 
 ```
-./kerbrute_linux_amd64 userenum -d amsterdam.bank.local xato-net-10-million-usernames.txt | tee username_enum.txt
+./kerbrute_linux_amd64 userenum -d amsterdam.bank.local --dc 10.0.0.3 xato-net-10-million-usernames.txt | tee username_enum.txt
 ```
 
-\<screenshot>
-
 These valid users can be used for AS-REP roasting or Password Spraying Attacks. For now save these users to `usernames.txt`.
+
+![](<../../../.gitbook/assets/image (22).png>)
 
 ## Defending
 
