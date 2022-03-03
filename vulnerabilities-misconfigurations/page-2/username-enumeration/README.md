@@ -83,9 +83,11 @@ These valid users can be used for AS-REP roasting or Password Spraying Attacks. 
 
 ### Recommendations
 
-
+* I dont know any configurations to block the enumeration of usernames. The best way to block this is using a non traditional naming convention for the samaccountnames.
 
 ### Detection
 
 The attack generates the Windows event ID [4768](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768) "A Kerberos authentication ticket (TGT) was requested" if Kerberos logging is enabled.
+
+**Work in Progress**
 
