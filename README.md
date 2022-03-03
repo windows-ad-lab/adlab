@@ -18,5 +18,4 @@ The text in this gitbook is written by [0xjs](https://github.com/0xJs) and [Just
 
 ## Our goal
 
-//ToDo: Describe the goal of this gitbook and what we want to accomplish
-
+//ToDo: Describe the goal of this gitbook and what we want to accomplish.
