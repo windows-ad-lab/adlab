@@ -40,27 +40,27 @@ Repeat these steps for each Image we would like to create (Windows Server 2019, 
 1. Start-up the virtual machine and quickly pres a key to boot to the CD.
 2. Make sure the language is set to "English" and the keyboard layout to "US" or your own keyboard layout and click Next.
 
-![](<../../.gitbook/assets/afbeelding (37).png>)
+![](<../../../.gitbook/assets/afbeelding (37).png>)
 
 3\. Click Install Now.
 
 * When asked to select an operating system select "Windows Server Standard Evaluation (Desktop Experience)" and click Next.
 
-![](<../../.gitbook/assets/afbeelding (57).png>)
+![](<../../../.gitbook/assets/afbeelding (57).png>)
 
 4\. Accept the licene terms and click Next.
 
-![](<../../.gitbook/assets/afbeelding (65).png>)
+![](<../../../.gitbook/assets/afbeelding (65).png>)
 
 5\. Select "Custom: Install Windows only" and select the disk, click on New and Apply.
 
-![](<../../.gitbook/assets/afbeelding (82).png>)
+![](<../../../.gitbook/assets/afbeelding (82).png>)
 
-![](<../../.gitbook/assets/afbeelding (8).png>)
+![](<../../../.gitbook/assets/afbeelding (8).png>)
 
 6\. Select the Primary Partition and click Next.
 
-![](<../../.gitbook/assets/afbeelding (21).png>)
+![](<../../../.gitbook/assets/afbeelding (21).png>)
 
 7\. After the installation finishes the machine will reboot. Make sure you remove the ISO by going to the settings of the machine and disconnecting the CD drive.
 
@@ -74,15 +74,15 @@ Repeat these steps for each Image we would like to create (Windows Server 2019, 
 
 1. Click Start and select the gear Settings Icon.
 
-![](<../../.gitbook/assets/image (27).png>)
+![](<../../../.gitbook/assets/image (27).png>)
 
 2\. The Windows Settings menu appears, click on "Update & Security"
 
-![](<../../.gitbook/assets/image (26).png>)
+![](<../../../.gitbook/assets/image (26).png>)
 
 3\. Click on "Check for Updates" and install all updates.
 
-![](<../../.gitbook/assets/image (49).png>)
+![](<../../../.gitbook/assets/image (49).png>)
 
 4\. When the system asks for a reboot, reboot is and repeat till there are no more updates left.
 
@@ -98,21 +98,21 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 1. Make sure the downloads folder is empty.
 
-![](<../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (58).png>)
 
 1. Empty the recycle bin by rightcliking on it and selecting "Empty Recycle Bin"
 
-![](<../../.gitbook/assets/image (44).png>)
+![](<../../../.gitbook/assets/image (44).png>)
 
 1. Open explorer and click on "This PC", right click the C:\ disk and click "Properties".
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 4\. Click on "Disk Cleanup", "Clean System Files", select everything and Click "OK"
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34).png>)
 
-![](<../../.gitbook/assets/image (62).png>)
+![](<../../../.gitbook/assets/image (62).png>)
 
 ## Sysprep
 
@@ -120,13 +120,13 @@ To be able to clone the virtual machine without having any problems when joining
 
 1. Press Windows + R, type sysprep and click OK.
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19).png>)
 
 2\. Windows Explorer opens and click on the "Sysprep" application.
 
 3\. Select "Generalize", Choose Shutdown and click on "OK"
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../../.gitbook/assets/image (18).png>)
 
 ## Finished
 

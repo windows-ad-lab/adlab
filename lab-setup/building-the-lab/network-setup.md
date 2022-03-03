@@ -15,13 +15,13 @@ DHCP: Disabled
 
 1. Open VMware workstation and click on "Edit" and then "Virtual Network Editor"
 
-![](<../.gitbook/assets/image (63).png>)
+![](<../../.gitbook/assets/image (63).png>)
 
 2\. Click on "Change Settings" and accept the UAC prompt.
 
 3\. Click on "Add Network" and Click "OK"
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9).png>)
 
 4\. Select the newly created network and copy the following settings:
 
@@ -30,7 +30,7 @@ DHCP: Disabled
 * Subnet IP: 10.0.0.0
 * Subnet Mask: 255.255.255.0
 
-![](<../.gitbook/assets/image (57).png>)
+![](<../../.gitbook/assets/image (57).png>)
 
 5\. Click "OK"
 

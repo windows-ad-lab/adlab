@@ -13,7 +13,7 @@
 
 1. Open VMware and click on "Open a Virtual Machine"
 
-![](<../.gitbook/assets/afbeelding (63).png>)
+![](<../../.gitbook/assets/afbeelding (63).png>)
 
 2\. Browse to the virtual machine directory and select the `.vmx` file.
 
@@ -21,11 +21,11 @@
 
 4\. Right click on the Virtual Machine --> Settings, change the network adapter to vmnet2 and click on "OK".
 
-![](<../.gitbook/assets/afbeelding (90).png>)
+![](<../../.gitbook/assets/afbeelding (90).png>)
 
 5\. Repeat this for all machines.
 
 You should have the following machines: DC01, DC02, FILE01, WEB01, WS01 and three images.&#x20;
 
-![](<../.gitbook/assets/afbeelding (7).png>)
+![](<../../.gitbook/assets/afbeelding (7).png>)
 

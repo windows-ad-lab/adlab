@@ -6,7 +6,7 @@ description: >-
 
 # Lab overview
 
-![](<.gitbook/assets/afbeelding (40).png>)
+![](<../.gitbook/assets/afbeelding (40).png>)
 
 ### General info
 

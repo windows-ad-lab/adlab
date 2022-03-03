@@ -2,23 +2,23 @@
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Users and Computers".
 
-![](<../../.gitbook/assets/afbeelding (52) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (52) (1) (1).png>)
 
 ### Creating a Organizational Unit (OU)
 
 2\. Extend the directories and right click on "amsterdam.bank.local", select "New" and "Organizational Unit". Give it the name `Employees` and click on "OK"
 
-![](<../../.gitbook/assets/image (36).png>)
+![](<../../../.gitbook/assets/image (36).png>)
 
 ### Creating Groups
 
 1. Right click on the newly created OU and select "New" and then "Group"
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17).png>)
 
 2\. Fill in "Finance" and click on "OK"
 
-![](<../../.gitbook/assets/image (38).png>)
+![](<../../../.gitbook/assets/image (38).png>)
 
 3\. Repeat and create the following groups:
 
@@ -27,6 +27,6 @@
 * Employees
 * IT
 
-![](../../.gitbook/assets/image.png)
+![](../../../.gitbook/assets/image.png)
 
 **We will create users later while creating the vulnerabilities and fileshare.**
