@@ -31,7 +31,7 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 8\. Click on "File" --> Save as --> Select "All Files" and save the file as `bginfo.bat` in `C:\BGInfo\`
 
-![](<../../.gitbook/assets/image (20).png>)
+![](<../../.gitbook/assets/image (46).png>)
 
 ![](<../../.gitbook/assets/image (50).png>)
 
@@ -55,11 +55,11 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 
 2\. A DVD Drive should show up, click on it and run setup64.exe.
 
-![](<../../.gitbook/assets/afbeelding (95).png>)
+![](<../../.gitbook/assets/afbeelding (91).png>)
 
 3\. Click next till you can click Install.
 
-![](<../../.gitbook/assets/afbeelding (89).png>)
+![](<../../.gitbook/assets/afbeelding (70).png>)
 
 ## Desktop cleanup
 

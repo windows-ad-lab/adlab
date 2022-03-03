@@ -15,7 +15,7 @@
 1. Startup the machine
 2. When asked if you copied the Virtual Machine, select "I Copied It"
 
-![](<../.gitbook/assets/afbeelding (103).png>)
+![](<../.gitbook/assets/afbeelding (108).png>)
 
 3\. Choose your region, in our example "Netherlands" and click "Yes"
 
@@ -47,7 +47,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 1. Open File Explorer --> right click "This PC" --> Properties
 
-![](<../.gitbook/assets/afbeelding (29).png>)
+![](<../.gitbook/assets/afbeelding (46).png>)
 
 2\. Click on "Rename this PC"
 

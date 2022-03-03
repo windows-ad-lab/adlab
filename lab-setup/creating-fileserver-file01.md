@@ -15,17 +15,17 @@
 1. Startup the machine
 2. When asked if you copied the Virtual Machine, select "I Copied It"
 
-![](<../.gitbook/assets/afbeelding (108).png>)
+![](<../.gitbook/assets/afbeelding (103) (4).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International"
 
-![](<../.gitbook/assets/afbeelding (72).png>)
+![](<../.gitbook/assets/afbeelding (1) (1).png>)
 
 4\. Accept the 'License terms'.
 
 5\. When asked to "Customize Settings" and set a password for the `Administrator` user, set the same password as before. Which was `Welcome01!`.
 
-![](<../.gitbook/assets/afbeelding (113).png>)
+![](<../.gitbook/assets/afbeelding (104).png>)
 
 6\.  Press CTRL + ALT + DEL and login with the user and password we just set.
 
@@ -33,7 +33,7 @@
 
 1\.  Open File Explorer --> right click "This PC" --> Properties.
 
-![](<../.gitbook/assets/afbeelding (83).png>)
+![](<../.gitbook/assets/afbeelding (29) (2).png>)
 
 2\. Click on "Rename this PC".
 
@@ -47,19 +47,19 @@
 
 5\. Login again and rightclick in the Taskbar on the Networking Icon and select "Open Network & Internet Settings".
 
-![](<../.gitbook/assets/afbeelding (109).png>)
+![](<../.gitbook/assets/afbeelding (36).png>)
 
 6\. Click on "Change adapter options".
 
-![](<../.gitbook/assets/afbeelding (20).png>)
+![](<../.gitbook/assets/afbeelding (38).png>)
 
 7\. Right click the Ethernet adapter and select "Properties".
 
-![](<../.gitbook/assets/afbeelding (17).png>)
+![](<../.gitbook/assets/afbeelding (102).png>)
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 
-![](<../.gitbook/assets/afbeelding (112).png>)
+![](<../.gitbook/assets/afbeelding (60).png>)
 
 9\. Copy the following settings:
 
