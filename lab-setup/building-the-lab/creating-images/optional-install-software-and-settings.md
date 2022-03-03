@@ -8,6 +8,10 @@ description: >-
 
 ## BGInfo sysinternals
 
+Show general info on the background:
+
+![](<../../../.gitbook/assets/image (22).png>)
+
 1. Download [BGinfo](https://docs.microsoft.com/en-us/sysinternals/downloads/bginfo) from the Sysinternals Suite from Microsoft in the VM.
 2. Go to the Download folder and unzip the BGInfo zip.
 3. Copy the folder to the C:\ drive and empty the Downloads folder.
