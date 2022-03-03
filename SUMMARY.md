@@ -56,3 +56,9 @@
     * [Account Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/account-operators.md)
     * [Backup Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/backup-operators.md)
   * [Example page](vulnerabilities-misconfigurations/active-directory-attacks/page-3.md)
+
+## Defence
+
+* [Detection](defence/detection.md)
+* [Hardening](defence/hardening/README.md)
+  * [Strong Password Policy](defence/hardening/strong-password-policy.md)

