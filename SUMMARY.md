@@ -41,7 +41,7 @@
     * [Resource Based Constrained Delegation](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation.md)
   * [ACL-Abuses](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/README.md)
     * [Page 1](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
-    * [Page 2](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/initial-access-attacks.md)
+    * [Page 2](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-2.md)
   * [LAPS](vulnerabilities-misconfigurations/active-directory-attacks/laps.md)
   * [SQL Server Attacks](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/README.md)
     * [Initial Access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access.md)
