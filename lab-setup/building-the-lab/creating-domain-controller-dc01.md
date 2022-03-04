@@ -41,7 +41,7 @@
 
 3\. Click "Change" and fill in `DC01` and click OK.
 
-![](<../../.gitbook/assets/afbeelding (3).png>)
+![](<../../.gitbook/assets/afbeelding (3) (1).png>)
 
 4\. When asked to restart, click on "Restart Now"
 

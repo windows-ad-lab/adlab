@@ -1,6 +1,6 @@
 # File services
 
-## Adding the fileserver Role
+## Adding the fileserver role
 
 1. Click on start and open the "Server Manager".
 
@@ -26,7 +26,7 @@
 
 2\. Click on "Shares" and then "to create a file share, start the new share wizard"
 
-![](<../../../.gitbook/assets/afbeelding (6).png>)
+![](<../../../.gitbook/assets/afbeelding (6) (1).png>)
 
 3\. Make sure "SMB Share - Quick" is selected and click "Next".
 
@@ -44,5 +44,21 @@
 
 ![](<../../../.gitbook/assets/afbeelding (17).png>)
 
-7\. At the other "Settings" click "Next", we will leave this default.
+7\. At the steps "Other Settings", "Permissions" and click "Next", we will leave this default.
+
+8\. Click "Create"
+
+![](<../../../.gitbook/assets/afbeelding (20).png>)
+
+![](<../../../.gitbook/assets/afbeelding (25).png>)
+
+## Testing
+
+1. Create a txt file in the `C:\Share` directory.
+
+![](<../../../.gitbook/assets/afbeelding (3).png>)
+
+2\. Login on `DC01` and access the share `\\file01\data` in Explorer. Check if you can access the share and if the txt file is there.
+
+![](<../../../.gitbook/assets/afbeelding (26).png>)
 
