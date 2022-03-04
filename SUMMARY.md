@@ -16,7 +16,7 @@
     * [Creating a AD structure](lab-setup/building-the-lab/creating-domain-controller-dc02/creating-a-ad-structure.md)
   * [Creating Fileserver - FILE01](lab-setup/building-the-lab/creating-fileserver-file01/README.md)
     * [File services](lab-setup/building-the-lab/creating-fileserver-file01/file-services.md)
-  * [Creating W10 client - WS01](lab-setup/building-the-lab/creating-w10-client-ws01/README.md)
+  * [Creating W10 client - WS01](lab-setup/building-the-lab/creating-w10-client-ws01.md)
     * [PSRemoting](lab-setup/building-the-lab/creating-w10-client-ws01/psremoting.md)
   * [Creating Webserver - WEB01](lab-setup/building-the-lab/creating-webserver-web01.md)
 

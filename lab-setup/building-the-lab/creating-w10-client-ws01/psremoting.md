@@ -67,3 +67,8 @@ Enter-PSSession WS01 -Credential $creds
 
 ![](<../../../.gitbook/assets/image (11).png>)
 
+Read more about PSRemoting in our lateral movement section
+
+{% content-ref url="../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md" %}
+[psremoting.md](../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md)
+{% endcontent-ref %}
