@@ -39,7 +39,7 @@ New-ADUser -Name "$name" -GivenName "$name" -SamAccountName "$name" -UserPrincip
 }
 ```
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (1).png>)
 
 Run the command below to check the users are created:
 
@@ -77,7 +77,7 @@ After downloading the tool and the username list run Kerbrute against the domain
 
 These valid users can be used for AS-REP roasting or Password Spraying Attacks. For now save these users to `usernames.txt`.
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 To only get a list of usernames execute the following:
 
@@ -111,8 +111,8 @@ From here we can execute the following attacks to gain access to the domain:
 [empty-password.md](empty-password.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../initial-access-attacks/username-enumeration/as-rep-roasting.md" %}
-[as-rep-roasting.md](../../initial-access-attacks/username-enumeration/as-rep-roasting.md)
+{% content-ref url="as-rep-roasting.md" %}
+[as-rep-roasting.md](as-rep-roasting.md)
 {% endcontent-ref %}
 
 ## Defending

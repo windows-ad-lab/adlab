@@ -1,3 +1,10 @@
+---
+description: >-
+  Shares are used a lot in infrastructures and we often see shares that are open
+  for all domain users. Sometimes passwords or other sensitive information can
+  be found on shares.
+---
+
 # File services
 
 ## Adding the fileserver role
