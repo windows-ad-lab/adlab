@@ -14,7 +14,8 @@
   * [Creating Domain Controller - DC01](lab-setup/building-the-lab/creating-domain-controller-dc01.md)
   * [Creating Domain Controller - DC02](lab-setup/building-the-lab/creating-domain-controller-dc02/README.md)
     * [Creating a AD structure](lab-setup/building-the-lab/creating-domain-controller-dc02/creating-a-ad-structure.md)
-  * [Creating Fileserver - FILE01](lab-setup/building-the-lab/creating-fileserver-file01.md)
+  * [Creating Fileserver - FILE01](lab-setup/building-the-lab/creating-fileserver-file01/README.md)
+    * [File services](lab-setup/building-the-lab/creating-fileserver-file01/file-services.md)
   * [Creating W10 client - WS01](lab-setup/building-the-lab/creating-w10-client-ws01.md)
   * [Creating Webserver - WEB01](lab-setup/building-the-lab/creating-webserver-web01.md)
 
@@ -34,6 +35,7 @@
   * [PASSWD\_NOT\_REQ](vulnerabilities-misconfigurations/active-directory-attacks/passwd\_not\_req.md)
   * [Kerberoasting](vulnerabilities-misconfigurations/active-directory-attacks/kerberoasting.md)
   * [AS-REP Roasting](vulnerabilities-misconfigurations/active-directory-attacks/as-rep-roasting.md)
+  * [Reused local administrator](vulnerabilities-misconfigurations/active-directory-attacks/reused-local-administrator.md)
   * [Delegation Attacks](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/README.md)
     * [Unconstrained Delegation](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/unconstrained-delegation/README.md)
       * [Printerbug](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/unconstrained-delegation/printerbug.md)

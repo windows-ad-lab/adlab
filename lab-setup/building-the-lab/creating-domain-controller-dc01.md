@@ -15,11 +15,11 @@
 1. Startup the machine
 2. When asked if you copied the Virtual Machine, select "I Copied It"
 
-![](<../../.gitbook/assets/afbeelding (103) (2) (1).png>)
+![](<../../.gitbook/assets/afbeelding (103) (1) (2) (3).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International"
 
-![](<../../.gitbook/assets/afbeelding (1) (2) (1).png>)
+![](<../../.gitbook/assets/afbeelding (1) (1) (1) (2) (2).png>)
 
 4\. Accept the 'License terms'.
 
@@ -33,7 +33,7 @@
 
 1\. Open File Explorer --> right click "This PC" --> Properties.
 
-![](<../../.gitbook/assets/afbeelding (29) (1).png>)
+![](<../../.gitbook/assets/afbeelding (17) (1) (2) (7).png>)
 
 2\. Click on "Change settings"
 
@@ -47,15 +47,15 @@
 
 5\. Login again and rightclick in the Taskbar on the Networking Icon and select "Open Network & Internet Settings"
 
-![](<../../.gitbook/assets/afbeelding (109).png>)
+![](<../../.gitbook/assets/afbeelding (109) (1).png>)
 
 6\. Click on "Change adapter options"
 
-![](<../../.gitbook/assets/afbeelding (20) (1).png>)
+![](<../../.gitbook/assets/afbeelding (20) (1) (1) (2).png>)
 
 7\. Right click the Ethernet adapter and select "Properties".
 
-![](<../../.gitbook/assets/afbeelding (102) (2) (2).png>)
+![](<../../.gitbook/assets/afbeelding (102) (1) (2) (2).png>)
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties"
 
@@ -63,7 +63,7 @@
 
 9\. Copy the following settings:
 
-![](<../../.gitbook/assets/afbeelding (2).png>)
+![](<../../.gitbook/assets/afbeelding (2) (1).png>)
 
 10\. Click on "OK" and close all the Windows.
 
@@ -73,11 +73,11 @@
 
 1. Click on start and open the "Server Manager".
 
-![](<../../.gitbook/assets/afbeelding (44) (2) (2).png>)
+![](<../../.gitbook/assets/afbeelding (44) (1) (2) (3).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
-![](<../../.gitbook/assets/afbeelding (81) (1).png>)
+![](<../../.gitbook/assets/afbeelding (81) (1) (1) (2).png>)
 
 3\. Check the "Skip this page by default" box and click "Next" three times (For the steps "Before You Begin", "Installation Type" and "Server Selection".
 
@@ -121,7 +121,7 @@
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Users and Computers".
 
-![](<../../.gitbook/assets/afbeelding (52).png>)
+![](<../../.gitbook/assets/afbeelding (52) (1) (1) (2).png>)
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 

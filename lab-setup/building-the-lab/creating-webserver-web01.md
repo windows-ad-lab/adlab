@@ -15,11 +15,11 @@
 1. Startup the machine
 2. When asked if you copied the Virtual Machine, select "I Copied It"
 
-![](<../../.gitbook/assets/afbeelding (103) (1) (4).png>)
+![](<../../.gitbook/assets/afbeelding (103) (1) (2) (7).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International"
 
-![](<../../.gitbook/assets/afbeelding (1) (2) (2).png>)
+![](<../../.gitbook/assets/afbeelding (1) (1) (1) (2) (3).png>)
 
 4\. Accept the 'License terms'.
 
@@ -33,7 +33,7 @@
 
 1\. Open File Explorer --> right click "This PC" --> Properties.
 
-![](<../../.gitbook/assets/afbeelding (29) (2).png>)
+![](<../../.gitbook/assets/afbeelding (17) (1) (2).png>)
 
 2\. Click on "Change settings".
 
@@ -51,7 +51,7 @@
 
 5\. Login again and right click in the Taskbar on the Networking Icon and select "Open Network & Internet Settings"
 
-![](<../../.gitbook/assets/afbeelding (109) (1) (1).png>)
+![](<../../.gitbook/assets/afbeelding (109) (1) (1) (1).png>)
 
 6\. Click on "Change adapter options".
 
@@ -59,11 +59,11 @@
 
 7\. Right click the Ethernet adapter and select "Properties".
 
-![](<../../.gitbook/assets/afbeelding (102) (1) (2).png>)
+![](<../../.gitbook/assets/afbeelding (102) (1) (2) (4).png>)
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 
-![](<../../.gitbook/assets/afbeelding (112).png>)
+![](<../../.gitbook/assets/afbeelding (112) (1).png>)
 
 9\. Copy the following settings:
 
@@ -79,11 +79,11 @@
 
 1\. Open File Explorer --> right click "This PC" --> Properties
 
-![](<../../.gitbook/assets/afbeelding (4).png>)
+![](<../../.gitbook/assets/afbeelding (17) (1) (2) (2).png>)
 
 2\. Click on "Change settings"
 
-![](<../../.gitbook/assets/afbeelding (17).png>)
+![](<../../.gitbook/assets/afbeelding (17) (1).png>)
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
@@ -95,10 +95,10 @@
 
 5\. You will be asked to supply credentials, we will use the `administrator` account from `amsterdam.bank.local` and click on "OK"
 
-![](<../../.gitbook/assets/afbeelding (9).png>)
+![](<../../.gitbook/assets/afbeelding (6) (1) (1) (1).png>)
 
 6\. We're welcomed to the domain, click on "OK". After this message it will asks us to reboot the machine, click on "OK". Close the 'System Properties' window and restart the machine now.
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
-![](<../../.gitbook/assets/afbeelding (19).png>)
+![](<../../.gitbook/assets/afbeelding (19) (1).png>)
