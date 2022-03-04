@@ -62,3 +62,5 @@
 
 ![](<../../../.gitbook/assets/afbeelding (26).png>)
 
+All domain users should be able to access the share.
+
