@@ -216,7 +216,7 @@ Password: `jr8Q3o97@s37AF`
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
 3\. Click "Next", fill in the name "DHCP Clients" and click "Next".
 

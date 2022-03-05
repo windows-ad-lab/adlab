@@ -1,7 +1,8 @@
 ---
 description: >-
   People don't always choose strong passwords, neither do IT people for
-  temporary accounts. But there is nothing
+  temporary accounts. Spraying passwords against all found user accounts is
+  effective for getting access to the domain.
 ---
 
 # Password Spraying
@@ -52,7 +53,7 @@ To spray a single password from our kali machine we will use kerbrute again. But
 ![](<../../../.gitbook/assets/image (11) (1) (2).png>)
 
 {% hint style="warning" %}
-It is recommended to not spray more then one password every 30 minutes to prevent locking out accounts. We dont have access to the domain yet and can't retrieve the current passwordpolicy.
+It is recommended to not spray more then one password every 30 minutes to prevent locking out accounts. We don't have access to the domain yet and can't retrieve the current passwordpolicy.
 {% endhint %}
 
 #### Spraying a small list of passwords
@@ -83,7 +84,7 @@ _For demonstration purposed we used 1 minute._
 
 ### Recommendations
 
-Implement a strong password policy:
+* Implement a strong password policy:
 
 {% content-ref url="../../../defence/hardening/strong-password-policy.md" %}
 [strong-password-policy.md](../../../defence/hardening/strong-password-policy.md)

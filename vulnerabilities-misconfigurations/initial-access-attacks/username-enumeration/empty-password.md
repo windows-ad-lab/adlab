@@ -1,3 +1,9 @@
+---
+description: >-
+  It is possible that accounts have an empty password if the useraccountcontrol
+  attribute contains the value PASSWD_NOT_REQ.
+---
+
 # Empty Password
 
 ## Configuring
@@ -28,32 +34,50 @@
 
 ![](<../../../.gitbook/assets/image (64).png>)
 
-
+![](<../../../.gitbook/assets/image (65).png>)
 
 ## Attacking
 
 ### How it works
 
-
+It is **possible** that accounts have an empty password if the useraccountcontrol attribute contains the value `PASSWD_NOT_REQ`.
 
 ### Tools
 
+* [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec)
 
+### Executing the attack
 
-### Executing the atttack
+1. Check if any on the users have a empty password by spraying an empty password for all the enumerated users against the DC.
 
+```
+crackmapexec smb 10.0.0.3 -u users.txt -p '' -d amsterdam.bank.local
+```
 
+![](<../../../.gitbook/assets/image (62).png>)
+
+{% hint style="warning" %}
+Spraying an empty password counts as a invalid login. So it is adviced to not do this while also passwordspraying as it might cause account lockouts.
+{% endhint %}
 
 ## Defending
 
 ### Recommendations
 
+* Check for users with the `PASSWD_NOT_REQ` attribute and remove it.
+
+```
+Get-ADUser -Filter {PasswordNotRequired -eq $true}
+```
+
+### Detection
 
 
-### Detections
 
 
 
 ## References
 
 {% embed url="https://specopssoft.com/blog/find-ad-accounts-using-password-not-required-blank-password" %}
+
+{% embed url="https://github.com/byt3bl33d3r/CrackMapExec" %}
