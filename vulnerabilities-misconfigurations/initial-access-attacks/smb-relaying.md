@@ -39,7 +39,7 @@ We need to save this file to a location accessible for the user who's going to r
 
 3\. In the 'General' tab, select "Run whetever user is logged on or not". Also we need to change the user, this can be done by clicking on "Change User..." and login with the user we have created for this attack, in our case `pukcab:Bangbang123`&#x20;
 
-
+![](<../../.gitbook/assets/afbeelding (9).png>)
 
 4\. At the 'Triggers' tab, click on "New...". Within the new tab, set 'Begin the task:' on "At startup". Check "Repeat task every:" and set the value "5 minutes" and set 'for a duration of:' to "indefinitely".
 
@@ -53,7 +53,7 @@ We need to save this file to a location accessible for the user who's going to r
 
 ![](../../.gitbook/assets/afbeelding.png)
 
-7\. Click on "OK" and fill in the credentials of the user.
+7\. Click on "OK" and fill in the credentials of the user. After we restart our workstation, the scheduled task will run every 5 minutes.
 
 ## Attacking
 

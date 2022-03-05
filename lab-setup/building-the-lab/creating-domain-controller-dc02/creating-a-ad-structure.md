@@ -44,7 +44,7 @@ With the command `net user <username> /domain` it's possible to check someone's 
 net user IT-Support01 /domain
 ```
 
-![](<../../../.gitbook/assets/afbeelding (9).png>)
+![](<../../../.gitbook/assets/afbeelding (9) (1).png>)
 
 For attack path \<url to attackpath> we need to create an user account in the Employees-group, to create an account we can use `net user /add <username> <password> /domain` and to add it inside the Employees-group we can use `net group Employees <username> /add /domain`. In this example we're using the following commands:
 
