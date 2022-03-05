@@ -29,4 +29,12 @@
 
 ![](<../../../.gitbook/assets/image (1).png>)
 
-**We will create users later while creating the vulnerabilities and fileshare.**
+### Creating Users
+
+For attack path \<url to attackpath> we need to create an user account in the IT-group, to create an account we can use `net user /add <username> <password> /domain` and to add it inside the IT-group we can use `net group IT <username> /add /domain`. In this example we're using the following commands:
+
+```
+net user /add IT-support01 Sup3rCompl1c4t3dP4ssw0rd2022 /domain
+net group IT IT-Support01 /add /domain
+```
+
