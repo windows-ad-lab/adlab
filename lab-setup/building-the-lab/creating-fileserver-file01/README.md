@@ -75,7 +75,7 @@
 
 2\. In the top right corner click on "Rename this PC (advanced)"
 
-![](<../../../.gitbook/assets/afbeelding (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (1) (1) (1).png>)
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
@@ -93,4 +93,4 @@
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
-![](<../../../.gitbook/assets/afbeelding (4) (2) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (4) (2) (1) (1).png>)

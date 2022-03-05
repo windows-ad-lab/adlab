@@ -21,7 +21,7 @@ description: >-
 
 4\. At the step "Server Roles" expand "File and Storage Services" and "File and ISCSI Services". Then select "File Server".
 
-![](<../../../.gitbook/assets/afbeelding (38).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1).png>)
 
 5\. Click "Next" and then "Install". Wait for the installation to finish.
 
@@ -29,11 +29,11 @@ description: >-
 
 1. In the Server Manager click on "File and Storage Services"
 
-![](<../../../.gitbook/assets/afbeelding (4).png>)
+![](<../../../.gitbook/assets/afbeelding (4) (2).png>)
 
 2\. Click on "Shares" and then "to create a file share, start the new share wizard"
 
-![](<../../../.gitbook/assets/afbeelding (6) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (6) (1) (2).png>)
 
 3\. Make sure "SMB Share - Quick" is selected and click "Next".
 
@@ -41,11 +41,11 @@ description: >-
 
 4\. Open Windows Explorer and go to the `C:\` disk and create a directory named `Share`.
 
-![](<../../../.gitbook/assets/afbeelding (36).png>)
+![](<../../../.gitbook/assets/afbeelding (36) (1).png>)
 
 5\. In the installer select "Type a custom path" and type `C:\Share`. Then click "Next".
 
-![](../../../.gitbook/assets/afbeelding.png)
+![](<../../../.gitbook/assets/afbeelding (1).png>)
 
 6\. Type the share name: `Data` and click "Next".
 
@@ -55,7 +55,7 @@ description: >-
 
 8\. Click "Create"
 
-![](<../../../.gitbook/assets/afbeelding (20).png>)
+![](<../../../.gitbook/assets/afbeelding (20) (1).png>)
 
 ![](<../../../.gitbook/assets/afbeelding (25) (1).png>)
 
@@ -67,7 +67,7 @@ description: >-
 
 2\. Login on `DC01` and access the share `\\file01\data` in Explorer. Check if you can access the share and if the txt file is there.
 
-![](<../../../.gitbook/assets/afbeelding (26).png>)
+![](<../../../.gitbook/assets/afbeelding (26) (1).png>)
 
 All domain users should be able to access the share.
 

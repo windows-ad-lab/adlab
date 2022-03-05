@@ -71,7 +71,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
-![](<../../.gitbook/assets/afbeelding (1) (1) (1).png>)
+![](<../../.gitbook/assets/afbeelding (1) (1) (1) (3).png>)
 
 4\. Another window will pop-up called 'Computer Name/Domain Changes', within this window change the 'Domain' to "amsterdam.bank.local" and click on "OK"
 
@@ -85,4 +85,4 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
-![](<../../.gitbook/assets/afbeelding (4) (2).png>)
+![](<../../.gitbook/assets/afbeelding (4) (2) (1).png>)
