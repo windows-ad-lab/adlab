@@ -27,6 +27,16 @@ The for loop is going to loop through the ip-range and tries to 'copy' a file fr
 
 We need to save this file to a location accessible for the user who's going to run the bat-file. In our example the user who's going to run the scheduled task is pukcab. We have put the file inside the documents folder.
 
+{% hint style="info" %}
+The range in our ESXI lab for our kali machines is different because we get access by VPN. For recreating the lab the following settings should be used:
+
+```
+SET BaseRange=192.168.248
+SET Min=128
+SET Max=150
+```
+{% endhint %}
+
 #### Creating a scheduled task
 
 1\. Open up 'Task Scheduler'
