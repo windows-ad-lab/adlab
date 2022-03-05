@@ -48,7 +48,7 @@ It is **possible** that accounts have an empty password if the useraccountcontro
 
 ### Executing the attack
 
-1. Check if any on the users have a empty password by spraying an empty password for all the enumerated users against the DC.
+1. Check if any on the users have a empty password by spraying an empty password for all the enumerated users against `DC02`.
 
 ```
 crackmapexec smb 10.0.0.3 -u users.txt -p '' -d amsterdam.bank.local
@@ -57,7 +57,7 @@ crackmapexec smb 10.0.0.3 -u users.txt -p '' -d amsterdam.bank.local
 ![](<../../../.gitbook/assets/image (62).png>)
 
 {% hint style="warning" %}
-Spraying an empty password counts as a invalid login. So it is adviced to not do this while also passwordspraying as it might cause account lockouts.
+Spraying an empty password counts as a invalid login. So it is advised to not do this while also passwordspraying as it might cause account lockouts.
 {% endhint %}
 
 2\. The user `Steve` has an empty password and could be used for further enumeration.
