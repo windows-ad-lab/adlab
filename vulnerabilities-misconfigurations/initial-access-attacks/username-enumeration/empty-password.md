@@ -30,11 +30,11 @@ description: >-
 
 6\. Click "Apply" and "OK".
 
-7\. Right click on Steve and select "Reset Password". Uncheck "User must change password at next logon" and make sure the Password fields are empty. Click on "OK"
+7\. Right click on `Steve` and select "Reset Password". Uncheck "User must change password at next logon" and make sure the Password fields are empty. Click on "OK"
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (66).png>)
 
 ## Attacking
 
@@ -68,8 +68,22 @@ Spraying an empty password counts as a invalid login. So it is adviced to not do
 
 * Periodically check for users with the `PASSWD_NOT_REQ` attribute and remove it.
 
+Check for users with the attribute:
+
 ```
-Get-ADUser -Filter {PasswordNotRequired -eq $true}
+Get-ADUser -Filter {PasswordNotRequired -eq $true} | Select-Object samAccountName
+```
+
+Remove the attribute:
+
+```
+Set-ADAccountControl -PasswordNotRequired $false -Identity <USER>
+```
+
+Check for users with the attribute and remove the attribute:
+
+```
+Get-ADUser -Filter {PasswordNotRequired -eq $true} | Set-ADAccountControl -PasswordNotRequired $false
 ```
 
 ### Detection
