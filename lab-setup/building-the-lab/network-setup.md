@@ -21,7 +21,7 @@ DHCP: Disabled
 
 3\. Click on "Add Network" and Click "OK"
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)
 
 4\. Select the newly created network and copy the following settings:
 
@@ -35,6 +35,3 @@ DHCP: Disabled
 5\. Click "OK"
 
 **From now on every machine that we clone should be setup on the VMnet2 network.**
-
-
-

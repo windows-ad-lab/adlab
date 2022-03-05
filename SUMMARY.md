@@ -62,7 +62,8 @@
 * [Misc](vulnerabilities-misconfigurations/misc/README.md)
   * [Lateral Movement](vulnerabilities-misconfigurations/misc/lateral-movement/README.md)
     * [PSRemoting](vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md)
-  * [Unqouted Service Path](vulnerabilities-misconfigurations/misc/unqouted-service-path.md)
+  * [Misconfigured Service](vulnerabilities-misconfigurations/misc/misconfigured-service/README.md)
+    * [Unqouted Service Path](vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
   * [Passwords on shares](vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
 
 ## Defence
