@@ -8,11 +8,11 @@ description: >-
 
 ## Configuring
 
-1. Open the "Active Directory Users and Computers" administration tool.
+1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
 ![](<../../../.gitbook/assets/image (5).png>)
 
-2\. Click on "View" en enable "Avanced Features"
+2\. Click on "View" and enable "Avanced Features"
 
 ![](<../../../.gitbook/assets/image (22).png>)
 
@@ -60,11 +60,13 @@ crackmapexec smb 10.0.0.3 -u users.txt -p '' -d amsterdam.bank.local
 Spraying an empty password counts as a invalid login. So it is adviced to not do this while also passwordspraying as it might cause account lockouts.
 {% endhint %}
 
+2\. The user `Steve` has an empty password.
+
 ## Defending
 
 ### Recommendations
 
-* Check for users with the `PASSWD_NOT_REQ` attribute and remove it.
+* Periodically check for users with the `PASSWD_NOT_REQ` attribute and remove it.
 
 ```
 Get-ADUser -Filter {PasswordNotRequired -eq $true}
