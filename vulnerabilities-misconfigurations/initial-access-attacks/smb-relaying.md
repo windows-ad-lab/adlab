@@ -86,3 +86,5 @@ We need to save this file to a location accessible for the user who's going to r
 
 
 ## References
+
+{% embed url="https://infosecwriteups.com/abusing-ntlm-relay-and-pass-the-hash-for-admin-d24d0f12bea0" %}
