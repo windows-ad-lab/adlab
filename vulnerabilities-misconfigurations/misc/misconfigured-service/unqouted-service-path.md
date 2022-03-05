@@ -36,7 +36,7 @@ icacls.exe "C:\Program Files\bin folder"
 icacls.exe "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (2).png>)
 
 Currently the low privileged users can't create any files in the directories with a space. BUILTIN\Users has (RX) privileges. Which is **RX** (read and execute access). For more information about the icacls access rights check out [this SuperUser](https://superuser.com/questions/322423/explain-the-output-of-icacls-exe-line-by-line-item-by-item) post.
 
@@ -133,7 +133,7 @@ But we do have write permissions in `C:\Program Files\bin folder\program`.
 Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin folder\program\bin.exe' -Username 'privesc' -Password "Welcome2022!" 
 ```
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 

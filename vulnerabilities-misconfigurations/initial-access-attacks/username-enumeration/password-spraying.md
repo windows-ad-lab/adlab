@@ -1,3 +1,9 @@
+---
+description: >-
+  People don't always choose strong passwords, neither do IT people for
+  temporary accounts. But there is nothing
+---
+
 # Password Spraying
 
 ## Configuring
