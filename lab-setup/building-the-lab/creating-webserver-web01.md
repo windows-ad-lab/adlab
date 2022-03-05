@@ -87,7 +87,7 @@
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
-![](<../../.gitbook/assets/afbeelding (25) (1).png>)
+![](<../../.gitbook/assets/afbeelding (25) (1) (1).png>)
 
 4\. Another window will pop-up called 'Computer Name/Domain Changes', within this window change the 'Domain' to "amsterdam.bank.local" and click on "OK"
 

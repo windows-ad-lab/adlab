@@ -38,3 +38,25 @@ net user /add IT-support01 Sup3rCompl1c4t3dP4ssw0rd2022 /domain
 net group IT IT-Support01 /add /domain
 ```
 
+With the command `net user <username> /domain` it's possible to check someone's group memberships. In this example we're using the following command:
+
+```
+net user IT-Support01 /domain
+```
+
+![](<../../../.gitbook/assets/afbeelding (9).png>)
+
+For attack path \<url to attackpath> we need to create an user account in the Employees-group, to create an account we can use `net user /add <username> <password> /domain` and to add it inside the Employees-group we can use `net group Employees <username> /add /domain`. In this example we're using the following commands:
+
+```
+net user /add pukcab Bangbang123 /domain
+net group Employees pukcab /add /domain
+```
+
+With the command `net user <username> /domain` it's possible to check someone's group memberships. In this example we're using the following command:
+
+```
+net user pukcab /domain
+```
+
+![](<../../../.gitbook/assets/afbeelding (25).png>)

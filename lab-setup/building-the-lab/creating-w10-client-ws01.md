@@ -75,7 +75,7 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 
 4\. Another window will pop-up called 'Computer Name/Domain Changes', within this window change the 'Domain' to "amsterdam.bank.local" and click on "OK"
 
-![](<../../.gitbook/assets/afbeelding (9) (1) (1).png>)
+![](<../../.gitbook/assets/afbeelding (9) (1) (1) (1).png>)
 
 5\. You will be asked to supply credentials, we will use the `administrator` account from `amsterdam.bank.local` and click on "OK"
 
