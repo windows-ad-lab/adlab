@@ -60,7 +60,7 @@ crackmapexec smb 10.0.0.3 -u users.txt -p '' -d amsterdam.bank.local
 Spraying an empty password counts as a invalid login. So it is adviced to not do this while also passwordspraying as it might cause account lockouts.
 {% endhint %}
 
-2\. The user `Steve` has an empty password.
+2\. The user `Steve` has an empty password and could be used for further enumeration.
 
 ## Defending
 
