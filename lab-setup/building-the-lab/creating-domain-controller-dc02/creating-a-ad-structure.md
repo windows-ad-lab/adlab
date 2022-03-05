@@ -27,6 +27,6 @@
 * Employees
 * IT
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
 **We will create users later while creating the vulnerabilities and fileshare.**
