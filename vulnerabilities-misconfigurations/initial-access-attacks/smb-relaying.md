@@ -31,7 +31,7 @@ We need to save this file to a location accessible for the user who's going to r
 The range in our ESXI lab for our kali machines is different because we get access by VPN. For recreating the lab the following settings should be used:
 
 ```
-SET BaseRange=192.168.248
+SET BaseRange=10.0.0
 SET Min=128
 SET Max=150
 ```
