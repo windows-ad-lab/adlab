@@ -20,4 +20,4 @@ The text in this gitbook is written by [0xjs](https://github.com/0xJs) and [Just
 
 What is a better way to learn something about an active directory (AD) then building it yourself? In this gitbook we want to learn you to build an AD, how to configure vulnerabilities or misconfigurations inside your AD, how to attack those vulnerabilities or misconfigurations and how to detect and defend yourself against it.
 
-If something is missing from this gitbook, please hit us up on github or make a 'issue' on the github page. I
+If something is missing from this gitbook, please hit us up on github or make a 'issue' on the github page.&#x20;
