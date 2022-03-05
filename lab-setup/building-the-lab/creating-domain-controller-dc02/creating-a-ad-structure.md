@@ -53,6 +53,8 @@ net user /add pukcab Bangbang123 /domain
 net group Employees pukcab /add /domain
 ```
 
+The password `Bangbang123` is a commonly used password from 2020, see refferences for the passwordlist.
+
 With the command `net user <username> /domain` it's possible to check someone's group memberships. In this example we're using the following command:
 
 ```
@@ -60,3 +62,7 @@ net user pukcab /domain
 ```
 
 ![](<../../../.gitbook/assets/afbeelding (25).png>)
+
+## References
+
+{% embed url="https://github.com/danielmiessler/SecLists/blob/master/Passwords/2020-200_most_used_passwords.txt" %}
