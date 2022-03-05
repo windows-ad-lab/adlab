@@ -63,6 +63,7 @@
   * [Lateral Movement](vulnerabilities-misconfigurations/misc/lateral-movement/README.md)
     * [PSRemoting](vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md)
   * [Misconfigured service](vulnerabilities-misconfigurations/misc/misconfigured-service.md)
+  * [Passwords on shares](vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
 
 ## Defence
 
