@@ -32,7 +32,7 @@ description: >-
 
 7\. Right click on `Steve` and select "Reset Password". Uncheck "User must change password at next logon" and make sure the Password fields are empty. Click on "OK"
 
-![](<../../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (66).png>)
 

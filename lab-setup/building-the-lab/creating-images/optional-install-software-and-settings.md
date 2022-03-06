@@ -78,4 +78,4 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 
 1. Download [Notepad++](https://download.sysinternals.com/files/BGInfo.zip), run the installer and click next next next.
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)

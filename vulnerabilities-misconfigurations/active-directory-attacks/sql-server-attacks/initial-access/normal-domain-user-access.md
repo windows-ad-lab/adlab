@@ -5,7 +5,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../../../.gitbook/assets/image (65) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -13,7 +13,35 @@
 
 4\. Expand the "Security" and "Logins" folders. Right click on "Logins" and click "New Login".
 
-5\. Copy the following Information:
+5\. Click on "Search", click "Locations" and expand the directories and click on "Amsterdam.bank.local".
+
+![](<../../../../.gitbook/assets/image (60).png>)
+
+6\. Fill in "Richard" and click "Check Names".
+
+![](<../../../../.gitbook/assets/image (64).png>)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Attacking
 

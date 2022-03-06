@@ -27,7 +27,7 @@
 * Employees
 * IT
 
-![](<../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1).png>)
 
 ### Creating Users
 

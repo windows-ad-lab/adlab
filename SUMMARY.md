@@ -20,7 +20,8 @@
     * [PSRemoting](lab-setup/building-the-lab/creating-w10-client-ws01/psremoting.md)
   * [Creating Webserver - WEB01](lab-setup/building-the-lab/creating-webserver-web01/README.md)
     * [Web Services](lab-setup/building-the-lab/creating-webserver-web01/web-services.md)
-    * [SQL Server](lab-setup/building-the-lab/creating-webserver-web01/sql-server.md)
+    * [SQL Server](lab-setup/building-the-lab/creating-webserver-web01/sql-server/README.md)
+      * [Create database](lab-setup/building-the-lab/creating-webserver-web01/sql-server/create-database.md)
 
 ## Vulnerabilities / Misconfigurations
 
