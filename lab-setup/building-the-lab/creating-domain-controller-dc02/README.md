@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -212,11 +212,11 @@ Password: `jr8Q3o97@s37AF`
 
 1. Click on "Tools" in the "Server Manager" and select "DHCP".
 
-![](<../../../.gitbook/assets/image (59).png>)
+![](<../../../.gitbook/assets/image (59) (1).png>)
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
 
 3\. Click "Next", fill in the name "DHCP Clients" and click "Next".
 
@@ -235,7 +235,7 @@ Password: `jr8Q3o97@s37AF`
 
 7\. Fill in `10.0.0.1` for the default gateway and click on "Add", it should be in the list and then click on "Next"
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 8\. At the step "Domain Name and DNS Server" make sure `10.0.0.2` and `10.0.0.3` are listed as DNS servers.
 

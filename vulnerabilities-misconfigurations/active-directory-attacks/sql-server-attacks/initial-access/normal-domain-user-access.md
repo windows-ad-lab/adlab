@@ -13,7 +13,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (65) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -35,7 +35,7 @@
 
 8\. Click on "User Mapping" and select "Production".
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../../.gitbook/assets/image (13) (1).png>)
 
 9\. Click "OK".
 
@@ -123,7 +123,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 
 5\. Click on the databases on the left and see if we got access to any:
 
-![](<../../../../.gitbook/assets/image (66).png>)
+![](<../../../../.gitbook/assets/image (66) (1).png>)
 
 We are able to access the Production database, but not the Development one.
 

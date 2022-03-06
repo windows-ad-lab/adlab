@@ -20,7 +20,7 @@ description: >-
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../../.gitbook/assets/image (34) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -135,6 +135,12 @@ Now no error:
 ![](<../../../../.gitbook/assets/image (43).png>)
 
 We successfully impersonated `Developer` --> `Developer_test` --> `sa`.
+
+Check the executing commands page under SQL Server Attacks to learn to execute cmd commands:
+
+{% content-ref url="../executing-commands.md" %}
+[executing-commands.md](../executing-commands.md)
+{% endcontent-ref %}
 
 ## Defending
 

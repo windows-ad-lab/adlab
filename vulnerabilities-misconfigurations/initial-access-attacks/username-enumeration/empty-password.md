@@ -42,7 +42,7 @@ description: >-
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (66) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1).png>)
 
 ## Attacking
 
