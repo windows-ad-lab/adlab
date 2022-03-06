@@ -98,7 +98,7 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 1. Make sure the downloads folder is empty.
 
-![](<../../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (58) (1).png>)
 
 1. Empty the recycle bin by rightcliking on it and selecting "Empty Recycle Bin"
 
@@ -112,7 +112,7 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 ![](<../../../.gitbook/assets/image (34).png>)
 
-![](<../../../.gitbook/assets/image (62) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1).png>)
 
 ## Sysprep
 

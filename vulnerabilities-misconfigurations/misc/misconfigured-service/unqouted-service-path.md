@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Prives
 python3 -M http.server 8090
 ```
 
-![](<../../../.gitbook/assets/image (43) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1) (1).png>)
 
 2\. Login on `WS01` with the user `John` and the password `Welcome2022!.`
 
@@ -121,7 +121,7 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52) (1).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 
@@ -139,11 +139,11 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (13) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
-![](<../../../.gitbook/assets/image (47).png>)
+![](<../../../.gitbook/assets/image (47) (1).png>)
 
 ![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 

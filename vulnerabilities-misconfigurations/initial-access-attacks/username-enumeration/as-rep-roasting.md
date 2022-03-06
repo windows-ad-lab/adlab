@@ -8,7 +8,7 @@
 
 2\. Click on "View" and enable "Avanced Features"
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)
 
 3\. Open "Employees", right click the user `Richard` and click on "Properties"
 
@@ -48,7 +48,7 @@ GetNPUsers.py amsterdam/ -usersfile users.txt -format hashcat -outputfile asrepr
 cat asreproasting
 ```
 
-![](<../../../.gitbook/assets/image (43) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1).png>)
 
 3\. The user richard doesn't require pre-authentication and we have an hash from the TGT. Lets crack it with hashcat and [this](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/2020-200\_most\_used\_passwords.txt) wordlist. The hashcat parameters are:
 

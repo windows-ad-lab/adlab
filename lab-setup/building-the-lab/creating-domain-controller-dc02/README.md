@@ -191,7 +191,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 4\. At the step "Server Roles" select "DHCP Server", click "Add Features" and "Next" three times.
 
-![](<../../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 5\. At the step "Confirmation" click "Install". Once the installation finishes click close.
 
