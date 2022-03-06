@@ -20,7 +20,7 @@
 
 5\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
 ## Attacking
 

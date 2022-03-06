@@ -7,7 +7,7 @@
 * Subnetmask: `255.255.255.0`
 * Gateway: `10.0.0.1`
 * DNS: `10.0.0.3`
-* Role: `Web Server (IIS)`
+* Role: Web Server (IIS), SQL Server
 * Domain: `amsterdam.bank.local`
 
 ## Installation after sysprep
