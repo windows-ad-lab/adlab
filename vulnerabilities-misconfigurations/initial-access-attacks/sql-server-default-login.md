@@ -12,7 +12,7 @@ description: >-
 
 2\. Open "Microsoft SQL Server Management Studio"
 
-![](<../../.gitbook/assets/image (32).png>)
+![](<../../.gitbook/assets/image (32) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 

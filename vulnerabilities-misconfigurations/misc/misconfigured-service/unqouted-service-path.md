@@ -27,7 +27,7 @@ sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Se
 mkdir "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2).png>)
 
 4\. Run icacls to check the current permissions on the directories with a space in it:
 
@@ -46,7 +46,7 @@ Currently the low privileged users can't create any files in the directories wit
 icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 ```
 
-![](<../../../.gitbook/assets/image (8) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1).png>)
 
 6\. Run icacls again the check the permissions on the directory:
 
@@ -54,7 +54,7 @@ icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 icacls.exe "C:\Program Files\bin folder\program"
 ```
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1).png>)
 
 ## Attacking
 
@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Prives
 python3 -M http.server 8090
 ```
 
-![](<../../../.gitbook/assets/image (43) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
 
 2\. Login on `WS01` with the user `John` and the password `Welcome2022!.`
 
@@ -121,7 +121,7 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../../.gitbook/assets/image (52) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 

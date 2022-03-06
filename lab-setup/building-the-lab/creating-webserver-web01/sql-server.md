@@ -19,7 +19,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. On "Select an installation type" select "Basic":
 
-![](<../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 5\. Accept the License Terms and click "Install".
 
@@ -46,11 +46,11 @@ The SQL Server Installation may require internet access, temporally add a second
 
 9\. Click Next and fill in the Instance name `dev`.
 
-![](<../../../.gitbook/assets/image (43) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1).png>)
 
 10\. Change the "Startup Type" for the "SQL Serer Agent" to "Automatic" and make sure all three are set to "Automatic", click "Next".
 
-![](<../../../.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (30) (1).png>)
 
 11\. At the next step select "Mixed Mode" and fill in the password `Password1!`. Then select "Add" at the "Specify SQL Server administrators" and add `amsterdam\administrator` then click Next.
 
@@ -58,7 +58,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 12\. Click "Install" and wait for the installation to finish.
 
-![](<../../../.gitbook/assets/image (42) (1) (1).png>)
+![](<../../../.gitbook/assets/image (42) (1) (1) (1).png>)
 
 13\. Open the "SQL Configuration Manager".
 
@@ -66,7 +66,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Expand "SQL Server Network Configuration" and select "Protocols for DEV". Double click on it and select the "IP Adresses" tab. Fill in `1433` for "TCP Port".
 
-![](<../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1).png>)
 
 14\. Scroll to the bottom and also configure IPAll:
 
@@ -74,13 +74,13 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Then click "Apply".
 
-![](<../../../.gitbook/assets/image (36).png>)
+![](<../../../.gitbook/assets/image (36) (1).png>)
 
 15\. Open "SQL Server services" and right click on "SQL Server (DEV)" and click "Restart".
 
 ![](<../../../.gitbook/assets/image (47) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (52) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1).png>)
 
 16\. Do the same for "SQL Server Agent":
 
@@ -108,7 +108,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 
-![](<../../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 
 ### Testing connectivity
 

