@@ -116,7 +116,7 @@ We successfully impersonated Developer and then DB\_Owner.
 
 ### Recommendations
 
-* Minimalise the use of impersonation and audit the users who can impersonate other users.
+* Use signed stored procedures that have been assigned access to external objects. This seems like the most secure option with the least amount of management overhead. Similar to the EXECUTE WITH option, this can result in escalation paths if the store procedure is vulnerable to SQL injection, or is simply written to allow users to take arbitrary actions. More information at [http://msdn.microsoft.com/en-us/library/bb283630.aspx](http://msdn.microsoft.com/en-us/library/bb283630.aspx).
 
 ### Detection
 
