@@ -56,7 +56,7 @@
       * [Impersonation](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/impersonation.md)
       * [DB-Owner](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/db-owner.md)
       * [Enumerate Logins](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/enumerate-logins/README.md)
-        * [Page 3](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/enumerate-logins/page-3.md)
+        * [Weak passwords](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/enumerate-logins/weak-passwords.md)
     * [Executing Commands](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/executing-commands.md)
     * [Database-Links](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/database-links.md)
   * [Priviliged Groups](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/README.md)
