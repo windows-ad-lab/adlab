@@ -2,9 +2,17 @@
 
 ## Configuring
 
+### Prerequisite&#x20;
+
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}
+
+### Configuring
+
 1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (6).png>)
+![](<../../../.gitbook/assets/image (6) (1).png>)
 
 2\. Click on "View" and enable "Avanced Features"
 
@@ -40,7 +48,7 @@ When pre-authentication is not required, an attack can directly send a request f
 GetNPUsers.py amsterdam/ -usersfile users.txt -format hashcat -outputfile asreproastinng
 ```
 
-![](<../../../.gitbook/assets/image (7).png>)
+![](<../../../.gitbook/assets/image (7) (1).png>)
 
 2\. The tool doesn't say anything about users that don't require pre-authentication. Check if the outputfile exists and cat it:
 

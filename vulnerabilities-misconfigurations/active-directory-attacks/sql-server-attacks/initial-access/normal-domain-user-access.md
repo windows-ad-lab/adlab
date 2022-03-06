@@ -2,6 +2,14 @@
 
 ## Configuring
 
+### Prerequisite&#x20;
+
+{% content-ref url="../../../initial-access-attacks/username-enumeration/" %}
+[username-enumeration](../../../initial-access-attacks/username-enumeration/)
+{% endcontent-ref %}
+
+### Configuring
+
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
@@ -77,7 +85,7 @@ The output shows one SQL Instance.
 Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded
 ```
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.local`.
 

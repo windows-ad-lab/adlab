@@ -8,6 +8,14 @@ description: >-
 
 ## Configuring
 
+### Prerequisite&#x20;
+
+{% content-ref url="./" %}
+[.](./)
+{% endcontent-ref %}
+
+### Configuring
+
 1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
 ![](<../../../.gitbook/assets/image (5) (1) (1).png>)
