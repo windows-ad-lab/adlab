@@ -13,7 +13,7 @@
 
 4\. Expand the "WEB01\DEV" structure and right click on "Databases", select "New Database".
 
-![](<../../../../.gitbook/assets/image (42).png>)
+![](<../../../../.gitbook/assets/image (42) (1).png>)
 
 5\. Fill in the Database Name `Production` and click "OK" to create the database.
 
