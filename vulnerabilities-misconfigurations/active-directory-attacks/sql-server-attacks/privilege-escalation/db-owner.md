@@ -117,7 +117,7 @@ SELECT suser_sname(owner_sid), * FROM sys.databases
 
 `sa` is the owner of the `production` database.
 
-6\. Check if the database is set to trustworthy, otherwise we won't be able to escalate our privileges to the Owner.
+6\. Check if the database is set to trustworthy
 
 ```
 SELECT a.name,b.is_trustworthy_on
@@ -161,11 +161,21 @@ SELECT is_srvrolemember('sysadmin')
 
 ![](<../../../../.gitbook/assets/image (34).png>)
 
-The `1` means that we are sysadmin! Check the executing commands page under SQL Server Attacks to learn to execute cmd commands:
+The `1` means that we are sysadmin! Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 
 {% content-ref url="../executing-commands.md" %}
 [executing-commands.md](../executing-commands.md)
 {% endcontent-ref %}
+
+#### Cleanup
+
+1. Login to WEB01 as Administrator, start the "Microsoft SQL Server Management Studio" and login as Administrator.
+2. Execute the following query:
+
+```
+EXEC sp_dropsrvrolemember 'AMSTERDAM\Richard','sysadmin';
+DROP PROCEDURE sp_elevate_me;
+```
 
 ## Defending
 
