@@ -82,7 +82,7 @@ Repeat these steps for each Image we would like to create (Windows Server 2019, 
 
 3\. Click on "Check for Updates" and install all updates.
 
-![](<../../../.gitbook/assets/image (49).png>)
+![](<../../../.gitbook/assets/image (49) (1).png>)
 
 4\. When the system asks for a reboot, reboot is and repeat till there are no more updates left.
 
@@ -120,7 +120,7 @@ To be able to clone the virtual machine without having any problems when joining
 
 1. Press Windows + R, type sysprep and click OK.
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 2\. Windows Explorer opens and click on the "Sysprep" application.
 

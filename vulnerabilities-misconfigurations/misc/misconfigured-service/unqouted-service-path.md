@@ -121,7 +121,7 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../../.gitbook/assets/image (52) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 
@@ -137,13 +137,13 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
-![](<../../../.gitbook/assets/image (47) (1) (1).png>)
+![](<../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 

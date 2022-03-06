@@ -40,7 +40,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../.gitbook/assets/image (51) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (26).png>)
 
@@ -70,7 +70,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Scroll to the bottom and also configure IPAll:
 
-![](<../../../.gitbook/assets/image (51).png>)
+![](<../../../.gitbook/assets/image (51) (1).png>)
 
 14\. Then click "Apply".
 
@@ -78,13 +78,13 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Open "SQL Server services" and right click on "SQL Server (DEV)" and click "Restart".
 
-![](<../../../.gitbook/assets/image (47) (1).png>)
+![](<../../../.gitbook/assets/image (47) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52) (1).png>)
 
 16\. Do the same for "SQL Server Agent":
 
-![](<../../../.gitbook/assets/image (46).png>)
+![](<../../../.gitbook/assets/image (46) (1).png>)
 
 17\. Download and Install [SQL Server Mangement Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN\&view=sql-server-ver15). Just Click "Install" and reboot the system.
 

@@ -26,7 +26,7 @@ description: >-
 
 5\. Set the value to `544` and cick "OK".
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 6\. Click "Apply" and "OK".
 
@@ -34,7 +34,7 @@ description: >-
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (66).png>)
+![](<../../../.gitbook/assets/image (66) (1).png>)
 
 ## Attacking
 
