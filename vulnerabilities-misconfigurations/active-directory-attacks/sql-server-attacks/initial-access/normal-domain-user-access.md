@@ -21,9 +21,13 @@
 
 ![](<../../../../.gitbook/assets/image (64).png>)
 
+7\. At "Default Database" select "Production".
 
+![](<../../../../.gitbook/assets/image (47).png>)
 
+8\. Click "OK".
 
+![](<../../../../.gitbook/assets/image (32).png>)
 
 
 
