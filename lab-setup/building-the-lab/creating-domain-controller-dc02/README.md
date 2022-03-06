@@ -123,7 +123,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADDomain`
 
-![](<../../../.gitbook/assets/image (12) (1) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (1) (1).png>)
 
 `Get-ADTrust -Identity "bank.local"`
 
@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -191,7 +191,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 4\. At the step "Server Roles" select "DHCP Server", click "Add Features" and "Next" three times.
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)
 
 5\. At the step "Confirmation" click "Install". Once the installation finishes click close.
 
@@ -227,7 +227,7 @@ Password: `jr8Q3o97@s37AF`
 * Length: `24`
 * Subnet mask: `255.255.255.0`
 
-![](<../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1).png>)
 
 5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 
@@ -235,7 +235,7 @@ Password: `jr8Q3o97@s37AF`
 
 7\. Fill in `10.0.0.1` for the default gateway and click on "Add", it should be in the list and then click on "Next"
 
-![](<../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1).png>)
 
 8\. At the step "Domain Name and DNS Server" make sure `10.0.0.2` and `10.0.0.3` are listed as DNS servers.
 

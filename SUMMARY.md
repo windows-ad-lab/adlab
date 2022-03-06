@@ -18,7 +18,9 @@
     * [File services](lab-setup/building-the-lab/creating-fileserver-file01/file-services.md)
   * [Creating W10 client - WS01](lab-setup/building-the-lab/creating-w10-client-ws01.md)
     * [PSRemoting](lab-setup/building-the-lab/creating-w10-client-ws01/psremoting.md)
-  * [Creating Webserver - WEB01](lab-setup/building-the-lab/creating-webserver-web01.md)
+  * [Creating Webserver - WEB01](lab-setup/building-the-lab/creating-webserver-web01/README.md)
+    * [Web Services](lab-setup/building-the-lab/creating-webserver-web01/web-services.md)
+    * [SQL Server](lab-setup/building-the-lab/creating-webserver-web01/sql-server.md)
 
 ## Vulnerabilities / Misconfigurations
 

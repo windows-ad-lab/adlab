@@ -74,11 +74,11 @@ Repeat these steps for each Image we would like to create (Windows Server 2019, 
 
 1. Click Start and select the gear Settings Icon.
 
-![](<../../../.gitbook/assets/image (27).png>)
+![](<../../../.gitbook/assets/image (27) (1).png>)
 
 2\. The Windows Settings menu appears, click on "Update & Security"
 
-![](<../../../.gitbook/assets/image (26).png>)
+![](<../../../.gitbook/assets/image (26) (1).png>)
 
 3\. Click on "Check for Updates" and install all updates.
 

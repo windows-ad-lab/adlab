@@ -8,15 +8,15 @@
 
 2\. Click on "View" and enable "Avanced Features"
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)
 
 3\. Open "Employees", right click the user `Richard` and click on "Properties"
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 4\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
-![](<../../../.gitbook/assets/image (39).png>)
+![](<../../../.gitbook/assets/image (39) (1).png>)
 
 5\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
@@ -48,7 +48,7 @@ GetNPUsers.py amsterdam/ -usersfile users.txt -format hashcat -outputfile asrepr
 cat asreproasting
 ```
 
-![](<../../../.gitbook/assets/image (43).png>)
+![](<../../../.gitbook/assets/image (43) (1).png>)
 
 3\. The user richard doesn't require pre-authentication and we have an hash from the TGT. Lets crack it with hashcat and [this](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/2020-200\_most\_used\_passwords.txt) wordlist. The hashcat parameters are:
 
