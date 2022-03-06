@@ -143,7 +143,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
-![](<../../../.gitbook/assets/image (41).png>)
+![](<../../../.gitbook/assets/image (41) (1).png>)
 
 4\. Fill in the following information and click on "Next".
 
@@ -191,7 +191,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 4\. At the step "Server Roles" select "DHCP Server", click "Add Features" and "Next" three times.
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
 5\. At the step "Confirmation" click "Install". Once the installation finishes click close.
 
