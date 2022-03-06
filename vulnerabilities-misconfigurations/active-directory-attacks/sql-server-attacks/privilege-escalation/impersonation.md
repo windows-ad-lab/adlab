@@ -55,11 +55,15 @@ SQL Server has a special permission, named impersonate, this enables one user to
 
 ### Tools
 
-* mssql-cli
+* [HeidiSQL](https://www.heidisql.com)
 
 ### Executing the attack
 
+1. Login to `WS01` as Richard with the password `Sample123`.
+2. Download and start heidiSQL.
+3. Click on "New" on the left bottom and configure the following settings:
 
+*
 
 ## Defending
 
