@@ -116,7 +116,7 @@ We successfully impersonated Developer and then DB\_Owner.
 
 ### Recommendations
 
-
+* Minimalise the use of impersonation and audit the users who can impersonate other users.
 
 ### Detection
 
