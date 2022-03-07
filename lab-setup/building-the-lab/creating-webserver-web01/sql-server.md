@@ -3,16 +3,16 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../.gitbook/assets/image (60) (1).png>)
+![](<../../../.gitbook/assets/image (60) (1) (1).png>)
 
 
 {% endhint %}
@@ -40,7 +40,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../.gitbook/assets/image (51) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (26).png>)
 
@@ -62,7 +62,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Open the "SQL Configuration Manager".
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 13\. Expand "SQL Server Network Configuration" and select "Protocols for DEV". Double click on it and select the "IP Adresses" tab. Fill in `1433` for "TCP Port".
 
@@ -70,7 +70,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Scroll to the bottom and also configure IPAll:
 
-![](<../../../.gitbook/assets/image (51) (1) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1) (1).png>)
 
 14\. Then click "Apply".
 
@@ -108,7 +108,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 
-![](<../../../.gitbook/assets/image (32) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
 
 ### Testing connectivity
 

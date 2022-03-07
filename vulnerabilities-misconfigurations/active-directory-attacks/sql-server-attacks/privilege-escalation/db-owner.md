@@ -151,7 +151,7 @@ USE Production;
 EXEC sp_elevate_me
 ```
 
-![](../../../../.gitbook/assets/image.png)
+![](<../../../../.gitbook/assets/image (1).png>)
 
 9\. Check if we are sysadmin:
 
@@ -159,7 +159,7 @@ EXEC sp_elevate_me
 SELECT is_srvrolemember('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../../.gitbook/assets/image (34) (1).png>)
 
 The `1` means that we are sysadmin! Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 

@@ -153,7 +153,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 5\. For this user we will set a password we can remember `TheBestSecureBank2022`. Make sure you save it somewhere, like in a password manager. And uncheck the box "user must change password at next logon"
 
-![](<../../../.gitbook/assets/image (45).png>)
+![](<../../../.gitbook/assets/image (45) (1).png>)
 
 6\. Click "Next" and "Finish"
 
@@ -235,7 +235,7 @@ Password: `jr8Q3o97@s37AF`
 
 7\. Fill in `10.0.0.1` for the default gateway and click on "Add", it should be in the list and then click on "Next"
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)
 
 8\. At the step "Domain Name and DNS Server" make sure `10.0.0.2` and `10.0.0.3` are listed as DNS servers.
 

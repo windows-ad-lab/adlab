@@ -102,7 +102,7 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 1. Empty the recycle bin by rightcliking on it and selecting "Empty Recycle Bin"
 
-![](<../../../.gitbook/assets/image (44).png>)
+![](<../../../.gitbook/assets/image (44) (1).png>)
 
 1. Open explorer and click on "This PC", right click the C:\ disk and click "Properties".
 
@@ -110,7 +110,7 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 4\. Click on "Disk Cleanup", "Clean System Files", select everything and Click "OK"
 
-![](<../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
@@ -120,7 +120,7 @@ To be able to clone the virtual machine without having any problems when joining
 
 1. Press Windows + R, type sysprep and click OK.
 
-![](<../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 2\. Windows Explorer opens and click on the "Sysprep" application.
 

@@ -23,11 +23,11 @@
 
 5\. Click on "Search", click "Locations" and expand the directories and click on "Amsterdam.bank.local".
 
-![](<../../../../.gitbook/assets/image (60).png>)
+![](<../../../../.gitbook/assets/image (60) (1).png>)
 
 6\. Fill in "Richard" and click "Check Names".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
 7\. At "Default Database" select "Production".
 
@@ -39,7 +39,7 @@
 
 9\. Click "OK".
 
-![](<../../../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -75,7 +75,7 @@ python3 -m http.server 8090
 Get-SQLInstanceDomain
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1).png>)
+![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
 
 The output shows one SQL Instance.
 
@@ -85,7 +85,7 @@ The output shows one SQL Instance.
 Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
 
 The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.local`.
 
@@ -99,7 +99,7 @@ If ran from a user that doesn't have access (for example John), it says `not acc
 Get-SQLServerInfo -Instance WEB01.amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../../.gitbook/assets/image (67) (1).png>)
 
 It shows that we aren't sysadmin. Which means we can't execute commands on the database, but our user has access to the database. So we can look into the database for sensitive information or we might be able to escalate our privileges to sysadmin.
 
