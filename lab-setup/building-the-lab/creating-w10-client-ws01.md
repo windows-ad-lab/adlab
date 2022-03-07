@@ -86,3 +86,13 @@ Now the machine will spin up and load our user-profile. After some minutes the m
 now we're able to login into the `amsterdam.bank.local` domain.
 
 ![](<../../.gitbook/assets/afbeelding (4) (2) (1).png>)
+
+### Removing local admin users
+
+1. Login to the machine with the `Administrator` user from the domain with password `Welcome01`.
+2. Execute the following commands to remove the user `user` and `user02`.
+
+```
+net user user /del
+net user user02 /del
+```
