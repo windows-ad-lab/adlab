@@ -57,7 +57,7 @@ Enter-PSSession ws01
 $creds = Get-Credential
 ```
 
-![](<../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 4\. Run the following command to connect to `WS01` as `John`:
 

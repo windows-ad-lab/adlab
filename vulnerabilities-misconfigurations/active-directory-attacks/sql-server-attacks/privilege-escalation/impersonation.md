@@ -69,11 +69,11 @@ SQL Server has a special permission, named impersonate, this enables one user to
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (33).png>)
+![](<../../../../.gitbook/assets/image (33) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 
-5\. Click on the "Query" tab and enter the following Query to check which users can be impersonated by the current user:
+5\. Click on the "Query" tab and enter the following Query to check which users can be impersonated by the current user.
 
 ```
 -- Find users that can be impersonated
@@ -88,7 +88,7 @@ We can impersonate the `Developer` user.
 
 ![](<../../../../.gitbook/assets/image (62).png>)
 
-6\. Impersonate the `Developer` user with the following Query:
+6\. Impersonate the `Developer` user with the following query.
 
 ```
 EXECUTE AS LOGIN = 'developer'
@@ -100,11 +100,11 @@ EXECUTE AS LOGIN = 'developer'
 Make sure the Master database is selected since the developer user doesn't have access to the production database.
 {% endhint %}
 
-7\. Execute the who can be impersonated query again:
+7\. Execute the who can be impersonated query again.
 
 ![](<../../../../.gitbook/assets/image (52).png>)
 
-8\. Impersonate the user `sa`:
+8\. Impersonate the user `sa`.
 
 ```
 EXECUTE AS LOGIN = 'sa'
@@ -114,7 +114,7 @@ EXECUTE AS LOGIN = 'sa'
 
 Hmm that doesn't work, lets impersonate `Developer_test`
 
-8\. Impersonate `Developer_test`:
+8\. Impersonate `Developer_test`.
 
 ```
 EXECUTE AS LOGIN = 'Developer_test'
@@ -124,7 +124,7 @@ EXECUTE AS LOGIN = 'Developer_test'
 
 ![](<../../../../.gitbook/assets/image (7).png>)
 
-10\. Impersonate `sa`:
+10\. Impersonate `sa`.
 
 ```
 EXECUTE AS LOGIN = 'sa'
@@ -136,7 +136,7 @@ Now no error:
 
 We successfully impersonated `Developer` --> `Developer_test` --> `sa`.
 
-Check the executing commands page under SQL Server Attacks to learn to execute cmd commands:
+Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 
 {% content-ref url="../executing-commands.md" %}
 [executing-commands.md](../executing-commands.md)

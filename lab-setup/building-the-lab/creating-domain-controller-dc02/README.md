@@ -161,7 +161,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 1. Right click the user and click on "Add to a group..."
 
-![](<../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1).png>)
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
