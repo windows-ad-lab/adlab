@@ -2,9 +2,9 @@
 
 ## Attack path visualised
 
-//ToDo: image
+![1. Enumerating users with kerbrute](<../../.gitbook/assets/1.0 enumerate users (1).png>)
 
-![](<../../.gitbook/assets/1.0 enumerate users (1).png>)
+![2. Password spraying with kerbrute](<../../.gitbook/assets/2.0 Password\_spraying.png>)
 
 ## Steps for the specified attack path
 
@@ -20,10 +20,13 @@
 [password-spraying.md](../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
 
-\
-
-
 3\. Ws01 privesc with misconfigured service
+
+{% content-ref url="../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
+[unqouted-service-path.md](../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
+{% endcontent-ref %}
+
+
 
 4\. Dump hashes - IT user logged in who can access share and IT folder on File01
 
