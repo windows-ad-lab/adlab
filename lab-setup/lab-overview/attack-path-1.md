@@ -4,7 +4,7 @@
 
 //ToDo: image
 
-![](<../../.gitbook/assets/1.0 enumerate users.png>)
+![](<../../.gitbook/assets/1.0 enumerate users (1).png>)
 
 ## Steps for the specified attack path
 
