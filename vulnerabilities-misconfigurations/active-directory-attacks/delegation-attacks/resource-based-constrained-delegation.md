@@ -1,3 +1,10 @@
+---
+description: >-
+  Abuse the lockscreen image changing functionality to achieve a webdav network
+  authentication as SYSTEM from the given computer. Then relay the
+  authentication to the Active Directory LDAP service in or
+---
+
 # Change-LockScreen
 
 ## Configuring
@@ -25,7 +32,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 ### How it works
 
-[https://research.nccgroup.com/2019/08/20/kerberos-resource-based-constrained-delegation-when-an-image-change-leads-to-a-privilege-escalation/](https://research.nccgroup.com/2019/08/20/kerberos-resource-based-constrained-delegation-when-an-image-change-leads-to-a-privilege-escalation/)
+Abuse the lockscreen image changing functionality to achieve a webdav network authentication as SYSTEM from the given computer. Then relay the authentication to the Active Directory LDAP service in order to set up Resource-Based Constrained Delegation to that specific machine.
 
 ### Tools
 
