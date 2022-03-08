@@ -2,7 +2,7 @@
 
 ## General machine info
 
-* Machine Name: `DC03`
+* Machine Name: `DATA01`
 * IP Adress: `10.0.0.101`
 * Subnetmask: `255.255.255.0`
 * Gateway: `10.0.0.1`

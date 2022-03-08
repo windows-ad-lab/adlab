@@ -6,7 +6,7 @@ description: >-
 
 # Lab overview
 
-![](<../.gitbook/assets/afbeelding (40).png>)
+![](<../../.gitbook/assets/afbeelding (40).png>)
 
 ### General info
 
@@ -20,4 +20,14 @@ Gateway: `10.0.0.1`
 
 ### Attack path 1
 
+//ToDo: add image which visually shows the attack path.
+
 ### Attack path 2
+
+
+
+## Vulnerabilities/ Misconfigurations overview
+
+Not all vulnerabilities or misconfigurations are inside an attack path. In this overview you can see which Vulnerabilities or misconfigurations are inside this gitbook, but not inside an attack path:
+
+//ToDo: add list
