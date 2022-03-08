@@ -2,23 +2,23 @@
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Users and Computers".
 
-![](<../../../.gitbook/assets/afbeelding (52) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/afbeelding (52) (1) (1) (1).png>)
 
 ### Creating a Organizational Unit (OU)
 
 2\. Extend the directories and right click on "amsterdam.bank.local", select "New" and "Organizational Unit". Give it the name `Employees` and click on "OK"
 
-![](<../../../.gitbook/assets/image (36) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (36) (1) (1).png>)
 
 ### Creating Groups
 
 1. Right click on the newly created OU and select "New" and then "Group"
 
-![](<../../../.gitbook/assets/image (17) (1).png>)
+![](<../../../../../.gitbook/assets/image (17) (1).png>)
 
 2\. Fill in "Finance" and click on "OK"
 
-![](<../../../.gitbook/assets/image (38) (1).png>)
+![](<../../../../../.gitbook/assets/image (38) (1).png>)
 
 3\. Repeat and create the following groups:
 
@@ -27,7 +27,7 @@
 * Employees
 * IT
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 ### Creating Users
 
@@ -44,7 +44,7 @@ With the command `net user <username> /domain` it's possible to check someone's 
 net user IT-Support01 /domain
 ```
 
-![](<../../../.gitbook/assets/afbeelding (9) (1).png>)
+![](<../../../../../.gitbook/assets/afbeelding (9) (1).png>)
 
 For attack path \<url to attackpath> we need to create an user account in the Employees-group, to create an account we can use `net user /add <username> <password> /domain` and to add it inside the Employees-group we can use `net group Employees <username> /add /domain`. In this example we're using the following commands:
 
@@ -61,7 +61,7 @@ With the command `net user <username> /domain` it's possible to check someone's 
 net user pukcab /domain
 ```
 
-![](<../../../.gitbook/assets/afbeelding (25).png>)
+![](<../../../../../.gitbook/assets/afbeelding (25).png>)
 
 ## References
 

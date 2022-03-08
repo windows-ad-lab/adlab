@@ -8,6 +8,8 @@
 4. Make a copy of the `Windows Server 2022 - Image` directory and rename it to `FILE01`.
 5. Make a copy of the `Windows 10 - Image` directory and rename it to `WS01`.
 6. Make a copy of the `Windows Server 2019 - Image` directory and rename it to `WEB01`.
+7. Make a copy of the `Windows Server 2022 - Image` directory and rename it do `DC03`.
+8. Make a copy of the `Windows Server 2022 - Image` directory and rename it do `DATA01`.
 
 ## Creating Virtual Machines
 
@@ -25,7 +27,6 @@
 
 5\. Repeat this for all machines.
 
-You should have the following machines: DC01, DC02, FILE01, WEB01, WS01 and three images.&#x20;
+You should have the following machines: DC01, DC02, DC03, FILE01, WEB01, WS01, DATA01 and three images.
 
-![](<../../.gitbook/assets/afbeelding (7).png>)
-
+![](<../../.gitbook/assets/afbeelding (29).png>)

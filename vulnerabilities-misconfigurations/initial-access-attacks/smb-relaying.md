@@ -40,7 +40,7 @@ SET Max=150
 
 1\. Open up 'Task Scheduler'.
 
-![](<../../.gitbook/assets/afbeelding (29).png>)
+![](<../../.gitbook/assets/afbeelding (29) (1).png>)
 
 2\. Select "Task Scheduler Library" and click "create a new task".
 

@@ -11,7 +11,7 @@ PSRemoting allows you to run commands on remote computers just as if you were si
 Enable-PSRemoting
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2) (1).png>)
+![](<../../../../../.gitbook/assets/image (10) (1) (2) (1).png>)
 
 > The `Enable-PSRemoting` cmdlet performs the following operations:
 >
@@ -38,7 +38,7 @@ Local admin acces is not required, it is possible as a normal user if its part o
 net localgroup "Remote Management Users" john /add
 ```
 
-![](<../../../.gitbook/assets/image (8) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 ## Testing
 
@@ -49,7 +49,7 @@ net localgroup "Remote Management Users" john /add
 Enter-PSSession ws01
 ```
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1).png>)
 
 3\. Create a PSCredential for the user `John` with the password `Welcome2022!` using the `Get-Credential` command.
 
@@ -57,7 +57,7 @@ Enter-PSSession ws01
 $creds = Get-Credential
 ```
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 4\. Run the following command to connect to `WS01` as `John`:
 
@@ -65,10 +65,10 @@ $creds = Get-Credential
 Enter-PSSession WS01 -Credential $creds
 ```
 
-![](<../../../.gitbook/assets/image (11) (1) (2).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (2).png>)
 
 Read more about PSRemoting and lateral movement:
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md" %}
-[psremoting.md](../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md)
+{% content-ref url="../../../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md" %}
+[psremoting.md](../../../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md)
 {% endcontent-ref %}
