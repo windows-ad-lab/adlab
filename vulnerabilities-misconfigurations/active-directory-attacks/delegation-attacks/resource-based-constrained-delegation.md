@@ -66,7 +66,7 @@ crackmapexec ldap 10.0.0.5 -u richard -p Sample123 -M MAQ
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
-The machine account qouta is 10, meaning we can create our own computerobject in the domain.
+The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 
 2\. Create machine account `FAKE01` with password `123456` with PowerMad:
 
