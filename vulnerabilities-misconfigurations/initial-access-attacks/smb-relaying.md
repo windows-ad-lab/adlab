@@ -44,11 +44,11 @@ SET Max=150
 
 2\. Select "Task Scheduler Library" and click "create a new task".
 
-![](<../../.gitbook/assets/afbeelding (26).png>)
+![](<../../.gitbook/assets/afbeelding (26) (1).png>)
 
 3\. In the "General" tab, select "Run whetever user is logged on or not". Also we need to change the user, this can be done by clicking on "Change User..." and login with the user we have created for this attack, in our case `pukcab:Bangbang123` .
 
-![](<../../.gitbook/assets/afbeelding (9).png>)
+![](<../../.gitbook/assets/afbeelding (9) (1).png>)
 
 4\. At the 'Triggers' tab, click on "New...". Within the new tab, set 'Begin the task:' on "At startup". Check "Repeat task every:" and set the value "5 minutes" and set 'for a duration of:' to "indefinitely".
 
