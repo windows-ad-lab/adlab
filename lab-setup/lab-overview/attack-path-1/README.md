@@ -6,6 +6,10 @@
 
 ![2. Password spraying with kerbrute](<../../../.gitbook/assets/2.0 Password\_spraying.png>)
 
+![3. Escalating priviliges of our user John](<../../../.gitbook/assets/3.0 Escalate priviliges.png>)
+
+![4. After dumping hashes we sprayed the hash against the network](<../../../.gitbook/assets/4.0 access share v2.0.png>)
+
 ## Steps for the specified attack path
 
 1\. First we need to get a list of usernames, which are valid inside our domain. We can do this by enumerating usernames with a list of top usernames.
@@ -20,17 +24,23 @@
 [password-spraying.md](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
 
-3\. Ws01 privesc with misconfigured service
+3\. We notice some weak credentials and can now access WS01. But sadly our user has low privileges on WS01. Let's try to abuse some misconfigured service's.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
 [unqouted-service-path.md](../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
 {% endcontent-ref %}
 
+4\. Once we have administrator privileges on WS01, we can dump the hashes. With the gathered hashes, we can spray the hash against the network and we notice IT-Support01 has access to some shares on FILE01.
 
-
-4\. Dump hashes - IT user logged in who can access share and IT folder on File01
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md" %}
+[password-spraying.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)
+{% endcontent-ref %}
 
 5\. Power Shell script with encrypted password (or another configuratie file or anything)
+
+{% content-ref url="../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md" %}
+[passwords-on-shares.md](../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
+{% endcontent-ref %}
 
 6\. The user has resetpassword on multiple users including a \<USER>
 
