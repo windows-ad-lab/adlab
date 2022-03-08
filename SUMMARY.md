@@ -45,7 +45,7 @@
       * [Printerbug](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/unconstrained-delegation/printerbug.md)
     * [Constrained Delegation](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md)
     * [Resource Based Constrained Delegation](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/README.md)
-      * [Page 4](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/page-4.md)
+      * [Computer Account Takeover](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/computer-account-takeover.md)
       * [Change-LockScreen](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation.md)
   * [ACL-Abuses](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/README.md)
     * [Page 1](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
