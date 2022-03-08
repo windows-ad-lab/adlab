@@ -8,13 +8,13 @@
 
 ## Steps for the specified attack path
 
-1\. First we need to get a list of usernames, which are valid inside our domain. We can do this with enumerating usernames. We will use the tool kerbrute.
+1\. First we need to get a list of usernames, which are valid inside our domain. We can do this by enumerating usernames with a list of top usernames.
 
 {% content-ref url="../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/" %}
 [username-enumeration](../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/)
 {% endcontent-ref %}
 
-2\. After we have a list of usernames which are available in our domain, we can spray easy to guess passwords against it.
+2\. After we have a list of usernames which are available in our domain, we can spray easy to guess passwords against the users that were discovered.
 
 {% content-ref url="../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md" %}
 [password-spraying.md](../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
