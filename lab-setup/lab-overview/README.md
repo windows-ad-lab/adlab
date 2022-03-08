@@ -24,8 +24,8 @@ Gateway: `10.0.0.1`
 
 Steps taken in this attack path are written on the following page:
 
-{% content-ref url="attack-path-1.md" %}
-[attack-path-1.md](attack-path-1.md)
+{% content-ref url="attack-path-1/" %}
+[attack-path-1](attack-path-1/)
 {% endcontent-ref %}
 
 ### Attack path 2

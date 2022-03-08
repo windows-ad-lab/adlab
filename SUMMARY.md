@@ -5,7 +5,8 @@
 ## Lab-setup
 
 * [Lab overview](lab-setup/lab-overview/README.md)
-  * [Attack path 1](lab-setup/lab-overview/attack-path-1.md)
+  * [Attack path 1](lab-setup/lab-overview/attack-path-1/README.md)
+    * [Manual](lab-setup/lab-overview/attack-path-1/manual.md)
 * [Building the lab](lab-setup/building-the-lab/README.md)
   * [Prerequisite](lab-setup/building-the-lab/prerequisite.md)
   * [Creating images](lab-setup/building-the-lab/creating-images/README.md)
