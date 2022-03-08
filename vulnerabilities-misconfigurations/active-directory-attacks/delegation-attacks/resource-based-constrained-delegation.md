@@ -163,7 +163,25 @@ RECONFIGURE
 
 ### Recommendations
 
+* Change who can add computers to the domain.
 
+{% content-ref url="../../../defence/hardening/change-who-can-join-computers-to-the-domain.md" %}
+[change-who-can-join-computers-to-the-domain.md](../../../defence/hardening/change-who-can-join-computers-to-the-domain.md)
+{% endcontent-ref %}
+
+* Add privileged users to the protected users group.
+
+{% content-ref url="../../../defence/hardening/protected-users-group.md" %}
+[protected-users-group.md](../../../defence/hardening/protected-users-group.md)
+{% endcontent-ref %}
+
+* Add the flag "Account is sensitive and cannot be delegated".
+
+{% content-ref url="../../../defence/hardening/account-is-sensitive-and-cannot-be-delegated.md" %}
+[account-is-sensitive-and-cannot-be-delegated.md](../../../defence/hardening/account-is-sensitive-and-cannot-be-delegated.md)
+{% endcontent-ref %}
+
+* Remove the WebDav client from servers and workstations.
 
 ### Detection
 

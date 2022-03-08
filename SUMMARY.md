@@ -78,3 +78,6 @@
 * [Detection](defence/detection.md)
 * [Hardening](defence/hardening/README.md)
   * [Strong Password Policy](defence/hardening/strong-password-policy.md)
+  * [Change who can join computers to the domain](defence/hardening/change-who-can-join-computers-to-the-domain.md)
+  * [Protected users group](defence/hardening/protected-users-group.md)
+  * [Account is sensitive and cannot be delegated](defence/hardening/account-is-sensitive-and-cannot-be-delegated.md)
