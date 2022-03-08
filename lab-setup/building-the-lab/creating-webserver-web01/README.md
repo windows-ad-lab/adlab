@@ -83,7 +83,7 @@
 
 2\. Click on "Change settings"
 
-![](<../../../.gitbook/assets/afbeelding (17) (1) (3).png>)
+![](<../../../.gitbook/assets/afbeelding (17) (1) (3) (1).png>)
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
@@ -101,4 +101,4 @@
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
-![](<../../../.gitbook/assets/afbeelding (19) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (19) (1) (1) (1).png>)

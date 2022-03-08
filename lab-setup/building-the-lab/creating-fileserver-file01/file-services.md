@@ -12,7 +12,7 @@ description: >-
 1. Login to `FiILE01` as the `Administrator` user with password `Welcome01!`.
 2. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/afbeelding (19) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (19) (1) (1).png>)
 
 3\. On the right top click on "Manage" and "Add Roles and Features".
 
@@ -22,7 +22,7 @@ description: >-
 
 5\. At the step "Server Roles" expand "File and Storage Services" and "File and ISCSI Services". Then select "File Server".
 
-![](<../../../.gitbook/assets/afbeelding (38) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1) (1) (1).png>)
 
 6\. Click "Next" and then "Install". Wait for the installation to finish.
 
@@ -34,11 +34,11 @@ description: >-
 
 2\. Click on "Shares" and then "to create a file share, start the new share wizard"
 
-![](<../../../.gitbook/assets/afbeelding (6) (1) (2).png>)
+![](<../../../.gitbook/assets/afbeelding (6) (1) (2) (1).png>)
 
 3\. Make sure "SMB Share - Quick" is selected and click "Next".
 
-![](<../../../.gitbook/assets/afbeelding (2).png>)
+![](<../../../.gitbook/assets/afbeelding (2) (1).png>)
 
 4\. Open Windows Explorer and go to the `C:\` disk and create a directory named `Share`.
 
@@ -50,7 +50,7 @@ description: >-
 
 6\. Type the share name: `Data` and click "Next".
 
-![](<../../../.gitbook/assets/afbeelding (17) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (17) (1) (3).png>)
 
 7\. At the steps "Other Settings", "Permissions" and click "Next", we will leave this default.
 

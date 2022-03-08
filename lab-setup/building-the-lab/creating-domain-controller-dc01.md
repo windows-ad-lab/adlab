@@ -63,7 +63,7 @@
 
 9\. Copy the following settings:
 
-![](<../../.gitbook/assets/afbeelding (2) (1).png>)
+![](<../../.gitbook/assets/afbeelding (2) (1) (1).png>)
 
 10\. Click on "OK" and close all the Windows.
 

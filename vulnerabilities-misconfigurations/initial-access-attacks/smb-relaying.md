@@ -56,7 +56,7 @@ SET Max=150
 
 5\. In the "Actions" tab click on "New..." and browse to your .bat file and click on "OK". You should have about the same as us:
 
-![](<../../.gitbook/assets/afbeelding (6).png>)
+![](<../../.gitbook/assets/afbeelding (6) (1).png>)
 
 6\. Conditions doesn't need any change, so we can go to the last tab called "Settings". Within "Settings" the only thing we need to change is "Do not start a new instance" to "Run a new instance in parallel".
 
