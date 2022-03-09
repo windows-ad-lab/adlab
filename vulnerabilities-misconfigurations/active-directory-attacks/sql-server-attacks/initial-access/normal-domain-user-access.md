@@ -75,7 +75,7 @@ python3 -m http.server 8090
 Get-SQLInstanceDomain
 ```
 
-![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (51) (1) (1) (1).png>)
 
 The output shows one SQL Instance.
 

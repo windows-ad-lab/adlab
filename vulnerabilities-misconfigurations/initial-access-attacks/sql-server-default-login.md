@@ -18,7 +18,7 @@ description: >-
 
 4\. Expand the "Security" and "Logins" folders. Right click "sa" and select "Properties". Make sure "Enforce password policy" is unchecked and fill in the password `sa` twice.
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (1).png>)
 
 ## Attacking
 

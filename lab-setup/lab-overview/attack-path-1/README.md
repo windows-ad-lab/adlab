@@ -2,7 +2,24 @@
 
 ## Attack path visualized
 
-![](<../../../.gitbook/assets/afbeelding (49).png>)
+![](<../../../.gitbook/assets/image (51).png>)
+
+## Tasks for the specified attack path
+
+* [ ] Enumerate valid usernames.
+* [ ] Spray password against the valid usernames discovered.
+* [ ] Try to get access to the workstation machines.
+* [ ] Escalate privileges by abusing a mis-configured service.
+* [ ] Dump credentials and enumerate shares.
+* [ ] Retrieve credentials from a share.
+* [ ] Enumerate ACL's for this user and abuse them.
+* [ ] Abuse constrained delegation.
+* [ ] Abuse Unconstrained delegation with the printerbug.
+* [ ] Escalate privileges to the paren't domain.
+* [ ] Discover Foreign Security Principals and access a share across trusts.
+* [ ] Retrieve credentials from the share.
+* [ ] Try to get access to the fileserver.
+* [ ] Abuse ACL and execute DC Sync
 
 ## Steps for the specified attack path
 
@@ -12,7 +29,7 @@
 [username-enumeration](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/)
 {% endcontent-ref %}
 
-2\. After we have a list of usernames which are available in our domain, we can spray easy to guess passwords against the users that were discovered.
+2\. After we have a list of usernames which are available in our domain, we can spray easy to guess passwords against the users that were discovered. The password for one user has been guessed.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md" %}
 [password-spraying.md](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
@@ -20,7 +37,7 @@
 
 3\. Access `WS01` as John by using PSRemoting.
 
-4\. We notice some weak credentials and can now access WS01. But sadly our user has low privileges on `WS01`. Let's try to abuse misconfigured service's.
+4\. But sadly our user has low privileges on `WS01`. Let's try to abuse misconfigured service's.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
 [unqouted-service-path.md](../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
@@ -46,4 +63,4 @@
 [constrained-delegation.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md)
 {% endcontent-ref %}
 
-9\. `WEB01` has unconstrained delegation Domain Admin logged on and is able to access `DC01`.
+9\. `FILE01` has unconstrained delegation Domain Admin logged on and is able to access `DC01`.

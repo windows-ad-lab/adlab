@@ -40,7 +40,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (26).png>)
 
@@ -70,7 +70,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Scroll to the bottom and also configure IPAll:
 
-![](<../../../.gitbook/assets/image (51) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1).png>)
 
 14\. Then click "Apply".
 

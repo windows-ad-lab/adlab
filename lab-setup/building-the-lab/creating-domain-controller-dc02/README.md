@@ -227,7 +227,7 @@ Password: `jr8Q3o97@s37AF`
 * Length: `24`
 * Subnet mask: `255.255.255.0`
 
-![](<../../../.gitbook/assets/image (5) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
 5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 
