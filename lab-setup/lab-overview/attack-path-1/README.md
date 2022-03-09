@@ -24,34 +24,32 @@
 [password-spraying.md](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
 
-3\. We notice some weak credentials and can now access WS01. But sadly our user has low privileges on WS01. Let's try to abuse misconfigured service's.
+3\. Access `WS01` as John by using PSRemoting.
+
+4\. We notice some weak credentials and can now access WS01. But sadly our user has low privileges on `WS01`. Let's try to abuse misconfigured service's.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
 [unqouted-service-path.md](../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
 {% endcontent-ref %}
 
-4\. Once we have administrator privileges on WS01, we can dump the hashes. With the gathered hashes, we can spray the hash against the network and we notice IT-Support01 has access to a share on FILE01.
+5\. Once we have administrator privileges on `WS01`, we can dump the hashes. With the gathered credentials of `IT-Support01`, we can spray against the network and we notice  has access to a share on `FILE01`.
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md" %}
-[password-spraying.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)
-{% endcontent-ref %}
-
-5\. Find PowerShell script with encrypted password
+6\. Find PowerShell script with encrypted password
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md" %}
 [passwords-on-shares.md](../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
 {% endcontent-ref %}
 
-6\. Abuse the permission this user has to reset the password of \<USER>.
+7\. Abuse the permission this user has to reset the password of \<USER>.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md" %}
 [page-1.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
 {% endcontent-ref %}
 
-7\. \<USER> has constrained delegation to FILE01. Abuse this to get access to the server.
+8\. \<USER> has constrained delegation to WEB01. Abuse this to get access to the server.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md" %}
 [constrained-delegation.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md)
 {% endcontent-ref %}
 
-8\. `FILE01` had Domain Admin logged on and is able to access `DC01`.
+9\. `WEB01` has unconstrained delegation Domain Admin logged on and is able to access `DC01`.
