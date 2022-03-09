@@ -2,7 +2,7 @@
 
 ## Attack path visualized
 
-![](<../../../.gitbook/assets/image (51).png>)
+![](../../../.gitbook/assets/attack\_path1.drawio.png)
 
 ## Tasks for the specified attack path
 
@@ -15,52 +15,35 @@
 * [ ] Enumerate ACL's for this user and abuse them.
 * [ ] Abuse constrained delegation.
 * [ ] Abuse Unconstrained delegation with the printerbug.
-* [ ] Escalate privileges to the paren't domain.
+* [ ] Escalate privileges to the parent domain.
 * [ ] Discover Foreign Security Principals and access a share across trusts.
 * [ ] Retrieve credentials from the share.
 * [ ] Try to get access to the fileserver.
 * [ ] Abuse ACL and execute DC Sync
 
-## Steps for the specified attack path
-
-1\. First we need to get a list of usernames, which are valid inside our domain. We can do this by enumerating usernames with a list of top usernames.
+## Pages
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/" %}
 [username-enumeration](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/)
 {% endcontent-ref %}
 
-2\. After we have a list of usernames which are available in our domain, we can spray easy to guess passwords against the users that were discovered. The password for one user has been guessed.
-
 {% content-ref url="../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md" %}
 [password-spraying.md](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
-
-3\. Access `WS01` as John by using PSRemoting.
-
-4\. But sadly our user has low privileges on `WS01`. Let's try to abuse misconfigured service's.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
 [unqouted-service-path.md](../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
 {% endcontent-ref %}
 
-5\. Once we have administrator privileges on `WS01`, we can dump the hashes. With the gathered credentials of `IT-Support01`, we can spray against the network and we notice  has access to a share on `FILE01`.
-
-6\. Find PowerShell script with encrypted password
-
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md" %}
 [passwords-on-shares.md](../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
 {% endcontent-ref %}
-
-7\. Abuse the permission this user has to reset the password of \<USER>.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md" %}
 [page-1.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
 {% endcontent-ref %}
 
-8\. \<USER> has constrained delegation to `FILE01`. Abuse this to get access to the server.
-
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md" %}
 [constrained-delegation.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md)
 {% endcontent-ref %}
 
-9\. `FILE01` has unconstrained delegation Domain Admin logged on and is able to access `DC01`.
