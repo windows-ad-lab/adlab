@@ -40,7 +40,7 @@
 [page-1.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
 {% endcontent-ref %}
 
-8\. \<USER> has constrained delegation to WEB01. Abuse this to get access to the server.
+8\. \<USER> has constrained delegation to `FILE01`. Abuse this to get access to the server.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md" %}
 [constrained-delegation.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md)
