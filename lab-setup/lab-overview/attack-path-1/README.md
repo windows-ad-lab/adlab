@@ -24,26 +24,33 @@
 [password-spraying.md](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
 
-3\. We notice some weak credentials and can now access WS01. But sadly our user has low privileges on WS01. Let's try to abuse some misconfigured service's.
+3\. We notice some weak credentials and can now access WS01. But sadly our user has low privileges on WS01. Let's try to abuse misconfigured service's.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
 [unqouted-service-path.md](../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
 {% endcontent-ref %}
 
-4\. Once we have administrator privileges on WS01, we can dump the hashes. With the gathered hashes, we can spray the hash against the network and we notice IT-Support01 has access to some shares on FILE01.
+4\. Once we have administrator privileges on WS01, we can dump the hashes. With the gathered hashes, we can spray the hash against the network and we notice IT-Support01 has access to a share on FILE01.
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md" %}
 [password-spraying.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)
 {% endcontent-ref %}
 
-5\. Power Shell script with encrypted password (or another configuratie file or anything)
+5\. Find PowerShell script with encrypted password
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md" %}
 [passwords-on-shares.md](../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
 {% endcontent-ref %}
 
-6\. The user has resetpassword on multiple users including a \<USER>
+6\. Abuse the permission this user has to reset the password of \<USER>.
 
-7\. \<USER> has constrained delegation to file01
 
-8\. File01 had Domain Admin logged on and is able to access dc01
+
+7\. \<USER> has constrained delegation to FILE01. Abuse this to get access to the server.
+
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md" %}
+[constrained-delegation.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md)
+{% endcontent-ref %}
+
+8\. `FILE01` had Domain Admin logged on and is able to access `DC01`.
+
