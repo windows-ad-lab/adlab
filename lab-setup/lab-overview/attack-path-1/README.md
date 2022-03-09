@@ -44,7 +44,9 @@
 
 6\. Abuse the permission this user has to reset the password of \<USER>.
 
-
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md" %}
+[page-1.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
+{% endcontent-ref %}
 
 7\. \<USER> has constrained delegation to FILE01. Abuse this to get access to the server.
 
@@ -53,4 +55,3 @@
 {% endcontent-ref %}
 
 8\. `FILE01` had Domain Admin logged on and is able to access `DC01`.
-
