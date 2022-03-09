@@ -22,7 +22,7 @@ description: >-
 
 5\. At the step "Server Roles" expand "File and Storage Services" and "File and ISCSI Services". Then select "File Server".
 
-![](<../../../.gitbook/assets/afbeelding (38) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1) (1) (1) (1).png>)
 
 6\. Click "Next" and then "Install". Wait for the installation to finish.
 

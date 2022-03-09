@@ -15,7 +15,7 @@
 1. Startup the machine.
 2. When asked if you copied the Virtual Machine, select "I Copied It".
 
-![](<../../../.gitbook/assets/afbeelding (38).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International".
 

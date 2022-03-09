@@ -1,14 +1,8 @@
 # Attack path 1
 
-## Attack path visualised
+## Attack path visualized
 
-![1. Enumerating users with kerbrute](<../../../.gitbook/assets/1.0 enumerate users (1).png>)
-
-![2. Password spraying with kerbrute](<../../../.gitbook/assets/2.0 Password\_spraying.png>)
-
-![3. Escalating priviliges of our user John](<../../../.gitbook/assets/3.0 Escalate priviliges.png>)
-
-![4. After dumping hashes we sprayed the hash against the network](<../../../.gitbook/assets/4.0 access share v2.0.png>)
+![](<../../../.gitbook/assets/afbeelding (49).png>)
 
 ## Steps for the specified attack path
 
