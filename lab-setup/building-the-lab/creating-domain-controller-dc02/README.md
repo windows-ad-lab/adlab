@@ -204,7 +204,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 Username: `bank\admin_bank`\
 Password: `jr8Q3o97@s37AF`
 
-![](<../../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 8\. Click on "Commit" and "close".
 

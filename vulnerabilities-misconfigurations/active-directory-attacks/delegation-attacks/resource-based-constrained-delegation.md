@@ -26,7 +26,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 4\. Select "File and Printer sharing" and click on "OK"
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
 ## Attacking
 

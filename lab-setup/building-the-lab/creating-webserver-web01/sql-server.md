@@ -84,7 +84,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 16\. Do the same for "SQL Server Agent":
 
-![](<../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1).png>)
 
 17\. Download and Install [SQL Server Mangement Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN\&view=sql-server-ver15). Just Click "Install" and reboot the system.
 
@@ -109,6 +109,8 @@ The SQL Server Installation may require internet access, temporally add a second
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 
 ![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
+
+6\. When done remove the "NAT" adapter from the virtual machine.
 
 ### Testing connectivity
 
