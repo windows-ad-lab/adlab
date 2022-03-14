@@ -32,7 +32,8 @@
           * [Create database](lab-setup/building-the-lab/creating-webserver-web01/sql-server/create-database.md)
   * [Creating secure.corp](lab-setup/building-the-lab/creating-secure.corp/README.md)
     * [Creating Domain Controller - DC03](lab-setup/building-the-lab/creating-secure.corp/creating-domain-controller-dc03.md)
-    * [Creating File/SQL Server - DATA01](lab-setup/building-the-lab/creating-secure.corp/creating-file-sql-server-data01.md)
+    * [Creating File/SQL Server - DATA01](lab-setup/building-the-lab/creating-secure.corp/creating-file-sql-server-data01/README.md)
+      * [SQL Server](lab-setup/building-the-lab/creating-secure.corp/creating-file-sql-server-data01/sql-server.md)
 
 ## Vulnerabilities / Misconfigurations
 

@@ -48,7 +48,7 @@ When pre-authentication is not required, an attack can directly send a request f
 GetNPUsers.py amsterdam/ -usersfile users.txt -format hashcat -outputfile asreproastinng
 ```
 
-![](<../../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 2\. The tool doesn't say anything about users that don't require pre-authentication. Check if the outputfile exists and cat it:
 

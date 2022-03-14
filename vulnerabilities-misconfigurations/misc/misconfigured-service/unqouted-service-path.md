@@ -19,7 +19,7 @@ description: >-
 sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Service.exe" start= auto
 ```
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1).png>)
 
 3\. Run the following command to create the folders for the service:
 
@@ -137,7 +137,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
 

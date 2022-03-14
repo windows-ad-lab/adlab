@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -153,7 +153,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 5\. For this user we will set a password we can remember `TheBestSecureBank2022`. Make sure you save it somewhere, like in a password manager. And uncheck the box "user must change password at next logon"
 
-![](<../../../.gitbook/assets/image (45) (1).png>)
+![](<../../../.gitbook/assets/image (45) (1) (1).png>)
 
 6\. Click "Next" and "Finish"
 
@@ -171,7 +171,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADGroupMember "Domain Admins"`
 
-![](<../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1).png>)
 
 ## Installing and configuring the DHCP service
 
@@ -197,7 +197,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 6\. In the server manager click on the flag and click on "Complete DHCP configuration"
 
-![](<../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1).png>)
 
 7\. Click "Next" and then select "User alternate credentials" and fill in the credentials for `admin_bank`.
 
@@ -212,7 +212,7 @@ Password: `jr8Q3o97@s37AF`
 
 1. Click on "Tools" in the "Server Manager" and select "DHCP".
 
-![](<../../../.gitbook/assets/image (59) (1).png>)
+![](<../../../.gitbook/assets/image (59) (1) (1).png>)
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
@@ -235,11 +235,11 @@ Password: `jr8Q3o97@s37AF`
 
 7\. Fill in `10.0.0.1` for the default gateway and click on "Add", it should be in the list and then click on "Next"
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png>)
 
 8\. At the step "Domain Name and DNS Server" make sure `10.0.0.2` and `10.0.0.3` are listed as DNS servers.
 
-![](<../../../.gitbook/assets/image (14) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1) (1).png>)
 
 9\. At the step "WINS Servers" and "Activate Scope" click "Next".
 
@@ -247,4 +247,4 @@ Password: `jr8Q3o97@s37AF`
 
 11\. We should now see a Scope for IPV4.
 
-![](<../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1).png>)

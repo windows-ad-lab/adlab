@@ -72,7 +72,7 @@ We got a succesfull login as the `sa` user with the password `sa`.
 crackmapexec mssql 10.0.0.5 -u sa -p sa --local-auth -q "select @@version;"
 ```
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 5\. Connect to the database using mssql-cli.
 
