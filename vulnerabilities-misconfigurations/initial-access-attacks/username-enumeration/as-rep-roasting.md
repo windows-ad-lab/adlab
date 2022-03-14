@@ -16,7 +16,7 @@
 
 2\. Click on "View" and enable "Avanced Features"
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
 3\. Open "Employees", right click the user `Richard` and click on "Properties"
 
@@ -28,7 +28,7 @@
 
 5\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
 
 ## Attacking
 

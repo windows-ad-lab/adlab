@@ -40,7 +40,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (26).png>)
 
@@ -50,15 +50,15 @@ The SQL Server Installation may require internet access, temporally add a second
 
 10\. Change the "Startup Type" for the "SQL Serer Agent" to "Automatic" and make sure all three are set to "Automatic", click "Next".
 
-![](<../../../.gitbook/assets/image (30) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1).png>)
 
 11\. At the next step select "Mixed Mode" and fill in the password `Password1!`. Then select "Add" at the "Specify SQL Server administrators" and add `amsterdam\administrator` then click Next.
 
-![](<../../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 12\. Click "Install" and wait for the installation to finish.
 
-![](<../../../.gitbook/assets/image (42) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (42) (1) (1) (1) (1).png>)
 
 13\. Open the "SQL Configuration Manager".
 
@@ -70,7 +70,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Scroll to the bottom and also configure IPAll:
 
-![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1).png>)
 
 14\. Then click "Apply".
 

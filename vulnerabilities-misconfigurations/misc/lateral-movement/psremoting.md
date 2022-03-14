@@ -24,7 +24,7 @@ net localgroup "Remote Management Users" /add
 Enter-PSSession ws01
 ```
 
-![](<../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (2).png>)
 
 ### Evil-WinRM
 
@@ -44,7 +44,7 @@ evil-winrm -i 10.0.0.128 -u john -p 'Welcome2022!'
 crackmapexec winrm 10.0.0.128 -u john -p 'Welcome2022!'
 ```
 
-![](<../../../.gitbook/assets/image (42) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (42) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 #### Observation

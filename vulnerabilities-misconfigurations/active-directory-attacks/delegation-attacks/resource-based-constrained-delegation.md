@@ -111,7 +111,7 @@ When we check the ntlmrelay output we see that `FAKE01` can now impersonate user
 
 If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute:
 
-![](<../../../.gitbook/assets/image (51) (1).png>)
+![](<../../../.gitbook/assets/image (51) (1) (1).png>)
 
 6\. Create a ticket using `FAKE01` impersonating the domain admin `Administrator` using impackets getST.py. Fill in the password `123456`.
 
@@ -147,7 +147,7 @@ Get-ADComputer fake01 | Remove-ADObject
 
 4\. Open "DNS Manager" and expand DC02 --> Forward Lookup Zones --> and click on `Amsterdam.bank.local.`Remove the DNS-record created for webdav:
 
-![](<../../../.gitbook/assets/image (33).png>)
+![](<../../../.gitbook/assets/image (33) (1).png>)
 
 4\. From our Kali machine set the SQL server settings back:
 

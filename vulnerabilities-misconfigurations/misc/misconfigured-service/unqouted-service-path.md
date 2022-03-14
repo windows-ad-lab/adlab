@@ -54,7 +54,7 @@ icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 icacls.exe "C:\Program Files\bin folder\program"
 ```
 
-![](<../../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -125,7 +125,7 @@ We have no write permissions in `C:\Program Files`:
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 
-![](<../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20) (1).png>)
 
 7\. To abuse this run the following command from PowerUp, which will create a executable `bin.exe` in the path `C:\Program Files\bin folder\program` which will add a new local administrator.
 
@@ -137,7 +137,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 

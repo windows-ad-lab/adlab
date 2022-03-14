@@ -113,7 +113,7 @@
 
 6\. The machine should automatically restart, if not manually restart the machine.
 
-7\. Login with the `Administrator:BankRecoveryKey2022` credentials set during the installation.
+7\. Login with the `Administrator:Welcome01!` credentials set during the installation.
 
 ### Creating a Enterprise Admin
 

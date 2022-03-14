@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -161,7 +161,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 1. Right click the user and click on "Add to a group..."
 
-![](<../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1) (1).png>)
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
@@ -171,7 +171,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADGroupMember "Domain Admins"`
 
-![](<../../../.gitbook/assets/image (55).png>)
+![](<../../../.gitbook/assets/image (55) (1).png>)
 
 ## Installing and configuring the DHCP service
 
@@ -181,7 +181,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 1. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
@@ -191,7 +191,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 4\. At the step "Server Roles" select "DHCP Server", click "Add Features" and "Next" three times.
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png>)
 
 5\. At the step "Confirmation" click "Install". Once the installation finishes click close.
 
@@ -216,7 +216,7 @@ Password: `jr8Q3o97@s37AF`
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
 
 3\. Click "Next", fill in the name "DHCP Clients" and click "Next".
 
@@ -247,4 +247,4 @@ Password: `jr8Q3o97@s37AF`
 
 11\. We should now see a Scope for IPV4.
 
-![](<../../../.gitbook/assets/image (54).png>)
+![](<../../../.gitbook/assets/image (54) (1).png>)

@@ -13,11 +13,11 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 3\. Login with the `sa` user using the password `sa` or `Password1!` (Depending if you changed it for another vulnerability)
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![](<../../../../.gitbook/assets/image (30) (1).png>)
 
 4\. Click “New Query” button and use the SQL query below to make `Amsterdam\Richard` database owner of the `production` database.
 
@@ -53,7 +53,7 @@ SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 ALTER DATABASE MyAppDb SET TRUSTWORTHY ON
 ```
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../../../.gitbook/assets/image (65) (1).png>)
 
 ```
 SELECT a.name,b.is_trustworthy_on
@@ -103,7 +103,7 @@ join sys.database_principals rp on (drm.role_principal_id = rp.principal_id)
 join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 ```
 
-![](<../../../../.gitbook/assets/image (66).png>)
+![](<../../../../.gitbook/assets/image (66) (1).png>)
 
 Our current user `AMSTERDAM\richard` is db\_owner.
 
@@ -126,7 +126,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../../.gitbook/assets/image (13) (1).png>)
 
 The Production database is trustworty.
 
