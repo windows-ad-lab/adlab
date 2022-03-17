@@ -97,3 +97,4 @@
   * [Protected users group](defence/hardening/protected-users-group.md)
   * [Account is sensitive and cannot be delegated](defence/hardening/account-is-sensitive-and-cannot-be-delegated.md)
   * [Example](defence/hardening/example.md)
+  * [Powershell Execution Policy](defence/hardening/powershell-execution-policy.md)
