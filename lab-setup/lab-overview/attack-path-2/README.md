@@ -7,7 +7,7 @@
 ## Tasks for the specified attack path
 
 1. Enumerate valid usernames.
-2. Check if any of the valid users require pre-authentication.
+2. Check if any of the valid users has the 'DONT\_REQ\_PREAUTH' set.
 3. Access the SQL instance.
 4. Escalate privileges to sysadmin.
 5. Get a shell on the SQL server.
