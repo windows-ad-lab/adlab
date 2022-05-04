@@ -143,7 +143,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
-![](<../../../.gitbook/assets/image (47) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
 

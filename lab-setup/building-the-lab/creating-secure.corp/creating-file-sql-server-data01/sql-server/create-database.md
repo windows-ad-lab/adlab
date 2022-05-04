@@ -7,7 +7,7 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../../.gitbook/assets/image (6).png>)
+![](<../../../../../.gitbook/assets/image (6) (1).png>)
 
 4\. Expand the "DATA01\DATA" structure and right click on "Databases", select "New Database".
 
@@ -16,6 +16,4 @@
 5\. Fill in the Database Name `BankTransfers` and click "OK" to create the database.
 
 6\. When done remove the "NAT" adapter from the virtual machine.
-
-## Create database link
 

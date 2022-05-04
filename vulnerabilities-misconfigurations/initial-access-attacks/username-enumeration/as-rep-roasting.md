@@ -12,7 +12,7 @@
 
 1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 2\. Click on "View" and enable "Avanced Features"
 

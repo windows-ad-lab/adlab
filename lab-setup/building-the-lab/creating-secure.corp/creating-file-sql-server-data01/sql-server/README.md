@@ -13,7 +13,11 @@
 
 ![](<../../../../../.gitbook/assets/image (11).png>)
 
-5\. Set the password "`Iloveyou2`" and create the user. Then close all the windows.
+5\. Set the password "`Iloveyou2`" and create the user.&#x20;
+
+6\. Open the tab "Account" and select "Password never expires" under "Account options".
+
+![](<../../../../../.gitbook/assets/image (47).png>)
 
 ### Installing SQL Server
 

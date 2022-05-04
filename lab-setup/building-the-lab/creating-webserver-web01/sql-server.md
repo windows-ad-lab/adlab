@@ -78,7 +78,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Open "SQL Server services" and right click on "SQL Server (DEV)" and click "Restart".
 
-![](<../../../.gitbook/assets/image (47) (1) (1).png>)
+![](<../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (52) (1) (1).png>)
 

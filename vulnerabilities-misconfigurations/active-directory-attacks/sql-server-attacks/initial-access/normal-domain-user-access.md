@@ -31,7 +31,7 @@
 
 7\. At "Default Database" select "Production".
 
-![](<../../../../.gitbook/assets/image (47) (1).png>)
+![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
 
 8\. Click on "User Mapping" and select "Production".
 
@@ -117,7 +117,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (47).png>)
+![](<../../../../.gitbook/assets/image (47) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 
