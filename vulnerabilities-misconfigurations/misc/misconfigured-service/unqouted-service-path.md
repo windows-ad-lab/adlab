@@ -27,7 +27,7 @@ sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Se
 mkdir "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1).png>)
 
 4\. Run icacls to check the current permissions on the directories with a space in it:
 
@@ -121,7 +121,7 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 

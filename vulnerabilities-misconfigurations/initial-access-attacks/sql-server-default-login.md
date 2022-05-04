@@ -12,7 +12,7 @@ description: >-
 
 2\. Open "Microsoft SQL Server Management Studio"
 
-![](<../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../.gitbook/assets/image (32) (1) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -39,7 +39,7 @@ One of the default users (not enabled by default) for SQL Server is the SA user.
 crackmapexec mssql 10.0.0.5 -d .
 ```
 
-![](<../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
 2\. Paste the following passwords in `passwords.txt` to spray with:
 

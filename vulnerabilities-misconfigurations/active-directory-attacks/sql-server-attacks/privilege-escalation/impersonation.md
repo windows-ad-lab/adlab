@@ -28,7 +28,7 @@ description: >-
 
 4\. Click “New Query” button and use the SQL query below to create two new users:
 
-![](<../../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
 
 ```
 CREATE LOGIN Developer WITH PASSWORD = 'MyPassword!';
@@ -102,7 +102,7 @@ Make sure the Master database is selected since the developer user doesn't have 
 
 7\. Execute the who can be impersonated query again.
 
-![](<../../../../.gitbook/assets/image (52).png>)
+![](<../../../../.gitbook/assets/image (52) (1).png>)
 
 8\. Impersonate the user `sa`.
 

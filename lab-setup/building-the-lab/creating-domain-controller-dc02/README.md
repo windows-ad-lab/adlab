@@ -204,7 +204,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 Username: `bank\admin_bank`\
 Password: `jr8Q3o97@s37AF`
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
 8\. Click on "Commit" and "close".
 
@@ -216,7 +216,7 @@ Password: `jr8Q3o97@s37AF`
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Click "Next", fill in the name "DHCP Clients" and click "Next".
 

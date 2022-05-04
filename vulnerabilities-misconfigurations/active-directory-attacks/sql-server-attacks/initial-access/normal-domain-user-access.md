@@ -13,7 +13,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -27,7 +27,7 @@
 
 6\. Fill in "Richard" and click "Check Names".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1).png>)
 
 7\. At "Default Database" select "Production".
 
@@ -39,7 +39,7 @@
 
 9\. Click "OK".
 
-![](<../../../../.gitbook/assets/image (32) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -91,7 +91,7 @@ The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.loc
 
 If ran from a user that doesn't have access (for example John), it says `not accessible`.
 
-![](<../../../../.gitbook/assets/image (52) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
 
 6\. To get mor info about the session on the SQL server run:
 
@@ -123,7 +123,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 
 5\. Click on the databases on the left and see if we got access to any:
 
-![](<../../../../.gitbook/assets/image (66) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1).png>)
 
 We are able to access the Production database, but not the Development one.
 

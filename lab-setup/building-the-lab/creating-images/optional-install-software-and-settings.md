@@ -31,7 +31,7 @@ cd
 CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprompt
 ```
 
-![](<../../../.gitbook/assets/image (66) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1).png>)
 
 8\. Click on "File" --> Save as --> Select "All Files" and save the file as `bginfo.bat` in `C:\BGInfo\`
 
@@ -45,7 +45,7 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 10\. Copy the `bginfo.bat` file and browse to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\` and paste the `bginfo.bat` file
 
-![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
 
 ## VMware tools
 
@@ -78,4 +78,4 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 
 1. Download [Notepad++](https://download.sysinternals.com/files/BGInfo.zip), run the installer and click next next next.
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)

@@ -11,7 +11,7 @@ PSRemoting allows you to run commands on remote computers just as if you were si
 Enable-PSRemoting
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1).png>)
 
 > The `Enable-PSRemoting` cmdlet performs the following operations:
 >

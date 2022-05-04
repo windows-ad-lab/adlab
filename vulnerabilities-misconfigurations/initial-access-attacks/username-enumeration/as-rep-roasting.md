@@ -12,7 +12,7 @@
 
 1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 
 2\. Click on "View" and enable "Avanced Features"
 
@@ -20,7 +20,7 @@
 
 3\. Open "Employees", right click the user `Richard` and click on "Properties"
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
@@ -28,7 +28,7 @@
 
 5\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -70,7 +70,7 @@ wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/
 hashcat -a 0 -m 18200 asreproasting 2020-200_most_used_passwords.txt
 ```
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2).png>)
 
 4\. We succesfully cracked the password. The password for `Richard` is `Sample123`.
 
