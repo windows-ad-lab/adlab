@@ -20,7 +20,7 @@
 
 3\. Open "Employees", right click the user `Richard` and click on "Properties"
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 

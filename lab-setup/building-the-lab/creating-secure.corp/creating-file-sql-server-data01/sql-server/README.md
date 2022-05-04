@@ -87,7 +87,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Then click "Apply".
 
-![](<../../../../../.gitbook/assets/image (28).png>)
+![](<../../../../../.gitbook/assets/image (28) (1).png>)
 
 16\. Open "SQL Server services" and right click on "SQL Server (DATA)" and click "Restart".
 

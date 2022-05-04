@@ -27,7 +27,7 @@
 
 6\. Fill in "Richard" and click "Check Names".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 7\. At "Default Database" select "Production".
 
@@ -85,7 +85,7 @@ The output shows one SQL Instance.
 Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.local`.
 

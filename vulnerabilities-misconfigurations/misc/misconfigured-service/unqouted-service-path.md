@@ -46,7 +46,7 @@ Currently the low privileged users can't create any files in the directories wit
 icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 ```
 
-![](<../../../.gitbook/assets/image (8) (1) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1) (1).png>)
 
 6\. Run icacls again the check the permissions on the directory:
 

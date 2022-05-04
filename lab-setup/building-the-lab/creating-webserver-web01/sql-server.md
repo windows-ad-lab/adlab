@@ -7,7 +7,7 @@
 
 3\. When smartscreen comes up select "Run".
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
