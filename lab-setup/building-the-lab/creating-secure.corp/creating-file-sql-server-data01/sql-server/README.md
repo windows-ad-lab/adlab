@@ -61,7 +61,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../../../.gitbook/assets/image (14).png>)
+![](<../../../../../.gitbook/assets/image (14) (1).png>)
 
 9\. Click Next and fill in the Instance name `data`.
 

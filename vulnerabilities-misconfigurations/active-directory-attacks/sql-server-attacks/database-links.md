@@ -17,7 +17,7 @@
 
 5\. Open the "Security" tab and select "SQL Server and Windows Authentication mode" under "Server authentication".
 
-![](<../../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52) (1).png>)
 
 6\. Open "SQL Server 2019 Configuration Manager"&#x20;
 
@@ -35,9 +35,9 @@
 
 ![](<../../../.gitbook/assets/image (65).png>)
 
-11\. In the tab "Server Roles" select "setupadmin" and click "OK".
+11\. In the tab "Server Roles" select "setupadmin" and "sysadmin" and click "OK".
 
-![](<../../../.gitbook/assets/image (66).png>)
+![](<../../../.gitbook/assets/image (52).png>)
 
 12\. In the tab "User Mapping" select "Bank Transfers".
 
@@ -57,7 +57,11 @@
 
 ![](<../../../.gitbook/assets/image (68).png>)
 
-7\. Click "OK" and the linked server should show up.
+7\. Open the "Server Options" tab and select True for "RPC Out". This is done so we can enable xp\_cmdshell during the attack.
+
+![](<../../../.gitbook/assets/image (14).png>)
+
+8\. Click "OK" and the linked server should show up.
 
 ![](<../../../.gitbook/assets/image (64).png>)
 

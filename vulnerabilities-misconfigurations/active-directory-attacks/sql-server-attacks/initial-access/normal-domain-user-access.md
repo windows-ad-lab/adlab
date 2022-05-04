@@ -91,7 +91,7 @@ The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.loc
 
 If ran from a user that doesn't have access (for example John), it says `not accessible`.
 
-![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1) (1).png>)
 
 6\. To get mor info about the session on the SQL server run:
 
@@ -127,7 +127,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 
 We are able to access the Production database, but not the Development one.
 
-![](<../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
 
 ## Defending
 

@@ -102,7 +102,7 @@ Make sure the Master database is selected since the developer user doesn't have 
 
 7\. Execute the who can be impersonated query again.
 
-![](<../../../../.gitbook/assets/image (52) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1).png>)
 
 8\. Impersonate the user `sa`.
 
