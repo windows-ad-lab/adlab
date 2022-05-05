@@ -15,7 +15,7 @@
 1. Startup the machine.
 2. When asked if you copied the Virtual Machine, select "I Copied It".
 
-![](<../../../.gitbook/assets/afbeelding (38) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1) (1).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International".
 
@@ -43,13 +43,13 @@
 
 6\. Click on "Change adapter options".
 
-![](<../../../.gitbook/assets/afbeelding (19).png>)
+![](<../../../.gitbook/assets/afbeelding (19) (1).png>)
 
 7\. Right click the Ethernet adapter and select "Properties".
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 
-![](<../../../.gitbook/assets/afbeelding (46).png>)
+![](<../../../.gitbook/assets/afbeelding (46) (1).png>)
 
 9\. Copy the following settings:
 

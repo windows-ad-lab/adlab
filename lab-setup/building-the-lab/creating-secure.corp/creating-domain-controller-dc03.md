@@ -29,11 +29,11 @@
 
 1. &#x20;Open File Explorer --> right click "This PC" --> Properties.
 
-![](<../../../.gitbook/assets/afbeelding (19) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (19) (1) (1).png>)
 
 2\.  Click on "Rename this PC".
 
-![](<../../../.gitbook/assets/afbeelding (26).png>)
+![](<../../../.gitbook/assets/afbeelding (26) (1).png>)
 
 3\. Fill in `DC03` and click "Next".
 
@@ -49,7 +49,7 @@
 
 7\. Right click the Ethernet adapter and select "Properties".
 
-![](<../../../.gitbook/assets/afbeelding (38) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1) (1) (1).png>)
 
 8\. Select "Internet Protocol Version 4 (TCP/IPv4) and click "Properties".
 

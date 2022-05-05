@@ -44,7 +44,7 @@ SET Max=150
 
 2\. Select "Task Scheduler Library" and click "create a new task".
 
-![](<../../.gitbook/assets/afbeelding (26) (1).png>)
+![](<../../.gitbook/assets/afbeelding (26) (1) (1).png>)
 
 3\. In the "General" tab, select "Run whetever user is logged on or not". Also we need to change the user, this can be done by clicking on "Change User..." and login with the user we have created for this attack, in our case `pukcab:Bangbang123` .
 

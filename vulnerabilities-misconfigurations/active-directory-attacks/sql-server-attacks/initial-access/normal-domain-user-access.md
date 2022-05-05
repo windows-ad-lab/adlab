@@ -106,10 +106,8 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 #### Connecting with HeidiSQL
 
 1. Download [HeidiSQL](https://www.heidisql.com/download.php?download=portable-64) on `WS01`.
-
-2\. To execute SQL queries and look into the database start heidiSQL.
-
-3\. Click on "New" on the left bottom and configure the following settings:
+2. To execute SQL queries and look into the database start heidiSQL.
+3. Click on "New" on the left bottom and configure the following settings:
 
 * Network Type: `Microsoft SQL Server (TCP/IP)`
 * Library: `SQLOLEDB`

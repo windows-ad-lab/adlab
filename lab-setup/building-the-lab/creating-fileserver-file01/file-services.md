@@ -12,7 +12,7 @@ description: >-
 1. Login to `FiILE01` as the `Administrator` user with password `Welcome01!`.
 2. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/afbeelding (19) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (19) (1) (1) (1).png>)
 
 3\. On the right top click on "Manage" and "Add Roles and Features".
 
@@ -22,7 +22,7 @@ description: >-
 
 5\. At the step "Server Roles" expand "File and Storage Services" and "File and ISCSI Services". Then select "File Server".
 
-![](<../../../.gitbook/assets/afbeelding (38) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (38) (1) (1) (1) (1) (1).png>)
 
 6\. Click "Next" and then "Install". Wait for the installation to finish.
 
@@ -68,7 +68,7 @@ description: >-
 
 2\. Login on `DC01` and access the share `\\file01\data` in Explorer. Check if you can access the share and if the txt file is there.
 
-![](<../../../.gitbook/assets/afbeelding (26) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (26) (1) (1) (1).png>)
 
 All domain users should be able to access the share.
 

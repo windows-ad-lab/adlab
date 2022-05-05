@@ -87,10 +87,11 @@
 
 5\. You will be asked to supply credentials, we will use the `administrator` account from `amsterdam.bank.local` and click on "OK"
 
-![](<../../../.gitbook/assets/afbeelding (19) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (19) (1) (1) (1) (1) (1).png>)
 
 6\. We're welcomed to the domain, click on "OK". After this message it will asks us to reboot the machine, click on "OK". Close the 'System Properties' window and restart the machine now.
 
 now we're able to login into the `amsterdam.bank.local` domain.
 
 ![](<../../../.gitbook/assets/afbeelding (4) (2) (1) (1).png>)
+
