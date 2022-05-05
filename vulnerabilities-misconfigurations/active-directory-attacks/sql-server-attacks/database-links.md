@@ -2,6 +2,12 @@
 
 ## Configuring
 
+### Prerequisite
+
+{% content-ref url="initial-access/normal-domain-user-access.md" %}
+[normal-domain-user-access.md](initial-access/normal-domain-user-access.md)
+{% endcontent-ref %}
+
 ### Configuring SQL user on Data01
 
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
@@ -69,13 +75,103 @@
 
 ### How it works
 
+SQL Servers can be linked together to access data on the linked SQL Server. The link is created using a security context, this could be a SQL user or a domain user. The link will have the permissions from the user. If the user has sysadmin privileges it is possible to execute queries as sysadmin.
 
+If xp\_cmdshell is enabled on the linked server it is possible to execute commands. Or if RPCOUT is enabled it is possible to enable xp\_cmdshell.
 
 ### Tools
 
-
+* [PowerupSQL](https://github.com/NetSPI/PowerUpSQL)
+* [Heidisql](https://www.heidisql.com)
 
 ### Executing the attack
+
+1. Download PowerUpSQL on the kali machine and host it on a webserver:
+
+```
+wget https://raw.githubusercontent.com/NetSPI/PowerUpSQL/master/PowerUpSQL.ps1
+python3 -m http.server 8090
+```
+
+2\. Login to `WS01` as Richard with the password `Sample123`.
+
+3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
+
+![](<../../../.gitbook/assets/afbeelding (20).png>)
+
+3\. With PowerUPSQL and the `Get-SQLServerLink` cmdlet we can query the SQL Server links from the current domain.
+
+```
+Get-SQLInstanceDomain | Get-SQLServerLink.
+```
+
+![](<../../../.gitbook/assets/afbeelding (36).png>)
+
+4\. The output shows that `web01.amsterdam.bank.local` has a SQL Server link to `DATA01.secure.local`.  A link that is to another domain. The output also shows that rpc\_out is enabled. With the cmdlet `Get-SQLServerLinkCrawl` we can execute a query through the linked servers.&#x20;
+
+```
+Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version'
+```
+
+![](<../../../.gitbook/assets/afbeelding (17).png>)
+
+We wont see the data from the SQL Query since its wrapped into the `CustomQuery` object. It is also queried to both SQL Servers.
+
+5\. With the parameter `-QueryTarget` we can select a target instance to query.
+
+```
+Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryTarget DATA01\DATA | Select-Object -ExpandProperty CustomQuery
+```
+
+![](<../../../.gitbook/assets/afbeelding (44).png>)
+
+#### Connecting with HeidiSQL
+
+1. Download [HeidiSQL](https://www.heidisql.com/download.php?download=portable-64) on `WS01`.
+2. To execute SQL queries and look into the database start heidiSQL.
+3. Click on "New" on the left bottom and configure the following settings:
+
+* Network Type: `Microsoft SQL Server (TCP/IP)`
+* Library: `SQLOLEDB`
+* Hostname / IP: `WEB01.amsterdam.bank.local`
+* Select: "Use Windows Authentication"
+* Port: `1433`
+
+![](<../../../.gitbook/assets/afbeelding (29).png>)
+
+4\. Click "OK" on the security Issue warning.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

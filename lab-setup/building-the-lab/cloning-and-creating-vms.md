@@ -29,4 +29,4 @@
 
 You should have the following machines: DC01, DC02, DC03, FILE01, WEB01, WS01, DATA01 and three images.
 
-![](<../../.gitbook/assets/afbeelding (29).png>)
+![](<../../.gitbook/assets/afbeelding (29) (1).png>)

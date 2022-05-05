@@ -42,7 +42,7 @@ description: >-
 
 4\. Open Windows Explorer and go to the `C:\` disk and create a directory named `Share`.
 
-![](<../../../.gitbook/assets/afbeelding (36) (1) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (36) (1) (1) (1).png>)
 
 5\. In the installer select "Type a custom path" and type `C:\Share`. Then click "Next".
 
@@ -56,7 +56,7 @@ description: >-
 
 8\. Click "Create"
 
-![](<../../../.gitbook/assets/afbeelding (20) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (20) (1) (2).png>)
 
 ![](<../../../.gitbook/assets/afbeelding (25) (1) (1).png>)
 

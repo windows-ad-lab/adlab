@@ -15,7 +15,7 @@
 1. Startup the machine.
 2. When asked if you copied the Virtual Machine, select "I Copied It".
 
-![](<../../../.gitbook/assets/afbeelding (17) (1).png>)
+![](<../../../.gitbook/assets/afbeelding (17) (1) (1).png>)
 
 3\. Choose the correct settings for your lab, in our example we choose for the region "Netherlands", for app language we choose "English (United States)" and for keyboard layout "United States-International".
 
@@ -45,7 +45,7 @@
 
 6\. Click on "Change adapter options".
 
-![](<../../../.gitbook/assets/afbeelding (36).png>)
+![](<../../../.gitbook/assets/afbeelding (36) (1).png>)
 
 7\. Right click the Ethernet adapter and select "Properties".
 
@@ -57,7 +57,7 @@
 
 9\. Copy the following settings:
 
-![](<../../../.gitbook/assets/afbeelding (17).png>)
+![](<../../../.gitbook/assets/afbeelding (17) (1).png>)
 
 10\. Click on "OK" and close all the Windows.
 

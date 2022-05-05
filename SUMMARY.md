@@ -68,6 +68,7 @@
   * [SQL Server Attacks](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/README.md)
     * [Initial Access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access.md)
       * [Normal domain user access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access/normal-domain-user-access.md)
+      * [Page 1](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access/page-1.md)
     * [Privilege Escalation](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/README.md)
       * [Impersonation](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/impersonation.md)
       * [DB-Owner](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/db-owner.md)
