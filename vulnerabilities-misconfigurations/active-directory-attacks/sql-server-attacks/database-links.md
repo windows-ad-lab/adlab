@@ -184,14 +184,9 @@ EXECUTE('exec master..xp_cmdshell ''whoami''') AT "DATA01.SECURE.LOCAL"
 
 ![](<../../../.gitbook/assets/afbeelding (44).png>)
 
-11\. We could get a reverse shell by executing the following query using the technique from:
+11\. We could get a reverse shell by executing the following query:
 
-{% content-ref url="../../misc/reverse-shell-trick.md" %}
-[reverse-shell-trick.md](../../misc/reverse-shell-trick.md)
-{% endcontent-ref %}
 
-```
-```
 
 ## Defending
 
