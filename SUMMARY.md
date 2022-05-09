@@ -63,7 +63,7 @@
       * [Webclient Attack](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/webclient-attack.md)
   * [ACL-Abuses](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/README.md)
     * [Reset users password](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
-    * [Page 2](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-2.md)
+    * [Write Owner](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-2.md)
   * [LAPS](vulnerabilities-misconfigurations/active-directory-attacks/laps.md)
   * [SQL Server Attacks](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/README.md)
     * [Initial Access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access.md)

