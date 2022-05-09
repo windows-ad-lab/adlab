@@ -1,3 +1,7 @@
+---
+description: SQL Servers can be configured to link to other SQL Servers.
+---
+
 # Database-Links
 
 ## Configuring

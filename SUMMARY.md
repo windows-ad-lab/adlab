@@ -76,6 +76,7 @@
         * [Weak passwords](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/enumerate-logins/weak-passwords.md)
     * [Executing Commands](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/executing-commands.md)
     * [Database-Links](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/database-links.md)
+    * [Capturing hashes & Relaying](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/capturing-hashes-and-relaying.md)
   * [Priviliged Groups](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/README.md)
     * [DNS-Admins](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/dns-admins.md)
     * [Account Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/account-operators.md)
