@@ -67,6 +67,7 @@
   * [LAPS](vulnerabilities-misconfigurations/active-directory-attacks/laps.md)
   * [SQL Server Attacks](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/README.md)
     * [Initial Access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access.md)
+      * [SQL Server default login](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access/sql-server-default-login.md)
       * [Normal domain user access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access/normal-domain-user-access.md)
     * [Privilege Escalation](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/README.md)
       * [Impersonation](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/impersonation.md)
