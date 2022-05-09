@@ -37,7 +37,7 @@ CREATE LOGIN Developer_test WITH PASSWORD = 'MyPassword!';
 
 ![](<../../../../.gitbook/assets/image (50) (1).png>)
 
-5\. Rune the following Query to allow impersonation:
+5\. Run the following Query to allow impersonation:
 
 ```
 GRANT IMPERSONATE ON LOGIN::Developer to [AMSTERDAM\Richard];
