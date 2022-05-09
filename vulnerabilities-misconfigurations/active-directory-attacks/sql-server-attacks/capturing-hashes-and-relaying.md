@@ -31,7 +31,7 @@ SQL Servers by default runs as a local service under the context of the computer
 
 If we are able to capture its NTLMv2 hash we could try to crack it offline or relay it to other SQL servers if they have SMB Signing disabled.
 
-Capturing the hashes is possible if specific functions are enabled on the SQL Server. There are many methods but the main methods are **xp\_dirtree** and **xp\_fileexist**. [This](https://gist.github.com/nullbind/7dfca2a6309a4209b5aeef181b676c6e) page has a lot of methods available.
+Capturing the hashes is possible if specific functions are enabled on the SQL Server. There are many methods but the main methods are **xp\_dirtree** and **xp\_fileexist**. [This](https://gist.github.com/nullbind/7dfca2a6309a4209b5aeef181b676c6e) page has a lot of methods available. This type of attack is called a UNC PATH injection.
 
 ### Tools
 
