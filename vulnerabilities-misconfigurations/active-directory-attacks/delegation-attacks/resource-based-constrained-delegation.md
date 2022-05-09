@@ -64,7 +64,7 @@ Abuse the lockscreen image changing functionality to achieve a webdav network au
 crackmapexec ldap 10.0.0.5 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 

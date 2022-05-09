@@ -21,7 +21,7 @@
 
 4\. Click “New Query” button and use the SQL query below to make `Amsterdam\Richard` database owner of the `production` database.
 
-![](<../../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../../.gitbook/assets/image (10) (1) (2).png>)
 
 ```
 Use Production;
@@ -88,7 +88,7 @@ If the database is set as trustworthy and we have db\_owner privileges, we could
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (58) (1).png>)
+![](<../../../../.gitbook/assets/image (58) (1) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 

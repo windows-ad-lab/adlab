@@ -70,7 +70,7 @@ wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/
 hashcat -a 0 -m 18200 asreproasting 2020-200_most_used_passwords.txt
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1).png>)
 
 4\. We succesfully cracked the password. The password for `Richard` is `Sample123`.
 

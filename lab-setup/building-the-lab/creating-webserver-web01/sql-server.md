@@ -3,7 +3,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -23,7 +23,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 
@@ -31,7 +31,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
@@ -62,7 +62,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Open the "SQL Configuration Manager".
 
-![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 13\. Expand "SQL Server Network Configuration" and select "Protocols for DEV". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 
@@ -80,7 +80,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 ![](<../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1).png>)
 
 16\. Do the same for "SQL Server Agent":
 
@@ -94,17 +94,17 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security"
 
-![](<../../../.gitbook/assets/image (62) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
 2\. Rightclick on "Inbound Rules" and select "New rule".
 
 3\. Select "Port" and click "Next"
 
-![](<../../../.gitbook/assets/image (31).png>)
+![](<../../../.gitbook/assets/image (31) (1).png>)
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 
-![](<../../../.gitbook/assets/image (58) (1) (1).png>)
+![](<../../../.gitbook/assets/image (58) (1) (1) (1).png>)
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 

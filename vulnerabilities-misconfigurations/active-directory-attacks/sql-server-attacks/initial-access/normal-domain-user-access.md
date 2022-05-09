@@ -91,9 +91,9 @@ The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.loc
 
 If ran from a user that doesn't have access (for example John), it says `not accessible`.
 
-![](<../../../../.gitbook/assets/image (52) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1) (1) (1).png>)
 
-6\. To get mor info about the session on the SQL server run:
+6\. To get more info about the session on the SQL server run:
 
 ```
 Get-SQLServerInfo -Instance WEB01.amsterdam.bank.local

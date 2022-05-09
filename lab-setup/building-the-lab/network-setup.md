@@ -21,7 +21,7 @@ DHCP: Disabled
 
 3\. Click on "Add Network" and Click "OK"
 
-![](<../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Select the newly created network and copy the following settings:
 

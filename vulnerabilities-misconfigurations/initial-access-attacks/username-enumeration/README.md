@@ -77,7 +77,7 @@ After downloading the tool and the username list run Kerbrute against the domain
 
 These valid users can be used for AS-REP roasting or Password Spraying Attacks. For now save these users to `usernames.txt`.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 To only get a list of usernames execute the following:
 
