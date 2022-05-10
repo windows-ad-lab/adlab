@@ -23,7 +23,7 @@
 
 5\. Click on "Search", click "Locations" and expand the directories and click on "Amsterdam.bank.local".
 
-![](<../../../../.gitbook/assets/image (60) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (60) (1) (1) (1).png>)
 
 6\. Fill in "Richard" and click "Check Names".
 
@@ -121,7 +121,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 
 5\. Click on the databases on the left and see if we got access to any:
 
-![](<../../../../.gitbook/assets/image (66) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1).png>)
 
 We are able to access the Production database, but not the Development one.
 

@@ -21,7 +21,7 @@
 
 4\. Click “New Query” button and use the SQL query below to make `Amsterdam\Richard` database owner of the `production` database.
 
-![](<../../../../.gitbook/assets/image (10) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (10) (1) (2) (1).png>)
 
 ```
 Use Production;
@@ -62,7 +62,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (39).png>)
+![](<../../../../.gitbook/assets/image (39) (1).png>)
 
 The `1` after `Production` shows us that the database is `ThrustWorthy`.
 
@@ -103,7 +103,7 @@ join sys.database_principals rp on (drm.role_principal_id = rp.principal_id)
 join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 ```
 
-![](<../../../../.gitbook/assets/image (66) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1).png>)
 
 Our current user `AMSTERDAM\richard` is db\_owner.
 
@@ -113,7 +113,7 @@ Our current user `AMSTERDAM\richard` is db\_owner.
 SELECT suser_sname(owner_sid), * FROM sys.databases
 ```
 
-![](<../../../../.gitbook/assets/image (59) (1).png>)
+![](<../../../../.gitbook/assets/image (59) (1) (1).png>)
 
 `sa` is the owner of the `production` database.
 

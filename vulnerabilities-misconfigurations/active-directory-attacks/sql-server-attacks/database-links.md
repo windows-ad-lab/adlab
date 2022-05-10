@@ -61,7 +61,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 4. Expand the "Server Objects" and "Linked Servers". Then right click on "Linked Servers" and select "New Linked Server".
 5. Fill in `Data01.secure.local` and select "SQL Server".
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2).png>)
 
 6\. Open the "Security" tab and select "Be made using this security context". Then fill in the credentials we created in the previous section. `SQL_link` and password `Eo6#jAzonQhw` .&#x20;
 

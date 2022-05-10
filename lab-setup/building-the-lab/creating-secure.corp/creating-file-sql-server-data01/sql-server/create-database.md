@@ -11,7 +11,7 @@
 
 4\. Expand the "DATA01\DATA" structure and right click on "Databases", select "New Database".
 
-![](<../../../../../.gitbook/assets/image (23).png>)
+![](<../../../../../.gitbook/assets/image (23) (1).png>)
 
 5\. Fill in the Database Name `BankTransfers` and click "OK" to create the database.
 

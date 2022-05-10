@@ -12,7 +12,7 @@
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../.gitbook/assets/image (60) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1).png>)
 
 
 {% endhint %}
@@ -23,7 +23,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../.gitbook/assets/image (31) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 
@@ -100,7 +100,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 3\. Select "Port" and click "Next"
 
-![](<../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1).png>)
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 

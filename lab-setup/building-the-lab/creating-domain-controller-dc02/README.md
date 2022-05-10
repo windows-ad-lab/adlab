@@ -143,7 +143,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
-![](<../../../.gitbook/assets/image (41) (1).png>)
+![](<../../../.gitbook/assets/image (41) (1) (1).png>)
 
 4\. Fill in the following information and click on "Next".
 
@@ -165,7 +165,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
-![](<../../../.gitbook/assets/image (35).png>)
+![](<../../../.gitbook/assets/image (35) (1).png>)
 
 3\. With the following simple PowerShell command we can check if `Amsterdam admin` is part of the `Domain Admins` group.
 
@@ -212,7 +212,7 @@ Password: `jr8Q3o97@s37AF`
 
 1. Click on "Tools" in the "Server Manager" and select "DHCP".
 
-![](<../../../.gitbook/assets/image (59) (1) (1).png>)
+![](<../../../.gitbook/assets/image (59) (1) (1) (1).png>)
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
@@ -227,7 +227,7 @@ Password: `jr8Q3o97@s37AF`
 * Length: `24`
 * Subnet mask: `255.255.255.0`
 
-![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png>)
 
 5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 

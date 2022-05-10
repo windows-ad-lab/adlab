@@ -11,7 +11,7 @@ PSRemoting allows you to run commands on remote computers just as if you were si
 Enable-PSRemoting
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1) (1) (1).png>)
 
 > The `Enable-PSRemoting` cmdlet performs the following operations:
 >
@@ -49,7 +49,7 @@ net localgroup "Remote Management Users" john /add
 Enter-PSSession ws01
 ```
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Create a PSCredential for the user `John` with the password `Welcome2022!` using the `Get-Credential` command.
 
@@ -57,7 +57,7 @@ Enter-PSSession ws01
 $creds = Get-Credential
 ```
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 4\. Run the following command to connect to `WS01` as `John`:
 

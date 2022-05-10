@@ -24,7 +24,7 @@
 
 4\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
 
 5\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
@@ -70,7 +70,7 @@ wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/
 hashcat -a 0 -m 18200 asreproasting 2020-200_most_used_passwords.txt
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (2) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1).png>)
 
 4\. We succesfully cracked the password. The password for `Richard` is `Sample123`.
 

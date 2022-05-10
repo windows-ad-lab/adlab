@@ -18,7 +18,7 @@ description: >-
 
 4\. Expand the "Security" and "Logins" folders. Right click "sa" and select "Properties". Make sure "Enforce password policy" is unchecked and fill in the password `sa` twice.
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1).png>)
 
 ## Attacking
 
@@ -54,7 +54,7 @@ Welcome1
 sa
 ```
 
-![](<../../.gitbook/assets/image (41).png>)
+![](<../../.gitbook/assets/image (41) (1).png>)
 
 3\. Run crackmapexec to connect to the MSSQL service and passwordspray the passwords till there is a successfull login:
 
@@ -62,7 +62,7 @@ sa
 crackmapexec mssql 10.0.0.5 -u sa -p passwords.txt --local-auth
 ```
 
-![](<../../.gitbook/assets/image (39) (1).png>)
+![](<../../.gitbook/assets/image (39) (1) (1).png>)
 
 We got a succesfull login as the `sa` user with the password `sa`.
 

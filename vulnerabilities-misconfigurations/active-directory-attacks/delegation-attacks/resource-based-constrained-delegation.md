@@ -18,7 +18,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 2\. After the server restarts Open the "Windows Defender Firewall" to open up the SMB port.
 
-![](<../../../.gitbook/assets/image (38).png>)
+![](<../../../.gitbook/assets/image (38) (1).png>)
 
 3\. Click on "Allow an app or feature through Windows Defender Firewall"
 
@@ -26,7 +26,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 4\. Select "File and Printer sharing" and click on "OK"
 
-![](<../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1).png>)
 
 ## Attacking
 
@@ -128,7 +128,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (44) (1) (1).png>)
+![](<../../../.gitbook/assets/image (44) (1) (1) (1).png>)
 
 ### Cleanup
 

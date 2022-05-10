@@ -61,7 +61,7 @@
 
 1\. Open File Explorer --> right click "This PC" --> Properties
 
-![](<../../../.gitbook/assets/image (37).png>)
+![](<../../../.gitbook/assets/image (37) (1).png>)
 
 2\. In the top right corner click on "Rename this PC (advanced)"
 
