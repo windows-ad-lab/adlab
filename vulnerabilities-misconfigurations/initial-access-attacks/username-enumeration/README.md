@@ -8,9 +8,7 @@ description: >-
 
 ## Configuring
 
-To implement the attack we need to create a couple users with easy guessable usernames. To do this we can choose some usernames from a populair [list of usernames](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/xato-net-10-million-usernames.txt) from the [SecLists](https://github.com/danielmiessler/SecLists) repository.
-
-We will create the following users:
+1. To implement the attack we need to create a couple users with easy guessable usernames. To do this we can choose some usernames from a populair [list of usernames](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/xato-net-10-million-usernames.txt) from the [SecLists](https://github.com/danielmiessler/SecLists) repository. We will create the following users:
 
 ```
 john
@@ -27,7 +25,7 @@ mark
 
 ### Creating users
 
-Previously we created users by using the GUI. Now we will create users using PowerShell. Create the file users.txt and place the usernames in there.
+2\. Previously we created users by using the GUI. Now we will create users using PowerShell. Create the file users.txt and place the usernames in there.
 
 ```
 cd C:\
@@ -41,7 +39,7 @@ New-ADUser -Name "$name" -GivenName "$name" -SamAccountName "$name" -UserPrincip
 
 ![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png>)
 
-Run the command below to check the users are created:
+2\. Run the command below to check the users are created:
 
 ```
 Get-ADUser -Filter * | Select-Object Name

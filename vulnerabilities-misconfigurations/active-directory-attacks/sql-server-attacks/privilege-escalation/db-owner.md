@@ -151,7 +151,7 @@ USE Production;
 EXEC sp_elevate_me
 ```
 
-![](<../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 9\. Check if we are sysadmin:
 

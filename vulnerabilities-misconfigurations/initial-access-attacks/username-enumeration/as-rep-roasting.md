@@ -10,23 +10,24 @@
 
 ### Configuring
 
-1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
+1. Login on `DC02` with the username `Administrator` and password `Welcome01!`.
+2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
 ![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 
-2\. Click on "View" and enable "Avanced Features"
+3\. Click on "View" and enable "Advanced Features"
 
 ![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
-3\. Open "Employees", right click the user `Richard` and click on "Properties"
+4\. Open "Employees", right click the user `Richard` and click on "Properties"
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1).png>)
 
-4\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
+5\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
 ![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
 
-5\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
+6\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
 ![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
 
@@ -72,7 +73,7 @@ hashcat -a 0 -m 18200 asreproasting 2020-200_most_used_passwords.txt
 
 ![](<../../../.gitbook/assets/image (10) (1) (2) (1) (1).png>)
 
-4\. We succesfully cracked the password. The password for `Richard` is `Sample123`.
+4\. We successfully cracked the password. The password for `Richard` is `Sample123`.
 
 ## Defending
 

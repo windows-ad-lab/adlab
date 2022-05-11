@@ -26,7 +26,7 @@ description: >-
 
 3\. Open "Employees", right click the user `steve` and click on "Properties"
 
-![](<../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 4\. Open "Attribute Editor", search for "Useraccountcontrol" and click "Edit".
 

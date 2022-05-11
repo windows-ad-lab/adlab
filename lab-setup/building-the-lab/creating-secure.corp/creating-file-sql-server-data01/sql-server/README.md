@@ -11,7 +11,7 @@
 
 4\. Create a user with the name `sa_sql`.
 
-![](<../../../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1).png>)
 
 5\. Set the password "`Iloveyou2`" and create the user.&#x20;
 
@@ -24,7 +24,7 @@
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../../../.gitbook/assets/image (61).png>)
+![](<../../../../../.gitbook/assets/image (61) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -52,7 +52,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../../../.gitbook/assets/image (15).png>)
+![](<../../../../../.gitbook/assets/image (15) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
