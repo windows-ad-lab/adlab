@@ -21,7 +21,7 @@
 
 ![](<../../../.gitbook/assets/image (15).png>)
 
-7\. We can quickly run BloodHound to check if the correct permissions are applied to the sa\_sql user:
+7\. We can quickly run BloodHound to check if the correct permissions are applied to the `sa_sql` user:
 
 ![](<../../../.gitbook/assets/image (1).png>)
 
