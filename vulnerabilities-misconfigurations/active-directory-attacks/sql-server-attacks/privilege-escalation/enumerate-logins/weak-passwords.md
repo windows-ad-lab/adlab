@@ -4,7 +4,7 @@
 
 ### Prerequisite&#x20;
 
-The weak passwords were configured during the creation of the SQL Server and domain users.
+The weak passwords were configured during the creation of the SQL Server users and Domain users in the section "Enumerate Logins".
 
 {% content-ref url="./" %}
 [.](./)
@@ -14,7 +14,7 @@ The weak passwords were configured during the creation of the SQL Server and dom
 
 ### How it works
 
-SQL Servers can have two type of accounts that could connect to it. Domain user accounts or groups or SQL Server accounts. These accounts have access to the SQL server and might have higher privileges then we currently have. By spraying passwords against these user we might get access to them.
+SQL Servers can have two type of accounts that could connect to it. Domain user accounts and groups or SQL Server accounts. These accounts have access to the SQL server and might have higher privileges then we currently have. By spraying passwords against these user we might get access to them.
 
 #### Password spraying
 
@@ -35,7 +35,7 @@ A old habit what a lot of companies enforce is the requirement to change passwor
 
 ### Executing the attack
 
-1. So during the enumeration we discovered that there are three domain users/groups which are `AMSTERDAM\richard`,  `BANK\administrator` and `AMSTERDAM\DatabaseUsers`.&#x20;
+1. So during the enumeration we discovered that there are three domain users or groups: `AMSTERDAM\richard`,  `BANK\administrator` and `AMSTERDAM\DatabaseUsers`.&#x20;
 2. To check which of these are users and groups, login to `WS01` as `Richard` with the password `Sample123`.
 3. Download PowerView on the kali machine and host it on a webserver:
 
@@ -58,7 +58,7 @@ Get-DomainObject DatabaseUsers
 
 6\. The output shows us that the `DatabasUsers` is a group object and that `bob` is its only member.
 
-7\. We already sprayed passwords at the SQL server during the initial access steps. We will do it again here. First we need to make a list of the enumerated logins in users.txt:
+7\. We already sprayed passwords at the SQL server during the initial access steps. We will do it again here. First we need to make a list of the enumerated logins, we will split them in `sqlusers.txt` and `domainusers.txt`.
 
 ```
 # sqlusers.txt
@@ -72,7 +72,7 @@ SQLAdmin
 bob
 ```
 
-8\. Secondly create a `passwords.txt` file and copy the following passwords like we did during the password spraying attack for normal domain users and we will also add the usernames since sometimes admin set the username as the password:
+8\. Secondly create a `passwords.txt` file and copy the following passwords like we did during the password spraying attack earlier and we will also add the usernames since sometimes admin set the username as the password:
 
 ```
 Spring2022!
