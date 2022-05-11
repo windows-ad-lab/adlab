@@ -126,7 +126,7 @@ To be able to clone the virtual machine without having any problems when joining
 
 3\. Select "Generalize", Choose Shutdown and click on "OK"
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
 ## Finished
 

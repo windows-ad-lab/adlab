@@ -46,7 +46,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 6\. Once the installation is finished, click on "Customize".
 
-![](<../../../../../.gitbook/assets/image (7).png>)
+![](<../../../../../.gitbook/assets/image (7) (1).png>)
 
 8\. Click next till the "License Terms" step.
 

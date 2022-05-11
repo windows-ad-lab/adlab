@@ -74,13 +74,13 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Then click "Apply".
 
-![](<../../../.gitbook/assets/image (36) (1).png>)
+![](<../../../.gitbook/assets/image (36) (1) (1).png>)
 
 15\. Open "SQL Server services" and right click on "SQL Server (DEV)" and click "Restart".
 
 ![](<../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1).png>)
 
 16\. Do the same for "SQL Server Agent":
 

@@ -19,4 +19,4 @@
 
 5\. Click "Next" a couple times and then "Install". Wait for the installation to finish.
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<../../../.gitbook/assets/image (12) (1).png>)

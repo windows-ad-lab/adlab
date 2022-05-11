@@ -24,7 +24,7 @@ description: >-
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 4\. Click “New Query” button and use the SQL query below to create two new users:
 
@@ -45,7 +45,7 @@ GRANT IMPERSONATE ON LOGIN::Developer_test to [Developer];
 GRANT IMPERSONATE ON LOGIN::sa to [Developer_test];
 ```
 
-![](<../../../../.gitbook/assets/image (36).png>)
+![](<../../../../.gitbook/assets/image (36) (1).png>)
 
 ## Attacking
 
@@ -102,7 +102,7 @@ Make sure the Master database is selected since the developer user doesn't have 
 
 7\. Execute the who can be impersonated query again.
 
-![](<../../../../.gitbook/assets/image (52) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1) (1) (1).png>)
 
 8\. Impersonate the user `sa`.
 
@@ -122,7 +122,7 @@ EXECUTE AS LOGIN = 'Developer_test'
 
 9\. Execute the who can be impersonated query again:
 
-![](<../../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../.gitbook/assets/image (7) (1) (1).png>)
 
 10\. Impersonate `sa`.
 

