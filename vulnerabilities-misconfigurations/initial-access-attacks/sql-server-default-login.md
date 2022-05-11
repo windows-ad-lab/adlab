@@ -29,7 +29,7 @@ One of the default users (not enabled by default) for SQL Server is the SA user.
 ### Tools
 
 * [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec)
-* mssql-cli
+* [mssql-cli](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
 
 ### Executing the attack
 

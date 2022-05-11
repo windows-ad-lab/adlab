@@ -60,7 +60,7 @@ SQL Servers can have two type of accounts that could connect to it. Domain user 
 
 ### Executing the attack
 
-1. Login to `WS01` as Richard with the password `Sample123`.
+1. Login to `WS01` as `Richard` with the password `Sample123`.
 2. Download PowerUpSQL on the kali machine and host it on a webserver:
 
 ```
