@@ -54,7 +54,7 @@ python3 -m http.server 8090
 Get-DomainObject DatabaseUsers
 ```
 
-![](<../../../../../.gitbook/assets/image (52).png>)
+![](<../../../../../.gitbook/assets/image (52) (1).png>)
 
 6\. The output shows us that the `DatabasUsers` is a group object and that `bob` is its only member.
 
@@ -106,7 +106,7 @@ We found the password for three users and it seems thats `SQLAdmin` has sysadmin
 crackmapexec mssql 10.0.0.5 -u domainusers.txt -p passwords.txt --continue-on-success | grep "+"
 ```
 
-![](<../../../../../.gitbook/assets/image (18).png>)
+![](<../../../../../.gitbook/assets/image (18) (1).png>)
 
 We discovered the password of another user `bob`, but this time the Domain User. We already connected to the SQL service using both SQL accounts and Domain user accounts. This can be done with tools such as mssql-cli or heidiSQL.&#x20;
 

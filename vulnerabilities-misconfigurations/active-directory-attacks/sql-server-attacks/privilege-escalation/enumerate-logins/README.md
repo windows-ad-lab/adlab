@@ -79,7 +79,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.syslogins
 Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_principals"
 ```
 
-![](<../../../../../.gitbook/assets/image (66).png>)
+![](<../../../../../.gitbook/assets/image (66) (1).png>)
 
 5\. If we run the queries on the SQL server itself as the Domain Admin we will receive all the users, since it is sysadmin on the SQL Server;
 

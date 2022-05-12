@@ -67,7 +67,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
-![](<../../../../.gitbook/assets/image (49).png>)
+![](<../../../../.gitbook/assets/image (49) (1).png>)
 
 4\. Get the SQL instances from the domain:
 
@@ -91,7 +91,7 @@ The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.loc
 
 If ran from a user that doesn't have access (for example John), it says `not accessible`.
 
-![](<../../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1).png>)
 
 6\. To get more info about the session on the SQL server run:
 
@@ -99,7 +99,7 @@ If ran from a user that doesn't have access (for example John), it says `not acc
 Get-SQLServerInfo -Instance WEB01.amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
 
 It shows that we aren't sysadmin. Which means we can't execute commands on the database, but our user has access to the database. So we can look into the database for sensitive information or we might be able to escalate our privileges to sysadmin.
 
@@ -121,7 +121,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 
 5\. Click on the databases on the left and see if we got access to any:
 
-![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1).png>)
 
 We are able to access the Production database, but not the Development one.
 

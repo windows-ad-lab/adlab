@@ -121,7 +121,7 @@ icacls.exe "C:\Program Files\bin folder\program"
 
 We have no write permissions in `C:\Program Files`:
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 

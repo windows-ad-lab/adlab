@@ -42,7 +42,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../../../.gitbook/assets/image (55).png>)
+![](<../../../../../.gitbook/assets/image (55) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 

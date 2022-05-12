@@ -27,7 +27,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 5\. Open the "Security" tab and select "SQL Server and Windows Authentication mode" under "Server authentication".
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1).png>)
 
 6\. Open "SQL Server 2019 Configuration Manager"&#x20;
 
@@ -47,7 +47,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 11\. In the tab "Server Roles" select "setupadmin" and "sysadmin" and click "OK".
 
-![](<../../../.gitbook/assets/image (52) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1).png>)
 
 12\. In the tab "User Mapping" select "Bank Transfers".
 

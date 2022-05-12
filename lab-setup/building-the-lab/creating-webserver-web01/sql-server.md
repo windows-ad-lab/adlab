@@ -80,7 +80,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 ![](<../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1) (1).png>)
 
 16\. Do the same for "SQL Server Agent":
 

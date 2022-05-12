@@ -5,11 +5,11 @@
 1. Login to `DC03` with the Administrator user and the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool.
 
-![](<../../../.gitbook/assets/image (67).png>)
+![](<../../../.gitbook/assets/image (67) (1).png>)
 
 3\. Click on "View" and enable "Advanced Features
 
-![](<../../../.gitbook/assets/image (48).png>)
+![](<../../../.gitbook/assets/image (48) (1).png>)
 
 4\. Click on the "Computers" directory and right click on the "DATA01" computer and select "Properties". Then select "Security" to see the ACL's.
 

@@ -101,7 +101,7 @@
 
 3\. At the step "Domain Controller Options" set a DSRM Password. For this domain we will choose `SecureRecoveryKey2022` as password.
 
-![](<../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1).png>)
 
 4\. For the steps "DNS Options", "Additional Options", "Paths" and "Review Options" click Next.
 
@@ -124,7 +124,7 @@
 
 4\. Add the DNS Domain `secure.local` with the IP `10.0.0.100` and click "OK".&#x20;
 
-![](<../../../.gitbook/assets/image (66) (1) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1) (1).png>)
 
 {% hint style="info" %}
 If you see a cross don't worry. I takes some time to validate. You can check the properties later to check if it is validated.
