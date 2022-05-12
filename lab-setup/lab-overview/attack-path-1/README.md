@@ -39,8 +39,8 @@
 [passwords-on-shares.md](../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md" %}
-[page-1.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1.md)
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1-1.md" %}
+[page-1-1.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-1-1.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/constrained-delegation.md" %}

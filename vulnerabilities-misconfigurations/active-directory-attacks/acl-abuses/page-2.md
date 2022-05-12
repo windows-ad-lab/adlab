@@ -33,7 +33,7 @@ It is configured correctly!
 
 ### How it works
 
-
+If a domain object has the WriteOwner ACL, the object can change the owner of the object. In this case the object `SA_SQL` can change the owner of `DATA01`.
 
 ### Tools
 
