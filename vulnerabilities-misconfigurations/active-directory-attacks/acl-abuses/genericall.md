@@ -4,11 +4,13 @@
 
 ### Prerequisite&#x20;
 
-
+{% content-ref url="owns.md" %}
+[owns.md](owns.md)
+{% endcontent-ref %}
 
 ### Configuring
 
-
+Nothing need to be configured to abuse this since we set the GenericAll permissions during the "Owns" section. If you would like to configure this it can be configured the same way as we configured "Write Owner".
 
 ## Attacking
 
