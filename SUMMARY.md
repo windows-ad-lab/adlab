@@ -67,6 +67,7 @@
     * [GenericWrite](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/genericwrite.md)
     * [ForceChangePassword](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/forcechangepassword.md)
     * [Add user to group](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/add-user-to-group.md)
+    * [Targeted Kerberoast](vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/targeted-kerberoast.md)
   * [Reused local administrator](vulnerabilities-misconfigurations/active-directory-attacks/reused-local-administrator.md)
   * [SQL Server Attacks](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/README.md)
     * [Initial Access](vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/initial-access.md)
