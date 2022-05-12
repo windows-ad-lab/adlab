@@ -1,4 +1,4 @@
-# User
+# Add user to group
 
 ## Configuring
 
