@@ -50,8 +50,8 @@ With these permissions on a computerobject you can do two things:
 [laps.md](../laps.md)
 {% endcontent-ref %}
 
-{% content-ref url="../delegation-attacks/resource-based-constrained-delegation/page-4.md" %}
-[page-4.md](../delegation-attacks/resource-based-constrained-delegation/page-4.md)
+{% content-ref url="../delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md" %}
+[computeraccount-takeover.md](../delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md)
 {% endcontent-ref %}
 
 ## References
