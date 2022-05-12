@@ -27,7 +27,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 6\. Once the installation is finished, click on "Customize".
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
@@ -108,7 +108,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 
-![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1) (1).png>)
 
 6\. When done remove the "NAT" adapter from the virtual machine.
 

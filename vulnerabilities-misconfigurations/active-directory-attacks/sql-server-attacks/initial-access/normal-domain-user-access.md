@@ -39,7 +39,7 @@
 
 9\. Click "OK".
 
-![](<../../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 

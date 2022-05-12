@@ -35,7 +35,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 7\. Restart the two SQL services with "DATA" in their name.
 
-![](<../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (32) (1).png>)
 
 8\. Open "Microsoft SQL Server Management Studio".
 

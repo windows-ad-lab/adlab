@@ -45,7 +45,7 @@ SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 
 ![](<../../../../.gitbook/assets/image (68) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (53).png>)
+![](<../../../../.gitbook/assets/image (53) (1).png>)
 
 7\. Set the database as trustworthy and check if it is:
 
