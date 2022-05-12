@@ -29,7 +29,7 @@ With these permission on a group you can add anyone to the group.
 With these permission on a user you can do two things:
 
 * Targeted kerberoast (set spn to user and kerberoast it)
-* Change their password (This will deny access to the user and may raise flags)
+* Change their password (This will deny access to the user and may raise red flags)
 
 {% content-ref url="targeted-kerberoast.md" %}
 [targeted-kerberoast.md](targeted-kerberoast.md)
