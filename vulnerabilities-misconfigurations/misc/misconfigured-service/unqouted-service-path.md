@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Prives
 python3 -M http.server 8090
 ```
 
-![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1) (1).png>)
 
 2\. Login on `WS01` with the user `John` and the password `Welcome2022!.`
 
@@ -139,7 +139,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 

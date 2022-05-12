@@ -83,7 +83,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Expand "SQL Server Network Configuration" and select "Protocols for DATA". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 
-![](<../../../../../.gitbook/assets/image (26).png>)
+![](<../../../../../.gitbook/assets/image (26) (1).png>)
 
 15\. Scroll to the bottom and also configure IPAll:
 

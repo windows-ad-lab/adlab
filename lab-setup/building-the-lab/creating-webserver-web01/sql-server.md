@@ -3,7 +3,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -42,11 +42,11 @@ The SQL Server Installation may require internet access, temporally add a second
 
 ![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../.gitbook/assets/image (26) (1) (1).png>)
 
 9\. Click Next and fill in the Instance name `dev`.
 
-![](<../../../.gitbook/assets/image (43) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1) (1).png>)
 
 10\. Change the "Startup Type" for the "SQL Serer Agent" to "Automatic" and make sure all three are set to "Automatic", click "Next".
 
@@ -62,7 +62,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Open the "SQL Configuration Manager".
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
 
 13\. Expand "SQL Server Network Configuration" and select "Protocols for DEV". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 
