@@ -33,13 +33,26 @@ It is configured correctly!
 
 ### How it works
 
-If a domain object has the WriteOwner ACL, the object can change the owner of the object. In this case the object `SA_SQL` can change the owner of `DATA01`.
+If a domain object has the WriteOwner ACL, the object can change the owner of the object. In this case the user `SA_SQL` can change the owner of the computerobject `DATA01`. Once you are "Owner" of a object, you can change the DACL of the object.
 
 ### Tools
 
 * [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 
 ### Executing the attack
+
+1. Download PowerView on the kali machine and host it on a webserver:
+
+```
+wget https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1
+python3 -m http.server 8090
+```
+
+2\. Login to `WS01` as Richard with the password `Sample123`.
+
+3\. Start PowerShell and download and execute an amsi and PowerView in memory:
+
+![](<../../../.gitbook/assets/image (70).png>)
 
 
 

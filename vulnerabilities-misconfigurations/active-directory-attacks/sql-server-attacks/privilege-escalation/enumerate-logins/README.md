@@ -7,7 +7,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio".
 
-![](<../../../../../.gitbook/assets/image (44).png>)
+![](<../../../../../.gitbook/assets/image (44) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -46,7 +46,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 6\. Go back to `WEB01` and unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login". Fill in Amsterdam\DatabaseUsers
 
-![](<../../../../../.gitbook/assets/image (70).png>)
+![](<../../../../../.gitbook/assets/image (70) (1).png>)
 
 ## Attacking
 
@@ -87,7 +87,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_princip
 
 6\. So we aren't able to enumerate all the users using these queries. But we are able to query the users with the following query; `Select SUSER_NAME(ID)`. Using the SUSER\_NAME function. Where the ID starts with 1 and we keep incrementing it till we have all the users. The id `282` is from the `testadmin` SQL user.
 
-![](<../../../../../.gitbook/assets/image (40).png>)
+![](<../../../../../.gitbook/assets/image (40) (1).png>)
 
 7\. Doing this manually takes a while so luckely the authors of PowerUpSQL automated this by using the `Get-SQLFuzzServerLogin` cmdlet;
 

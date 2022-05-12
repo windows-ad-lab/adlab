@@ -24,7 +24,7 @@ net localgroup "Remote Management Users" /add
 Enter-PSSession ws01
 ```
 
-![](<../../../.gitbook/assets/image (20) (1) (2).png>)
+![](<../../../.gitbook/assets/image (20) (1) (2) (1).png>)
 
 ### Evil-WinRM
 

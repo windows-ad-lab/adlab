@@ -125,7 +125,7 @@ We have no write permissions in `C:\Program Files`:
 
 But we do have write permissions in `C:\Program Files\bin folder\program`.
 
-![](<../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (2).png>)
 
 7\. To abuse this run the following command from PowerUp, which will create a executable `bin.exe` in the path `C:\Program Files\bin folder\program` which will add a new local administrator.
 
