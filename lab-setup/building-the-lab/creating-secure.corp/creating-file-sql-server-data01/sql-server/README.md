@@ -24,7 +24,7 @@
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../../../.gitbook/assets/image (61) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -115,7 +115,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 
-![](<../../../../../.gitbook/assets/image (59) (1).png>)
+![](<../../../../../.gitbook/assets/image (59) (1) (1).png>)
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish".
 

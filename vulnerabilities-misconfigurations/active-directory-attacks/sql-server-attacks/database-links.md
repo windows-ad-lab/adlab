@@ -86,7 +86,7 @@ If xp\_cmdshell is enabled on the linked server it is possible to execute comman
 ### Tools
 
 * [PowerupSQL](https://github.com/NetSPI/PowerUpSQL)
-* [Heidisql](https://www.heidisql.com)
+* [Heidisql](https://www.heidisql.com/)
 
 ### Executing the attack
 

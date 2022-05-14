@@ -55,7 +55,7 @@ SQL Server has a special permission, named impersonate, this enables one user to
 
 ### Tools
 
-* [HeidiSQL](https://www.heidisql.com)
+* [HeidiSQL](https://www.heidisql.com/)
 
 ### Executing the attack
 
@@ -69,7 +69,7 @@ SQL Server has a special permission, named impersonate, this enables one user to
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 

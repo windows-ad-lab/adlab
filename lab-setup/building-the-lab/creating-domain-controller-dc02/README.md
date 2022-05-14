@@ -161,7 +161,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 1. Right click the user and click on "Add to a group..."
 
-![](<../../../.gitbook/assets/image (33) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
@@ -212,7 +212,7 @@ Password: `jr8Q3o97@s37AF`
 
 1. Click on "Tools" in the "Server Manager" and select "DHCP".
 
-![](<../../../.gitbook/assets/image (59) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (59) (1) (1) (1) (1).png>)
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 

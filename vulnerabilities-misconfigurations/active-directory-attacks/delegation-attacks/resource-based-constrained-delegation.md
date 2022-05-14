@@ -147,7 +147,7 @@ Get-ADComputer fake01 | Remove-ADObject
 
 4\. Open "DNS Manager" and expand DC02 --> Forward Lookup Zones --> and click on `Amsterdam.bank.local.`Remove the DNS-record created for webdav:
 
-![](<../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1).png>)
 
 4\. From our Kali machine set the SQL server settings back:
 

@@ -74,7 +74,7 @@ If the database is set as trustworthy and we have db\_owner privileges, we could
 
 ### Tools
 
-* [HeidiSql](https://www.heidisql.com)
+* [HeidiSql](https://www.heidisql.com/)
 
 ### Executing attack
 
@@ -113,7 +113,7 @@ Our current user `AMSTERDAM\richard` is db\_owner.
 SELECT suser_sname(owner_sid), * FROM sys.databases
 ```
 
-![](<../../../../.gitbook/assets/image (59) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (59) (1) (1) (1).png>)
 
 `sa` is the owner of the `production` database.
 

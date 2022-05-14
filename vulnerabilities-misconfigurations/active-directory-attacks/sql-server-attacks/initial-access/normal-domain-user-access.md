@@ -50,7 +50,7 @@ Check for MSSQL servers inside the domain and try to login using the credentials
 ### Tools
 
 * [PowerUpSQL](https://github.com/NetSPI/PowerUpSQL)
-* [HeidiSQL](https://www.heidisql.com)
+* [HeidiSQL](https://www.heidisql.com/)
 
 ### Executing the attack
 

@@ -142,7 +142,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 2\. Right click the domain object "Secure.local" and click on "Properties".
 
-![](<../../../.gitbook/assets/image (33).png>)
+![](<../../../.gitbook/assets/image (33) (1).png>)
 
 3\. Click on the tab "Trust", then click "New Trust" and then click "Next".
 
@@ -152,7 +152,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 5\. On the "Trust Type" page, select "External trust" and click "Next".
 
-![](<../../../.gitbook/assets/image (61) (1) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
 6\. On the "Direction of trust" page select "Two-Way" and click "Next".
 

@@ -25,7 +25,7 @@
 
 ![](<../../../.gitbook/assets/image (1).png>)
 
-![](<../../../.gitbook/assets/image (61).png>)
+![](<../../../.gitbook/assets/image (61) (1).png>)
 
 It is configured correctly!
 

