@@ -55,6 +55,14 @@ From the output we can see that the user `sa_sql` has GenericAll permission on `
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
+### Cleanup
+
+The cleanup for Both "Owns" and "GenericAll" are on the "GenericAll" page.
+
+{% content-ref url="genericall.md" %}
+[genericall.md](genericall.md)
+{% endcontent-ref %}
+
 ## Defending
 
 ### Recommendations
