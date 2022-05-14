@@ -95,7 +95,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 16\. Open "SQL Server services" and right click on "SQL Server (DATA)" and click "Restart".
 
-![](<../../../../../.gitbook/assets/image (54).png>)
+![](<../../../../../.gitbook/assets/image (54) (1).png>)
 
 17\. Do the same for "SQL Server Agent".
 

@@ -247,4 +247,4 @@ Password: `jr8Q3o97@s37AF`
 
 11\. We should now see a Scope for IPV4.
 
-![](<../../../.gitbook/assets/image (54) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)

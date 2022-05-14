@@ -57,11 +57,12 @@ From the output we can see that the user `sa_sql` has GenericAll permission on `
 
 ### Cleanup
 
-The cleanup for Both "Owns" and "GenericAll" are on the "GenericAll" page.
+1. Login to `DC03` as `Administrator` with the password `Welcome01!`.
+2. Open "Active Directory Users and Computers" and open the "Computers" section and open the "Properties" for the computerobject `DATA01`. Make sure the "Advanced Features" are enabled.
+3. Open the "Security" tab and click on "Advanced". Change the owner to the group "Domain Admins"&#x20;
+4. Delete the `sa_sql` user from the permission entries. Then add it again and give it the permissions "Modify Owner" like we did in the "Write Owner" section to configure the vulnerability. So its ready to be abused again. (Which is easier then deselecting everything)
 
-{% content-ref url="genericall.md" %}
-[genericall.md](genericall.md)
-{% endcontent-ref %}
+![](<../../../.gitbook/assets/image (54).png>)
 
 ## Defending
 
