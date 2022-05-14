@@ -18,7 +18,7 @@
 
 2\. Fill in "Finance" and click on "OK"
 
-![](<../../../.gitbook/assets/image (38) (1) (1).png>)
+![](<../../../.gitbook/assets/image (38) (1) (1) (1).png>)
 
 3\. Repeat and create the following groups:
 

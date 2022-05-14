@@ -1,8 +1,18 @@
-# Password in description
+# Example page
 
 ## Configuring
 
-1. Login to `DC03` as `Administrator` with the password `Welcome01!`.
+{% hint style="info" %}
+Remove prerquisite and configuring subheading if no prerequisite
+{% endhint %}
+
+### Prerequisite&#x20;
+
+
+
+### Configuring
+
+
 
 ## Attacking
 

@@ -48,7 +48,7 @@
   * [SQL Server default login](vulnerabilities-misconfigurations/initial-access-attacks/sql-server-default-login.md)
 * [Active Directory Attacks](vulnerabilities-misconfigurations/active-directory-attacks/README.md)
   * [Password spraying](vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)
-  * [Password in description](vulnerabilities-misconfigurations/active-directory-attacks/page-3.md)
+  * [Password in description](<vulnerabilities-misconfigurations/active-directory-attacks/page-3 (1).md>)
   * [PASSWD\_NOT\_REQ](vulnerabilities-misconfigurations/active-directory-attacks/passwd\_not\_req.md)
   * [Kerberoasting](vulnerabilities-misconfigurations/active-directory-attacks/kerberoasting.md)
   * [AS-REP Roasting](vulnerabilities-misconfigurations/active-directory-attacks/as-rep-roasting.md)
@@ -86,7 +86,7 @@
     * [DNS-Admins](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/dns-admins.md)
     * [Account Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/account-operators.md)
     * [Backup Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/backup-operators.md)
-  * [Example page](vulnerabilities-misconfigurations/active-directory-attacks/page-3-1.md)
+  * [Example page](vulnerabilities-misconfigurations/active-directory-attacks/page-3.md)
 * [Misc](vulnerabilities-misconfigurations/misc/README.md)
   * [Reverse shell trick](vulnerabilities-misconfigurations/misc/reverse-shell-trick.md)
   * [Lateral Movement](vulnerabilities-misconfigurations/misc/lateral-movement/README.md)
@@ -95,6 +95,7 @@
   * [Misconfigured Service](vulnerabilities-misconfigurations/misc/misconfigured-service/README.md)
     * [Unqouted Service Path](vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
   * [Passwords on shares](vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
+  * [Dumping DPAPI](vulnerabilities-misconfigurations/misc/page-3.md)
 
 ## Defence
 
