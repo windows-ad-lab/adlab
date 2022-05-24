@@ -5,7 +5,7 @@
 1. Login to `DC03` with the Administrator user and the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool.
 
-![](<../../../.gitbook/assets/image (67) (1) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1) (1).png>)
 
 3\. Click on "View" and enable "Advanced Features
 
@@ -85,7 +85,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 7\. We didn't receive any errors, to lets use the same queries again to query the owner of the computerobject DATA01;
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
 
 8\. We successfully changed the owner of the computerobject from `Domain Admins` to `sa_ql`.
 

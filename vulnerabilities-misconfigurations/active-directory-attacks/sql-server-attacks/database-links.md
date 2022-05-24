@@ -73,7 +73,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 8\. Click "OK" and the linked server should show up.
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 ## Attacking
 

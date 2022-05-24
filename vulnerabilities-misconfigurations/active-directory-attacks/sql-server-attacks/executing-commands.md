@@ -53,7 +53,7 @@ This query will download and load into memory the `amsi.txt` file and then the `
 [reverse-shell-trick.md](../../misc/reverse-shell-trick.md)
 {% endcontent-ref %}
 
-![](<../../../.gitbook/assets/image (45) (1).png>)
+![](<../../../.gitbook/assets/image (45) (1) (1).png>)
 
 ## Defending
 
