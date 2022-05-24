@@ -54,7 +54,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 11\. At the next step select "Mixed Mode" and fill in the password `Password1!`. Then select "Add" at the "Specify SQL Server administrators" and add `amsterdam\administrator` then click Next.
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
 12\. Click "Install" and wait for the installation to finish.
 

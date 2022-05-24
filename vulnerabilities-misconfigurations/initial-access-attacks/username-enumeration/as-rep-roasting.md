@@ -17,7 +17,7 @@
 
 3\. Click on "View" and enable "Advanced Features"
 
-![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png>)
 
 4\. Open "Employees", right click the user `Richard` and click on "Properties"
 

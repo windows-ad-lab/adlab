@@ -30,7 +30,7 @@ EXEC sp_addrolemember [db_owner], [AMSTERDAM\Richard];
 
 5\. Change the Owner of the database to the SA account. Right click on "Production", click "Properties" and open the "Files" tab. Click on the "..." and fill in "sa" and click on "OK"
 
-![](<../../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1).png>)
 
 6\. Execute the following query to make sure `Amsterdam\Richard` is Database owner and the real Owner of the database is `sa`:
 

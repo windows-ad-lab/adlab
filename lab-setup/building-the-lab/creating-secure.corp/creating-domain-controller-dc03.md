@@ -95,7 +95,7 @@
 
 1\. In the server manager click on the flag and click on "Promote this server to a domain controller"
 
-![](<../../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
 2\. Select "Add a new forest" and fill in the domain name `secure.local`.
 
@@ -118,7 +118,7 @@
 1. Login to `DC001` as the `Administrator` user with password `Welcome01!`.
 2. Open the "Server Manager", click on "Tools" and open the "DNS" tool.
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)
 
 3\. In the DNS Server expand "DC01" and right click on "Conditional Forwarders" and click "new".
 

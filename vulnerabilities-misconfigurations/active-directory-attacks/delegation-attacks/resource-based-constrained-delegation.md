@@ -22,7 +22,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 3\. Click on "Allow an app or feature through Windows Defender Firewall"
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
 4\. Select "File and Printer sharing" and click on "OK"
 
