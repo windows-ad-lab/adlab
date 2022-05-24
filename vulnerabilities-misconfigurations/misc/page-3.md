@@ -2,6 +2,8 @@
 
 ## Configuring
 
+**OLD DIDN"T WORK!**
+
 1. Login to `DC03` as the `Administrator` user with the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" management tool and open the "Users" directory. Right click the "Users" directory and click "New User"
 3. Create a user with the name `adm_jony` and the password `LS6RV5o8T9`. Make sure you deselect "User must change password at next logon" and select "Password never expires".
