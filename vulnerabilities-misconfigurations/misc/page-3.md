@@ -1,3 +1,9 @@
+---
+description: >-
+  DPAPI stands for Data Protection API. Which is used by windows to securely
+  save credentials.
+---
+
 # Dumping DPAPI
 
 ## Configuring
@@ -39,7 +45,7 @@ Add-ADGroupMember "Backup Operators" -Members sa_backup
 
 ### How it works
 
-If a user is logged in or if you have the password of a user you can retrieve its DPAPI masterkey and decrypt the saved credentials on machines. These saved credentials might give you access to other systems
+If a user is logged in or if you have the password of a user you can retrieve its DPAPI masterkey and decrypt the saved credentials. These saved credentials might give you access to other systems or higher privileges within the domain and can be used for lateral movement.
 
 ### Tools
 
@@ -105,7 +111,7 @@ In PowerView we can see that `sa_backup` is member of the `Account Operators` en
 
 ### Recommendations
 
-* a
+* Don't save RDP credentials in Windows.
 
 ### Detection
 
@@ -113,3 +119,6 @@ In PowerView we can see that `sa_backup` is member of the `Account Operators` en
 
 ## References
 
+{% embed url="https://www.ired.team/offensive-security/credential-access-and-credential-dumping/reading-dpapi-encrypted-secrets-with-mimikatz-and-c++" %}
+
+{% embed url="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dpapi-extracting-passwords" %}

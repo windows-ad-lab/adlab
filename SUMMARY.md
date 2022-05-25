@@ -85,6 +85,7 @@
   * [Priviliged Groups](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/README.md)
     * [DNS-Admins](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/dns-admins.md)
     * [Account Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/account-operators.md)
+    * [Server Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/server-operators.md)
     * [Backup Operators](vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/backup-operators.md)
   * [Example page](vulnerabilities-misconfigurations/active-directory-attacks/page-3.md)
 * [Misc](vulnerabilities-misconfigurations/misc/README.md)
