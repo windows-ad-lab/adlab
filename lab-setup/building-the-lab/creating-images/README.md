@@ -120,13 +120,13 @@ To be able to clone the virtual machine without having any problems when joining
 
 1. Press Windows + R, type sysprep and click OK.
 
-![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
 
 2\. Windows Explorer opens and click on the "Sysprep" application.
 
 3\. Select "Generalize", Choose Shutdown and click on "OK"
 
-![](<../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
 
 ## Finished
 

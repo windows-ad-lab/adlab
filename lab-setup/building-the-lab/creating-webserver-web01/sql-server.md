@@ -7,12 +7,12 @@
 
 3\. When smartscreen comes up select "Run".
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1) (1).png>)
 
 
 {% endhint %}
@@ -31,7 +31,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../.gitbook/assets/image (22) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 

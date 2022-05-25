@@ -13,21 +13,21 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../.gitbook/assets/image (63) (1).png>)
+![](<../../../../.gitbook/assets/image (63) (1) (1).png>)
 
 4\. Expand the "Security" and "Logins" folders. Right click on "Logins" and click "New Login".
 
 5\. Click on "Search", click "Locations" and expand the directories and click on "Amsterdam.bank.local".
 
-![](<../../../../.gitbook/assets/image (60) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (60) (1) (1) (1) (1).png>)
 
 6\. Fill in "Richard" and click "Check Names".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1).png>)
 
 7\. At "Default Database" select "Production".
 
@@ -85,7 +85,7 @@ The output shows one SQL Instance.
 Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
 
 The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.local`.
 
@@ -99,7 +99,7 @@ If ran from a user that doesn't have access (for example John), it says `not acc
 Get-SQLServerInfo -Instance WEB01.amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1) (1) (1).png>)
 
 It shows that we aren't sysadmin. Which means we can't execute commands on the database, but our user has access to the database. So we can look into the database for sensitive information or we might be able to escalate our privileges to sysadmin.
 

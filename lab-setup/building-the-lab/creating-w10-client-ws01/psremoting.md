@@ -38,7 +38,7 @@ Local admin acces is not required, it is possible as a normal user if its part o
 net localgroup "Remote Management Users" john /add
 ```
 
-![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png>)
 
 ## Testing
 
@@ -57,7 +57,7 @@ Enter-PSSession ws01
 $creds = Get-Credential
 ```
 
-![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Run the following command to connect to `WS01` as `John`:
 

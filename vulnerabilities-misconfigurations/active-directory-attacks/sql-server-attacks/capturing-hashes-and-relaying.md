@@ -48,7 +48,7 @@ First we will check what happens if you attack a SQL server attacking it with th
 The red marking is there from the installation steps, please ignore it.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (28).png>)
+![](<../../../.gitbook/assets/image (28) (1).png>)
 
 We will start of from having access to the SQL database running on `Web01` using PowerUpSQL. Check out this page if you forgot how we got access.
 
@@ -62,7 +62,7 @@ We will start of from having access to the SQL database running on `Web01` using
 Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 2\. This shows us that the server is running as the service account `NT Service\MSSQL$DEV` which means its running with the system account. There is no way we can crack the computer accounts hash since its a long random password that changes every month. But we can still try to capture it.&#x20;
 

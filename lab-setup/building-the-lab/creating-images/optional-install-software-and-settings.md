@@ -10,14 +10,14 @@ description: >-
 
 Show general info on the background:
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
 
 1. Download [BGinfo](https://docs.microsoft.com/en-us/sysinternals/downloads/bginfo) from the Sysinternals Suite from Microsoft in the VM.
 2. Go to the Download folder and unzip the BGInfo zip.
 3. Copy the folder to the C:\ drive and empty the Downloads folder.
 4. Run the Bginfo64 program and Agree to the License Terms.
 
-![](<../../../.gitbook/assets/image (48) (1) (1).png>)
+![](<../../../.gitbook/assets/image (48) (1) (1) (1).png>)
 
 5\. Click on "File" --> Save as and select "All files". Then save the file in `C:\BGInfo` with the name `bginfo.bgi`
 
@@ -78,4 +78,4 @@ Vmware tools is required to automatically adapt the size to the monitor and for 
 
 1. Download [Notepad++](https://download.sysinternals.com/files/BGInfo.zip), run the installer and click next next next.
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)

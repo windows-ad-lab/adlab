@@ -15,7 +15,7 @@ DHCP: Disabled
 
 1. Open VMware workstation and click on "Edit" and then "Virtual Network Editor"
 
-![](<../../.gitbook/assets/image (63) (1) (1).png>)
+![](<../../.gitbook/assets/image (63) (1) (1) (1).png>)
 
 2\. Click on "Change Settings" and accept the UAC prompt.
 

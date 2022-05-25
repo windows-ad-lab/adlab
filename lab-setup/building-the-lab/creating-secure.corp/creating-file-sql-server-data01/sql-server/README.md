@@ -28,7 +28,7 @@
 
 3\. When smartscreen comes up select "Run".
 
-![](<../../../../../.gitbook/assets/image (68) (1).png>)
+![](<../../../../../.gitbook/assets/image (68) (1) (1).png>)
 
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
@@ -91,11 +91,11 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Then click "Apply".
 
-![](<../../../../../.gitbook/assets/image (28) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (28) (1) (1) (1).png>)
 
 16\. Open "SQL Server services" and right click on "SQL Server (DATA)" and click "Restart".
 
-![](<../../../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../../../.gitbook/assets/image (54) (1) (1).png>)
 
 17\. Do the same for "SQL Server Agent".
 
@@ -119,7 +119,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish".
 
-![](<../../../../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
 ### Testing connectivity
 
