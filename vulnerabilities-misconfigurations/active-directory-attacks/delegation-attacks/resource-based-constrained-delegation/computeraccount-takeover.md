@@ -121,7 +121,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 <S
 .\Rubeus.exe hash /password:123456 /user:fake01 /domain:secure.local
 ```
 
-![](<../../../../.gitbook/assets/image (72).png>)
+![](<../../../../.gitbook/assets/image (72) (1).png>)
 
 {% hint style="info" %}
 Temporarily disable Windows Defender if it gets flagged by it.

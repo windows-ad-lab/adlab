@@ -175,3 +175,16 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 13\. Click "Finish"
 
 14\. Close the Windows.
+
+### Enable RDP
+
+1. Open the Server Manager and click in the left menu on "Local Server".
+2. Click on "Disabled" in the "Remote Desktop" section
+
+![](<../../../.gitbook/assets/image (62).png>)
+
+3\. Then select "Allow remote connections to this computer" in the "Remote Desktop" section and click "Apply" and "Ok".
+
+![](<../../../.gitbook/assets/image (72).png>)
+
+Remote Desktop is enabled.
