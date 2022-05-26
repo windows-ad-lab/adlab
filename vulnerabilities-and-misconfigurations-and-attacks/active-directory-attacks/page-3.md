@@ -25,6 +25,8 @@
 
 ![](<../../.gitbook/assets/image (45).png>)
 
+6\. Click on "Apply" and "OK".
+
 ## Attacking
 
 ### How it works
@@ -33,7 +35,7 @@ When pre-authentication is not required, an attack can directly send a request f
 
 ### Tools
 
-* Crackmapexec
+* [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec)
 
 ### Executing the attack
 
@@ -43,19 +45,60 @@ AS-REP roasting was already covered in the Initial Access Attacks section.&#x20;
 [as-rep-roasting.md](../initial-access-attacks/username-enumeration/as-rep-roasting.md)
 {% endcontent-ref %}
 
-But since we have a set of valid credentials of the domain now, we could request a list of all usernames and check for AS-REP roastable users.
+But since we have a set of valid credentials of the domain now, we could request a list of all usernames and check for AS-REP roastable users. During the Initial Access AS-REP Roasting we used a example script from Impacket. But there are more tools that can accomplish the same thing, such as Crackmapexec.
 
+1. Use the discovered credentials `john` and password `Welcome2022!` with crackmapexec to authenticate over ldap and AS-REP roast all roastable users.
 
+```
+crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --asreproast asreproast.txt
+```
+
+![](<../../.gitbook/assets/image (60).png>)
+
+2\. We retrieved two hashes, one new one from `bankuser`. Lets crack it with hashcat and use the passwordlist we created earlier during the passwordspray. The hashcat parameters are:
+
+* Crackingmode: `-a 0` for using a wordlist
+* Hashmode: `-m 18200` for Kerberos 5, etype 23, AS-REP
+* List with hashes: `asreproasting.txt`
+* Passwords list: `passwords.txt`
+
+```
+hashcat -a 0 -m 18200 asreproast.txt passwords.txt
+```
+
+![](<../../.gitbook/assets/image (55).png>)
+
+We successfully cracked the password of the user `bankuser`, the password is `Bank2022!`.
 
 ## Defending
 
 ### Recommendations
 
-* a
+* Periodically check for users that don't require pre-authentication and remove the attribute.
+
+Check for users with the attribute:
+
+```
+Get-ADUser -Filter {DoesNotRequirePreAuth -eq $true} | Select-Object samAccountName
+```
+
+Remove the attribute for a single user:
+
+```
+Set-ADAccountControl -DoesNotRequirePreAuth $false -Identity <USER>
+```
+
+Check for users with the attribute and remove it:
+
+```
+Get-ADUser -Filter {DoesNotRequirePreAuth -eq $true} | Set-ADAccountControl -DoesNotRequirePreAuth $false
+```
 
 ### Detection
 
 
 
 ## References
+
+{% embed url="https://github.com/byt3bl33d3r/CrackMapExec" %}
 
