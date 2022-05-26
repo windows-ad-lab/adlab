@@ -33,9 +33,11 @@
   * [Configuring attack paths](lab-setup/attack-paths/configuring-attack-paths/README.md)
     * [Attack path 1](lab-setup/attack-paths/configuring-attack-paths/attack-path-1.md)
     * [Attack path 2](lab-setup/attack-paths/configuring-attack-paths/attack-path-2.md)
-  * [Guide](lab-setup/attack-paths/guide/README.md)
-    * [Attack path 1](lab-setup/attack-paths/guide/attack-path-1.md)
-    * [Attack path 2](lab-setup/attack-paths/guide/attack-path-2.md)
+  * [Tasks & Guide](lab-setup/attack-paths/tasks-and-guide/README.md)
+    * [Attack path 1](lab-setup/attack-paths/tasks-and-guide/attack-path-1/README.md)
+      * [Manual](lab-setup/attack-paths/tasks-and-guide/attack-path-1/manual.md)
+    * [Attack path 2](lab-setup/attack-paths/tasks-and-guide/attack-path-2/README.md)
+      * [Manual](lab-setup/attack-paths/tasks-and-guide/attack-path-2/manual.md)
 
 ## Vulnerabilities / Misconfigurations
 

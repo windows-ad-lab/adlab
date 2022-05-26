@@ -23,4 +23,4 @@ Below here there WILL be big spoilers on what to do to exploit the misconfigurat
 
 ## Attack path visualized
 
-![](<../../../.gitbook/assets/image (69).png>)
+![](<../../../../.gitbook/assets/image (69).png>)

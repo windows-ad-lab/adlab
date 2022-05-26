@@ -15,12 +15,4 @@
 11. Discover Foreign Security Principals and access a share across trusts.
 12. Retrieve credentials from the share.
 13. Try to get access to the fileserver.
-14. Abuse ACL and execute DC Sync
-
-{% hint style="danger" %}
-Below here there WILL be big spoilers on what to do to exploit the misconfigurations.
-{% endhint %}
-
-## Attack path visualized
-
-![](<../../../.gitbook/assets/image (70).png>)
+14. Abuse ACL and execute DC Sync.
