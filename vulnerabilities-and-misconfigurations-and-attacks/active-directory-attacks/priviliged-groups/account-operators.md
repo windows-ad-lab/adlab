@@ -38,7 +38,7 @@ By default it has no direct path to Domain Admin, but these groups might be able
 
 
 
-![](<../../../.gitbook/assets/image (62).png>)
+![](<../../../.gitbook/assets/image (62) (1).png>)
 
 ## Defending
 

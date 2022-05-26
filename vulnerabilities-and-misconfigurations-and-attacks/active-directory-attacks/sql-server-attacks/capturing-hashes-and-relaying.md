@@ -73,7 +73,7 @@ Get-SQLInstanceDomain | Invoke-SQLAuditPrivXpDirtree
 Get-SQLInstanceDomain | Invoke-SQLAuditPrivXpFileexist
 ```
 
-![](<../../../.gitbook/assets/image (62) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
 3\. Both methods are available on the `WEB01` SQL server. Before we can capture the hash we should run Responder on our Kali Machine:
 

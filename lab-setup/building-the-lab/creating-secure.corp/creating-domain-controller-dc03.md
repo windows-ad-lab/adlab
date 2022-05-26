@@ -101,7 +101,7 @@
 
 3\. At the step "Domain Controller Options" set a DSRM Password. For this domain we will choose `SecureRecoveryKey2022` as password.
 
-![](<../../../.gitbook/assets/image (55) (1) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1) (1).png>)
 
 4\. For the steps "DNS Options", "Additional Options", "Paths" and "Review Options" click Next.
 

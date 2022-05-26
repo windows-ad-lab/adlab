@@ -6,20 +6,20 @@ Complete the "Configuration" part of each of these pages to build the second att
 We recommend completing the pages in order.
 {% endhint %}
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/" %}
-[username-enumeration](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/" %}
+[username-enumeration](../../../vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/)
 {% endcontent-ref %}
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md" %}
-[password-spraying.md](../../../vulnerabilities-misconfigurations/initial-access-attacks/username-enumeration/password-spraying.md)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/password-spraying.md" %}
+[password-spraying.md](../../../vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md" %}
-[unqouted-service-path.md](../../../vulnerabilities-misconfigurations/misc/misconfigured-service/unqouted-service-path.md)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md" %}
+[unqouted-service-path.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md" %}
-[passwords-on-shares.md](../../../vulnerabilities-misconfigurations/misc/passwords-on-shares.md)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/passwords-on-shares.md" %}
+[passwords-on-shares.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/passwords-on-shares.md)
 {% endcontent-ref %}
 
 // Still work in progress

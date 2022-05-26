@@ -81,7 +81,7 @@ New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.
 Get-DomainComputer fake01 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../../.gitbook/assets/image (55).png>)
+![](<../../../../.gitbook/assets/image (55) (1).png>)
 
 7\. Now we need to create the raw security descriptor which we then will write to the attribute:
 

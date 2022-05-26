@@ -62,7 +62,7 @@ It is **possible** that accounts have an empty password if the useraccountcontro
 crackmapexec smb 10.0.0.3 -u users.txt -p '' -d amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="warning" %}
 Spraying an empty password counts as a invalid login. So it is advised to not do this while also passwordspraying as it might cause account lockouts.

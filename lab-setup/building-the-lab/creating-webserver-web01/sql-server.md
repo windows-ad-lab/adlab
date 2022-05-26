@@ -94,7 +94,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security"
 
-![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Rightclick on "Inbound Rules" and select "New rule".
 

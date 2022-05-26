@@ -90,8 +90,6 @@ bash spray.sh smb 10.0.0.3 ~/adlab/users.txt ~/adlab/passwords.txt 1 31 password
 For demonstration purposed we used 1 minute in the screenshot.
 {% endhint %}
 
-We discovered two accounts, chris and john.
-
 ## Defending
 
 ### Recommendations

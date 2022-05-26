@@ -69,6 +69,6 @@ Enter-PSSession WS01 -Credential $creds
 
 Read more about PSRemoting and lateral movement:
 
-{% content-ref url="../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md" %}
-[psremoting.md](../../../vulnerabilities-misconfigurations/misc/lateral-movement/psremoting.md)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/lateral-movement/psremoting.md" %}
+[psremoting.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/lateral-movement/psremoting.md)
 {% endcontent-ref %}
