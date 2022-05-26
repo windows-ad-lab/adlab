@@ -35,7 +35,7 @@
 
 ### How it works
 
-When pre-authentication is not required, an attack can directly send a request for authentication. The KDC will return an encrypted TGT and the attacker can brute-force it offline.
+When pre-authentication is not required, an attack can directly send a request for authentication. The KDC will return an encrypted TGT and the attacker can extract the hash and brute-force it offline.
 
 ### Tools
 
