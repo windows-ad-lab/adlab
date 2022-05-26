@@ -52,7 +52,7 @@
 * [Active Directory Attacks](vulnerabilities-misconfigurations/active-directory-attacks/README.md)
   * [Password spraying](vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)
   * [Password in description](<vulnerabilities-misconfigurations/active-directory-attacks/page-3 (1).md>)
-  * [PASSWD\_NOT\_REQ](vulnerabilities-misconfigurations/active-directory-attacks/passwd\_not\_req.md)
+  * [Empty password](vulnerabilities-misconfigurations/active-directory-attacks/passwd\_not\_req.md)
   * [Kerberoasting](vulnerabilities-misconfigurations/active-directory-attacks/kerberoasting.md)
   * [AS-REP Roasting](vulnerabilities-misconfigurations/active-directory-attacks/as-rep-roasting.md)
   * [Delegation Attacks](vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/README.md)

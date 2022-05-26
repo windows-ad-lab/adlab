@@ -7,3 +7,4 @@ description: >-
 
 # Password spraying
 
+During the username enumeration phase

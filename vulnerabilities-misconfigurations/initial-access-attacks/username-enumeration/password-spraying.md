@@ -87,8 +87,10 @@ bash spray.sh smb 10.0.0.3 ~/adlab/users.txt ~/adlab/passwords.txt 1 31 password
 ![](<../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
-For demonstration purposed we used 1 minute.
+For demonstration purposed we used 1 minute in the screenshot.
 {% endhint %}
+
+We discovered two accounts, chris and john.
 
 ## Defending
 
