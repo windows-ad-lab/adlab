@@ -137,7 +137,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
 

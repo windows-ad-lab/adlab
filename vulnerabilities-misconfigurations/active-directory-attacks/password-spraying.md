@@ -20,10 +20,20 @@ net user banktest Bank2022! /add /domain
 
 ## Attacking
 
+### Tools
+
+* [Kerbrute](https://github.com/ropnop/kerbrute)
+* [Spray](https://github.com/Greenwolf/Spray)
+* [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec)
+* [Domainpasswordspray](https://github.com/dafthack/DomainPasswordSpray)
+* [Rubeus](https://github.com/GhostPack/Rubeus)
+
+### Executing the attack
+
 Spraying passwords was already covered in the Initial Access Attacks section.
 
-{% content-ref url="../initial-access-attacks/username-enumeration/password-spraying.md" %}
-[password-spraying.md](../initial-access-attacks/username-enumeration/password-spraying.md)
+{% content-ref url="../../vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/password-spraying.md" %}
+[password-spraying.md](../../vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/password-spraying.md)
 {% endcontent-ref %}
 
 But since we have a set of valid credentials of the domain now, we could request a list of all usernames and passwordspray again. We will do just that in this section.
@@ -64,3 +74,10 @@ We discovered two extra set of credentials. `Bankuser` and `banktest`.
 
 ## References
 
+{% embed url="https://github.com/ropnop/kerbrute" %}
+
+{% embed url="https://github.com/Greenwolf/Spray" %}
+
+{% embed url="https://github.com/byt3bl33d3r/CrackMapExec" %}
+
+{% embed url="https://github.com/dafthack/DomainPasswordSpray" %}

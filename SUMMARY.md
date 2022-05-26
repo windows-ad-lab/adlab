@@ -50,7 +50,7 @@
   * [SMB Null-Session](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/smb-null-session.md)
   * [SQL Server default login](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/sql-server-default-login.md)
 * [Active Directory Attacks](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/README.md)
-  * [Password spraying](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/password-spraying.md)
+  * [Password spraying](vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)
   * [AS-REP Roasting](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3.md)
   * [Empty password](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-1.md)
   * [Password in description](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-2.md)
@@ -100,6 +100,7 @@
     * [Unqouted Service Path](vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md)
   * [Passwords on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/passwords-on-shares.md)
   * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
+  * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
 
 ## Defence
 

@@ -35,7 +35,7 @@
 
 8\. Click on "User Mapping" and select "Production".
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 9\. Click "OK".
 
