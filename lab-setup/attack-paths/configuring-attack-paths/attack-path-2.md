@@ -1,27 +1,10 @@
 # Attack path 2
 
-## Attack path visualized
+Complete the "Configuration" part of each of these pages to build the second attack path of the lab. Completing the "Attacking" part is NOT Required! These are added to give as an example on how the misconfigurations could be exploited.
 
-![](<../../../.gitbook/assets/attack\_path2.drawio (2).png>)
-
-## Tasks for the specified attack path
-
-1. Enumerate valid usernames.
-2. Check if any of the valid users has interesting attributes.
-3. Look for anything interesting the new user can access.
-4. Escalate privileges to sysadmin.
-5. Get a shell on the server.
-6. Escalate privileges on the machine with a delegation attack.
-7. Enumerate SQL Links to hop accross trusts.
-8. Perform UNC Path injection and capture the hash of SQL Service user.
-9. Crack the hash.
-10. Check for ACL's and get access to the system.
-11. Look for saved credentials on the machine (DPAPI).
-12. Become domain admin by abusing the "Backup Operators" group.
-13. Check for interesting user attributes accross the trust to `bank.local`.
-14. Take over the `bank.local` forest.
-
-## Steps for the specified attack path
+{% hint style="info" %}
+We recommend completing the pages in order.
+{% endhint %}
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/enumerate-logins/" %}
 [enumerate-logins](../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/privilege-escalation/enumerate-logins/)
@@ -47,13 +30,27 @@
 [executing-commands.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/executing-commands.md)
 {% endcontent-ref %}
 
-
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation.md" %}
+[resource-based-constrained-delegation.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation.md)
+{% endcontent-ref %}
 
 {% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/database-links.md" %}
 [database-links.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/database-links.md)
 {% endcontent-ref %}
 
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/capturing-hashes-and-relaying.md" %}
+[capturing-hashes-and-relaying.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/sql-server-attacks/capturing-hashes-and-relaying.md)
+{% endcontent-ref %}
 
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-2.md" %}
+[page-2.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/acl-abuses/page-2.md)
+{% endcontent-ref %}
 
-##
+{% content-ref url="../../../vulnerabilities-misconfigurations/misc/page-3.md" %}
+[page-3.md](../../../vulnerabilities-misconfigurations/misc/page-3.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/backup-operators.md" %}
+[backup-operators.md](../../../vulnerabilities-misconfigurations/active-directory-attacks/priviliged-groups/backup-operators.md)
+{% endcontent-ref %}
 

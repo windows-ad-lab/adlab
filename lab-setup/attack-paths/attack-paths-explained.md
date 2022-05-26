@@ -1,2 +1,0 @@
-# Attack paths explained
-

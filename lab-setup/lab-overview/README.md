@@ -6,7 +6,7 @@ description: >-
 
 # Lab overview
 
-![](<../.gitbook/assets/lab\_overview.drawio (1).png>)
+![](<../../.gitbook/assets/lab\_overview.drawio (1).png>)
 
 ## General info
 

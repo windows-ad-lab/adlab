@@ -46,7 +46,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 6\. Go back to `WEB01` and unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login". Fill in Amsterdam\DatabaseUsers
 
-![](<../../../../../.gitbook/assets/image (70) (1).png>)
+![](<../../../../../.gitbook/assets/image (70) (1) (1).png>)
 
 ## Attacking
 

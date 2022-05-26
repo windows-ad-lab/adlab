@@ -4,7 +4,7 @@
 
 ## Lab-setup
 
-* [Lab overview](lab-setup/lab-overview.md)
+* [Lab overview](lab-setup/lab-overview/README.md)
 * [Building the lab](lab-setup/building-the-lab/README.md)
   * [Prerequisite](lab-setup/building-the-lab/prerequisite.md)
   * [Creating images](lab-setup/building-the-lab/creating-images/README.md)
@@ -30,14 +30,12 @@
       * [SQL Server](lab-setup/building-the-lab/creating-secure.corp/creating-file-sql-server-data01/sql-server/README.md)
         * [Create database](lab-setup/building-the-lab/creating-secure.corp/creating-file-sql-server-data01/sql-server/create-database.md)
 * [Attack Paths](lab-setup/attack-paths/README.md)
-  * [Configuring attack paths](lab-setup/attack-paths/configuring-attack-paths.md)
-  * [Attack paths explained](lab-setup/attack-paths/attack-paths-explained.md)
-  * [Attack path 1](lab-setup/attack-paths/attack-path-1/README.md)
-    * [Manual](lab-setup/attack-paths/attack-path-1/manual.md)
-  * [Attack path 2](lab-setup/attack-paths/attack-path-2/README.md)
-    * [Manual](lab-setup/attack-paths/attack-path-2/manual.md)
-  * [Attack path 3](lab-setup/attack-paths/attack-path-3/README.md)
-    * [Manual](lab-setup/attack-paths/attack-path-3/manual.md)
+  * [Configuring attack paths](lab-setup/attack-paths/configuring-attack-paths/README.md)
+    * [Attack path 1](lab-setup/attack-paths/configuring-attack-paths/attack-path-1.md)
+    * [Attack path 2](lab-setup/attack-paths/configuring-attack-paths/attack-path-2.md)
+  * [Guide](lab-setup/attack-paths/guide/README.md)
+    * [Attack path 1](lab-setup/attack-paths/guide/attack-path-1.md)
+    * [Attack path 2](lab-setup/attack-paths/guide/attack-path-2.md)
 
 ## Vulnerabilities / Misconfigurations
 

