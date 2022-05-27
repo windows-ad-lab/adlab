@@ -43,7 +43,7 @@ join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 ```
 
-![](<../../../../.gitbook/assets/image (68) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (68) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (53) (1) (1).png>)
 

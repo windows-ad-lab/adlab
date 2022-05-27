@@ -65,7 +65,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 6\. Open the "Security" tab and select "Be made using this security context". Then fill in the credentials we created in the previous section. `SQL_link` and password `Eo6#jAzonQhw` .&#x20;
 
-![](<../../../.gitbook/assets/image (68) (1).png>)
+![](<../../../.gitbook/assets/image (68) (1) (1).png>)
 
 7\. Open the "Server Options" tab and select True for "RPC Out". This is done so we can enable xp\_cmdshell during the attack.
 

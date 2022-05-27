@@ -16,11 +16,3 @@
 12. Become domain admin by abusing the "Backup Operators" group.
 13. Check for interesting user attributes across the trust to `bank.local`.
 14. Take over the `bank.local` forest.
-
-{% hint style="danger" %}
-Below here there WILL be big spoilers on what to do to exploit the misconfigurations.
-{% endhint %}
-
-## Attack path visualized
-
-![](<../../../../.gitbook/assets/image (69).png>)
