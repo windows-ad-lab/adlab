@@ -161,7 +161,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 1. Right click the user and click on "Add to a group..."
 
-![](<../../../.gitbook/assets/image (33) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1) (1) (1) (1).png>)
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
@@ -171,7 +171,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADGroupMember "Domain Admins"`
 
-![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1).png>)
 
 ## Installing and configuring the DHCP service
 
@@ -227,7 +227,7 @@ Password: `jr8Q3o97@s37AF`
 * Length: `24`
 * Subnet mask: `255.255.255.0`
 
-![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png>)
 
 5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 
@@ -235,11 +235,11 @@ Password: `jr8Q3o97@s37AF`
 
 7\. Fill in `10.0.0.1` for the default gateway and click on "Add", it should be in the list and then click on "Next"
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 8\. At the step "Domain Name and DNS Server" make sure `10.0.0.2` and `10.0.0.3` are listed as DNS servers.
 
-![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
 
 9\. At the step "WINS Servers" and "Activate Scope" click "Next".
 

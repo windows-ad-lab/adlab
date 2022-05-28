@@ -38,11 +38,11 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 4\. Right click on the "Employees" OU and select "new" and then "User". Name the user also `Bob` and set the password `Fall2022!`. Make sure you deselect "User must change password at next Logon".
 
-![](<../../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 5\. Right click the user "Bob" and select "Properties". Then open the tab "Member Of" and click "Add". Fill in the group `DatabaseUsers` and click on "OK"
 
-![](<../../../../../.gitbook/assets/image (37).png>)
+![](<../../../../../.gitbook/assets/image (37) (1).png>)
 
 6\. Go back to `WEB01` and unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login". Fill in Amsterdam\DatabaseUsers
 
@@ -83,7 +83,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_princip
 
 5\. If we run the queries on the SQL server itself as the Domain Admin we will receive all the users, since it is sysadmin on the SQL Server;
 
-![](<../../../../../.gitbook/assets/image (5).png>)
+![](<../../../../../.gitbook/assets/image (5) (1).png>)
 
 6\. So we aren't able to enumerate all the users using these queries. But we are able to query the users with the following query; `Select SUSER_NAME(ID)`. Using the SUSER\_NAME function. Where the ID starts with 1 and we keep incrementing it till we have all the users. The id `282` is from the `testadmin` SQL user.
 

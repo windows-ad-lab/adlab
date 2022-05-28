@@ -101,7 +101,7 @@
 
 3\. At the step "Domain Controller Options" set a DSRM Password. For this domain we will choose `SecureRecoveryKey2022` as password.
 
-![](<../../../.gitbook/assets/image (55) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
 
 4\. For the steps "DNS Options", "Additional Options", "Paths" and "Review Options" click Next.
 
@@ -142,7 +142,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 2\. Right click the domain object "Secure.local" and click on "Properties".
 
-![](<../../../.gitbook/assets/image (33) (1).png>)
+![](<../../../.gitbook/assets/image (33) (1) (1).png>)
 
 3\. Click on the tab "Trust", then click "New Trust" and then click "Next".
 
@@ -185,6 +185,6 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 3\. Then select "Allow remote connections to this computer" in the "Remote Desktop" section and click "Apply" and "Ok".
 
-![](<../../../.gitbook/assets/image (72) (1) (1).png>)
+![](<../../../.gitbook/assets/image (72) (1) (1) (1).png>)
 
 Remote Desktop is enabled.
