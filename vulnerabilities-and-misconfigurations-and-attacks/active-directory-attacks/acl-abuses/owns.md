@@ -40,7 +40,7 @@ If you are "Owner" of a object, you can change the DACL of the object. Meaning y
 Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetIdentity DATA01 -PrincipalIdentity sa_sql -Rights All -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (26).png>)
+![](<../../../.gitbook/assets/image (26) (1).png>)
 
 3\. PowerView gives some errors but it seems like it found the correct information and tried to set the ACL's. We can check this by running BloodHound again or querying the Domain Controller for all ACL's from DATA01 and filter. First we have to get the objectsid from the user `sa_sql` and then we can use the cmdlet `Get-DomainObjectACL` to query all the ACL's for `DATA01`.
 

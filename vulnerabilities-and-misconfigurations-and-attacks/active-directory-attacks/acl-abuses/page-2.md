@@ -5,7 +5,7 @@
 1. Login to `DC03` with the Administrator user and the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool.
 
-![](<../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Click on "View" and enable "Advanced Features
 
@@ -25,7 +25,7 @@
 
 ![](<../../../.gitbook/assets/image (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (61) (1) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
 It is configured correctly!
 
@@ -52,7 +52,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../../.gitbook/assets/image (70) (1).png>)
+![](<../../../.gitbook/assets/image (70) (1) (1).png>)
 
 4\. In the page DACL-Abuses I showed you how to check for ACL's using BloodHound. We will abuse the "Write Owner" ACL `sa_sql` has on `DATA01`.
 
@@ -81,7 +81,7 @@ The current owner of the computerobject `DATA01` is the group `Domain Admins`.
 Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100 -Identity DATA01 -OwnerIdentity sa_sql -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (69) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1).png>)
 
 7\. We didn't receive any errors, to lets use the same queries again to query the owner of the computerobject DATA01;
 

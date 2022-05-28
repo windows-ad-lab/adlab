@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -171,7 +171,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADGroupMember "Domain Admins"`
 
-![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1) (1).png>)
 
 ## Installing and configuring the DHCP service
 
@@ -216,7 +216,7 @@ Password: `jr8Q3o97@s37AF`
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Click "Next", fill in the name "DHCP Clients" and click "Next".
 
@@ -227,7 +227,7 @@ Password: `jr8Q3o97@s37AF`
 * Length: `24`
 * Subnet mask: `255.255.255.0`
 
-![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png>)
 
 5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 

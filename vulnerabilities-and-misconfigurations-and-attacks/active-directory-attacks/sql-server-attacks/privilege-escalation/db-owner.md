@@ -17,7 +17,7 @@
 
 3\. Login with the `sa` user using the password `sa` or `Password1!` (Depending if you changed it for another vulnerability)
 
-![](<../../../../.gitbook/assets/image (30) (1).png>)
+![](<../../../../.gitbook/assets/image (30) (1) (1).png>)
 
 4\. Click “New Query” button and use the SQL query below to make `Amsterdam\Richard` database owner of the `production` database.
 
@@ -30,7 +30,7 @@ EXEC sp_addrolemember [db_owner], [AMSTERDAM\Richard];
 
 5\. Change the Owner of the database to the SA account. Right click on "Production", click "Properties" and open the "Files" tab. Click on the "..." and fill in "sa" and click on "OK"
 
-![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png>)
 
 6\. Execute the following query to make sure `Amsterdam\Richard` is Database owner and the real Owner of the database is `sa`:
 
@@ -43,7 +43,7 @@ join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 ```
 
-![](<../../../../.gitbook/assets/image (68) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (68) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../../.gitbook/assets/image (53) (1) (1).png>)
 
@@ -53,7 +53,7 @@ SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 ALTER DATABASE MyAppDb SET TRUSTWORTHY ON
 ```
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
 
 ```
 SELECT a.name,b.is_trustworthy_on
@@ -62,7 +62,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (39) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
 
 The `1` after `Production` shows us that the database is `ThrustWorthy`.
 
@@ -103,7 +103,7 @@ join sys.database_principals rp on (drm.role_principal_id = rp.principal_id)
 join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 ```
 
-![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1) (1).png>)
 
 Our current user `AMSTERDAM\richard` is db\_owner.
 
@@ -126,7 +126,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 The Production database is trustworty.
 

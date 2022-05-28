@@ -30,7 +30,7 @@ By default it has no direct path to Domain Admin, but these groups might be able
 
 * Create users.
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
 * Add users to low privileged groups. This can be achieved through the cmdlet `Add-DomainGroupMember` from PowerView. Since we didn't create any groups in the domain we will use the "Domain Guests" group.
 
@@ -38,7 +38,7 @@ By default it has no direct path to Domain Admin, but these groups might be able
 
 
 
-![](<../../../.gitbook/assets/image (62) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
 ## Defending
 

@@ -43,7 +43,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 10\. Fill in the login name `SQL_link` and password `Eo6#jAzonQhw` . Then make sure the three password flags "Enforce Password policy", "Enforce password expiration" and "User must change password at next login" are unselected.
 
-![](<../../../.gitbook/assets/image (65) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1).png>)
 
 11\. In the tab "Server Roles" select "setupadmin" and "sysadmin" and click "OK".
 
@@ -65,7 +65,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 6\. Open the "Security" tab and select "Be made using this security context". Then fill in the credentials we created in the previous section. `SQL_link` and password `Eo6#jAzonQhw` .&#x20;
 
-![](<../../../.gitbook/assets/image (68) (1) (1).png>)
+![](<../../../.gitbook/assets/image (68) (1) (1) (1).png>)
 
 7\. Open the "Server Options" tab and select True for "RPC Out". This is done so we can enable xp\_cmdshell during the attack.
 
@@ -73,7 +73,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 8\. Click "OK" and the linked server should show up.
 
-![](<../../../.gitbook/assets/image (64) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
 
 ## Attacking
 

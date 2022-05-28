@@ -7,7 +7,7 @@
 
 3\. When smartscreen comes up select "Run".
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
@@ -23,7 +23,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 
@@ -42,7 +42,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 ![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (26) (1) (1).png>)
+![](<../../../.gitbook/assets/image (26) (1) (1) (1).png>)
 
 9\. Click Next and fill in the Instance name `dev`.
 
@@ -50,7 +50,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 10\. Change the "Startup Type" for the "SQL Serer Agent" to "Automatic" and make sure all three are set to "Automatic", click "Next".
 
-![](<../../../.gitbook/assets/image (30) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1).png>)
 
 11\. At the next step select "Mixed Mode" and fill in the password `Password1!`. Then select "Add" at the "Specify SQL Server administrators" and add `amsterdam\administrator` then click Next.
 
@@ -94,13 +94,13 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security"
 
-![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Rightclick on "Inbound Rules" and select "New rule".
 
 3\. Select "Port" and click "Next"
 
-![](<../../../.gitbook/assets/image (31) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 

