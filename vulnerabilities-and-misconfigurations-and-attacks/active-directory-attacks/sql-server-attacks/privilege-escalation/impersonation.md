@@ -28,7 +28,7 @@ description: >-
 
 4\. Click “New Query” button and use the SQL query below to create two new users:
 
-![](<../../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 ```
 CREATE LOGIN Developer WITH PASSWORD = 'MyPassword!';
@@ -45,7 +45,7 @@ GRANT IMPERSONATE ON LOGIN::Developer_test to [Developer];
 GRANT IMPERSONATE ON LOGIN::sa to [Developer_test];
 ```
 
-![](<../../../../.gitbook/assets/image (36) (1).png>)
+![](<../../../../.gitbook/assets/image (36) (1) (1).png>)
 
 ## Attacking
 

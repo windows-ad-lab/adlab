@@ -12,7 +12,7 @@ description: >-
 
 2\. Open "Microsoft SQL Server Management Studio"
 
-![](<../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (32) (1) (1) (1) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -62,7 +62,7 @@ sa
 crackmapexec mssql 10.0.0.5 -u sa -p passwords.txt --local-auth
 ```
 
-![](<../../.gitbook/assets/image (39) (1) (1).png>)
+![](<../../.gitbook/assets/image (39) (1) (1) (1).png>)
 
 We got a succesfull login as the `sa` user with the password `sa`.
 
@@ -72,7 +72,7 @@ We got a succesfull login as the `sa` user with the password `sa`.
 crackmapexec mssql 10.0.0.5 -u sa -p sa --local-auth -q "select @@version;"
 ```
 
-![](<../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 5\. Connect to the database using mssql-cli.
 

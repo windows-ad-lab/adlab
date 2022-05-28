@@ -95,7 +95,7 @@
 
 1\. In the server manager click on the flag and click on "Promote this server to a domain controller"
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
 
 2\. Select "Add a new forest" and fill in the domain name `secure.local`.
 
@@ -132,13 +132,13 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 5\. Do the same on `DC03` but then for `bank.local` with the IP `10.0.0.2`.
 
-![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
 
 ### Creating trust to bank.local
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Domain and Trusts".
 
-![](<../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1).png>)
 
 2\. Right click the domain object "Secure.local" and click on "Properties".
 
@@ -152,7 +152,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 5\. On the "Trust Type" page, select "External trust" and click "Next".
 
-![](<../../../.gitbook/assets/image (61) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1) (1) (1).png>)
 
 6\. On the "Direction of trust" page select "Two-Way" and click "Next".
 
@@ -181,10 +181,10 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 1. Open the Server Manager and click in the left menu on "Local Server".
 2. Click on "Disabled" in the "Remote Desktop" section
 
-![](<../../../.gitbook/assets/image (63) (1).png>)
+![](<../../../.gitbook/assets/image (63) (1) (1).png>)
 
 3\. Then select "Allow remote connections to this computer" in the "Remote Desktop" section and click "Apply" and "Ok".
 
-![](<../../../.gitbook/assets/image (72) (1).png>)
+![](<../../../.gitbook/assets/image (72) (1) (1).png>)
 
 Remote Desktop is enabled.

@@ -11,7 +11,7 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../../.gitbook/assets/image (39).png>)
+![](<../../../../../.gitbook/assets/image (39) (1).png>)
 
 4\. Create two new users copying the following settings. Unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login".
 
@@ -30,7 +30,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 1. The user AMSTERDAM\Richard already has access to the SQL Server. But lets create a group and a new user and add this user to the group and give it access.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../../../.gitbook/assets/image (10).png>)
+![](<../../../../../.gitbook/assets/image (10) (1).png>)
 
 3\. Open the "Employees" OU and right click on it and select "new" and then "Group". Name the group `DatabaseUsers`.
 
@@ -38,7 +38,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 4\. Right click on the "Employees" OU and select "new" and then "User". Name the user also `Bob` and set the password `Fall2022!`. Make sure you deselect "User must change password at next Logon".
 
-![](<../../../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 5\. Right click the user "Bob" and select "Properties". Then open the tab "Member Of" and click "Add". Fill in the group `DatabaseUsers` and click on "OK"
 

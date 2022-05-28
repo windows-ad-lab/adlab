@@ -17,7 +17,7 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../.gitbook/assets/image (63) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (63) (1) (1) (1) (1).png>)
 
 4\. Expand the "Security" and "Logins" folders. Right click on "Logins" and click "New Login".
 
@@ -31,7 +31,7 @@
 
 7\. At "Default Database" select "Production".
 
-![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (47) (1) (1) (1).png>)
 
 8\. Click on "User Mapping" and select "Production".
 
@@ -39,7 +39,7 @@
 
 9\. Click "OK".
 
-![](<../../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -115,7 +115,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (47) (1).png>)
+![](<../../../../.gitbook/assets/image (47) (1) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 
@@ -125,7 +125,7 @@ It shows that we aren't sysadmin. Which means we can't execute commands on the d
 
 We are able to access the Production database, but not the Development one.
 
-![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (14) (1) (1) (1).png>)
 
 ## Defending
 

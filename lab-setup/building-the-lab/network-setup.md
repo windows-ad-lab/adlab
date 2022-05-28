@@ -15,13 +15,13 @@ DHCP: Disabled
 
 1. Open VMware workstation and click on "Edit" and then "Virtual Network Editor"
 
-![](<../../.gitbook/assets/image (63) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (63) (1) (1) (1) (1) (1).png>)
 
 2\. Click on "Change Settings" and accept the UAC prompt.
 
 3\. Click on "Add Network" and Click "OK"
 
-![](<../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Select the newly created network and copy the following settings:
 

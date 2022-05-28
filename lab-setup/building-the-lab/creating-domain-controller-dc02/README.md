@@ -153,7 +153,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 5\. For this user we will set a password we can remember `TheBestSecureBank2022`. Make sure you save it somewhere, like in a password manager. And uncheck the box "user must change password at next logon"
 
-![](<../../../.gitbook/assets/image (45) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (45) (1) (1) (1) (1) (1).png>)
 
 6\. Click "Next" and "Finish"
 
@@ -165,7 +165,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
-![](<../../../.gitbook/assets/image (35) (1).png>)
+![](<../../../.gitbook/assets/image (35) (1) (1).png>)
 
 3\. With the following simple PowerShell command we can check if `Amsterdam admin` is part of the `Domain Admins` group.
 
@@ -197,7 +197,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 6\. In the server manager click on the flag and click on "Complete DHCP configuration"
 
-![](<../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 7\. Click "Next" and then select "User alternate credentials" and fill in the credentials for `admin_bank`.
 
@@ -239,7 +239,7 @@ Password: `jr8Q3o97@s37AF`
 
 8\. At the step "Domain Name and DNS Server" make sure `10.0.0.2` and `10.0.0.3` are listed as DNS servers.
 
-![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
 
 9\. At the step "WINS Servers" and "Activate Scope" click "Next".
 
@@ -247,4 +247,4 @@ Password: `jr8Q3o97@s37AF`
 
 11\. We should now see a Scope for IPV4.
 
-![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1).png>)

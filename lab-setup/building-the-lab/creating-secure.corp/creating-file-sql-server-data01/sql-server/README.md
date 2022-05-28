@@ -11,20 +11,20 @@
 
 4\. Create a user with the name `sa_sql`.
 
-![](<../../../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 5\. Set the password "`Iloveyou2`" and create the user.&#x20;
 
 6\. Open the tab "Account" and select "Password never expires" under "Account options".
 
-![](<../../../../../.gitbook/assets/image (47).png>)
+![](<../../../../../.gitbook/assets/image (47) (1).png>)
 
 ### Installing SQL Server
 
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../../../.gitbook/assets/image (61) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -52,7 +52,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
@@ -61,7 +61,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../../../.gitbook/assets/image (14) (1) (1).png>)
 
 9\. Click Next and fill in the Instance name `data`.
 
@@ -69,7 +69,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 10\. Change the "Startup Type" for the "SQL Server Agent" to "Automatic" and make sure all three are set to "Automatic". Then change the account name for "SQL Server agent" and "SQL Server Database Engine" to `sa_sql` and fill in the password `Iloveyou2`.
 
-![](<../../../../../.gitbook/assets/image (56) (1).png>)
+![](<../../../../../.gitbook/assets/image (56) (1) (1).png>)
 
 11\. At the next step select "Windows authentication mode". Then select "Add" at the "Specify SQL Server administrators" and add `secure\administrator` then click "Next".&#x20;
 
@@ -95,7 +95,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 16\. Open "SQL Server services" and right click on "SQL Server (DATA)" and click "Restart".
 
-![](<../../../../../.gitbook/assets/image (54) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (54) (1) (1) (1).png>)
 
 17\. Do the same for "SQL Server Agent".
 
@@ -105,7 +105,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security".
 
-![](<../../../../../.gitbook/assets/image (45) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (45) (1) (1) (1).png>)
 
 2\. Right click on "Inbound Rules" and select "New rule".
 
@@ -119,7 +119,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish".
 
-![](<../../../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
 
 ### Testing connectivity
 

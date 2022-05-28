@@ -15,17 +15,17 @@
 
 5\. Click on "Add" and type `sa_sql`.
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1).png>)
 
 6\. Select the "sa\_sql" user and click "Advanced". Then select the "sa\_sql" once again and click on "Edit". Then select "Modify Owner".
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
 7\. We can quickly run BloodHound to check if the correct permissions are applied to the `sa_sql` user:
 
 ![](<../../../.gitbook/assets/image (1).png>)
 
-![](<../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1).png>)
 
 It is configured correctly!
 
@@ -71,7 +71,7 @@ Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Cre
 Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (32) (1).png>)
 
 The current owner of the computerobject `DATA01` is the group `Domain Admins`.
 

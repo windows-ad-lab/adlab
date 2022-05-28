@@ -19,7 +19,7 @@ description: >-
 sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Service.exe" start= auto
 ```
 
-![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Run the following command to create the folders for the service:
 
@@ -139,13 +139,13 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
-![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1).png>)
 
 #### Cleanup
 

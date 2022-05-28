@@ -44,7 +44,7 @@ Is you have GenericAll or GenericWrite rights to a computer object you can write
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Data01 | Select-Object -Property name, msds-allowedtoactonbehalfofotheridentity
 ```
 
-![](<../../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 The attribute haven't been set yet.
 
@@ -121,7 +121,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 <S
 .\Rubeus.exe hash /password:123456 /user:fake01 /domain:secure.local
 ```
 
-![](<../../../../.gitbook/assets/image (72) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (72) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Temporarily disable Windows Defender if it gets flagged by it.
@@ -139,7 +139,7 @@ Temporarily disable Windows Defender if it gets flagged by it.
 
 12\. We got a CIFS ticket as `Administrator` for `data01.secure.local`, now we can try to list the C disk.
 
-![](<../../../../.gitbook/assets/image (61).png>)
+![](<../../../../.gitbook/assets/image (61) (1).png>)
 
 ### Cleanup
 

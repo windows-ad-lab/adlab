@@ -23,7 +23,7 @@
 
 5\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
-![](<../../.gitbook/assets/image (45).png>)
+![](<../../.gitbook/assets/image (45) (1).png>)
 
 6\. Click on "Apply" and "OK".
 
