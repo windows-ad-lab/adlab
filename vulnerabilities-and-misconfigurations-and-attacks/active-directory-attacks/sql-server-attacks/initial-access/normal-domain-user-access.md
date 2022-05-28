@@ -17,7 +17,7 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../.gitbook/assets/image (63) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (63) (1) (1) (1).png>)
 
 4\. Expand the "Security" and "Logins" folders. Right click on "Logins" and click "New Login".
 
