@@ -64,7 +64,7 @@ python3 -m http.server 8090
 $creds = Get-Credential
 ```
 
-Then we can use PowerView to query the Domaincontroller from `secure.local` for the domain-object and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve aswell;
+Then we can use PowerView to query the domain controller from `secure.local` for the domain-object `DATA01` and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve aswell;
 
 ```
 Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Credential $creds -Server 10.0.0.100 | select samaccountname, Owner

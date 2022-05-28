@@ -148,7 +148,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 4\. On the "Trust Name" page, type the NetBIOS name `bank.local` and then click "Next".
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
 
 5\. On the "Trust Type" page, select "External trust" and click "Next".
 

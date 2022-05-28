@@ -132,7 +132,7 @@ EXECUTE AS LOGIN = 'sa'
 
 Now no error:
 
-![](<../../../../.gitbook/assets/image (43) (1).png>)
+![](<../../../../.gitbook/assets/image (43) (1) (1).png>)
 
 We successfully impersonated `Developer` --> `Developer_test` --> `sa`.
 

@@ -46,7 +46,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 9\. Click Next and fill in the Instance name `dev`.
 
-![](<../../../.gitbook/assets/image (43) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
 
 10\. Change the "Startup Type" for the "SQL Serer Agent" to "Automatic" and make sure all three are set to "Automatic", click "Next".
 
@@ -84,7 +84,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 16\. Do the same for "SQL Server Agent":
 
-![](<../../../.gitbook/assets/image (46) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1).png>)
 
 17\. Download and Install [SQL Server Mangement Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN\&view=sql-server-ver15). Just Click "Install" and reboot the system.
 

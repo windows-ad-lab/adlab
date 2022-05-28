@@ -13,7 +13,7 @@ Active Directory Discretionary Access Control Lists (DACLs) and Acccess Control 
 
 The easiest way to check for ACL abuses is using BloodHound since it will visualize the ACL abuses and it is easy to to check if any new owned objects has ACL's. The easiest way to check it is searching for the user at the top and clicking on the user, then scroll down all the "Node Info" and look for "Outbound control rights". This is the section thats hows if the user has any ACL's:
 
-![](<../../../.gitbook/assets/image (40) (1).png>)
+![](<../../../.gitbook/assets/image (40) (1) (1).png>)
 
 The object has one First Degree Object Control, meaning the user has one direct ACL to another object. If the user is member of a group and that group had a ACL to another object it would show under "Group Delegated Object Control". Once you click on the number it will show the ACL's:
 

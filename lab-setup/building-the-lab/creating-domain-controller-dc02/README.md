@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -197,7 +197,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 6\. In the server manager click on the flag and click on "Complete DHCP configuration"
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
 
 7\. Click "Next" and then select "User alternate credentials" and fill in the credentials for `admin_bank`.
 
@@ -216,7 +216,7 @@ Password: `jr8Q3o97@s37AF`
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Click "Next", fill in the name "DHCP Clients" and click "Next".
 

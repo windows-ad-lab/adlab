@@ -29,7 +29,7 @@
 
 6\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -57,7 +57,7 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 cat asreproasting
 ```
 
-![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1) (1).png>)
 
 3\. The user `Richard` doesn't require pre-authentication and we have an hash from the TGT. Lets crack it with Hashcat and [this](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/2020-200\_most\_used\_passwords.txt) wordlist. The Hashcat parameters are:
 

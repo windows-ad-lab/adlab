@@ -43,7 +43,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 10\. Fill in the login name `SQL_link` and password `Eo6#jAzonQhw` . Then make sure the three password flags "Enforce Password policy", "Enforce password expiration" and "User must change password at next login" are unselected.
 
-![](<../../../.gitbook/assets/image (65) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1).png>)
 
 11\. In the tab "Server Roles" select "setupadmin" and "sysadmin" and click "OK".
 

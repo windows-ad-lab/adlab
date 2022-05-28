@@ -87,7 +87,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_princip
 
 6\. So we aren't able to enumerate all the users using these queries. But we are able to query the users with the following query; `Select SUSER_NAME(ID)`. Using the SUSER\_NAME function. Where the ID starts with 1 and we keep incrementing it till we have all the users. The id `282` is from the `testadmin` SQL user.
 
-![](<../../../../../.gitbook/assets/image (40) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (40) (1) (1) (1).png>)
 
 7\. Doing this manually takes a while so luckely the authors of PowerUpSQL automated this by using the `Get-SQLFuzzServerLogin` cmdlet;
 

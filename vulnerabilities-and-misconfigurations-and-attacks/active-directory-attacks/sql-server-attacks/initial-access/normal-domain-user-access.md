@@ -13,7 +13,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -35,7 +35,7 @@
 
 8\. Click on "User Mapping" and select "Production".
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
 9\. Click "OK".
 
@@ -85,7 +85,7 @@ The output shows one SQL Instance.
 Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
 
 The output shows that we can access the MSSQL instance `WEB01.amsterdam.bank.local`.
 
