@@ -5,7 +5,7 @@
 1. Login to `DC03` with the Administrator user and the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool.
 
-![](<../../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1).png>)
 
 3\. Click on "View" and enable "Advanced Features
 
@@ -19,7 +19,7 @@
 
 6\. Select the "sa\_sql" user and click "Advanced". Then select the "sa\_sql" once again and click on "Edit". Then select "Modify Owner".
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 7\. We can quickly run BloodHound to check if the correct permissions are applied to the `sa_sql` user:
 

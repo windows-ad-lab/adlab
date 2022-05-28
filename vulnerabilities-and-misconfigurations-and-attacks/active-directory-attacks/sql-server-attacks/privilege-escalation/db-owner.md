@@ -30,7 +30,7 @@ EXEC sp_addrolemember [db_owner], [AMSTERDAM\Richard];
 
 5\. Change the Owner of the database to the SA account. Right click on "Production", click "Properties" and open the "Files" tab. Click on the "..." and fill in "sa" and click on "OK"
 
-![](<../../../../.gitbook/assets/image (2) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
 
 6\. Execute the following query to make sure `Amsterdam\Richard` is Database owner and the real Owner of the database is `sa`:
 
@@ -103,7 +103,7 @@ join sys.database_principals rp on (drm.role_principal_id = rp.principal_id)
 join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 ```
 
-![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1).png>)
 
 Our current user `AMSTERDAM\richard` is db\_owner.
 
@@ -159,7 +159,7 @@ EXEC sp_elevate_me
 SELECT is_srvrolemember('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1).png>)
 
 The `1` means that we are sysadmin! Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 

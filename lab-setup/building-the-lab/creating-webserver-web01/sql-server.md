@@ -3,7 +3,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -62,7 +62,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Open the "SQL Configuration Manager".
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
 
 13\. Expand "SQL Server Network Configuration" and select "Protocols for DEV". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 
@@ -94,7 +94,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security"
 
-![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Rightclick on "Inbound Rules" and select "New rule".
 

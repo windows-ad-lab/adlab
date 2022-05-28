@@ -33,7 +33,7 @@
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../../../.gitbook/assets/image (62) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1).png>)
 {% endhint %}
 
 4\. On "Select an installation type" select "Basic":
@@ -52,7 +52,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../../../.gitbook/assets/image (15) (1) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
@@ -65,7 +65,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 9\. Click Next and fill in the Instance name `data`.
 
-![](<../../../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../../../.gitbook/assets/image (34) (1) (1).png>)
 
 10\. Change the "Startup Type" for the "SQL Server Agent" to "Automatic" and make sure all three are set to "Automatic". Then change the account name for "SQL Server agent" and "SQL Server Database Engine" to `sa_sql` and fill in the password `Iloveyou2`.
 

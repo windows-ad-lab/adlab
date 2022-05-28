@@ -45,7 +45,7 @@ In my attack we will use the tool BackupOperatorToDA from [mpgn](https://github.
 
 * Copy files from the Domain Controller:
 
-![](<../../../.gitbook/assets/image (67).png>)
+![](<../../../.gitbook/assets/image (67) (1).png>)
 
 #### To Domain Admin!
 

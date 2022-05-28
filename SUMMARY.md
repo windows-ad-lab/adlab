@@ -38,6 +38,7 @@
       * [Manual](lab-setup/attack-paths/tasks-and-guide/attack-path-1/manual.md)
     * [Attack path 2](lab-setup/attack-paths/tasks-and-guide/attack-path-2/README.md)
       * [Manual](lab-setup/attack-paths/tasks-and-guide/attack-path-2/manual.md)
+* [Troubleshooting](lab-setup/troubleshooting.md)
 
 ## Vulnerabilities & Misconfigurations & Attacks
 

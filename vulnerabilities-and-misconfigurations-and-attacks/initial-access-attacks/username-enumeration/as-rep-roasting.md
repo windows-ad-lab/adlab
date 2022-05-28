@@ -43,10 +43,10 @@ When pre-authentication is not required, an attack can directly send a request f
 
 ### Executing the attack
 
-1. Make sure impacket is installed and run the GetNPUsers.py tool with the users we enumerated earlier. The tool will check if any of the enumerated users doesn't require pre-authentication and will request a ticket which we can crack offline.
+1. Make sure Impacket is installed and run the GetNPUsers.py tool with the users we enumerated earlier and saved in `users.txt`. The tool will check if any of the enumerated users doesn't require pre-authentication and will request a ticket which we can crack offline.
 
 ```
-GetNPUsers.py amsterdam/ -usersfile users.txt -format hashcat -outputfile asreproastinng
+GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -outputfile asreproasting
 ```
 
 ![](<../../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
@@ -59,7 +59,7 @@ cat asreproasting
 
 ![](<../../../.gitbook/assets/image (43) (1) (1) (1) (1).png>)
 
-3\. The user richard doesn't require pre-authentication and we have an hash from the TGT. Lets crack it with hashcat and [this](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/2020-200\_most\_used\_passwords.txt) wordlist. The hashcat parameters are:
+3\. The user `Richard` doesn't require pre-authentication and we have an hash from the TGT. Lets crack it with Hashcat and [this](https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/2020-200\_most\_used\_passwords.txt) wordlist. The Hashcat parameters are:
 
 * Crackingmode: `-a 0` for using a wordlist
 * Hashmode: `-m 18200` for Kerberos 5, etype 23, AS-REP

