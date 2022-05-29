@@ -95,7 +95,7 @@
 
 1\. In the server manager click on the flag and click on "Promote this server to a domain controller"
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Select "Add a new forest" and fill in the domain name `secure.local`.
 
@@ -124,7 +124,7 @@
 
 4\. Add the DNS Domain `secure.local` with the IP `10.0.0.100` and click "OK".&#x20;
 
-![](<../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
 If you see a cross don't worry. I takes some time to validate. You can check the properties later to check if it is validated.

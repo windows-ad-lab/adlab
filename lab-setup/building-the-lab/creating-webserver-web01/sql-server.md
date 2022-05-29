@@ -108,7 +108,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 
-![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 6\. When done remove the "NAT" adapter from the virtual machine.
 

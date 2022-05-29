@@ -26,15 +26,15 @@ description: >-
 
 3\. Open "Employees", right click the user `steve` and click on "Properties"
 
-![](<../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Open "Attribute Editor", search for "Useraccountcontrol" and click "Edit".
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
 
 5\. Set the value to `544` and cick "OK".
 
-![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
 
 6\. Click "Apply" and "OK".
 
@@ -42,7 +42,7 @@ description: >-
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 

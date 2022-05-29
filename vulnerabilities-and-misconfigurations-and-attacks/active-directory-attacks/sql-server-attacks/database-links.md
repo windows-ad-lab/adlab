@@ -17,7 +17,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio".
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
 
 3\.  Login with the `Administrator` user using Windows Authentication.
 
@@ -35,7 +35,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 7\. Restart the two SQL services with "DATA" in their name.
 
-![](<../../../.gitbook/assets/image (32) (1) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1) (1) (1).png>)
 
 8\. Open "Microsoft SQL Server Management Studio".
 
@@ -69,7 +69,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 7\. Open the "Server Options" tab and select True for "RPC Out". This is done so we can enable xp\_cmdshell during the attack.
 
-![](<../../../.gitbook/assets/image (14) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1) (1).png>)
 
 8\. Click "OK" and the linked server should show up.
 

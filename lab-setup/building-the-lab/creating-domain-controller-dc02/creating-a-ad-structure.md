@@ -14,7 +14,7 @@
 
 1. Right click on the newly created OU and select "New" and then "Group"
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Fill in "Finance" and click on "OK"
 
@@ -27,7 +27,7 @@
 * Employees
 * IT
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Creating Users
 

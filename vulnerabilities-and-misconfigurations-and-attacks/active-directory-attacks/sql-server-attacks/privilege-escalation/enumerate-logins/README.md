@@ -46,7 +46,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 6\. Go back to `WEB01` and unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login". Fill in Amsterdam\DatabaseUsers
 
-![](<../../../../../.gitbook/assets/image (70) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (70) (1) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -79,7 +79,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.syslogins
 Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_principals"
 ```
 
-![](<../../../../../.gitbook/assets/image (66) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (66) (1) (1) (1) (1).png>)
 
 5\. If we run the queries on the SQL server itself as the Domain Admin we will receive all the users, since it is sysadmin on the SQL Server;
 

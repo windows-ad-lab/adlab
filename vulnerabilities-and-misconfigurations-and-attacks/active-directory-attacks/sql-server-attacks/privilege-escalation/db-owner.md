@@ -103,7 +103,7 @@ join sys.database_principals rp on (drm.role_principal_id = rp.principal_id)
 join sys.database_principals mp on (drm.member_principal_id = mp.principal_id)
 ```
 
-![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (66) (1) (1) (1) (1) (1) (1) (1).png>)
 
 Our current user `AMSTERDAM\richard` is db\_owner.
 
@@ -126,7 +126,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png>)
 
 The Production database is trustworty.
 
@@ -151,7 +151,7 @@ USE Production;
 EXEC sp_elevate_me
 ```
 
-![](<../../../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 9\. Check if we are sysadmin:
 

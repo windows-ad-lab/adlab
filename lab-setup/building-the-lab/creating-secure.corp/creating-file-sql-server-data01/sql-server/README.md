@@ -52,7 +52,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
@@ -61,7 +61,7 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../../../.gitbook/assets/image (14) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
 
 9\. Click Next and fill in the Instance name `data`.
 
@@ -87,7 +87,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Scroll to the bottom and also configure IPAll:
 
-![](<../../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 15\. Then click "Apply".
 
@@ -119,7 +119,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish".
 
-![](<../../../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
 
 ### Testing connectivity
 
