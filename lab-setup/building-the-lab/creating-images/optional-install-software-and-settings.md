@@ -35,7 +35,7 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 8\. Click on "File" --> Save as --> Select "All Files" and save the file as `bginfo.bat` in `C:\BGInfo\`
 
-![](<../../../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (50) (1) (1).png>)
 

@@ -138,7 +138,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 1. Open the "Server Manager", click on "Tools" and then "Active Directory Domain and Trusts".
 
-![](<../../../.gitbook/assets/image (20) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
 2\. Right click the domain object "Secure.local" and click on "Properties".
 

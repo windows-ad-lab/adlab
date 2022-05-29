@@ -165,7 +165,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Add the user to the "Domain Admins" group by typing the name into the textbox and click on "OK
 
-![](<../../../.gitbook/assets/image (35) (1) (1).png>)
+![](<../../../.gitbook/assets/image (35) (1) (1) (1).png>)
 
 3\. With the following simple PowerShell command we can check if `Amsterdam admin` is part of the `Domain Admins` group.
 
