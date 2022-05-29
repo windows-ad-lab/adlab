@@ -15,7 +15,7 @@
 
 4\. At the step "Server Roles" select "Web Server (IIS)" and click "Add Features"
 
-![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1) (1) (1).png>)
 
 5\. Click "Next" a couple times and then "Install". Wait for the installation to finish.
 

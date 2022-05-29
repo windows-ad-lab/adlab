@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
@@ -153,7 +153,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 5\. For this user we will set a password we can remember `TheBestSecureBank2022`. Make sure you save it somewhere, like in a password manager. And uncheck the box "user must change password at next logon"
 
-![](<../../../.gitbook/assets/image (45) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (45) (1) (1) (1) (1) (1) (1).png>)
 
 6\. Click "Next" and "Finish"
 

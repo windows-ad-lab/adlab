@@ -44,7 +44,7 @@ But since we have a set of valid credentials of the domain now, we could request
 crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --users
 ```
 
-![](<../../.gitbook/assets/image (62) (1) (1).png>)
+![](<../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
 2\. We discovered a couple extra users such as `admin_amsterdam`, `IT-support01`, `pukcab`, `IT-support01`, `bankuser` and `banktest`.
 

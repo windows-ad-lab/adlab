@@ -33,7 +33,7 @@
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1).png>)
 {% endhint %}
 
 4\. On "Select an installation type" select "Basic":
@@ -87,7 +87,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Scroll to the bottom and also configure IPAll:
 
-![](<../../../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png>)
 
 15\. Then click "Apply".
 
@@ -105,7 +105,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security".
 
-![](<../../../../../.gitbook/assets/image (45) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (45) (1) (1) (1) (1).png>)
 
 2\. Right click on "Inbound Rules" and select "New rule".
 

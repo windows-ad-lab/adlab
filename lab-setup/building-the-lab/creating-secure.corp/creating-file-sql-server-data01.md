@@ -65,7 +65,7 @@
 
 2\. In the top right corner click on "Rename this PC (advanced)"
 
-![](<../../../.gitbook/assets/image (63) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (63) (1) (1) (1) (1).png>)
 
 3\. A new window will pop-up called 'System Properties', within this window click on "Change..."
 
