@@ -1,15 +1,7 @@
 # Attack Paths
 
-The attack path section has two subsections:
+In this section all attack paths are explained and divided in three sections; configuring, tasks and manual.&#x20;
 
-{% content-ref url="configuring-attack-paths/" %}
-[configuring-attack-paths](configuring-attack-paths/)
-{% endcontent-ref %}
-
-The pages in configuring attack paths will link to the pages to build out the attack paths. To build the attack paths going to each misconfiguration page and following the chapter "Configuring" is required.&#x20;
-
-{% content-ref url="tasks-and-guide/" %}
-[tasks-and-guide](tasks-and-guide/)
-{% endcontent-ref %}
-
-The pages in Task & Guide will link to tasks in each attack path to give some direction and a full manual on how to exploit the whole attack path and own the whole lab.
+* The configuring page links to each page that is required to configure the attack path.&#x20;
+* The tasks page will contain a list of tasks that should be performed to exploit the attack path and will give a bit of guidance.
+* The manual page is a full manual on how to execute every attack and chain them together to takeover the whole domain,
