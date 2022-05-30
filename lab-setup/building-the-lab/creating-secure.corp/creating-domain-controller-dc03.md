@@ -185,6 +185,6 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 3\. Then select "Allow remote connections to this computer" in the "Remote Desktop" section and click "Apply" and "Ok".
 
-![](<../../../.gitbook/assets/image (72) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (72) (1) (1) (1) (1).png>)
 
 Remote Desktop is enabled.

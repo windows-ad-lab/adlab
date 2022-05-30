@@ -69,7 +69,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 7\. Open the "Server Options" tab and select True for "RPC Out". This is done so we can enable xp\_cmdshell during the attack.
 
-![](<../../../.gitbook/assets/image (14) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
 
 8\. Click "OK" and the linked server should show up.
 

@@ -61,11 +61,11 @@ The SQL Server Installation may require internet access, temporally add a second
 * Client Tools Connectivity
 * Client Tools SDK
 
-![](<../../../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
 
 9\. Click Next and fill in the Instance name `data`.
 
-![](<../../../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
 10\. Change the "Startup Type" for the "SQL Server Agent" to "Automatic" and make sure all three are set to "Automatic". Then change the account name for "SQL Server agent" and "SQL Server Database Engine" to `sa_sql` and fill in the password `Iloveyou2`.
 

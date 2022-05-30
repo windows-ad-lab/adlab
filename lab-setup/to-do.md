@@ -2,6 +2,7 @@
 
 This page contains a small list of stuff I still want to do and note down to keep track off. Which I might forget. So this isn't a complete list of stuff!
 
+* Complete the Kerberoast page.
 * Research the account operator group privileges more. There should be something to become DA! Generic all on all these groups:
 
 ![](<../.gitbook/assets/image (24).png>)
