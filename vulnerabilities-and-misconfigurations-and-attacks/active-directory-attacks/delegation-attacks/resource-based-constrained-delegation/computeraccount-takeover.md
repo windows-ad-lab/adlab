@@ -44,7 +44,7 @@ Is you have GenericAll or GenericWrite rights to a computer object you can write
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Data01 | Select-Object -Property name, msds-allowedtoactonbehalfofotheridentity
 ```
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
 
 The attribute haven't been set yet.
 

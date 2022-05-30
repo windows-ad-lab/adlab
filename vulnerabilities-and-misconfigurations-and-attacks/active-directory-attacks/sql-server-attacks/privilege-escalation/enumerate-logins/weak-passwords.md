@@ -106,7 +106,7 @@ We found the password for three users and it seems thats `SQLAdmin` has sysadmin
 crackmapexec mssql 10.0.0.5 -u domainusers.txt -p passwords.txt --continue-on-success | grep "+"
 ```
 
-![](<../../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1).png>)
 
 We discovered the password of another user `bob`, but this time the Domain User. We already connected to the SQL service using both SQL accounts and Domain user accounts. This can be done with tools such as mssql-cli or heidiSQL.&#x20;
 

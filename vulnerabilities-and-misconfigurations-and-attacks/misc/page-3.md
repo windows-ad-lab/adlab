@@ -40,7 +40,7 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 * User Name: `sa_backup`
 * Password: `LS6RV5o8T9`
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (21) (1).png>)
 
 ## Attacking
 
@@ -69,7 +69,7 @@ The tool is great for detecting DPAPI secrets.
 
 3\. In the output of the section WindowsCredentialFiles we can see that the user `sa_sql` has some credentials saved:
 
-![](<../../.gitbook/assets/image (18) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
 
 4\. We can find the master encryption key id and some information about the saved credentials with the following Mimikatz command using the previous path and FileName:
 

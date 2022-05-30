@@ -27,7 +27,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 6\. Once the installation is finished, click on "Customize".
 
-![](<../../../.gitbook/assets/image (21) (1) (1).png>)
+![](<../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 

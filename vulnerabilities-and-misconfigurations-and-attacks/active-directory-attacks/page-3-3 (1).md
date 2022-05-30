@@ -12,6 +12,13 @@ net user sa_admin Welcome123456! /add
 setspn -A MSSQLsvc/DC03:1433 sa_admin
 ```
 
+3\. Execute the following command to make the user `Enterprise Admin` and `Domain Admin`:
+
+```
+Add-ADGroupMember -Identity "Enterprise Admins" -Members sa_admin
+Add-ADGroupMember -Identity "Domain Admins" -Members sa_admin
+```
+
 ## Attacking
 
 ### How it works
@@ -37,7 +44,7 @@ cat kerberoast.txt
 
 ![](<../../.gitbook/assets/image (14).png>)
 
-2\. We retrieved one hash. Lets crack it with Hashcat and use the passwordlist we created earlier during the passwordspray. The hashcat parameters are:
+2\. We retrieved one hash. Lets crack it with Hashcat. The parameters are:
 
 * Crackingmode: `-a 0` for using a wordlist
 * Hashmode: `-m 18200` for Kerberos 5, etype 23, AS-REP

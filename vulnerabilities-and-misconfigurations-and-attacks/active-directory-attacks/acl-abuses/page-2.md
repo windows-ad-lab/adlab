@@ -19,7 +19,7 @@
 
 6\. Select the "sa\_sql" user and click "Advanced". Then select the "sa\_sql" once again and click on "Edit". Then select "Modify Owner".
 
-![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 7\. We can quickly run BloodHound to check if the correct permissions are applied to the `sa_sql` user:
 
@@ -85,7 +85,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 7\. We didn't receive any errors, to lets use the same queries again to query the owner of the computerobject DATA01;
 
-![](<../../../.gitbook/assets/image (21) (1).png>)
+![](<../../../.gitbook/assets/image (21) (1) (1).png>)
 
 8\. We successfully changed the owner of the computerobject from `Domain Admins` to `sa_ql`.
 

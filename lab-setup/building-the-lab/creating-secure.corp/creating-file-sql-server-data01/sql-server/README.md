@@ -52,7 +52,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
