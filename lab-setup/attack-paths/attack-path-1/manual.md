@@ -2,7 +2,7 @@
 
 ## Attack path visualized
 
-![](<../../../../.gitbook/assets/image (24) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1).png>)
 
 ## Step 1. Enumerate logins
 

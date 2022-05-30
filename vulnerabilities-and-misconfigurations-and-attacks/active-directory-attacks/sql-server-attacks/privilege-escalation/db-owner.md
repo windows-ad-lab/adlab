@@ -142,7 +142,7 @@ AS
 EXEC sp_addsrvrolemember 'AMSTERDAM\Richard','sysadmin'
 ```
 
-![](<../../../../.gitbook/assets/image (57) (1).png>)
+![](<../../../../.gitbook/assets/image (57) (1) (1).png>)
 
 8\. Execute the stored procedure:
 

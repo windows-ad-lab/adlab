@@ -38,7 +38,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. On "Select an installation type" select "Basic":
 
-![](<../../../../../.gitbook/assets/image (57).png>)
+![](<../../../../../.gitbook/assets/image (57) (1).png>)
 
 5\. Accept the License Terms and click "Install".
 

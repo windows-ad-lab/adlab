@@ -54,7 +54,7 @@ Welcome1
 sa
 ```
 
-![](<../../.gitbook/assets/image (41) (1).png>)
+![](<../../.gitbook/assets/image (41) (1) (1).png>)
 
 3\. Run Crackmapexec to connect to the MSSQL service running on `WEB01` and passwordspray the passwords till there is a succesfull login:
 

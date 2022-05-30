@@ -143,7 +143,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 
-![](<../../../.gitbook/assets/image (41) (1) (1).png>)
+![](<../../../.gitbook/assets/image (41) (1) (1) (1).png>)
 
 4\. Fill in the following information and click on "Next".
 

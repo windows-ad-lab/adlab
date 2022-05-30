@@ -23,7 +23,7 @@ EXEC sp_configure 'xp_cmdshell',1
 RECONFIGURE
 ```
 
-![](<../../../.gitbook/assets/image (69) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1) (1) (1) (1).png>)
 
 2\. Execute commands with xp\_cmdshell:
 
