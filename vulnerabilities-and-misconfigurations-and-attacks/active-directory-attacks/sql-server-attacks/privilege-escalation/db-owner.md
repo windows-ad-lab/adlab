@@ -62,7 +62,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (39) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
 
 The `1` after `Production` shows us that the database is `ThrustWorthy`.
 
@@ -88,7 +88,7 @@ If the database is set as trustworthy and we have db\_owner privileges, we could
 * Select: "Use Windows Authentication"
 * Port: `1433`
 
-![](<../../../../.gitbook/assets/image (58) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (58) (1) (1) (1).png>)
 
 4\. Click "OK" on the security Issue warning.
 

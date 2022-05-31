@@ -25,7 +25,7 @@
 
 5\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1).png>)
 
 6\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 

@@ -24,7 +24,7 @@
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../../../.gitbook/assets/image (61) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -73,7 +73,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 11\. At the next step select "Windows authentication mode". Then select "Add" at the "Specify SQL Server administrators" and add `secure\administrator` then click "Next".&#x20;
 
-![](<../../../../../.gitbook/assets/image (58) (1).png>)
+![](<../../../../../.gitbook/assets/image (58) (1) (1).png>)
 
 12\. Click "Install" and wait for the installation to finish.
 

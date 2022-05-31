@@ -19,11 +19,11 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. On "Select an installation type" select "Basic":
 
-![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1) (1).png>)
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 
@@ -66,7 +66,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Expand "SQL Server Network Configuration" and select "Protocols for DEV". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 
-![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
 
 14\. Scroll to the bottom and also configure IPAll:
 
@@ -100,11 +100,11 @@ The SQL Server Installation may require internet access, temporally add a second
 
 3\. Select "Port" and click "Next"
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1).png>)
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 
-![](<../../../.gitbook/assets/image (58) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (58) (1) (1) (1) (1).png>)
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 

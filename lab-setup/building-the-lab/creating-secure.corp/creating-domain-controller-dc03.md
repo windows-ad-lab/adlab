@@ -152,7 +152,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 5\. On the "Trust Type" page, select "External trust" and click "Next".
 
-![](<../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1) (1).png>)
 
 6\. On the "Direction of trust" page select "Two-Way" and click "Next".
 

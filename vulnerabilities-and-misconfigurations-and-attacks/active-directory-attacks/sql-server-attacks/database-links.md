@@ -21,7 +21,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 3\.  Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../.gitbook/assets/image (29) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1).png>)
 
 4\. Right click on the server object "Data01\Data (SQL Server 15.0.2000.5)" and select "Properties".
 

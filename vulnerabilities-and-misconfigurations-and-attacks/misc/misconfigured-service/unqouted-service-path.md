@@ -145,7 +145,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 #### Cleanup
 

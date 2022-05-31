@@ -49,7 +49,7 @@ net localgroup "Remote Management Users" john /add
 Enter-PSSession ws01
 ```
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Create a PSCredential for the user `John` with the password `Welcome2022!` using the `Get-Credential` command.
 

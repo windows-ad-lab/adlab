@@ -197,7 +197,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 6\. In the server manager click on the flag and click on "Complete DHCP configuration"
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
 
 7\. Click "Next" and then select "User alternate credentials" and fill in the credentials for `admin_bank`.
 
@@ -227,7 +227,7 @@ Password: `jr8Q3o97@s37AF`
 * Length: `24`
 * Subnet mask: `255.255.255.0`
 
-![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 5\. At the step "Add Exclusion and Delay" and "Lease Duration" click "Next". We will leave this default.
 
