@@ -1,3 +1,10 @@
+---
+description: >-
+  If you have GenericAll or GenericWrite rights to a computer object you can
+  write to the attribute msds-AllowedToActOnBehalfOfOtherIdentity and the abuse
+  the delegation to take over the system
+---
+
 # Computeraccount Takeover
 
 ## Configuring
@@ -16,7 +23,7 @@ Nothing need to be configured to abuse this since we set the GenericAll permissi
 
 ### How it works
 
-Is you have GenericAll or GenericWrite rights to a computer object you can write to the attribute `msds-AllowedToActOnBehalfOfOtherIdentity`. If you control this attribute you can impersonate and authenticate as any domain user to the computer. Resulting in getting access to the computer as long as you can impersonate a user that has access too it. Users with the flag "This account is senstitive and cannot be delegated" or members of the "Protected Users Group" can't be impersonated.
+If you have GenericAll or GenericWrite rights to a computer object you can write to the attribute `msds-AllowedToActOnBehalfOfOtherIdentity`. If you control this attribute you can impersonate and authenticate as any domain user to the computer. Resulting in getting access to the computer as long as you can impersonate a user that has access too it. Users with the flag "This account is senstitive and cannot be delegated" or members of the "Protected Users Group" can't be impersonated.
 
 ### Tools
 

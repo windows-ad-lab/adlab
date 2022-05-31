@@ -2,7 +2,7 @@
 
 ## Configuring
 
-1. Login to `DC03` as `Administrator` with the password `Welcome01!`.
+1. Login to `DC02` as `Administrator` with the password `Welcome01!`.
 
 ## Attacking
 
