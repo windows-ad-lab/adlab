@@ -181,7 +181,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 1. Open the Server Manager and click in the left menu on "Local Server".
 2. Click on "Disabled" in the "Remote Desktop" section
 
-![](<../../../.gitbook/assets/image (63) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (63) (1) (1) (1) (1).png>)
 
 3\. Then select "Allow remote connections to this computer" in the "Remote Desktop" section and click "Apply" and "Ok".
 

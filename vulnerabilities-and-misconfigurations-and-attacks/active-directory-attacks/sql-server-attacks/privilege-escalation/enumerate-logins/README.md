@@ -70,7 +70,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
-![](<../../../../../.gitbook/assets/image (31) (1).png>)
+![](<../../../../../.gitbook/assets/image (31) (1) (1).png>)
 
 4\. With PowerUPSQL loaded and the knowledge that Richard already has access to the SQL Server. We can enumerate the logins manually but since we aren't sysadmin it wont return all the users, only the one we can see from the database we have access to;
 

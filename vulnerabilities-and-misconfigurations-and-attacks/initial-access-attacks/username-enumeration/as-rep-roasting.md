@@ -13,7 +13,7 @@
 1. Login on `DC02` with the username `Administrator` and password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
 3\. Click on "View" and enable "Advanced Features"
 

@@ -78,7 +78,7 @@ wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/
 
 These valid users can be used for AS-REP roasting or Password Spraying Attacks. For now save these users to `usernames.txt`.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
 
 4\. To only get a list of usernames execute the following which will cut the output to only get the usernames, changes everything to lowercase and sorting for unique entries:
 

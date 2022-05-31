@@ -23,7 +23,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 
@@ -31,7 +31,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 7\. Check "Use Microsoft Update to check for updates" and click next till the step "License Terms" and accept them:
 
-![](<../../../.gitbook/assets/image (22) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
 8\. At the step "Feature Selection" choose the following options:
 
@@ -78,13 +78,13 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Open "SQL Server services" and right click on "SQL Server (DEV)" and click "Restart".
 
-![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (52) (1) (1) (1) (1) (1) (1) (1).png>)
 
 16\. Do the same for "SQL Server Agent":
 
-![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1) (1) (1).png>)
 
 17\. Download and Install [SQL Server Mangement Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN\&view=sql-server-ver15). Just Click "Install" and reboot the system.
 
@@ -100,7 +100,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 3\. Select "Port" and click "Next"
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 

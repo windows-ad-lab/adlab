@@ -17,7 +17,7 @@
 
 6\. Open the tab "Account" and select "Password never expires" under "Account options".
 
-![](<../../../../../.gitbook/assets/image (47) (1).png>)
+![](<../../../../../.gitbook/assets/image (47) (1) (1).png>)
 
 ### Installing SQL Server
 
@@ -38,7 +38,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. On "Select an installation type" select "Basic":
 
-![](<../../../../../.gitbook/assets/image (57) (1).png>)
+![](<../../../../../.gitbook/assets/image (57) (1) (1).png>)
 
 5\. Accept the License Terms and click "Install".
 

