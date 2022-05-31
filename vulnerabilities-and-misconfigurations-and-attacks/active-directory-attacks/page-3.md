@@ -94,6 +94,8 @@ Check for users with the attribute and remove it:
 Get-ADUser -Filter {DoesNotRequirePreAuth -eq $true} | Set-ADAccountControl -DoesNotRequirePreAuth $false
 ```
 
+* If pre authenticatio is required, make sure
+
 ### Detection
 
 

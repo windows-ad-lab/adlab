@@ -66,7 +66,7 @@ We successfully cracked the password of the user `sa_admin`, the password is `We
 
 * Use [Group Managed Service Accounts or Managed Service Accounts.](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview)
 * Limit the privileges of Service Accounts.
-* Use strong passwords (atleast 32 characters) on service accounts.
+* Use strong passwords (at least 32 characters) on service accounts.
 
 ### Detection
 
