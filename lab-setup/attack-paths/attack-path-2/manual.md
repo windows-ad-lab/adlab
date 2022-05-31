@@ -8,7 +8,7 @@
 
 **Task: Enumerate valid domain users.**
 
-It is possible to enumerate valid domain users by sending TGT requests to the DC. One tool which can do this is [Kerbrute](https://github.com/ropnop/kerbrute). But before we can use this tool we need a list of valid usernames. A repository with a lot of lists for these kind of things is [SecLists](https://github.com/danielmiessler/SecLists).
+It is possible to enumerate valid domain users by sending TGT requests with the usernames to the domain controller. One tool which can do this is [Kerbrute](https://github.com/ropnop/kerbrute). But before we can use this tool we need a list of valid usernames which we want to use. A repository with a lot of lists for these kind of things is [SecLists](https://github.com/danielmiessler/SecLists).
 
 1. Download the required tools:
 
@@ -18,7 +18,7 @@ chmod +x kerbrute
 git clone https://github.com/danielmiessler/SecLists
 ```
 
-2\. After downloading the tool and the username list, run Kerbrute against the domain `amsterdam.bank.local` and DC `10.0.0.3`. Pipe the command to `tee` to save the output to the txt file `username_enum.txt`.&#x20;
+2\. After downloading the tool and the username list, run Kerbrute against the domain `amsterdam.bank.local` and DC `10.0.0.3`. I like to pipe the command to `tee` to save the output to a text file with the name `username_enum.txt`. The command is:
 
 ```
 ./kerbrute userenum -d amsterdam.bank.local --dc 10.0.0.3 /opt/SecLists/Usernames/xato-net-10-million-usernames.txt | tee username_enum.txt
@@ -26,14 +26,15 @@ git clone https://github.com/danielmiessler/SecLists
 
 ![](<../../../.gitbook/assets/image (72) (1) (1) (1).png>)
 
-3\. To only get a list of usernames execute the following which will cut the output to only get the usernames, changes everything to lowercase and sorting for unique entries:
+3\. Kerbrute found quite some valid usernames. To only get a list of usernames execute the following which will cut the output and only leave the usernames. Then it changes everything to lowercase and sort for unique entries and write it to `users.txt`:
 
 ```
 cat username_enum.txt | grep bank.local | cut -d " " -f 8- | cut -d "@" -f 1 | sed 's/./\L&/g' | sort -u > users.txt
 ```
 
 ```
-cat users.txt                                                                                                       
+cat users.txt   
+                                                                                                    
 administrator
 bank
 bob
