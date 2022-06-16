@@ -18,7 +18,7 @@ description: >-
 
 4\. Right click the user helpdesk and select "Properties". In the "General" tab fill in the password SuperSecretField1! in the description field. Then click on "Apply" and "OK".
 
-![](<../../.gitbook/assets/image (58).png>)
+![](<../../.gitbook/assets/image (58) (1).png>)
 
 ## Attacking
 

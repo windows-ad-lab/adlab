@@ -38,7 +38,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 4\. Right click on the "Employees" OU and select "new" and then "User". Name the user also `Bob` and set the password `Fall2022!`. Make sure you deselect "User must change password at next Logon".
 
-![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1).png>)
 
 5\. Right click the user "Bob" and select "Properties". Then open the tab "Member Of" and click "Add". Fill in the group `DatabaseUsers` and click on "OK"
 

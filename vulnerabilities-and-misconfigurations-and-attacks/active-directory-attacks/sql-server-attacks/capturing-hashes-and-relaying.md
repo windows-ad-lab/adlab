@@ -113,7 +113,7 @@ We will start of from having access to the SQL database running on `DATA01` usin
 Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryTarget DATA01\DATA | Select-Object -Property instance -ExpandProperty Customquery
 ```
 
-![](<../../../.gitbook/assets/image (58) (1).png>)
+![](<../../../.gitbook/assets/image (58) (1) (1).png>)
 
 2\. With Responder running from the previous capture we can execute the same UNC path injection attack to capture its hash, but now through the SQL link.
 

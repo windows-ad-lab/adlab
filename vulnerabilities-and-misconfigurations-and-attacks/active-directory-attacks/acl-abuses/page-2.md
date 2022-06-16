@@ -15,7 +15,7 @@
 
 5\. Click on "Add" and type `sa_sql`.
 
-![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
 
 6\. Select the "sa\_sql" user and click "Advanced". Then select the "sa\_sql" once again and click on "Edit". Then select "Modify Owner".
 

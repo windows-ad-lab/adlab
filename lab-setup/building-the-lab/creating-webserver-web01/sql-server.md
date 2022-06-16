@@ -12,7 +12,7 @@
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1) (1) (1) (1).png>)
 
 
 {% endhint %}
@@ -104,7 +104,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 
-![](<../../../.gitbook/assets/image (58) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (58) (1) (1) (1) (1) (1).png>)
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish":
 

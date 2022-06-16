@@ -171,7 +171,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADGroupMember "Domain Admins"`
 
-![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Installing and configuring the DHCP service
 

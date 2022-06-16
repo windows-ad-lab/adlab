@@ -11,7 +11,7 @@
 
 4\. Create a user with the name `sa_sql`.
 
-![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1).png>)
 
 5\. Set the password "`Iloveyou2`" and create the user.&#x20;
 
@@ -42,7 +42,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 5\. Accept the License Terms and click "Install".
 
-![](<../../../../../.gitbook/assets/image (55) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (55) (1) (1) (1) (1) (1).png>)
 
 6\. Once the installation is finished, click on "Customize".
 
@@ -73,7 +73,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 11\. At the next step select "Windows authentication mode". Then select "Add" at the "Specify SQL Server administrators" and add `secure\administrator` then click "Next".&#x20;
 
-![](<../../../../../.gitbook/assets/image (58) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (58) (1) (1) (1).png>)
 
 12\. Click "Install" and wait for the installation to finish.
 

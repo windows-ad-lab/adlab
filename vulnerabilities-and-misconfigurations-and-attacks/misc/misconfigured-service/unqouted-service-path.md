@@ -19,7 +19,7 @@ description: >-
 sc.exe create "Service" binpath= "C:\Program Files\bin folder\program\bin x64\Service.exe" start= auto
 ```
 
-![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Run the following command to create the folders for the service:
 

@@ -11,7 +11,7 @@
 1. Login on `DC02` with the username `Administrator` and password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 3\. Open the "Users" OU and then right click it, select "New" and "User".
 

