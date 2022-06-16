@@ -140,6 +140,39 @@ We can verify our connection by pressing enter until we see _ntlmrelayx>_ . Now 
 
 ![](<../../.gitbook/assets/image (58).png>)
 
+Now we need to use the active socks connections we have, for this we will use _proxychains._ Before using proxychains, we need to make some changes within proxychains. This can be done through editor, the file we need to change is `/etc/proxychains4.conf` _._
+
+```
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+#socks5 	127.0.0.1 9000
+socks4 		127.0.0.1 1080
+```
+
+At the bottom we need to add socks 4, with port 1080. And remove other socks. With the changes made, we can use our active socks connections through proxychains.
+
+We want to know if our user has access to certain folders. To check this, we will use CrackMapExec with the parameter --shares. The command is as follows:
+
+```
+proxychains crackmapexec smb smb-signing-false.txt -d amsterdam -u pukcab -H 00000000000000000000000000000000 --shares
+```
+
+At the -H we can fill in a random hash, this is because CrackMapExec will use our hash from ntlmrelayx.&#x20;
+
+![](<../../.gitbook/assets/image (42).png>)
+
+We notice that our user _pukcab_ has access to the Data directory at FILE01. To view what's inside this directory, we can use smbclient. Smbclient is also a package from impacket. The command we will run to view the content of the Data directory, is as follows:
+
+```
+proxychains smbclient.py AMSTERDAM/pukcab:this_password_can_be_empy_aswell@10.0.0.4
+```
+
+With above command, we get a connection to FILE01. If we type `shares`, the shares from above image will show. Next we type `use Data` and `ls`. After we have typed those commands, more directories will show up. With the command `cd directory_name`, you can change to the directory you want.
+
+In this example, we notice a file called credentials.txt inside the backup directory.
+
 
 
 ## Defending

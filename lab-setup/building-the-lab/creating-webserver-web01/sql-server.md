@@ -58,7 +58,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 12\. Click "Install" and wait for the installation to finish.
 
-![](<../../../.gitbook/assets/image (42) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (42) (1) (1) (1) (1) (1).png>)
 
 13\. Open the "SQL Configuration Manager".
 

@@ -94,7 +94,7 @@ We can impersonate the `Developer` user.
 EXECUTE AS LOGIN = 'developer'
 ```
 
-![](<../../../../.gitbook/assets/image (42) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (42) (1) (1) (1).png>)
 
 {% hint style="info" %}
 Make sure the Master database is selected since the developer user doesn't have access to the production database.
@@ -110,7 +110,7 @@ Make sure the Master database is selected since the developer user doesn't have 
 EXECUTE AS LOGIN = 'sa'
 ```
 
-![](<../../../../.gitbook/assets/image (42) (1).png>)
+![](<../../../../.gitbook/assets/image (42) (1) (1).png>)
 
 Hmm that doesn't work, lets impersonate `Developer_test`
 
