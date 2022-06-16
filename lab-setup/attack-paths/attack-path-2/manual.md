@@ -958,3 +958,8 @@ crackmapexec smb 10.0.0.2 10.0.0.3 -d bank.local -u sa_admin -p 'Welcome123456!'
 ![](<../../../.gitbook/assets/image (15).png>)
 
 We successfully owned all three the domains!
+
+## Cleanup
+
+Set back the SQL server xp\_cmdshell
+

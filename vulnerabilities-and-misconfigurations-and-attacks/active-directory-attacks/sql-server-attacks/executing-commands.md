@@ -55,6 +55,32 @@ This query will download and load into memory the `amsi.txt` file and then the `
 
 ![](<../../../.gitbook/assets/image (45) (1) (1) (1) (1) (1).png>)
 
+### Cleanup
+
+Execute the following queries on `WEB01` to disable xp\_cmdshell again:
+
+```
+EXEC sp_configure 'xp_cmdshell',0
+RECONFIGURE
+EXEC sp_configure 'show advanced options',0
+RECONFIGURE
+```
+
+Do the following to clean up the constrained delegation:
+
+1. Login to `DC03` as `Administrator` with the password `Welcome01!`.
+2. Execute the following command to remove the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute from `DATA01`.
+
+```
+Set-ADComputer -PrincipalsAllowedToDelegateToAccount $null -Identity data01
+```
+
+3\. Execute the following command to remove the `FAKE01` computer we created:
+
+```
+Get-ADComputer fake01 | Remove-ADObject
+```
+
 ## Defending
 
 ### Recommendations
