@@ -37,7 +37,7 @@ setspn -A HTTP/FILE01.amsterdam.bank.local amsterdam\sa_transfer
 
 7\. Select the "cifs" service and click on "OK". Click on "Apply" and "OK" and the delegation is configured.
 
-![](<../../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (58) (1).png>)
 
 
 

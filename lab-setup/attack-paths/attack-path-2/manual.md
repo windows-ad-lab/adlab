@@ -425,7 +425,7 @@ Lets force the webdav request back to our kali attacking machine:
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](<../../../.gitbook/assets/image (74) (1).png>)
+![](<../../../.gitbook/assets/image (74) (1) (1).png>)
 
 Once we check our NTLMRelay tool output we see that it succesfully authenticated as `WEB01$` to the LDAP port on the DC at `10.0.0.3`. And it says `FAKE01` can now impersonate users on `WEB01`.
 
@@ -654,7 +654,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 We didn't received any output, but we can execute the commands again to see who the owner is now.
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 The owner successfully changed.
 
@@ -743,7 +743,7 @@ $RawBytes = Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -S
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-1-5-21-1498997062-1091976085-892328878-1601 | Select-Object samaccountname
 ```
 
-![](<../../../.gitbook/assets/image (74).png>)
+![](<../../../.gitbook/assets/image (74) (1).png>)
 
 15\. The next step is to impersonate a user and request tickets so we can authenticate. We can create a CIFS service ticket using `FAKE01` impersonating the domain admin Administrator using impackets getST.py script. Fill in the password `123456`.
 

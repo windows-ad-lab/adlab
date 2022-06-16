@@ -73,7 +73,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 11\. At the next step select "Windows authentication mode". Then select "Add" at the "Specify SQL Server administrators" and add `secure\administrator` then click "Next".&#x20;
 
-![](<../../../../../.gitbook/assets/image (58) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (58) (1) (1) (1) (1).png>)
 
 12\. Click "Install" and wait for the installation to finish.
 
@@ -91,7 +91,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 15\. Then click "Apply".
 
-![](<../../../../../.gitbook/assets/image (28) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (28) (1) (1) (1) (1).png>)
 
 16\. Open "SQL Server services" and right click on "SQL Server (DATA)" and click "Restart".
 

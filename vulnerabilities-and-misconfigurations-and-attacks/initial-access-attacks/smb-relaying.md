@@ -80,6 +80,8 @@ An attacker can take advantage of this and place on every network device he has 
 
 [Responder](https://github.com/lgandx/Responder)
 
+CrackMapExec
+
 [Impacket-ntlmrelayx](https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/ntlmrelayx.py)
 
 ### Executing the attack
@@ -94,9 +96,51 @@ sudo responder -I tun0 -A
 Our interface is tun0, this is because we're connected to a VPN.
 {% endhint %}
 
-After a few minutes you notice a NTLMv2-SSP hash
+After a few minutes you notice a NTLMv2-SSP hash from the user pukcab:
 
 ![](<../../.gitbook/assets/image (73).png>)
+
+We can try to crack the NTLMv2 hash or relay the hash to Windows machines, which has SMB signing on false. In this example we will try to relay the hash. More information about cracking hashes, can be found [here](../../lab-setup/to-do.md).
+
+For relaying hashes we're going to use a package of impacket, called ntlmrelayx. But before we're going to use ntlmrelayx, we need to know which host has SMB signing on false. For this we use CrackMapExec. To view manually which hosts in a specific subnet has SMB signing on false, we will run the following command:
+
+```
+crackmapexec smb 10.0.0.0/24
+```
+
+![In the end you notice (signing:False)](<../../.gitbook/assets/image (28).png>)
+
+CracMapExec also has a function to generate a list of hosts, which has SMB signing on false. To create this list, you need to run the following command:
+
+```
+crackmapexec smb 10.0.0.0/24 --gen-relay-list smb-signing-false.txt
+```
+
+The generated list we can use with the tool ntlmrelayx. The below command, will try to authenticate with the Net-NTLM-hash and try to dump the Sam. Dumping the Sam is only possible, when you have administrator access to the machine.
+
+```
+sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support
+```
+
+Within some minutes we see something happening within ntlmrelayx, it's trying to relay the hash to the hosts which are inside our .txt. We notice it succeeded two times to authenticate, but access is denied after.
+
+![](<../../.gitbook/assets/image (74).png>)
+
+So, what can we do after this attempt has failed? We can try to the socks parameter within ntlmrelayx. The socks parameter, will try to authenticate and remember the connection in the background. The command we will run is as follows:
+
+```
+sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support -socks
+```
+
+After a few minutes, we get new output within ntlmrelayx. But this time, we see _adding user to active SOCKS connection. Enjoy._ This means, we have an active connection to two machines.
+
+![](<../../.gitbook/assets/image (19).png>)
+
+We can verify our connection by pressing enter until we see _ntlmrelayx>_ . Now we can type _socks_ and we see the machines, where we have succesfully relayed our hashes to.
+
+![](<../../.gitbook/assets/image (58).png>)
+
+
 
 ## Defending
 

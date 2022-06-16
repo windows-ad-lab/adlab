@@ -48,7 +48,7 @@ First we will check what happens if you attack a SQL server attacking it with th
 The red marking is there from the installation steps, please ignore it.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (28) (1).png>)
+![](<../../../.gitbook/assets/image (28) (1) (1).png>)
 
 We will start of from having access to the SQL database running on `Web01` using PowerUpSQL. Check out this page if you forgot how we got access.
 
@@ -113,7 +113,7 @@ We will start of from having access to the SQL database running on `DATA01` usin
 Get-SQLInstanceDomain | Get-SQLServerLinkCrawl -Query 'select @@version' -QueryTarget DATA01\DATA | Select-Object -Property instance -ExpandProperty Customquery
 ```
 
-![](<../../../.gitbook/assets/image (58) (1) (1).png>)
+![](<../../../.gitbook/assets/image (58) (1) (1) (1).png>)
 
 2\. With Responder running from the previous capture we can execute the same UNC path injection attack to capture its hash, but now through the SQL link.
 
