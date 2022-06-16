@@ -38,11 +38,11 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 
 4\. Right click on the "Employees" OU and select "new" and then "User". Name the user also `Bob` and set the password `Fall2022!`. Make sure you deselect "User must change password at next Logon".
 
-![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png>)
 
 5\. Right click the user "Bob" and select "Properties". Then open the tab "Member Of" and click "Add". Fill in the group `DatabaseUsers` and click on "OK"
 
-![](<../../../../../.gitbook/assets/image (37) (1).png>)
+![](<../../../../../.gitbook/assets/image (37) (1) (1).png>)
 
 6\. Go back to `WEB01` and unfold "Security" and "Logins" folders and right clicking on "Logins" and selecting "New Login". Fill in Amsterdam\DatabaseUsers
 
@@ -70,7 +70,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
-![](<../../../../../.gitbook/assets/image (31) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
 
 4\. With PowerUPSQL loaded and the knowledge that Richard already has access to the SQL Server. We can enumerate the logins manually but since we aren't sysadmin it wont return all the users, only the one we can see from the database we have access to;
 

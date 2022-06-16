@@ -61,7 +61,7 @@ crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --password-not-required
 crackmapexec smb 10.0.0.3 -u bank_dev -p ''
 ```
 
-![](<../../.gitbook/assets/image (31) (1).png>)
+![](<../../.gitbook/assets/image (31) (1) (1).png>)
 
 The password is indeed empty.
 

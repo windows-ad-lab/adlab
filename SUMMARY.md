@@ -60,7 +60,7 @@
   * [Delegation Attacks](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/README.md)
     * [Unconstrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/README.md)
       * [Printerbug](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/printerbug.md)
-    * [Constrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/constrained-delegation.md)
+    * [Constrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/page-3.md)
     * [Resource Based Constrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/README.md)
       * [Computeraccount Takeover](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md)
       * [Change-LockScreen](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/resource-based-constrained-delegation.md)

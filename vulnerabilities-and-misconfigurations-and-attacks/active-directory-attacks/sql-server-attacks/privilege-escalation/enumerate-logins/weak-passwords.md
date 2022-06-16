@@ -116,7 +116,7 @@ We discovered the password of another user `bob`, but this time the Domain User.
 crackmapexec mssql 10.0.0.5 -u SQLAdmin -p Winter2022! --local-auth -q "select @@version"
 ```
 
-![](<../../../../../.gitbook/assets/image (36) (1).png>)
+![](<../../../../../.gitbook/assets/image (36) (1) (1).png>)
 
 There will always be loads of tools which can do the same stuff, it will always come down to convenience and where you are used too or like the most. Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 

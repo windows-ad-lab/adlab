@@ -110,7 +110,7 @@ Repeat these steps for each Image we would like to create (Windows Server 2019 a
 
 4\. Click on "Disk Cleanup", "Clean System Files", select everything and Click "OK"
 
-![](<../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 

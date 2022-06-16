@@ -13,7 +13,7 @@
 1. Login on `DC02` with the username `Administrator` and password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
 3\. Click on "View" and enable "Advanced Features".
 
@@ -94,7 +94,7 @@ Check for users with the attribute and remove it:
 Get-ADUser -Filter {DoesNotRequirePreAuth -eq $true} | Set-ADAccountControl -DoesNotRequirePreAuth $false
 ```
 
-* If pre authenticatio is required, make sure
+* If pre authenticatio is required. Use strong passwords (at least 32 characters).
 
 ### Detection
 
