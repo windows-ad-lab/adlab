@@ -68,19 +68,35 @@ SET Max=150
 
 ### How it works
 
+If an attacker has access to a network, which is also used by people inside the company. The attacker can listen to traffic and reply to it. The traffic can contain Net-NTLM-hashes.
 
+When a person wants access to a network device, like a file storage, Net-NTLM-hashes are sent to the device. The Net-NTLM-hash is sent to let the network-device know, who's connecting to it.&#x20;
 
+But, why is an attacker intercepting the Net-NTLM-hash? Sometimes it can happen, that an old shortcut is still in use. But the shortcut points to an old server. The user doesn't even need to click the shortcut, but when an user opens the file explorer and the shortcut is there, Windows will automatically load it.
 
+An attacker can take advantage of this and place on every network device he has access to, a shortcut, which points to his machine. During the configuration phase, we've created an user, who's trying to connect to an old Windows server, to store his files.
 
+### Tools
 
+[Responder](https://github.com/lgandx/Responder)
+
+[Impacket-ntlmrelayx](https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/ntlmrelayx.py)
 
 ### Executing the attack
 
+First we will run Responder, to look for traffic within our network. If we notice an user is active, we will try to relay the Net-NTLM-hash. The command we will run, to look passively:
 
+```
+sudo responder -I tun0 -A
+```
 
+{% hint style="info" %}
+Our interface is tun0, this is because we're connected to a VPN.
+{% endhint %}
 
+After a few minutes you notice a NTLMv2-SSP hash
 
-
+![](<../../.gitbook/assets/image (73).png>)
 
 ## Defending
 

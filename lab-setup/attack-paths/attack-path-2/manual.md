@@ -135,7 +135,7 @@ crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 
 The IPC$, NETLOGON and SYSVOL shares are default. There is one interesting share with the name `Data` on `FILE01`. After connecting to the share with smbclient we see that this user unfortunately can't access any of the subdirectories:
 
-![](<../../../.gitbook/assets/image (73) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1).png>)
 
 2\. Next we can check if the user can access any systems with the winrm protocol:
 
@@ -373,7 +373,7 @@ Then we can create our own computerobject with the name `FAKE01` and password `1
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
 3\. The third requirement is that the WebDav director is installed. We can check this with the following PowerShell command in the shell:
 
@@ -642,7 +642,7 @@ Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Cre
 Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (73).png>)
+![](<../../../.gitbook/assets/image (73) (1).png>)
 
 7\. The current owner of `DATA01` is the Domain Admins group. Lets change that. We can change the owner of the object using the `Set-DomainObjectOwner` cmdlet. The command below will change the owner to `sa_sql`.
 
