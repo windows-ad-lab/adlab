@@ -2,7 +2,7 @@
 
 ## Configuring
 
-Login with an 'Administrator' account created for this attack.
+Login to WS01 with an account, which has administrator privileges. In our example, we use the domain Administrator of AMSTERDAM.
 
 With this attack we need some kind of 'user behaviour', so simulate this we're going to make use of a 'scheduled task' which is running a batch file every 5 minutes. Within the batch file we need to simulate that an user is going to a wrong share within the network. Inside the batch file is the following code:
 
@@ -78,11 +78,11 @@ An attacker can take advantage of this and place on every network device he has 
 
 ### Tools
 
-[Responder](https://github.com/lgandx/Responder)
-
-CrackMapExec
-
-[Impacket-ntlmrelayx](https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/ntlmrelayx.py)
+* [Responder](https://github.com/lgandx/Responder)
+* CrackMapExec
+* [Impacket-ntlmrelayx](https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/ntlmrelayx.py)
+* smbclient
+* proxychains
 
 ### Executing the attack
 
