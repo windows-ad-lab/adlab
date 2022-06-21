@@ -71,6 +71,12 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 ![](<../../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
 
+{% hint style="info" %}
+Step 7 could be skipped and then it could be enabled during the attack after getting sa privileges on Web01 database using the following query:
+
+`EXEC sp_serveroption @server='DATA01.SECURE.LOCAL', @optname='rpc out', @optvalue='True'`
+{% endhint %}
+
 8\. Click "OK" and the linked server should show up.
 
 ![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
