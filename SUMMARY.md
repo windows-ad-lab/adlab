@@ -38,6 +38,7 @@
     * [Configuring](lab-setup/attack-paths/attack-path-2/configuring.md)
     * [Tasks](lab-setup/attack-paths/attack-path-2/tasks.md)
     * [Manual](lab-setup/attack-paths/attack-path-2/manual.md)
+* [Page 1](lab-setup/page-1.md)
 * [Troubleshooting](lab-setup/troubleshooting.md)
 * [To-Do](lab-setup/to-do.md)
 

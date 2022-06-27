@@ -45,7 +45,8 @@ setspn -A HTTP/FILE01.amsterdam.bank.local amsterdam\sa_transfer
 
 ### How it works
 
-
+1. Login to `WS01` as Richard with the password `Sample123`.
+2.
 
 ### Tools
 
