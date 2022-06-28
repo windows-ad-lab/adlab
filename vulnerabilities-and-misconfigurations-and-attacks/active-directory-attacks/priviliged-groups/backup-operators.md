@@ -54,7 +54,7 @@ From our enumeration when we gained access to the `sa_backup` account we know th
 1. Login to `DATA01` as `sa_backup` with the password `LS6RV5o8T9`.
 2. Run the following command to check if the `sa_backup` user is member of the `Backup Operators` group.
 
-![](<../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 3\. One of the requirements is to host a public SMB share, we can do this with the smbserver.py script from Impacket. This will create a share on `\\192.168.248.2\share`.
 
@@ -78,7 +78,7 @@ If you are using another share, make sure the share is writeable by anyone other
 
 5\. If we check in our directory `~/adlab` we can see the files: (for the screenshot I made a copy in the HIVE directory)
 
-![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1) (1).png>)
 
 6\. The next step is to run SecretDump.py to retrieve the machine account NTLM hash out of these HIVE dumps:
 

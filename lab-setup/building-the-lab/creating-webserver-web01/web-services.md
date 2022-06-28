@@ -9,7 +9,7 @@
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 
-![](<../../../.gitbook/assets/image (27) (1) (1).png>)
+![](<../../../.gitbook/assets/image (27) (1) (1) (1).png>)
 
 3\. Check the "Skip this page by default" box and click "Next" three times (For the steps "Before You Begin", "Installation Type" and "Server Selection".
 

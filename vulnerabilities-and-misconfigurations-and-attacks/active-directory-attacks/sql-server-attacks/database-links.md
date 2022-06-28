@@ -51,7 +51,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 12\. In the tab "User Mapping" select "Bank Transfers".
 
-![](<../../../.gitbook/assets/image (27) (1).png>)
+![](<../../../.gitbook/assets/image (27) (1) (1).png>)
 
 ### Configuring SQL link
 

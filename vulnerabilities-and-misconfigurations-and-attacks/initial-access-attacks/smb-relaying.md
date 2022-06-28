@@ -98,7 +98,7 @@ Our interface is tun0, this is because we're connected to a VPN.
 
 After a few minutes you notice a NTLMv2-SSP hash from the user pukcab:
 
-![](<../../.gitbook/assets/image (73).png>)
+![](<../../.gitbook/assets/image (73) (1).png>)
 
 We can try to crack the NTLMv2 hash or relay the hash to Windows machines, which has SMB signing on false. In this example we will try to relay the hash. More information about cracking hashes, can be found [here](../../lab-setup/to-do.md).
 
@@ -134,7 +134,7 @@ sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support -socks
 
 After a few minutes, we get new output within ntlmrelayx. But this time, we see _adding user to active SOCKS connection. Enjoy._ This means, we have an active connection to two machines.
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (19) (1).png>)
 
 We can verify our connection by pressing enter until we see _ntlmrelayx>_ . Now we can type _socks_ and we see the machines, where we have succesfully relayed our hashes to.
 

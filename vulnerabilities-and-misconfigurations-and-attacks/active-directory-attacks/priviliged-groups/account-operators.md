@@ -10,7 +10,7 @@ The membership of the "Account Operators" group is configured in the Dumping DPA
 [page-3.md](../../misc/page-3.md)
 {% endcontent-ref %}
 
-![](<../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1).png>)
 
 ## Attacking
 

@@ -17,7 +17,7 @@ Show general info on the background:
 3. Copy the folder to the C:\ drive and empty the Downloads folder.
 4. Run the Bginfo64 program and Agree to the License Terms.
 
-![](<../../../.gitbook/assets/image (48) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (48) (1) (1) (1) (1).png>)
 
 5\. Click on "File" --> Save as and select "All files". Then save the file in `C:\BGInfo` with the name `bginfo.bgi`
 

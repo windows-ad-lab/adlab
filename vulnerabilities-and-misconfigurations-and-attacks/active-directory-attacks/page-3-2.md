@@ -53,7 +53,7 @@ The description from helpdesk looks like a password.
 
 
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 If a PowerShell session opens it worked:
 

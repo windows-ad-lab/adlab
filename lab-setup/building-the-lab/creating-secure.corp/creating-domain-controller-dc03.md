@@ -132,7 +132,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 5\. Do the same on `DC03` but then for `bank.local` with the IP `10.0.0.2`.
 
-![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1).png>)
 
 ### Creating trust to bank.local
 
