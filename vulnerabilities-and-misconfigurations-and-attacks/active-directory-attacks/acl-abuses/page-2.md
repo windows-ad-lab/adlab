@@ -81,7 +81,7 @@ The current owner of the computerobject `DATA01` is the group `Domain Admins`.
 Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100 -Identity DATA01 -OwnerIdentity sa_sql -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (69) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1) (1) (1) (1).png>)
 
 7\. We didn't receive any errors, to lets use the same queries again to query the owner of the computerobject DATA01;
 

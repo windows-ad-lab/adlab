@@ -95,7 +95,7 @@
 
 1\. In the server manager click on the flag and click on "Promote this server to a domain controller"
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Select "Add a new forest" and fill in the domain name `secure.local`.
 

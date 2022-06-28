@@ -58,6 +58,7 @@ If a user or computer has constrained delegation configured, it's possible to im
 
 * [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 * [Rubeus](https://github.com/GhostPack/Rubeus)
+* [Psexec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)
 
 ### Executing the attack
 
@@ -121,6 +122,10 @@ ls \\file01.amsterdam.bank.local\c$
 
 9\. We are unable to use the RPC and HOST tickets for pssession since the target server doesn't have it enabled. We can get a shell with the CIFS ticket by using psexec from sysinternals:
 
+```
+.\psexec64.exe \\file01.amsterdam.bank.local cmd.exe
+```
+
 ![](<../../../.gitbook/assets/image (75).png>)
 
 ## Defending
@@ -138,3 +143,8 @@ ls \\file01.amsterdam.bank.local\c$
 
 ## References
 
+{% embed url="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1" %}
+
+{% embed url="https://github.com/GhostPack/Rubeus" %}
+
+{% embed url="https://docs.microsoft.com/en-us/sysinternals/downloads/psexec" %}
