@@ -30,7 +30,7 @@ description: >-
 
 4\. Open "Attribute Editor", search for "Useraccountcontrol" and click "Edit".
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1).png>)
 
 5\. Set the value to `544` and cick "OK".
 

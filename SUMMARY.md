@@ -59,7 +59,7 @@
   * [Kerberoasting](<vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3 (1).md>)
   * [Delegation Attacks](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/README.md)
     * [Unconstrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/README.md)
-      * [Printerbug](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/printerbug.md)
+      * [Printerbug](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/page-3.md)
     * [Constrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/page-3.md)
     * [Resource Based Constrained Delegation](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/README.md)
       * [Computeraccount Takeover](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md)

@@ -53,7 +53,7 @@ It is **possible** that accounts have an empty password if the useraccountcontro
 crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --password-not-required
 ```
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 2\. We already knew the user `steve` had a empty password from our initial access attacks. The `Guest` password is empty by default, but this account is also disabled by default. We can check if `bank_dev` user has a empty password just like we did earlier.
 

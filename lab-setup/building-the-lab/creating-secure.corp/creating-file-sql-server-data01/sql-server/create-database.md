@@ -7,11 +7,11 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../../.gitbook/assets/image (6) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
 
 4\. Expand the "DATA01\DATA" structure and right click on "Databases", select "New Database".
 
-![](<../../../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 5\. Fill in the Database Name `BankTransfers` and click "OK" to create the database.
 

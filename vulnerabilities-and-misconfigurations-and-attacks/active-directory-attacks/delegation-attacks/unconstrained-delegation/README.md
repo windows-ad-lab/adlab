@@ -41,7 +41,7 @@ Example: We have a webserver and webapplication that authenticates to a database
 
 ### Executing the attack
 
-The attack will start from the perspective of already owning the FILE01 server from the constrained delegation abuse.
+The attack will start from the perspective of already owning the `FILE01` server from the constrained delegation abuse.
 
 {% content-ref url="../page-3.md" %}
 [page-3.md](../page-3.md)

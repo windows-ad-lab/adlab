@@ -197,14 +197,14 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 6\. In the server manager click on the flag and click on "Complete DHCP configuration"
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 7\. Click "Next" and then select "User alternate credentials" and fill in the credentials for `admin_bank`.
 
 Username: `bank\admin_bank`\
 Password: `jr8Q3o97@s37AF`
 
-![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1).png>)
 
 8\. Click on "Commit" and "close".
 
@@ -212,7 +212,7 @@ Password: `jr8Q3o97@s37AF`
 
 1. Click on "Tools" in the "Server Manager" and select "DHCP".
 
-![](<../../../.gitbook/assets/image (59) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (59) (1) (1) (1) (1) (1).png>)
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 

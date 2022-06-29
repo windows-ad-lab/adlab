@@ -56,7 +56,7 @@ python3 -m http.server 8090
 
 4\. In the page DACL-Abuses I showed you how to check for ACL's using BloodHound. We will abuse the "Write Owner" ACL `sa_sql` has on `DATA01`.
 
-![](<../../../.gitbook/assets/image (53) (1).png>)
+![](<../../../.gitbook/assets/image (53) (1) (1).png>)
 
 5\. With PowerView we can query the current owner of the computerobject `DATA01`. Since we are queering data from another domain, we will have to provide a username and password for that domain. Create a credential object using the `get-credential` cmdlet:
 
