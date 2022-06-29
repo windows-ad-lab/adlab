@@ -31,15 +31,46 @@ This section requires the SPN set during the Constrained Delegation setup on `FI
 
 ### How it works
 
-If a system has unconstrained delegation configured it saves kerberos tickets of users in the lsass so it can be used to authenticate to other services. An attacker could extract these saved tickets and use them against any other service.
+If a system has unconstrained delegation configured it saves kerberos tickets of users in the LSASS so it can be used to authenticate to other services. An attacker could extract these saved tickets and use them against any other service.
 
 Example: We have a webserver and webapplication that authenticates to a database too change some entries on behalf of the user. To do this kerberos unconstrained delegation is configured on the webserver.
 
 ### Tools
 
-* Rubeus
+* [Rubeus](https://github.com/GhostPack/Rubeus)
 
 ### Executing the attack
+
+The attack will start from the perspective of already owning the FILE01 server from the constrained delegation abuse.
+
+{% content-ref url="../page-3.md" %}
+[page-3.md](../page-3.md)
+{% endcontent-ref %}
+
+1. Login to `WS01` as Richard with the password `Sample123`.
+2. Start PowerShell and download and execute an amsi and PowerView in memory:
+
+![](<../../../../.gitbook/assets/image (12).png>)
+
+3\. Execute the following PowerView Query to retrieve all domain computers which have unconstrained delegation and only print the samaccountnames:
+
+```
+// Some code
+```
+
+![](<../../../../.gitbook/assets/image (50).png>)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

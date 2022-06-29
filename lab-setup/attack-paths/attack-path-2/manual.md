@@ -681,7 +681,7 @@ Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure
 crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
 ```
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<../../../.gitbook/assets/image (12) (1).png>)
 
 Then create a credential object, load PowerMad and add a computerobject to the domain:
 

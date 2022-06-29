@@ -35,7 +35,7 @@ CREATE LOGIN Developer WITH PASSWORD = 'MyPassword!';
 CREATE LOGIN Developer_test WITH PASSWORD = 'MyPassword!';
 ```
 
-![](<../../../../.gitbook/assets/image (50) (1).png>)
+![](<../../../../.gitbook/assets/image (50) (1) (1).png>)
 
 5\. Run the following Query to allow impersonation:
 

@@ -96,7 +96,7 @@ Developer_test
 crackmapexec mssql 10.0.0.5 -u sqlusers.txt -p passwords.txt --local-auth --continue-on-success | grep "+"
 ```
 
-![](<../../../../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
 We found the password for three users and it seems thats `SQLAdmin` has sysadmin rights since it shows `Pwn3d!` , this means it has admin rights. Since we are spraying MSSQL logins this means sysadmin rights. If we were spraying with SMB it meant the user was localadmin on the machine.
 

@@ -123,7 +123,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 `Get-ADDomain`
 
-![](<../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 `Get-ADTrust -Identity "bank.local"`
 

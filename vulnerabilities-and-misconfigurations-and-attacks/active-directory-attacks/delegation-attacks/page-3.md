@@ -136,6 +136,12 @@ ls \\file01.amsterdam.bank.local\c$
   * Set strong passwords and rotate them periodically.
   * Limit logons to systems.
   * Harden the systems these accounts are used.
+* Add the flag "this account is sensitive and cannot be delegated"
+* Add all high privileged accounts to the protected users group.
+
+{% content-ref url="../../../defence/hardening/protected-users-group.md" %}
+[protected-users-group.md](../../../defence/hardening/protected-users-group.md)
+{% endcontent-ref %}
 
 ### Detection
 

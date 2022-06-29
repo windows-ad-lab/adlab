@@ -32,7 +32,7 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 
 7\. Click on the "Windows Credentials" tab and select "Add a Windows credential".
 
-![](<../../.gitbook/assets/image (12) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1) (1).png>)
 
 8\. Fill in the following information:
 
@@ -78,7 +78,7 @@ The tool is great for detecting DPAPI secrets.
 dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD
 ```
 
-![](<../../.gitbook/assets/image (12) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1).png>)
 
 The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
 

@@ -34,7 +34,7 @@ Enter-PSSession ws01
 evil-winrm -i 10.0.0.128 -u john -p 'Welcome2022!'
 ```
 
-![](<../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Crackmapexec
 
