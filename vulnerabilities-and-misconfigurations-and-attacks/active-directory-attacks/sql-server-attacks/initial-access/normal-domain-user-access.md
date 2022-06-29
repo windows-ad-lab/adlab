@@ -67,7 +67,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
-![](<../../../../.gitbook/assets/image (49) (1).png>)
+![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
 
 4\. Get the SQL instances from the domain:
 

@@ -87,7 +87,7 @@ Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 .\Rubeus.exe hash /password:'2i^t#fFpL' /user:sa_transfer /domain:amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (76).png>)
+![](<../../../.gitbook/assets/image (76) (1).png>)
 
 6\. The next step is too request a TGT and then request two service tickets for CIFS, HOST and RPCSS. So we can interact with the file system and psremoting for the fileserver. The easiest way to do this is using Rubeus.
 
@@ -110,7 +110,7 @@ Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 
 7\. When we list our tickets now we can see that we have three service tickets:
 
-![](<../../../.gitbook/assets/image (48).png>)
+![](<../../../.gitbook/assets/image (48) (1).png>)
 
 8\. Since we have a CIFS ticket we can list the `C` drive of the fileserver `FILE01`:
 

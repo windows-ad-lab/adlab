@@ -54,7 +54,7 @@ icacls.exe "C:\Program Files\bin folder\program" /grant BUILTIN\Users:W
 icacls.exe "C:\Program Files\bin folder\program"
 ```
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 ## Attacking
 

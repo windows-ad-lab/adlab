@@ -181,7 +181,7 @@ Since we disabled DHCP in our VMWare, we need a DHCP server to lease IP-adresses
 
 1. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 

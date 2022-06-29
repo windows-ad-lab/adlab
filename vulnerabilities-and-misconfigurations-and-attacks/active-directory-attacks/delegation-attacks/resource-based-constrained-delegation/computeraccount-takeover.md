@@ -69,7 +69,7 @@ The attribute haven't been set yet.
 crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
 ```
 
-![](<../../../../.gitbook/assets/image (48) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (48) (1) (1) (1).png>)
 
 The machine account qouta is 10, meaning we (all authenticated users) can create our own computerobject in the domain.
 
@@ -102,7 +102,7 @@ $SD.GetBinaryForm($SDBytes, 0)
 Make sure you changed the SID since it can differ in your lab.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (49).png>)
+![](<../../../../.gitbook/assets/image (49) (1).png>)
 
 8\. Now we can write as `sa_sql` to the `msds-allowedtoactonbehalfofotheridentity` attribute of the computerobject `DATA01`:
 
