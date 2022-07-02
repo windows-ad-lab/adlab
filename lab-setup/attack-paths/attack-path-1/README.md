@@ -1,2 +1,0 @@
-# Attack path 1
-
