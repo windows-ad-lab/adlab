@@ -33,7 +33,7 @@ description: >-
 
 7\. Right click on `bank_dev` and select "Reset Password". Uncheck "User must change password at next logon" and make sure the Password fields are empty. Click on "OK"
 
-![](<../../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/image (22) (1).png>)
 
 ## Attacking
 

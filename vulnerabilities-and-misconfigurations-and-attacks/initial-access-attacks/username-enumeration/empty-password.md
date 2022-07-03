@@ -22,7 +22,7 @@ description: >-
 
 2\. Click on "View" and enable "Avanced Features"
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1).png>)
 
 3\. Open "Employees", right click the user `steve` and click on "Properties"
 

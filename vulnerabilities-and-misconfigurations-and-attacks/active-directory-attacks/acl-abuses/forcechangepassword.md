@@ -17,7 +17,7 @@
 
 4\. Fill in the name `sa_transfer` and set the password to `2i^t#fFpL`.
 
-![](<../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34) (1).png>)
 
 5\. Make sure "User must change password at next logon" is NOT selected and select "Password never expires".
 

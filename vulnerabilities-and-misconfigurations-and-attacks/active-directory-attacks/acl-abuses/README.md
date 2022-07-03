@@ -17,7 +17,7 @@ The easiest way to check for ACL abuses is using BloodHound since it will visual
 
 The object has one First Degree Object Control, meaning the user has one direct ACL to another object. If the user is member of a group and that group had a ACL to another object it would show under "Group Delegated Object Control". Once you click on the number it will show the ACL's:
 
-![](<../../../.gitbook/assets/image (20) (1) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1) (1).png>)
 
 I will always recommend doing this for EVERY user and computer or other objects you got access to and own(Know the password from or NTLM hash or tickets etc). And also right click on the objects and mark them as "Owned"
 

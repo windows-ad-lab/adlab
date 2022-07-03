@@ -92,8 +92,9 @@
     * [Account Operators](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/priviliged-groups/account-operators.md)
     * [Backup Operators](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/priviliged-groups/backup-operators.md)
     * [Server Operators](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/priviliged-groups/server-operators.md)
-  * [Example page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
-  * [Child to parent](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-5.md)
+  * [Child to parent domain](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/README.md)
+    * [Krbtgt hash](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/page-3.md)
+    * [Trust key](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/page-3-1.md)
 * [Misc](vulnerabilities-and-misconfigurations-and-attacks/misc/README.md)
   * [Reverse shell trick](vulnerabilities-and-misconfigurations-and-attacks/misc/reverse-shell-trick.md)
   * [Lateral Movement](vulnerabilities-and-misconfigurations-and-attacks/misc/lateral-movement/README.md)
@@ -104,6 +105,7 @@
   * [Passwords on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/passwords-on-shares.md)
   * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
   * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
+* [Template page](vulnerabilities-and-misconfigurations-and-attacks/page-3.md)
 
 ## Defence
 

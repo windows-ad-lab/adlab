@@ -52,7 +52,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../../.gitbook/assets/image (70) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (70) (1) (1) (1) (1).png>)
 
 4\. In the page DACL-Abuses I showed you how to check for ACL's using BloodHound. We will abuse the "Write Owner" ACL `sa_sql` has on `DATA01`.
 
@@ -85,7 +85,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 7\. We didn't receive any errors, to lets use the same queries again to query the owner of the computerobject DATA01;
 
-![](<../../../.gitbook/assets/image (21) (1) (1).png>)
+![](<../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
 8\. We successfully changed the owner of the computerobject from `Domain Admins` to `sa_ql`.
 

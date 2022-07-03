@@ -126,7 +126,7 @@ ls \\file01.amsterdam.bank.local\c$
 .\psexec64.exe \\file01.amsterdam.bank.local cmd.exe
 ```
 
-![](<../../../.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75) (1).png>)
 
 ## Defending
 

@@ -40,7 +40,7 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 * User Name: `sa_backup`
 * Password: `LS6RV5o8T9`
 
-![](<../../.gitbook/assets/image (21) (1).png>)
+![](<../../.gitbook/assets/image (21) (1) (1).png>)
 
 ## Attacking
 

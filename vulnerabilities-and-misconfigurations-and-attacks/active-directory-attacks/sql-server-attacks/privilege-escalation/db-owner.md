@@ -159,7 +159,7 @@ EXEC sp_elevate_me
 SELECT is_srvrolemember('sysadmin')
 ```
 
-![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (34) (1) (1) (1) (1) (1) (1) (1).png>)
 
 The `1` means that we are sysadmin! Check the executing commands page under SQL Server Attacks to read how to execute cmd commands:
 

@@ -56,7 +56,7 @@ cat kerberoast.txt
 .\hashcat.exe -a 0 -m 13100 .\kerberoast.txt .\wordlists\rockyou.txt -r .\rules\dive.rule
 ```
 
-![](<../../.gitbook/assets/image (34) (1).png>)
+![](<../../.gitbook/assets/image (34) (1) (1).png>)
 
 We successfully cracked the password of the user `sa_admin`, the password is `Welcome123456!`
 
