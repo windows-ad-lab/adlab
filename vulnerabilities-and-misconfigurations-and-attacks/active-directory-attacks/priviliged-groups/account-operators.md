@@ -10,7 +10,7 @@ The membership of the "Account Operators" group is configured in the Dumping DPA
 [page-3.md](../../misc/page-3.md)
 {% endcontent-ref %}
 
-![](<../../../.gitbook/assets/image (54) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -30,7 +30,7 @@ By default it has no direct path to Domain Admin, but these groups might be able
 
 * Create users.
 
-![](<../../../.gitbook/assets/image (65) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1).png>)
 
 * Add users to low privileged groups. This can be achieved through the cmdlet `Add-DomainGroupMember` from PowerView. Since we didn't create any groups in the domain we will use the "Domain Guests" group.
 

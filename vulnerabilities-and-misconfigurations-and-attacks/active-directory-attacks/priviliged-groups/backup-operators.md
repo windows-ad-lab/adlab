@@ -37,11 +37,11 @@ In my attack we will use the tool BackupOperatorToDA from [mpgn](https://github.
 
 * Login to the DC locally (Not through RDP but only locally):
 
-![](<../../../.gitbook/assets/image (22) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
 
 * List files on the Domain Controller:
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1).png>)
 
 * Copy files from the Domain Controller:
 

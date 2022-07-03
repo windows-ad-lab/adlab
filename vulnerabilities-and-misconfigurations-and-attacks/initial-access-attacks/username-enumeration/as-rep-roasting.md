@@ -21,7 +21,7 @@
 
 4\. Open "Employees", right click the user `Richard` and click on "Properties"
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 5\. Open "Account" and scroll to the bottom in "Account options", then select "Do not require kerberos preauthentication".
 
@@ -29,7 +29,7 @@
 
 6\. Right click on `Richard` and select "Reset Password". Uncheck "User must change password at next logon" and fill in the password `Sample123`. Click on "OK"
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 

@@ -95,7 +95,7 @@
 
 1\. In the server manager click on the flag and click on "Promote this server to a domain controller"
 
-![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Select "Add a new forest" and fill in the domain name `secure.local`.
 
@@ -132,7 +132,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 5\. Do the same on `DC03` but then for `bank.local` with the IP `10.0.0.2`.
 
-![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1) (1).png>)
 
 ### Creating trust to bank.local
 
@@ -148,7 +148,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 4\. On the "Trust Name" page, type the NetBIOS name `bank.local` and then click "Next".
 
-![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
 
 5\. On the "Trust Type" page, select "External trust" and click "Next".
 

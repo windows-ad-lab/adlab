@@ -45,7 +45,7 @@ Get-DomainGroup "Enterprise Admins" -Domain bank.local | Select-Object samaccoun
 Get-DomainSid
 ```
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 6\. Create a TGT for the krbtgt user and save it to disk with MimiKatz:
 

@@ -95,7 +95,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_princip
 Get-SQLFuzzServerLogin -Instance web01
 ```
 
-![](<../../../../../.gitbook/assets/image (59) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (59) (1) (1) (1).png>)
 
 8\. We discovered that the following user/groups can access the SQL Server. The users/groups with `AMSTERDAM\` or `BANK\` are domain users/groups.
 

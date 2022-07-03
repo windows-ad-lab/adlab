@@ -23,7 +23,7 @@ This section requires the SPN set during the Constrained Delegation setup on `FI
 
 4\. Open the "Delegation" tab and select "Trust this computer for delegation to any service (Kerberos only)".
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../../../.gitbook/assets/image (17) (1).png>)
 
 5\. Click on "Apply" and "OK".
 

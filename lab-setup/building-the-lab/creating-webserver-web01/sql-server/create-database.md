@@ -19,4 +19,4 @@
 
 6\. Repeat step 4 and 5 and create database with the name `Development`.
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1).png>)

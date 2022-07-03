@@ -53,7 +53,7 @@ SELECT suser_sname(owner_sid) FROM sys.databases WHERE name = 'Production'
 ALTER DATABASE MyAppDb SET TRUSTWORTHY ON
 ```
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1).png>)
 
 ```
 SELECT a.name,b.is_trustworthy_on
@@ -113,7 +113,7 @@ Our current user `AMSTERDAM\richard` is db\_owner.
 SELECT suser_sname(owner_sid), * FROM sys.databases
 ```
 
-![](<../../../../.gitbook/assets/image (59) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (59) (1) (1) (1) (1) (1).png>)
 
 `sa` is the owner of the `production` database.
 

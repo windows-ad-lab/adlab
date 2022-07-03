@@ -28,7 +28,7 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 
 6\. Click start and open the "Credential Manager".
 
-![](<../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 7\. Click on the "Windows Credentials" tab and select "Add a Windows credential".
 

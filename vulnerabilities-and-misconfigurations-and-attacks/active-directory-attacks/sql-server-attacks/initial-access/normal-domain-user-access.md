@@ -13,7 +13,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (65) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
@@ -27,7 +27,7 @@
 
 6\. Fill in "Richard" and click "Check Names".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 7\. At "Default Database" select "Production".
 

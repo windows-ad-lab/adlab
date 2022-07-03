@@ -95,7 +95,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 16\. Open "SQL Server services" and right click on "SQL Server (DATA)" and click "Restart".
 
-![](<../../../../../.gitbook/assets/image (54) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (54) (1) (1) (1) (1) (1).png>)
 
 17\. Do the same for "SQL Server Agent".
 
@@ -115,11 +115,11 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 
-![](<../../../../../.gitbook/assets/image (59) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (59) (1) (1) (1) (1).png>)
 
 5\. Click next at the step "Profile". Fill in the name "Allow TCP 1433 MSSQL Server for all" and click "Finish".
 
-![](<../../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Testing connectivity
 

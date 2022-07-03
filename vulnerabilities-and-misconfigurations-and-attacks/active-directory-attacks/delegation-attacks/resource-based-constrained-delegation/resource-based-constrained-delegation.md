@@ -107,7 +107,7 @@ change-lockscreen -webdav \\webdav@80\
 
 When we check the ntlmrelay output we see that `FAKE01` can now impersonate users on `WEB01`.
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1).png>)
 
 If we open the attribute editor on DC02 for WEB01 we can see the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute:
 
