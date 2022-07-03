@@ -1,4 +1,4 @@
-# Example page
+# Template page
 
 ## Configuring
 

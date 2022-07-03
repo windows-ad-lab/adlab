@@ -108,7 +108,7 @@ For relaying hashes we're going to use a package of impacket, called ntlmrelayx.
 crackmapexec smb 10.0.0.0/24
 ```
 
-![In the end you notice (signing:False)](<../../.gitbook/assets/image (28).png>)
+![In the end you notice (signing:False)](<../../.gitbook/assets/image (28) (1).png>)
 
 CracMapExec also has a function to generate a list of hosts, which has SMB signing on false. To create this list, you need to run the following command:
 

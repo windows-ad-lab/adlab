@@ -105,7 +105,7 @@
   * [Passwords on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/passwords-on-shares.md)
   * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
   * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
-* [Template page](vulnerabilities-and-misconfigurations-and-attacks/page-3.md)
+* [Template page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
 
 ## Defence
 

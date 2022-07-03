@@ -27,7 +27,7 @@
 
 6\. Fill in "Richard" and click "Check Names".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 7\. At "Default Database" select "Production".
 
@@ -35,7 +35,7 @@
 
 8\. Click on "User Mapping" and select "Production".
 
-![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 9\. Click "OK".
 

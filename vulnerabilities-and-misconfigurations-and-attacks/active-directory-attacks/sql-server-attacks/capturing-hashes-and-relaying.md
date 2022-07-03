@@ -48,7 +48,7 @@ First we will check what happens if you attack a SQL server attacking it with th
 The red marking is there from the installation steps, please ignore it.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (28) (1) (1).png>)
+![](<../../../.gitbook/assets/image (28) (1) (1) (1).png>)
 
 We will start of from having access to the SQL database running on `Web01` using PowerUpSQL. Check out this page if you forgot how we got access.
 
@@ -140,7 +140,7 @@ Hashcat cracked it within second since the user has a weak password:
 
 4\. The password for `sa_sql` is `IIoveyou2`. We can check if we can access the SQL Server with this account using crackmapexec, which will authenticate over SMB. If it shows Pwn3d we are localadmin.
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png>)
 
 The password is correct but the user isn't local admin unfortunately. But the user can be used to exploit something. We will continue with the attack on the following page.
 

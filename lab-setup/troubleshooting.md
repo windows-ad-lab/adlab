@@ -13,4 +13,4 @@ If a DC is on a private network instead of the domain, the firewall will block a
 * Run the Enable-Psremoting cmdlet again.
 * Add a extra firewall rule allowing all traffic to port tcp 5985.
 
-![](<../.gitbook/assets/image (72) (1) (1).png>)
+![](<../.gitbook/assets/image (72) (1) (1) (1).png>)

@@ -53,7 +53,7 @@ Get-DomainObjectAcl -Domain secure.local -Credential $creds -Server 10.0.0.100 -
 
 From the output we can see that the user `sa_sql` has GenericAll permission on `DATA01`. Since we own the lab we can also check it out on the Domain Controller, the same way as we configured the Owner permissions. And it has all the permissions:
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
 
 ### Cleanup
 

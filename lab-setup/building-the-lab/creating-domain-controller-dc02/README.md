@@ -139,7 +139,7 @@ With the help of PowerShell we can confirm that our child domain is created and 
 
 2\. Extend the directories and click on the folder "Users". All the default users and groups are shown in this folder.
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 3\. Right click the "Users" directory, go to "New" and click "User"
 

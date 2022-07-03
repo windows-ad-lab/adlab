@@ -87,7 +87,7 @@ Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 .\Rubeus.exe hash /password:'2i^t#fFpL' /user:sa_transfer /domain:amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (76) (1).png>)
+![](<../../../.gitbook/assets/image (76) (1) (1).png>)
 
 6\. The next step is too request a TGT and then request two service tickets for CIFS, HOST and RPCSS. So we can interact with the file system and psremoting for the fileserver. The easiest way to do this is using Rubeus.
 

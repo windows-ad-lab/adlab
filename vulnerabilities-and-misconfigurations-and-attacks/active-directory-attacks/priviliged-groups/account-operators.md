@@ -26,7 +26,7 @@ By default it has no direct path to Domain Admin, but these groups might be able
 
 * Login to the DC locally (Not through RDP but only locally).
 
-![](<../../../.gitbook/assets/image (28) (1).png>)
+![](<../../../.gitbook/assets/image (28) (1) (1).png>)
 
 * Create users.
 

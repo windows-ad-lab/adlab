@@ -79,7 +79,7 @@ Step 7 could be skipped and then it could be enabled during the attack after get
 
 8\. Click "OK" and the linked server should show up.
 
-![](<../../../.gitbook/assets/image (64) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 ## Attacking
 

