@@ -95,6 +95,7 @@
   * [Child to parent domain](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/README.md)
     * [Krbtgt hash](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/page-3.md)
     * [Trust key](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/page-3-1.md)
+  * [Foreign user](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-4.md)
 * [Misc](vulnerabilities-and-misconfigurations-and-attacks/misc/README.md)
   * [Reverse shell trick](vulnerabilities-and-misconfigurations-and-attacks/misc/reverse-shell-trick.md)
   * [Lateral Movement](vulnerabilities-and-misconfigurations-and-attacks/misc/lateral-movement/README.md)
