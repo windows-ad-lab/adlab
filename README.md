@@ -1,8 +1,8 @@
 ---
 description: >-
   In this GitBook 0xjs and JustRelax will demonstrate how to build a vulnerable
-  Active Directory(AD) Lab for learning pentesting on Windows Domains. Creating
-  misconfigurations, abusing and patching them
+  Active Directory(AD) lab for learning pentesting windows domains. Creating
+  misconfigurations, abusing and patching them.
 coverY: 0
 ---
 
