@@ -64,7 +64,7 @@ Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:<FQDN CH
 
 7\. The ticket injected successfully, now we can dir the c$ directory to check if our user has read/write access to the C disk:
 
-![](<../../../.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75) (1).png>)
 
 ## Defending
 

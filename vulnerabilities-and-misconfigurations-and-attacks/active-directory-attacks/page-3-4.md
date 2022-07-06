@@ -64,6 +64,64 @@ Meaning that if you take over domain A you can easily access domain B by enumera
 
 ### Executing the attack
 
+This attack is executing from the perspective of already gaining Enterprise Admin privileges within the `bank.local` admin.
+
+1. To easily execute the attack login on `DC01` with the user `Administrator` and the password `Welcome01!`.
+2. Start PowerShell and load an amsi and PowerView into memory:
+
+![](<../../.gitbook/assets/image (57).png>)
+
+3\. With the PowerView cmdlet `Get-DomainForeigGroupMember` we can query the target domain for users in groups that aren't from their domain.
+
+```
+Get-DomainForeignGroupMember -Domain secure.local
+```
+
+![](<../../.gitbook/assets/image (44).png>)
+
+4\. The output shows us that there is a foreign user in the `Local admin data` group and that the member is `S-1-5-21-320929719-844265543-1524670925-1602`.  To get the user name we can use the `ConvertFrom-SID` cmdlet from PowerView:
+
+```
+ConvertFrom-SID S-1-5-21-320929719-844265543-1524670925-1602
+```
+
+![](<../../.gitbook/assets/image (78).png>)
+
+5\. The user `bank\secure_admin` from `bank.local` is member of `local admin data` in `secure.local`. We can also see this in bloodhound after collecting the data for both domains and loading it into the BloodHound GUI.
+
+```
+Invoke-BloodHound -Collectionmethod all -Domain secure.local
+Invoke-BloodHound -Collectionmethod all -Domain bank.local
+```
+
+After clicking on "Users with Foreign Domain Group Membership" and selecting `Secure.local` under the "Dangerous Rights" section in the "Analysis" tab we see:
+
+![](<../../.gitbook/assets/image (75).png>)
+
+6\.&#x20;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Defending

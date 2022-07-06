@@ -38,7 +38,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 4\. On "Select an installation type" select "Basic":
 
-![](<../../../../../.gitbook/assets/image (57) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (57) (1) (1) (1).png>)
 
 5\. Accept the License Terms and click "Install".
 
@@ -79,7 +79,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 13\. Open the "SQL Configuration Manager".
 
-![](<../../../../../.gitbook/assets/image (44) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (44) (1) (1) (1) (1).png>)
 
 14\. Expand "SQL Server Network Configuration" and select "Protocols for DATA". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 

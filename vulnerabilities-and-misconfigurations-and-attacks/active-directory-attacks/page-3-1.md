@@ -23,7 +23,7 @@ description: >-
 
 4\. Right click the user and select "Properties". Open the tab "Attribute Editor", search for "Useraccountcontrol" and click "Edit".
 
-![](<../../.gitbook/assets/image (57).png>)
+![](<../../.gitbook/assets/image (57) (1).png>)
 
 5\. Set the value to `544` and cick "OK".
 

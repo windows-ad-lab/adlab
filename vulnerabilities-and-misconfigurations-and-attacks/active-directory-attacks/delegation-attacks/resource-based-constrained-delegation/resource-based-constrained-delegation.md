@@ -128,7 +128,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (44) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (44) (1) (1) (1) (1) (1).png>)
 
 ### Cleanup
 
