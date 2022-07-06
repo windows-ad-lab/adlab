@@ -5,13 +5,13 @@
 1. Login to `DC01` with the `Administrator` user and the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool.
 
-![](<../../../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17).png>)
 
 3\. Open the "Users" directory and right click it, then select "New" and then "Users".
 
 4\. Create a new user with the name `secure_admin` and the password `rFKbUJrDu$sz*36ffKr6`.
 
-![](<../../../../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/image (22).png>)
 
 5\. Make sure "Password never expires" is checked and "User must change password at next logon" is unchecked when creating the user.
 
@@ -23,17 +23,17 @@
 
 9\. Make a new group with the name `Local admin data` and select group scope "Domain Local".
 
-![](<../../../../.gitbook/assets/image (77).png>)
+![](<../../.gitbook/assets/image (77).png>)
 
 10\. Right click the group and select "Properties". Click on the "Members" tab and click on "Add"
 
 11\. Click on "Locations" and select bank.local.
 
-![](<../../../../.gitbook/assets/image (59).png>)
+![](<../../.gitbook/assets/image (59).png>)
 
 12\. Enter the username secure\_admin and click "Check Names" and then click "OK".
 
-![](<../../../../.gitbook/assets/image (65).png>)
+![](<../../.gitbook/assets/image (65).png>)
 
 13\. Click "Apply" and then "OK".
 
@@ -48,7 +48,7 @@
 net localgroup administrators "local admin data" /add
 ```
 
-![](<../../../../.gitbook/assets/image (64).png>)
+![](<../../.gitbook/assets/image (64).png>)
 
 ## Attacking
 
