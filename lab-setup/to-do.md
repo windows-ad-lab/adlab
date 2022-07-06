@@ -8,3 +8,4 @@ This page contains a small list of stuff I still want to do and note down to kee
 
 * Add a enumeration section to the attack path manual for enumerating the domain with PowerView and BloodHound. Either make one page on how to enumerate a domain for example or add it inbetween the already existing sections.
 * Add GPO's to disable/enable the firewall and defender on specific machines? Crackmapexec doesn't work nicely with the firewall enabled. Test if this is only with local admin account or all local admins? Also with DA? Also check [https://github.com/Mr-Un1k0d3r/SCShell](https://github.com/Mr-Un1k0d3r/SCShell)
+* Big overview of how the trusts works and who can authenticate to who to explain the forest overview
