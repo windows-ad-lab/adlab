@@ -18,7 +18,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 2\. After the server restarts Open the "Windows Defender Firewall" to open up the SMB port.
 
-![](<../../../../.gitbook/assets/image (38) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (38) (1) (1) (1) (1).png>)
 
 3\. Click on "Allow an app or feature through Windows Defender Firewall"
 

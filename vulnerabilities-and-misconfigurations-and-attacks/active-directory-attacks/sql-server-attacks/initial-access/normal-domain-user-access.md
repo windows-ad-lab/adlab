@@ -23,7 +23,7 @@
 
 5\. Click on "Search", click "Locations" and expand the directories and click on "Amsterdam.bank.local".
 
-![](<../../../../.gitbook/assets/image (60) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (60) (1) (1) (1) (1) (1) (1) (1).png>)
 
 6\. Fill in "Richard" and click "Check Names".
 

