@@ -65,7 +65,7 @@ If a user or computer has constrained delegation configured, it's possible to im
 1. Login to `WS01` as Richard with the password `Sample123`.
 2. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1).png>)
 
 3\. Execute the following query to enumerate all users with constrained delegation and select the samaccountname and msds-allowedtodelegateto attributes.
 

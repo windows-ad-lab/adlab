@@ -37,7 +37,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 .\Rubeus.exe triage
 ```
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (1).png>)
 
 2\. There is no ticket for `DC02`. We can execute the spoolsample to force the DC to authenticate to the `FILE01` server and leave a TGT ticket. We can do this with the following command:
 

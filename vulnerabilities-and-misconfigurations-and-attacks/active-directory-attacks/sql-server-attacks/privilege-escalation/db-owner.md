@@ -62,7 +62,7 @@ INNER JOIN sys.databases as b
 ON a.name=b.name;
 ```
 
-![](<../../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1).png>)
 
 The `1` after `Production` shows us that the database is `ThrustWorthy`.
 

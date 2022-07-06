@@ -43,7 +43,7 @@ Every domain user is able to retrieve the non-protected attributes of all object
 Get-DomainUser | Where-Object -Property description | Select-Object samaccountname, description
 ```
 
-![](<../../.gitbook/assets/image (39).png>)
+![](<../../.gitbook/assets/image (39) (1).png>)
 
 The description from helpdesk looks like a password.
 
@@ -53,7 +53,7 @@ The description from helpdesk looks like a password.
 
 
 
-![](<../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 If a PowerShell session opens it worked:
 
