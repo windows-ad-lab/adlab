@@ -50,7 +50,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 1. Login to `WS01` as Richard with the password `Sample123`.
 2. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (1).png>)
 
 3\. Execute the following PowerView Query to retrieve all domain computers which have unconstrained delegation and only print the samaccountnames:
 
@@ -62,7 +62,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 
 4\. There are two systems with unconstrained delegation. One which is the domain controller, which always had unconstrained delegation. The other is `FILE01`. Since we got access to this system we can check if there are any tickets onto the system with Rubeus.
 
-![](<../../../../.gitbook/assets/image (49).png>)
+![](<../../../../.gitbook/assets/image (49) (1).png>)
 
 {% hint style="info" %}
 To simulate that unconstrained delegation is configured with a purpose we need to login to the FILE01 server as the administrator user. This will make sure that there are TGT tickets on the system available.

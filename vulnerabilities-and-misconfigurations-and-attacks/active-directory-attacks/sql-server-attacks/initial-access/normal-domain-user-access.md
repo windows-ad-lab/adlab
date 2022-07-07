@@ -67,7 +67,7 @@ python3 -m http.server 8090
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
-![](<../../../../.gitbook/assets/image (49) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (49) (1) (1) (1).png>)
 
 4\. Get the SQL instances from the domain:
 
@@ -99,7 +99,7 @@ If ran from a user that doesn't have access (for example John), it says `not acc
 Get-SQLServerInfo -Instance WEB01.amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 It shows that we aren't sysadmin. Which means we can't execute commands on the database, but our user has access to the database. So we can look into the database for sensitive information or we might be able to escalate our privileges to sysadmin.
 

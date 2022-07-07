@@ -73,7 +73,7 @@ If a user or computer has constrained delegation configured, it's possible to im
 Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 ```
 
-![](<../../../.gitbook/assets/image (73).png>)
+![](<../../../.gitbook/assets/image (73) (1).png>)
 
 4\. The user `sa_transfer` can delegate access to `cifs\FILE01.amsterdam.bank.local`. To abuse this we need access to the user, luckily we could reset the password earlier.
 

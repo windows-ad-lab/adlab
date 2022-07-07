@@ -45,7 +45,7 @@ In my attack we will use the tool BackupOperatorToDA from [mpgn](https://github.
 
 * Copy files from the Domain Controller:
 
-![](<../../../.gitbook/assets/image (67) (1) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1) (1).png>)
 
 #### To Domain Admin!
 
@@ -78,7 +78,7 @@ If you are using another share, make sure the share is writeable by anyone other
 
 5\. If we check in our directory `~/adlab` we can see the files: (for the screenshot I made a copy in the HIVE directory)
 
-![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1) (1) (1).png>)
 
 6\. The next step is to run SecretDump.py to retrieve the machine account NTLM hash out of these HIVE dumps:
 

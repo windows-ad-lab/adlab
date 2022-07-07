@@ -98,7 +98,7 @@ Our interface is tun0, this is because we're connected to a VPN.
 
 After a few minutes you notice a NTLMv2-SSP hash from the user pukcab:
 
-![](<../../.gitbook/assets/image (73) (1).png>)
+![](<../../.gitbook/assets/image (73) (1) (1).png>)
 
 2\. We can try to crack the NTLMv2 hash or relay the hash to Windows machines, which has SMB signing on false. In this example we will try to relay the hash. More information about cracking hashes, can be found [here](../../lab-setup/to-do.md).
 

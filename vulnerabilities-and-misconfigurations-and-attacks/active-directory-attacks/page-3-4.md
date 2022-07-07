@@ -23,7 +23,7 @@
 
 9\. Make a new group with the name `Local admin data` and select group scope "Domain Local".
 
-![](<../../.gitbook/assets/image (77).png>)
+![](<../../.gitbook/assets/image (77) (1).png>)
 
 10\. Right click the group and select "Properties". Click on the "Members" tab and click on "Add"
 

@@ -12,7 +12,7 @@ description: >-
 2. Open the "Active Directory Users and Computers" management tool and open the "Users" directory. Right click the "Users" directory and click "New User"
 3. Create a user with the name `sa_backup` and the password `LS6RV5o8T9`. Make sure you deselect "User must change password at next logon" and select "Password never expires".
 
-![](<../../.gitbook/assets/image (67) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
 
 ![](<../../.gitbook/assets/image (62) (1) (1) (1) (1) (1).png>)
 
@@ -32,7 +32,7 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 
 7\. Click on the "Windows Credentials" tab and select "Add a Windows credential".
 
-![](<../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
 8\. Fill in the following information:
 
@@ -78,7 +78,7 @@ The tool is great for detecting DPAPI secrets.
 dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD
 ```
 
-![](<../../.gitbook/assets/image (12) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1) (1).png>)
 
 The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
 

@@ -71,6 +71,7 @@
     * [Owns](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/owns.md)
     * [GenericAll](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/genericall.md)
     * [GenericWrite](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/genericwrite.md)
+    * [WriteDacl](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/writedacl.md)
     * [ForceChangePassword](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/forcechangepassword.md)
     * [Add user to group](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/add-user-to-group.md)
     * [Targeted Kerberoast](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/targeted-kerberoast.md)
