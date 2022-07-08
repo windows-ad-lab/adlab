@@ -33,9 +33,9 @@
 
 ![](<../../../.gitbook/assets/image (6).png>)
 
-8\. Click on "OK" and search for the privilege "Change Password".
+8\. Click on "OK" and select the privilege "Reset Password".
 
-![](<../../../.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (59).png>)
 
 9\. Click on "Ok", "Apply" and again on "OK".
 

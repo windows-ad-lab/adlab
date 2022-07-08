@@ -29,7 +29,7 @@
 
 11\. Click on "Locations" and select bank.local.
 
-![](<../../.gitbook/assets/image (59).png>)
+![](<../../.gitbook/assets/image (59) (1).png>)
 
 12\. Enter the username secure\_admin and click "Check Names" and then click "OK".
 

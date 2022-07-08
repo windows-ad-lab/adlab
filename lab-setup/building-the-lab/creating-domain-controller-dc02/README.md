@@ -212,7 +212,7 @@ Password: `jr8Q3o97@s37AF`
 
 1. Click on "Tools" in the "Server Manager" and select "DHCP".
 
-![](<../../../.gitbook/assets/image (59) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (59) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Unfold the directories, right click on "IPv4" and select "New Scope"
 
