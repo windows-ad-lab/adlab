@@ -41,7 +41,7 @@ CALL “C:\BGInfo\Bginfo64.exe” “C:\BGInfo\bginfo.bgi” /timer:0 /nolicprom
 
 9\. Open explorer, click on "View" and select "Hidden items"
 
-![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1) (1) (1) (1).png>)
 
 10\. Copy the `bginfo.bat` file and browse to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\` and paste the `bginfo.bat` file
 

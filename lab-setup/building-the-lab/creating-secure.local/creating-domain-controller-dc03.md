@@ -107,7 +107,7 @@
 
 5\. At the step "Prerequisites Check" click "Install".
 
-![](<../../../.gitbook/assets/image (30) (1).png>)
+![](<../../../.gitbook/assets/image (30) (1) (1).png>)
 
 6\. The machine should automatically restart, if not manually restart the machine.
 

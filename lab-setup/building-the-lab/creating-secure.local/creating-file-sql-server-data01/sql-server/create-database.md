@@ -7,7 +7,7 @@
 
 3\. Login with the `Administrator` user using Windows Authentication.
 
-![](<../../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
 4\. Expand the "DATA01\DATA" structure and right click on "Databases", select "New Database".
 

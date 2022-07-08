@@ -6,8 +6,8 @@
 
 The membership of the "Account Operators" group is configured in the Dumping DPAPI page.
 
-{% content-ref url="../../misc/page-3-2.md" %}
-[page-3-2.md](../../misc/page-3-2.md)
+{% content-ref url="../../misc/page-3 (1).md" %}
+[page-3 (1).md](<../../misc/page-3 (1).md>)
 {% endcontent-ref %}
 
 ![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)

@@ -17,7 +17,7 @@
 
 3\. Login with the `sa` user using the password `sa` or `Password1!` (Depending if you changed it for another vulnerability)
 
-![](<../../../../.gitbook/assets/image (30) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (30) (1) (1) (1).png>)
 
 4\. Click “New Query” button and use the SQL query below to make `Amsterdam\Richard` database owner of the `production` database.
 

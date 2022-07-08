@@ -58,7 +58,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 .\SpoolSample.exe DC02.amsterdam.bank.local FILE01
 ```
 
-![](<../../../../.gitbook/assets/image (6).png>)
+![](<../../../../.gitbook/assets/image (6) (1).png>)
 
 Inject the ticket:
 

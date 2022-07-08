@@ -110,7 +110,7 @@
     * [Unqouted Service Path](vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md)
   * [Discovering Shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
   * [Password on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md)
-  * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-2.md)
+  * [Dumping DPAPI](<vulnerabilities-and-misconfigurations-and-attacks/misc/page-3 (1).md>)
   * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
 * [Template page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
 

@@ -25,7 +25,19 @@
 
 ![](<../../../.gitbook/assets/image (31).png>)
 
+6\. Right click on the `sa_transfer` user and select "Properties", open the "Security" tab and click on "Advanced".
 
+![](<../../../.gitbook/assets/image (74).png>)
+
+7\. Click on "Add" and then "Select a principal" and fill in the name testreset and click "Check Names" .
+
+![](<../../../.gitbook/assets/image (6).png>)
+
+8\. Click on "OK" and search for the privilege "Change Password".
+
+![](<../../../.gitbook/assets/image (30).png>)
+
+9\. Click on "Ok", "Apply" and again on "OK".
 
 ## Attacking
 

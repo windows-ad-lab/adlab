@@ -31,7 +31,7 @@ description: SQL Servers can be configured to link to other SQL Servers.
 
 6\. Open "SQL Server 2019 Configuration Manager"&#x20;
 
-![](<../../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 7\. Restart the two SQL services with "DATA" in their name.
 

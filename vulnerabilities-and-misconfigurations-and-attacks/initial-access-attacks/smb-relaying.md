@@ -124,7 +124,7 @@ sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support
 
 Within some minutes we see something happening within ntlmrelayx, it's trying to relay the hash to the hosts which are inside our .txt. We notice it succeeded two times to authenticate, but access is denied after.
 
-![](<../../.gitbook/assets/image (74).png>)
+![](<../../.gitbook/assets/image (74) (1).png>)
 
 5\. So, what can we do after this attempt has failed? We can try to the socks parameter within ntlmrelayx. The socks parameter, will try to authenticate and remember the connection in the background. The command we will run is as follows:
 

