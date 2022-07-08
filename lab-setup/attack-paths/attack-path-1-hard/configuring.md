@@ -1,4 +1,4 @@
-# Attack path 2
+# Configuring
 
 Complete the "Configuration" part of each of these pages to build the second attack path of the lab. Completing the "Attacking" part is NOT Required! These are added to give as an example on how the misconfigurations could be exploited.
 
@@ -46,8 +46,8 @@ We recommend completing the pages in order.
 [page-2.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/page-2.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md" %}
-[page-3.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-2.md" %}
+[page-3-2.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-2.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/priviliged-groups/backup-operators.md" %}

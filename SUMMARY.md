@@ -108,8 +108,9 @@
     * [PsExec](vulnerabilities-and-misconfigurations-and-attacks/misc/lateral-movement/psexec.md)
   * [Misconfigured Service](vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/README.md)
     * [Unqouted Service Path](vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md)
-  * [Passwords on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/passwords-on-shares.md)
-  * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
+  * [Discovering Shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
+  * [Password on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md)
+  * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-2.md)
   * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
 * [Template page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
 

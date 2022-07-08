@@ -62,7 +62,7 @@ The attack is executed from the perspective of already having high privileged ac
 Invoke-Mimikatz -Command '"privilege::debug" "token::elevate"'
 ```
 
-![](<../../../.gitbook/assets/image (50).png>)
+![](<../../../.gitbook/assets/image (50) (1).png>)
 
 5\. Now we can give `secure_admin` DCSync privileges on the `secure.local` domain object using the Add-DomainObjectAcl cmdlet from PowerView:&#x20;
 

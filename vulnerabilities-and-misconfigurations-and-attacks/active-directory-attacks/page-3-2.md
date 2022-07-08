@@ -12,7 +12,7 @@ description: >-
 1. Login to `DC02` as `Administrator` with the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../.gitbook/assets/image (29) (1).png>)
+![](<../../.gitbook/assets/image (29) (1) (1).png>)
 
 3\. Open the "Emplyees" OU and right click on it, select "New" and then "User". Name the user `helpdesk` and set the password `SuperSecretField1!`. Make sure to deselect "User must change password at next logon" and select "Password never expires".
 

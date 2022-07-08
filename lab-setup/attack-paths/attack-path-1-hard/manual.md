@@ -174,7 +174,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../.gitbook/assets/image (29) (1) (1).png>)
+![](<../../../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 2\. The `0` means that the user `AMSTERDAM\richard` is not sysadmin. So we have to find a way to gain sysadmin privileges. One of the ways I know of is checking if our user can impersonate any other user which we can check with the following SQL query:
 

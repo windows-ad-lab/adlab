@@ -58,7 +58,7 @@ The attack will start from the perspective of already owning the `FILE01` server
  Get-DomainComputer -UnConstrained | select samaccountname
 ```
 
-![](<../../../../.gitbook/assets/image (50) (1).png>)
+![](<../../../../.gitbook/assets/image (50) (1) (1).png>)
 
 4\. There are two systems with unconstrained delegation. One which is the domain controller, which always had unconstrained delegation. The other is `FILE01`. Since we got access to this system we can check if there are any tickets onto the system with Rubeus.
 

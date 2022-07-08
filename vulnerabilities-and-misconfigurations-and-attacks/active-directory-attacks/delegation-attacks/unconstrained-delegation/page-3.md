@@ -49,7 +49,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 
 3\. Now when we check if there is a ticket on `FILE01` for `DC02` and there is:
 
-![](<../../../../.gitbook/assets/image (29).png>)
+![](<../../../../.gitbook/assets/image (29) (1).png>)
 
 4\. We can dump this ticket and reuse it and then execute a dcsync just like during the unconstrained delegation attack. But this time we need to use the Rubeus monitor function and then run the spoolsample again:
 

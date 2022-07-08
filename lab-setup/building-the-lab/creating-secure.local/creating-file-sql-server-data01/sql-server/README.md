@@ -5,7 +5,7 @@
 1. Login to `DC03` as the `Administrator` user with password `Welcome01!`.
 2. Open the "Server Manager" and open the "Active Directory Users and Computers" tool in the tool section.
 
-![](<../../../../../.gitbook/assets/image (50) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (50) (1) (1) (1).png>)
 
 3\. Expand the "secure.local" directory, right click on "User" and select "New" and "User".
 

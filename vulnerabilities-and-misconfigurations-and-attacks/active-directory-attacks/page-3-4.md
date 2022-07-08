@@ -85,7 +85,7 @@ Get-DomainForeignGroupMember -Domain secure.local
 ConvertFrom-SID S-1-5-21-320929719-844265543-1524670925-1602
 ```
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (78) (1).png>)
 
 5\. The user `bank\secure_admin` from `bank.local` is member of `local admin data` in `secure.local`. We can also see this in bloodhound after collecting the data for both domains and loading it into the BloodHound GUI.
 

@@ -4,7 +4,9 @@
 
 ### Prerequisite&#x20;
 
-
+{% content-ref url="../../misc/page-3-1.md" %}
+[page-3-1.md](../../misc/page-3-1.md)
+{% endcontent-ref %}
 
 ### Configuring
 
@@ -22,6 +24,8 @@
 5\. Make sure "User must change password at next logon" is NOT selected and select "Password never expires".
 
 ![](<../../../.gitbook/assets/image (31).png>)
+
+
 
 ## Attacking
 
