@@ -22,7 +22,7 @@ The attack is executed from the perspective of already gaining domain admin priv
 1. For easy execution, login on `WS01` as the `Administrator` user with the password `Welcome01!`.
 2. Start PowerShell as Administrator and load a amsi bypass and MimiKatz into memory.
 
-![](<../../../.gitbook/assets/image (71).png>)
+![](<../../../.gitbook/assets/image (71) (1).png>)
 
 3\. DCsync the trust key with MimiKatz:
 

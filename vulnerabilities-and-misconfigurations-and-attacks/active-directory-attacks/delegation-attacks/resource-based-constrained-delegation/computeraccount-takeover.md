@@ -146,7 +146,7 @@ Temporarily disable Windows Defender if it gets flagged by it.
 
 12\. We got a CIFS ticket as `Administrator` for `data01.secure.local`, now we can try to list the C disk.
 
-![](<../../../../.gitbook/assets/image (61) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (61) (1) (1) (1) (1).png>)
 
 ### Cleanup
 

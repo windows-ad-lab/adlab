@@ -40,7 +40,7 @@ If you are "Owner" of a object, you can change the DACL of the object. Meaning y
 Add-DomainObjectAcl -Domain secure.local -Credential $creds -TargetIdentity DATA01 -PrincipalIdentity sa_sql -Rights All -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (26) (1).png>)
+![](<../../../.gitbook/assets/image (26) (1) (1).png>)
 
 3\. PowerView gives some errors but it seems like it found the correct information and tried to set the ACL's. We can check this by running BloodHound again or querying the Domain Controller for all ACL's from DATA01 and filter. First we have to get the objectsid from the user `sa_sql` and then we can use the cmdlet `Get-DomainObjectACL` to query all the ACL's for `DATA01`.
 
@@ -54,6 +54,16 @@ Get-DomainObjectAcl -Domain secure.local -Credential $creds -Server 10.0.0.100 -
 From the output we can see that the user `sa_sql` has GenericAll permission on `DATA01`. Since we own the lab we can also check it out on the Domain Controller, the same way as we configured the Owner permissions. And it has all the permissions:
 
 ![](<../../../.gitbook/assets/image (9) (1) (1) (1) (1).png>)
+
+4\. The next step to abuse the GenericAll permissions page which will send you to two more pages. To abuse the privileges for `DATA01` the computeraccount takeover attack should be executed:
+
+{% content-ref url="genericall.md" %}
+[genericall.md](genericall.md)
+{% endcontent-ref %}
+
+{% content-ref url="../delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md" %}
+[computeraccount-takeover.md](../delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md)
+{% endcontent-ref %}
 
 ### Cleanup
 

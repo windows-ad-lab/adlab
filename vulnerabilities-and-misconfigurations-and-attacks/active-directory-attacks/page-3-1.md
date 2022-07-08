@@ -27,7 +27,7 @@ description: >-
 
 5\. Set the value to `544` and cick "OK".
 
-![](<../../.gitbook/assets/image (46).png>)
+![](<../../.gitbook/assets/image (46) (1).png>)
 
 6\. Click "Apply" and "OK".
 

@@ -17,11 +17,11 @@
 
 Username: `Bob`, Password: `Bob`
 
-![](<../../../../../.gitbook/assets/image (23) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (23) (1) (1) (1).png>)
 
 Click "OK" and create the second user: Username: `SQLAdmin`, Password `Winter2022!`.
 
-![](<../../../../../.gitbook/assets/image (25).png>)
+![](<../../../../../.gitbook/assets/image (25) (1).png>)
 
 Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is sysadmin.
 

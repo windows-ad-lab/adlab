@@ -16,7 +16,7 @@ With these permission on a group you can add anyone to the group.
 
 #### Users
 
-With these permission on a user you can do two things:
+With GenericAll permission on a user you can do two things:
 
 * Targeted kerberoast (set spn to user and kerberoast it)
 * Change their password (This will deny access to the user and may raise red flags)
@@ -31,7 +31,7 @@ With these permission on a user you can do two things:
 
 #### Computers
 
-With these permissions on a computerobject you can do two things:
+With GenericAll permissions on a computerobject you can do two things:
 
 * Read its LAPS password.
 * Get access to the machine using Resource Based Constrained Delegation
@@ -42,6 +42,14 @@ With these permissions on a computerobject you can do two things:
 
 {% content-ref url="../delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md" %}
 [computeraccount-takeover.md](../delegation-attacks/resource-based-constrained-delegation/computeraccount-takeover.md)
+{% endcontent-ref %}
+
+#### Domain object
+
+In these GenericAll permissions the permissions DS-Replication-Get-Changes and Replication-Get-Changes-All rights are included. Giving you the ability to execute a DCSync attack.
+
+{% content-ref url="get-changes.md" %}
+[get-changes.md](get-changes.md)
 {% endcontent-ref %}
 
 ## References

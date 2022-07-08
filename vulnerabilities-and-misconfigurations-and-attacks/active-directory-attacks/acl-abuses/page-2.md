@@ -25,7 +25,7 @@
 
 ![](<../../../.gitbook/assets/image (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (61) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1).png>)
 
 It is configured correctly!
 
@@ -87,7 +87,11 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 ![](<../../../.gitbook/assets/image (21) (1) (1) (1).png>)
 
-8\. We successfully changed the owner of the computerobject from `Domain Admins` to `sa_ql`.
+8\. We successfully changed the owner of the computerobject from `Domain Admins` to `sa_ql`. The next step will be on the Owns section:
+
+{% content-ref url="owns.md" %}
+[owns.md](owns.md)
+{% endcontent-ref %}
 
 ## Defending
 

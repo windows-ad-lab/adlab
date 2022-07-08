@@ -22,3 +22,5 @@ The object has one First Degree Object Control, meaning the user has one direct 
 I will always recommend doing this for EVERY user and computer or other objects you got access to and own(Know the password from or NTLM hash or tickets etc). And also right click on the objects and mark them as "Owned"
 
 ![](<../../../.gitbook/assets/image (44) (1).png>)
+
+{% embed url="https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html" %}

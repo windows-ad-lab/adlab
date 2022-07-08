@@ -23,7 +23,7 @@
 
 9\. Make a new group with the name `Local admin data` and select group scope "Domain Local".
 
-![](<../../.gitbook/assets/image (77) (1).png>)
+![](<../../.gitbook/assets/image (77) (1) (1).png>)
 
 10\. Right click the group and select "Properties". Click on the "Members" tab and click on "Add"
 
@@ -37,7 +37,7 @@
 
 13\. Click "Apply" and then "OK".
 
-14\. To make the group local admin to the DATA01 server there are two options
+14\. To make the group local admin to the `DATA01` server there are two options
 
 * Login to the machine and use the net command to add the group to the local administrators group.
 * Deploy a GPO to make the group local admin on the machine.

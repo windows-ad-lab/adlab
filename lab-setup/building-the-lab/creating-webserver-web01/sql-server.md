@@ -42,7 +42,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 ![](<../../../.gitbook/assets/image (51) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (26) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (26) (1) (1) (1) (1).png>)
 
 9\. Click Next and fill in the Instance name `dev`.
 
@@ -84,7 +84,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 16\. Do the same for "SQL Server Agent":
 
-![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (46) (1) (1) (1) (1) (1) (1) (1).png>)
 
 17\. Download and Install [SQL Server Mangement Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?redirectedfrom=MSDN\&view=sql-server-ver15). Just Click "Install" and reboot the system.
 
@@ -94,7 +94,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 1. Search for "Windows Defender Firewall with Advanced Security" and select "Windows Defender Firewall with Advanced Security"
 
-![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 2\. Rightclick on "Inbound Rules" and select "New rule".
 

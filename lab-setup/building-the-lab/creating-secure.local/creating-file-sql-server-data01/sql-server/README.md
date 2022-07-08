@@ -5,7 +5,7 @@
 1. Login to `DC03` as the `Administrator` user with password `Welcome01!`.
 2. Open the "Server Manager" and open the "Active Directory Users and Computers" tool in the tool section.
 
-![](<../../../../../.gitbook/assets/image (50) (1).png>)
+![](<../../../../../.gitbook/assets/image (50) (1) (1).png>)
 
 3\. Expand the "secure.local" directory, right click on "User" and select "New" and "User".
 
@@ -24,7 +24,7 @@
 1. Login to `DATA01` as the `Administrator` user with password `Welcome01!`.
 2. Download SQL Server 2019 from [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019).
 
-![](<../../../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1) (1).png>)
 
 3\. When smartscreen comes up select "Run".
 
@@ -33,7 +33,7 @@
 {% hint style="info" %}
 The SQL Server Installation may require internet access, temporally add a second adapter in the machine settings and select the NAT network. The machine should have internet access. (ps our first adapter is different since our lab runs on a ESXI host).
 
-![](<../../../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 {% endhint %}
 
 4\. On "Select an installation type" select "Basic":
@@ -83,7 +83,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 14\. Expand "SQL Server Network Configuration" and select "Protocols for DATA". Double click on "TCP/IP" and select the "IP Addresses" tab. Fill in `1433` for "TCP Port".
 
-![](<../../../../../.gitbook/assets/image (26) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (26) (1) (1) (1).png>)
 
 15\. Scroll to the bottom and also configure IPAll:
 

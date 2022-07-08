@@ -49,7 +49,7 @@ The description from helpdesk looks like a password.
 
 4\. Run PowerShell as another user (Shift rightlick) and fill in the username `helpdesk` and password `SuperSecretField1!`.
 
-![](<../../.gitbook/assets/image (61).png>)
+![](<../../.gitbook/assets/image (61) (1).png>)
 
 
 

@@ -14,7 +14,7 @@ description: >-
 
 ![](<../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (62) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Add the user to the "Account operator" and "Backup Operator" groups via the interface, memberof section or run the following command:
 
