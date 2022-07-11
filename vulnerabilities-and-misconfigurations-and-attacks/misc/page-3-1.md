@@ -59,13 +59,33 @@ wget https://raw.githubusercontent.com/ruudmens/LazyAdmin/master/ActiveDirectory
 
 ### How it works
 
-
+During our pentests I often find shares that are accessible for all users and often there are some credentials to be discovered in either configuration files, scripts or Microsoft documents(`.doc`, `.xls`) made to store passwords. Sometimes there even is a NAS that allows null session and read/write on all shares.
 
 ### Tools
 
-
+* SMBClient
 
 ### Executing the attack
+
+The attack is executed from the perspective of already having discovered the IT Share on `FILE01` and having access to it.
+
+{% content-ref url="page-3.md" %}
+[page-3.md](page-3.md)
+{% endcontent-ref %}
+
+1. For having easy access to look at the share&#x20;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
