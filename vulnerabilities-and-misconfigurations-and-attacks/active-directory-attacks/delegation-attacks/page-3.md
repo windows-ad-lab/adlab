@@ -118,7 +118,7 @@ Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 ls \\file01.amsterdam.bank.local\c$
 ```
 
-![](<../../../.gitbook/assets/image (27).png>)
+![](<../../../.gitbook/assets/image (27) (1).png>)
 
 9\. We are unable to use the RPC and HOST tickets for pssession since the target server doesn't have it enabled. We can get a shell with the CIFS ticket by using psexec from sysinternals:
 

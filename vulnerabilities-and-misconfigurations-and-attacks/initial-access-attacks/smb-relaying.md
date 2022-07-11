@@ -134,7 +134,7 @@ sudo ntlmrelayx.py -tf smb-signing-false.txt -smb2support -socks
 
 After a few minutes, we get new output within ntlmrelayx. But this time, we see _adding user to active SOCKS connection. Enjoy._ This means, we have an active connection to two machines.
 
-![](<../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../.gitbook/assets/image (19) (1) (1) (1).png>)
 
 We can verify our connection by pressing enter until we see _ntlmrelayx>_ . Now we can type _socks_ and we see the machines, where we have succesfully relayed our hashes to.
 

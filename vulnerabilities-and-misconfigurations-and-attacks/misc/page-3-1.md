@@ -43,7 +43,7 @@ Set-ADAccountPassword $user -NewPassword $NewPwd -Reset -Credential $credentials
 Write-Host $user, $Password
 ```
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (78) (1).png>)
 
 8\. Download a couple bogus scripts to the server and place them in the same folder such as:
 
@@ -63,7 +63,7 @@ During our pentests I often find shares that are accessible for all users and of
 
 ### Tools
 
-* SMBClient
+*
 
 ### Executing the attack
 
@@ -73,31 +73,37 @@ The attack is executed from the perspective of already having discovered the IT 
 [page-3.md](page-3.md)
 {% endcontent-ref %}
 
-1. For having easy access to look at the share&#x20;
+1. For having easy access to look at the share login as `noah` with the password `haoNHasAStrongPassword321!@` on `WS01`.
+2. Open File Explorer and browse to `\\file01\Data`.
 
+![](<../../.gitbook/assets/image (22).png>)
 
+3\. Open the IT directory and then the Script directory.
 
+![](<../../.gitbook/assets/image (56).png>)
 
+4\. While looking through the scripts we see that the script `Password-reset-transferuser-testscript` has login credentials saved in the script:
 
+![](<../../.gitbook/assets/image (18).png>)
 
+5\. The password for the user `testreset` probably is `Testing123Testing!`. After reading through the code it seems that its a script to reset the credentials of the user `sa_transfer_test` with the credentials of `testreset`.
 
+We can easily test this by starting a new PowerShell session as this user by opening powershell, then in the taskbar right click on it and shift right clicking on Window PowerShell and then selecting "Runas as different user".
 
+![](<../../.gitbook/assets/image (27).png>)
 
+6\. Copy and paste the credentials and click on "OK". A PowerShell window opens, type `whoami` to check if we are running as the `testreset` user:
 
+![](<../../.gitbook/assets/image (19).png>)
 
+On the following page the ACL's this account has will be abused by resetting a password from another user:
 
-
-
+{% content-ref url="../active-directory-attacks/acl-abuses/forcechangepassword.md" %}
+[forcechangepassword.md](../active-directory-attacks/acl-abuses/forcechangepassword.md)
+{% endcontent-ref %}
 
 ## Defending
 
 ### Recommendations
 
-* a
-
-### Detection
-
-
-
-## References
-
+* Don't save credentials in readable files.

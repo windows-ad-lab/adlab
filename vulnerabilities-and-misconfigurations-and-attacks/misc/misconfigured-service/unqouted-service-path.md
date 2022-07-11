@@ -133,7 +133,7 @@ But we do have write permissions in `C:\Program Files\bin folder\program`.
 Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin folder\program\bin.exe' -Username 'privesc' -Password "Welcome2022!" 
 ```
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (22) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 8\. Our current user can't start the service, which means we should restart the machine and check if the user `privesc` is created.
 
@@ -145,7 +145,7 @@ Write-ServiceBinary -ServiceName 'Service' -ServicePath 'C:\Program Files\bin fo
 
 ![](<../../../.gitbook/assets/image (47) (1) (1) (1) (1) (1) (1).png>)
 
-![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 #### Cleanup
 

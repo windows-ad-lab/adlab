@@ -62,7 +62,7 @@ sa
 crackmapexec mssql 10.0.0.5 -u sa -p passwords.txt --local-auth
 ```
 
-![](<../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (39) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We got a succesfull login as the `sa` user with the password `sa`.
 

@@ -74,7 +74,7 @@ Add-DomainObjectAcl -TargetIdentity 'DC=secure,DC=local' -PrincipalIdentity 'sec
 
 7\. We can quickly run BloodHound to check if the correct permissions are applied to the `secure_admin` user:
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 ![](<../../../.gitbook/assets/image (79).png>)
 

@@ -16,7 +16,7 @@ net user bankuser Bank2022! /add /domain
 net user banktest Bank2022! /add /domain
 ```
 
-![](<../../.gitbook/assets/image (56) (1) (1).png>)
+![](<../../.gitbook/assets/image (56) (1) (1) (1).png>)
 
 ## Attacking
 

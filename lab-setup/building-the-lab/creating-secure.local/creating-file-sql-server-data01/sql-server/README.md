@@ -69,7 +69,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 10\. Change the "Startup Type" for the "SQL Server Agent" to "Automatic" and make sure all three are set to "Automatic". Then change the account name for "SQL Server agent" and "SQL Server Database Engine" to `sa_sql` and fill in the password `Iloveyou2`.
 
-![](<../../../../../.gitbook/assets/image (56) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (56) (1) (1) (1) (1).png>)
 
 11\. At the next step select "Windows authentication mode". Then select "Add" at the "Specify SQL Server administrators" and add `secure\administrator` then click "Next".&#x20;
 

