@@ -118,9 +118,11 @@
 
 * [Detection](defence/detection.md)
 * [Hardening](defence/hardening/README.md)
+  * [LDAP](defence/hardening/ldap/README.md)
+    * [Enable LDAP SSL (LDAPS)](defence/hardening/ldap/enable-ldap-ssl-ldaps.md)
   * [Strong Password Policy](defence/hardening/strong-password-policy.md)
   * [Change who can join computers to the domain](defence/hardening/change-who-can-join-computers-to-the-domain.md)
   * [Protected users group](defence/hardening/protected-users-group.md)
   * [Account is sensitive and cannot be delegated](defence/hardening/account-is-sensitive-and-cannot-be-delegated.md)
-  * [Example](defence/hardening/example.md)
   * [Powershell Execution Policy](defence/hardening/powershell-execution-policy.md)
+  * [Template page](defence/hardening/template-page.md)
