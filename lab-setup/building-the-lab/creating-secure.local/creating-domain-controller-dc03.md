@@ -118,7 +118,7 @@
 1. Login to `DC001` as the `Administrator` user with password `Welcome01!`.
 2. Open the "Server Manager", click on "Tools" and open the "DNS" tool.
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (2).png>)
 
 3\. In the DNS Server expand "DC01" and right click on "Conditional Forwarders" and click "new".
 
@@ -162,7 +162,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 8\. Fill in the the credentials Administrator and password Welcome01.
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../.gitbook/assets/image (3) (1) (3).png>)
 
 9\. Select "Domain-wide authentication" for this trust and click "Next".&#x20;
 

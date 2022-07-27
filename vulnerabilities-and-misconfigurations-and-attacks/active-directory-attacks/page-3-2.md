@@ -57,7 +57,7 @@ The description from helpdesk looks like a password.
 
 If a PowerShell session opens it worked:
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (1).png>)
 
 {% hint style="info" %}
 It might be interesting to also check the descriptions of groups and computers. Never found password but sometimes some usefull information about the groups and systems!

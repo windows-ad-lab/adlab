@@ -46,7 +46,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 6\. Once the installation is finished, click on "Customize".
 
-![](<../../../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../../.gitbook/assets/image (7) (1) (2).png>)
 
 8\. Click next till the "License Terms" step.
 
@@ -111,7 +111,7 @@ The SQL Server Installation may require internet access, temporally add a second
 
 3\. Select "Port" and click "Next".
 
-![](../../../../../.gitbook/assets/image.png)
+![](<../../../../../.gitbook/assets/image (89).png>)
 
 4\. Make sure "TCP" is selected and fill in port `1433` and click "Next":
 

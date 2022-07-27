@@ -23,7 +23,7 @@
 
 7\. We can quickly run BloodHound to check if the correct permissions are applied to the `sa_sql` user:
 
-![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (2).png>)
 
 ![](<../../../.gitbook/assets/image (61) (1) (1) (1) (1) (1).png>)
 

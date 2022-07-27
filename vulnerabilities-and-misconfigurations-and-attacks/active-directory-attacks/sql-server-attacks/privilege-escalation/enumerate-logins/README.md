@@ -30,7 +30,7 @@ Then open the tab "Server Roles" and select "sysadmin" so the user `SQLAdmin` is
 1. The user AMSTERDAM\Richard already has access to the SQL Server. But lets create a group and a new user and add this user to the group and give it access.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../../../.gitbook/assets/image (10) (1) (1).png>)
 
 3\. Open the "Employees" OU and right click on it and select "new" and then "Group". Name the group `DatabaseUsers`.
 
@@ -83,7 +83,7 @@ Get-SQLInstanceDomain | Get-SQLQuery -Query "SELECT name FROM sys.server_princip
 
 5\. If we run the queries on the SQL server itself as the Domain Admin we will receive all the users, since it is sysadmin on the SQL Server;
 
-![](<../../../../../.gitbook/assets/image (5) (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png>)
 
 6\. So we aren't able to enumerate all the users using these queries. But we are able to query the users with the following query; `Select SUSER_NAME(ID)`. Using the SUSER\_NAME function. Where the ID starts with 1 and we keep incrementing it till we have all the users. The id `282` is from the `testadmin` SQL user.
 

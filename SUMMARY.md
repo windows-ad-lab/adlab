@@ -17,6 +17,8 @@
     * [Creating amsterdam.bank.local](lab-setup/building-the-lab/creating-bank.local/creating-amsterdam.bank.local/README.md)
       * [Creating Domain Controller - DC02](lab-setup/building-the-lab/creating-domain-controller-dc02/README.md)
         * [Creating a AD structure](lab-setup/building-the-lab/creating-domain-controller-dc02/creating-a-ad-structure.md)
+        * [Create a CA](lab-setup/building-the-lab/creating-bank.local/creating-amsterdam.bank.local/creating-domain-controller-dc02/create-a-ca.md)
+        * [Configure LDAPS](lab-setup/building-the-lab/creating-bank.local/creating-amsterdam.bank.local/creating-domain-controller-dc02/configure-ldaps.md)
       * [Creating Fileserver - FILE01](lab-setup/building-the-lab/creating-fileserver-file01/README.md)
         * [File services](lab-setup/building-the-lab/creating-fileserver-file01/file-services.md)
       * [Creating W10 client - WS01](lab-setup/building-the-lab/creating-w10-client-ws01.md)

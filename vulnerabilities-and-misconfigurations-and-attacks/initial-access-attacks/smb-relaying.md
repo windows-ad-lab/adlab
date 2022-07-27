@@ -138,7 +138,7 @@ After a few minutes, we get new output within ntlmrelayx. But this time, we see 
 
 We can verify our connection by pressing enter until we see _ntlmrelayx>_ . Now we can type _socks_ and we see the machines, where we have succesfully relayed our hashes to.
 
-![](<../../.gitbook/assets/image (58).png>)
+![](<../../.gitbook/assets/image (58) (2).png>)
 
 5\. Now we need to use the active socks connections we have, for this we will use _proxychains._ Before using proxychains, we need to make some changes within proxychains. This can be done through editor, the file we need to change is `/etc/proxychains4.conf` _._
 
@@ -161,7 +161,7 @@ proxychains crackmapexec smb smb-signing-false.txt -d amsterdam -u pukcab -H 000
 
 At the -H we can fill in a random hash, this is because CrackMapExec will use our hash from ntlmrelayx.&#x20;
 
-![](<../../.gitbook/assets/image (42).png>)
+![](<../../.gitbook/assets/image (42) (1).png>)
 
 7\. We notice that our user _pukcab_ has access to the Data directory at FILE01. To view what's inside this directory, we can use smbclient. Smbclient is also a package from impacket. The command we will run to view the content of the Data directory, is as follows:
 

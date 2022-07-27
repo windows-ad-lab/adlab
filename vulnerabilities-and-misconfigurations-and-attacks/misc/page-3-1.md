@@ -84,7 +84,7 @@ The attack is executed from the perspective of already having discovered the IT 
 
 4\. While looking through the scripts we see that the script `Password-reset-transferuser-testscript` has login credentials saved in the script:
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../.gitbook/assets/image (18) (1).png>)
 
 5\. The password for the user `testreset` probably is `Testing123Testing!`. After reading through the code it seems that its a script to reset the credentials of the user `sa_transfer_test` with the credentials of `testreset`.
 

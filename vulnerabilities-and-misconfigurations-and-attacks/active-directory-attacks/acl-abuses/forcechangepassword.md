@@ -31,7 +31,7 @@
 
 7\. Click on "Add" and then "Select a principal" and fill in the name testreset and click "Check Names" .
 
-![](<../../../.gitbook/assets/image (6).png>)
+![](<../../../.gitbook/assets/image (6) (1).png>)
 
 8\. Click on "OK" and select the privilege "Reset Password".
 

