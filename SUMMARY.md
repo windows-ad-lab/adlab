@@ -119,7 +119,7 @@
 * [Detection](defence/detection.md)
 * [Hardening](defence/hardening/README.md)
   * [LDAP](defence/hardening/ldap/README.md)
-    * [Enable LDAP SSL (LDAPS)](defence/hardening/ldap/enable-ldap-ssl-ldaps.md)
+    * [Enable LDAP SSL (LDAPS)](defence/hardening/example.md)
   * [Strong Password Policy](defence/hardening/strong-password-policy.md)
   * [Change who can join computers to the domain](defence/hardening/change-who-can-join-computers-to-the-domain.md)
   * [Protected users group](defence/hardening/protected-users-group.md)

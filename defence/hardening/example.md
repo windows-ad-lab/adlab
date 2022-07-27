@@ -1,10 +1,6 @@
-# Example
+# Enable LDAP SSL (LDAPS)
 
 ## Configuring
-
-### Prerequisite
-
-
 
 ### How it works
 
