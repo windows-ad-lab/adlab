@@ -170,7 +170,7 @@ If you see a cross don't worry. I takes some time to validate. You can check the
 
 11\. On the page "Confirm Outgoing Trust" select "Yes, confirm the outgoing trust".
 
-12\. On the page "Confirm Outgoing Trust" select "Yes, confirm the outgoing trust".
+12\. On the page "Confirm incoming Trust" select "Yes, confirm the incoming trust".
 
 13\. Click "Finish"
 
