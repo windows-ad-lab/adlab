@@ -48,3 +48,6 @@ If something is missing from this gitbook or if you have questions please hit us
 * [https://github.com/0xJs](https://github.com/0xJs)
 * [https://jonyschats.nl/](https://jonyschats.nl/)
 
+## JustRelax
+
+* [https://www.linkedin.com/in/stanplasmeijer/](https://www.linkedin.com/in/stanplasmeijer/)
