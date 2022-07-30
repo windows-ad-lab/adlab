@@ -26,7 +26,7 @@
 
 7\. Click on "Apply" and "OK" and the template should be created.
 
-![](<../../../../../.gitbook/assets/image (42) (2).png>)
+![](<../../../../../.gitbook/assets/image (42).png>)
 
 8\. Return to "certsrv" window and right click "Certificate Templates" and select "New" and then "Certificate Template to Issue".
 
@@ -112,6 +112,6 @@ Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Cryptography\Services\NTDS\SystemC
 
 15\. Open ldp.exe and test the connection to the domain controller:
 
-![](<../../../../../.gitbook/assets/image (42).png>)
+![](<../../../../../.gitbook/assets/image (2).png>)
 
 ![](<../../../../../.gitbook/assets/image (1).png>)

@@ -4,6 +4,6 @@ Windows has multiple places to store credentials. For a hacker it is interesting
 
 Within this module we will take a look at those places, where the credentials are stored.&#x20;
 
-{% content-ref url="services.md" %}
-[services.md](services.md)
+{% content-ref url="different-methods-of-dumping-credentials/services.md" %}
+[services.md](different-methods-of-dumping-credentials/services.md)
 {% endcontent-ref %}

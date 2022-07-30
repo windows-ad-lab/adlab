@@ -30,7 +30,7 @@
 
 8\. Click on "Next" and in the step "Role Services" select "Certificate Authority" and "Certificate Authority Web Enrollment" and click "Next".
 
-![](<../../../../../.gitbook/assets/image (2).png>)
+![](<../../../../../.gitbook/assets/image (2) (1).png>)
 
 8\. In the step "Setup Type" select the default "Enterprise CA" and click "Next".
 

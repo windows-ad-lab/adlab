@@ -91,7 +91,7 @@ git clone https://github.com/fox-it/BloodHound.py
 bloodhound-python -d amsterdam.bank.local -ns 10.0.0.3 -dc DC02.amsterdam.bank.local -u 'Richard' -p 'Sample123' --zip -c all
 ```
 
-![](<../../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (3).png>)
 
 2\. We now can load the data into BloodHound by dragging the zip file into the BloodHound program and see if `Richard` can do anything useful. In the top search for the Richard user and click on it.
 

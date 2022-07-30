@@ -113,7 +113,7 @@
   * [Discovering Shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
   * [Password on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md)
   * [Dumping DPAPI](<vulnerabilities-and-misconfigurations-and-attacks/misc/page-3 (1).md>)
-  * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/README.md)
+  * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
     * [LSASS](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/lsass.md)
     * [Scheduled tasks](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/scheduled-tasks.md)
     * [Services](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/services.md)

@@ -18,8 +18,34 @@ We recommend completing the pages in order.
 [unqouted-service-path.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/services.md" %}
+[services.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/services.md)
 {% endcontent-ref %}
 
-// Still work in progress
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md" %}
+[page-3.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md" %}
+[page-3-1.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/forcechangepassword.md" %}
+[forcechangepassword.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/forcechangepassword.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/page-3.md" %}
+[page-3.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/page-3.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/" %}
+[unconstrained-delegation](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/delegation-attacks/unconstrained-delegation/)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/page-3-1.md" %}
+[page-3-1.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/child-to-parent-domain/page-3-1.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-4.md" %}
+[page-3-4.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-4.md)
+{% endcontent-ref %}
