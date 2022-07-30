@@ -16,7 +16,7 @@
 
 5\. Click "Next" and finish the installation.
 
-![](<../../../../../.gitbook/assets/image (1).png>)
+![](<../../../../../.gitbook/assets/image (1) (1).png>)
 
 6\. Click on the "Flag" in the "Server Manager" it should have an exclamation mark and click the "Configure Active Directory Certificate Services on the...."
 
@@ -30,7 +30,7 @@
 
 8\. Click on "Next" and in the step "Role Services" select "Certificate Authority" and "Certificate Authority Web Enrollment" and click "Next".
 
-![](../../../../../.gitbook/assets/image.png)
+![](<../../../../../.gitbook/assets/image (2).png>)
 
 8\. In the step "Setup Type" select the default "Enterprise CA" and click "Next".
 

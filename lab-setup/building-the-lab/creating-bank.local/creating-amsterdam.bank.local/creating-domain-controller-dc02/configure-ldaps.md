@@ -110,9 +110,8 @@ Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Cryptography\Services\NTDS\SystemC
 
 ![](<../../../../../.gitbook/assets/image (88).png>)
 
+15\. Open ldp.exe and test the connection to the domain controller:
 
+![](../../../../../.gitbook/assets/image.png)
 
-
-
-
-
+![](<../../../../../.gitbook/assets/image (1).png>)

