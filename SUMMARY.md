@@ -117,6 +117,8 @@
     * [LSASS](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/lsass.md)
     * [Scheduled tasks](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/scheduled-tasks.md)
     * [Services](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/services.md)
+  * [ms-ds-machineaccountquota](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-3.md)
+  * [add DNS Records](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-4.md)
 * [Template page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
 
 ## Defence
