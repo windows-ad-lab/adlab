@@ -10,11 +10,11 @@
 
 **Creating security groups**
 
-1. Login with an administrative user onto the Domain Controller. In our example we will login with Administrator on DC02.
+1. Login with the `Administrator` user on `DC02` and the password `Welcome01!`.&#x20;
 
 **Creating shares**
 
-1. Login with an administrative user on a server with File and Storage services installed. In our example we will login with Administrator on FILE01.
+1. Login with an administrative user on a server with File and Storage services installed. In our example we will login with Administrator on `FILE01`.
 2.
 
 ## Attacking
