@@ -1,4 +1,4 @@
-# Enable LDAP SSL (LDAPS)
+# LDAP Signing
 
 ## Configuring
 

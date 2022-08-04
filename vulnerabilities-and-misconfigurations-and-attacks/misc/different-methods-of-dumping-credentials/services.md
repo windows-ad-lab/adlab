@@ -15,7 +15,11 @@ description: >-
 
 ### Configuring
 
-We've created the user account _noah._
+In the Prerequisite stands that we need a domain account, which will run the service. For this example we have created the user _noah_ onto the Domain Controller. We executed  the following command to create the user:
+
+```
+net user Noah haoNHasAStrongPassword321!@ /domain /add
+```
 
 1. Login with an `Administrator` account into the machine, where you want to configure the service. In our example we will configure this within `WS01`.
 2. Open up _cmd.exe_
