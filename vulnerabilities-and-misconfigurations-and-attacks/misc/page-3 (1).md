@@ -106,7 +106,7 @@ First we get the output of the first mimikatz command we ran, some information a
 
 7\. With the help of PowerView we can quickly check if this user has any value:
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (3).png>)
 
 In PowerView we can see that `sa_backup` is member of the `Account Operators` en `Backup Operators` groups. These groups are interesting!
 

@@ -86,7 +86,7 @@ If you are using another share, make sure the share is writeable by anyone other
 secretsdump.py LOCAL -system ~/adlab/SYSTEM -security ~/adlab/SECURITY -sam ~/adlab/SAM
 ```
 
-![](<../../../.gitbook/assets/image (53) (1) (2).png>)
+![](<../../../.gitbook/assets/image (53) (1).png>)
 
 7\. The last step is to run Secretsdump.py to run DCsync and retrieve all the domain account hashes:
 
