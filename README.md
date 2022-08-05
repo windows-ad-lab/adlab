@@ -47,6 +47,7 @@ If something is missing from this gitbook or if you have questions please hit us
 
 * [https://github.com/0xJs](https://github.com/0xJs)
 * [https://jonyschats.nl/](https://jonyschats.nl/)
+* [https://www.linkedin.com/in/jony-schats/](https://www.linkedin.com/in/jony-schats/)
 
 ## JustRelax
 

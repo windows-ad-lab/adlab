@@ -12,7 +12,7 @@
 
 4\. Click next till the step "Role Services" and select "Certificate authority" and "Certificate Authority Web Enrollment" and select "Add Features".
 
-![](<../../../../../.gitbook/assets/image (3) (2).png>)
+![](<../../../../../.gitbook/assets/image (3) (1).png>)
 
 5\. Click "Next" and finish the installation.
 

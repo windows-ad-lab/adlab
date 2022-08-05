@@ -2,7 +2,7 @@
 
 1. Search for "Certificate Authority" in the Windows Search Function and Right click on it and select "Run as different user". Then fill in the Enterprise Admin credentials from `bank\administrator` and the password `Welcome01!`.
 
-![](<../../../../../.gitbook/assets/image (6) (1).png>)
+![](<../../../../../.gitbook/assets/image (6) (2).png>)
 
 2\. Open the directories and click on "Certificate Templates" and select "Manage".
 
