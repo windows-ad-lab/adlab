@@ -9,13 +9,7 @@ description: >-
 
 ## Configuring
 
-### Prerequisite&#x20;
-
-* domain account, which will run the service.&#x20;
-
-### Configuring
-
-In the Prerequisite stands that we need a domain account, which will run the service. For this example we have created the user _noah_ onto the Domain Controller. We executed  the following command to create the user:
+For this example we have created the user _noah_ onto the Domain Controller. The following command should be executed:
 
 ```
 net user Noah haoNHasAStrongPassword321!@ /domain /add
@@ -63,7 +57,7 @@ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "lsadump::secrets"
 
 The result is that our freshly created service is shown, including with username and NTLM Hash:
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (3).png>)
 
 With the hash we can try to execute pass-the-hash attacks.
 
