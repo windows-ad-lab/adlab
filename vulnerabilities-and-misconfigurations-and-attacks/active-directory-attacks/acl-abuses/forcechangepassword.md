@@ -23,7 +23,7 @@
 
 5\. Make sure "User must change password at next logon" is NOT selected and select "Password never expires".
 
-![](<../../../.gitbook/assets/image (31).png>)
+![](<../../../.gitbook/assets/image (31) (1).png>)
 
 6\. Right click on the `sa_transfer` user and select "Properties", open the "Security" tab and click on "Advanced".
 

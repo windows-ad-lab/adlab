@@ -35,7 +35,7 @@ Every domain user is able to retrieve the non-protected attributes of all object
 1. Login with the username `John` and password `Welcome2022!` on WS01.
 2. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../.gitbook/assets/image (31) (1).png>)
+![](<../../.gitbook/assets/image (31) (1) (2).png>)
 
 3\. The following command request all domain users with a value in the description attribute and then only selects the samaccountname and description attributes:
 

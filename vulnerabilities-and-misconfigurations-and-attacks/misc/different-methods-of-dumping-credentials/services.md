@@ -57,7 +57,7 @@ Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "lsadump::secrets"
 
 The result is that our freshly created service is shown, including with username and NTLM Hash:
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (33).png>)
 
 With the hash we can try to execute pass-the-hash attacks.
 
