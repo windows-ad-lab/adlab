@@ -73,7 +73,7 @@
 
 1\. Click on start and open the "Server Manager".
 
-![](<../../../.gitbook/assets/image (3) (1) (1) (2).png>)
+![](<../../../.gitbook/assets/image (3) (1) (1) (2) (1).png>)
 
 2\. On the right top click on "Manage" and "Add Roles and Features".
 

@@ -49,3 +49,11 @@ We recommend completing the pages in order.
 {% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-4.md" %}
 [page-3-4.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-4.md)
 {% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/writedacl.md" %}
+[writedacl.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/writedacl.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/get-changes.md" %}
+[get-changes.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/get-changes.md)
+{% endcontent-ref %}

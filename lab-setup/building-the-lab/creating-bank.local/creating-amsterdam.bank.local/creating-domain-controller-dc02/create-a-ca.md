@@ -16,7 +16,7 @@
 
 5\. Click "Next" and finish the installation.
 
-![](<../../../../../.gitbook/assets/image (1) (1) (2).png>)
+![](<../../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 6\. Click on the "Flag" in the "Server Manager" it should have an exclamation mark and click the "Configure Active Directory Certificate Services on the...."
 

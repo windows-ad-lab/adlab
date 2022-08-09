@@ -46,7 +46,7 @@ python3 -m http.server 8090
 
 4\. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../../../../.gitbook/assets/image (7) (1).png>)
+![](<../../../../../.gitbook/assets/image (7) (1) (3).png>)
 
 5\. Now we can query these objects using PowerView and the `Get-DomainObject` cmdlet. We already know who Richard is and the Administrator is a well known user. We will query DatabaseUsers:
 
