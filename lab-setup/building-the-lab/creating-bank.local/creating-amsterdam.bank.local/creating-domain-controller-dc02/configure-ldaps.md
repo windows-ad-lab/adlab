@@ -2,7 +2,7 @@
 
 1. Search for "Certificate Authority" in the Windows Search Function and Right click on it and select "Run as different user". Then fill in the Enterprise Admin credentials from `bank\administrator` and the password `Welcome01!`.
 
-![](<../../../../../.gitbook/assets/image (6).png>)
+![](<../../../../../.gitbook/assets/image (6) (2).png>)
 
 2\. Open the directories and click on "Certificate Templates" and select "Manage".
 
@@ -14,7 +14,7 @@
 
 4\. Open the tab "General" and give the template name `LDAPS` and select "Public certificate Active Directory".
 
-![](<../../../../../.gitbook/assets/image (9).png>)
+![](<../../../../../.gitbook/assets/image (9) (2).png>)
 
 5\. Open the tab "Request Handling" and select "Allow private key to be exported".
 
@@ -22,7 +22,7 @@
 
 6\. Open the tab "Subject Name" and select "User Principal Name" and "Serviec Principal Name".
 
-![](<../../../../../.gitbook/assets/image (11).png>)
+![](<../../../../../.gitbook/assets/image (11) (1).png>)
 
 7\. Click on "Apply" and "OK" and the template should be created.
 
@@ -114,4 +114,4 @@ Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Cryptography\Services\NTDS\SystemC
 
 ![](<../../../../../.gitbook/assets/image (2) (3).png>)
 
-![](<../../../../../.gitbook/assets/image (1).png>)
+![](<../../../../../.gitbook/assets/image (1) (1).png>)

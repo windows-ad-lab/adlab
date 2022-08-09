@@ -66,7 +66,7 @@ In this example we will use the already created SMB share called `Share`.
 
 When everything has been followed from step 4, you will get something like this:
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (10).png>)
 
 Follow step 4 for all folders you have created. You can even add other security groups to spice things up.
 
@@ -124,7 +124,7 @@ smbmap -u noah -p 'aad3b435b51404eeaad3b435b51404ee:02671733e400aa35ad23828f5df3
 
 The output of the command:
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)
 
 next we will look for interesting content. This can be found on the below page
 

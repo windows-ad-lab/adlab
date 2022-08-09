@@ -13,7 +13,7 @@
 1. Login on `DC02` with the username `Administrator` and password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (3).png>)
 
 3\. Open the "Users" OU and then right click it, select "New" and "User".
 
@@ -47,9 +47,50 @@
 
 ### Tools
 
-
+* [PowerView](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 
 ### Executing the attack
+
+We know the password of the user `testreset`, this is `Testing123Testing!`.  It's possible to either login with the account, or open up a PowerShell session. We will go with a PowerShell session.
+
+1. Start PowerShell and within the taskbar right click on PowerShell and then shift+ right click on Windows PowerShell. If we do this correctly it's possible to select 'Run as different user'.\
+
+
+![](<../../../.gitbook/assets/image (11).png>)
+
+2\. Fill in the login details of the `testreset` user and click on 'OK'. Now a PowerShell window will open and we can confirm it's running under the testreset user, by typing `whoami`.
+
+![](<../../../.gitbook/assets/image (4).png>)
+
+3\. Within the script where we found the testreset user, we also noticed the account `sa_transfer_test` account.  If we run `net user /domain` command within PowerShell, we see the `sa_transfer` account. It might be that we have the same permissions on this account with our testreset user.
+
+![](<../../../.gitbook/assets/image (6).png>)
+
+We can confirm this by loading in PowerView and check the ACL's on the sa\_transfer account. We will run the following command to check this out.
+
+{% code overflow="wrap" %}
+```
+ Get-ObjectAcl -SamAccountName sa_transfer -ResolveGUIDs | ? {$_.ObjectAceType -eq "User-force-Change-Password"}
+```
+{% endcode %}
+
+The above command will filter out everything but reset password permissions. The output will be as follows:
+
+![](<../../../.gitbook/assets/image (3).png>)
+
+If we convert the SecurityIdentifier, we notice it's the user testreset.
+
+![](<../../../.gitbook/assets/image (8).png>)
+
+4\. We now know that we have permissions to reset the password of the `sa_transfer` user. To reset the password of `SA_transfer`, we will run the following command:
+
+{% code overflow="wrap" %}
+```
+Set-DomainUserPassword -Identity sa_transfer -AccountPassword (ConvertTo-SecureString 'WeCanResetThisPassword123!' -AsPlainText -Force) -Verbose
+```
+{% endcode %}
+
+![](../../../.gitbook/assets/image.png)
 
 ## Defending
 
@@ -63,3 +104,4 @@
 
 ## References
 
+{% embed url="https://www.ired.team/offensive-security-experiments/active-directory-kerberos-abuse/abusing-active-directory-acls-aces#forcechangepassword" %}

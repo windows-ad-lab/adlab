@@ -12,11 +12,11 @@
 
 4\. Click next till the step "Role Services" and select "Certificate authority" and "Certificate Authority Web Enrollment" and select "Add Features".
 
-![](<../../../../../.gitbook/assets/image (3).png>)
+![](<../../../../../.gitbook/assets/image (3) (1).png>)
 
 5\. Click "Next" and finish the installation.
 
-![](<../../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (1) (1) (2).png>)
 
 6\. Click on the "Flag" in the "Server Manager" it should have an exclamation mark and click the "Configure Active Directory Certificate Services on the...."
 
@@ -30,7 +30,7 @@
 
 8\. Click on "Next" and in the step "Role Services" select "Certificate Authority" and "Certificate Authority Web Enrollment" and click "Next".
 
-![](<../../../../../.gitbook/assets/image (2) (1).png>)
+![](<../../../../../.gitbook/assets/image (2) (1) (2).png>)
 
 8\. In the step "Setup Type" select the default "Enterprise CA" and click "Next".
 
@@ -42,6 +42,6 @@
 
 11\. In the step "CA Name" fill in the name `amsterdambank-ca` and click "Next".
 
-![](<../../../../../.gitbook/assets/image (5).png>)
+![](<../../../../../.gitbook/assets/image (5) (1).png>)
 
 12\. In the step "Validity Period" click "Next". Then click "Next" and click "Configure".

