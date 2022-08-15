@@ -50,7 +50,7 @@ The attack will start from the perspective of already owning the `FILE01` server
 1. Login to `WS01` as Richard with the password `Sample123`.
 2. Start PowerShell and download and execute an amsi and PowerView in memory:
 
-![](<../../../../.gitbook/assets/image (12) (1) (2).png>)
+![](<../../../../.gitbook/assets/image (12) (1) (2) (1).png>)
 
 3\. Execute the following PowerView Query to retrieve all domain computers which have unconstrained delegation and only print the samaccountnames:
 
@@ -74,7 +74,7 @@ To simulate that unconstrained delegation is configured with a purpose we need t
 ./Rubeus.exe dump /luid:0x85e21db /service:krbtgt nowrap
 ```
 
-![](<../../../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (3) (1) (1) (3).png>)
 
 6\. Then on `WS01` we can import this ticket with the following Rubeus command:
 

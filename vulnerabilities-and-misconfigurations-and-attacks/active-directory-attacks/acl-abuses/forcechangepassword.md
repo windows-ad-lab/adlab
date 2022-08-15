@@ -56,11 +56,11 @@ We know the password of the user `testreset`, this is `Testing123Testing!`.  It'
 1. Start PowerShell and within the taskbar right click on PowerShell and then shift+ right click on Windows PowerShell. If we do this correctly it's possible to select 'Run as different user'.\
 
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (13).png>)
 
 2\. Fill in the login details of the `testreset` user and click on 'OK'. Now a PowerShell window will open and we can confirm it's running under the testreset user, by typing `whoami`.
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 3\. Within the script where we found the testreset user, we also noticed the account `sa_transfer_test` account.  If we run `net user /domain` command within PowerShell, we see the `sa_transfer` account. It might be that we have the same permissions on this account with our testreset user.
 

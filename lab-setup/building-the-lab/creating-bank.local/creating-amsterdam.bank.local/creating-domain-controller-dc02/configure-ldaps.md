@@ -6,7 +6,7 @@
 
 2\. Open the directories and click on "Certificate Templates" and select "Manage".
 
-![](<../../../../../.gitbook/assets/image (14).png>)
+![](<../../../../../.gitbook/assets/image (14) (3).png>)
 
 3\. Look for the template "Kerberos Auithentication" and select "Duplicate Template".
 

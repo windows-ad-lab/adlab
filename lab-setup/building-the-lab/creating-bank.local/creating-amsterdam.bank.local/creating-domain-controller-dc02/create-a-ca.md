@@ -2,7 +2,7 @@
 
 1. Open the "Server Manager" and click on "Manage" and select "Add roles and Features".
 
-![](<../../../../../.gitbook/assets/image (15).png>)
+![](<../../../../../.gitbook/assets/image (15) (3).png>)
 
 2\. In the step "Installation type" select the default "Role-based or feature-based installation" and click "Next". Then in "Server Selection" click next.
 
@@ -12,7 +12,7 @@
 
 4\. Click next till the step "Role Services" and select "Certificate authority" and "Certificate Authority Web Enrollment" and select "Add Features".
 
-![](<../../../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../../../.gitbook/assets/image (3) (1) (1).png>)
 
 5\. Click "Next" and finish the installation.
 
@@ -38,7 +38,7 @@
 
 10\. In the step "Private Key" select "Create a new private key" and click "Next". In the step "Cryptography" make sure sha256 is selected and key length 2048 and click "Next".
 
-![](<../../../../../.gitbook/assets/image (12).png>)
+![](<../../../../../.gitbook/assets/image (12) (1).png>)
 
 11\. In the step "CA Name" fill in the name `amsterdambank-ca` and click "Next".
 
