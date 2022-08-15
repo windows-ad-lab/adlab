@@ -107,7 +107,7 @@ You can also run CrackMapExec with the -p flag instead of the flag -H. With the 
 
 In our case we run the command with the NTLM-hash, the result is:
 
-![](<../../.gitbook/assets/image (35).png>)
+![](<../../.gitbook/assets/image (35) (2).png>)
 
 As we can see, we have read permissions to multiple shares. We also notice the share `Data`, which has read and write permissions.
 

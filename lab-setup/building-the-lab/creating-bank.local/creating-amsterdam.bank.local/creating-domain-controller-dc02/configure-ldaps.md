@@ -6,7 +6,7 @@
 
 2\. Open the directories and click on "Certificate Templates" and select "Manage".
 
-![](<../../../../../.gitbook/assets/image (14) (3).png>)
+![](<../../../../../.gitbook/assets/image (14).png>)
 
 3\. Look for the template "Kerberos Auithentication" and select "Duplicate Template".
 
@@ -70,7 +70,7 @@
 
 9\. Click on "Next" and select "LDAPS" and click on "Enroll".
 
-![](<../../../../../.gitbook/assets/image (58).png>)
+![](<../../../../../.gitbook/assets/image (58) (3).png>)
 
 10\. Create a new directory in the `C:\` disk with the following powershell command:
 

