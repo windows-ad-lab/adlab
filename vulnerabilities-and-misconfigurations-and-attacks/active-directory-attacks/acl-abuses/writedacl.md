@@ -25,7 +25,7 @@
 
 7\. Click on "DATA01" and then on "Advanced". Scroll through the list and search for the `DATA01` entry. Then click on "Edit" and select "Modify permissions".
 
-![](<../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (2).png>)
 
 8\. Click on "OK", "Apply" and "OK". Then on "Apply" and "OK" again to close and apply all the permissions screens.
 

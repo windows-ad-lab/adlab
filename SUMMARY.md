@@ -112,14 +112,14 @@
     * [Unqouted Service Path](vulnerabilities-and-misconfigurations-and-attacks/misc/misconfigured-service/unqouted-service-path.md)
   * [Discovering Shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3.md)
   * [Password on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md)
-  * [Dumping DPAPI](<vulnerabilities-and-misconfigurations-and-attacks/misc/page-3 (1).md>)
   * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
     * [LSASS](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/lsass.md)
+    * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3.md)
     * [Scheduled tasks](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/scheduled-tasks.md)
     * [Services](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/services.md)
-    * [Vssadmin Shadow Copy](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3.md)
-  * [ms-ds-machineaccountquota](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-3.md)
-  * [add DNS Records](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-4.md)
+    * [Vssadmin Shadow Copy](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3-1.md)
+  * [ms-ds-machineaccountquota](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-2.md)
+  * [add DNS Records](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-3.md)
 * [Template page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
 
 ## Defence
