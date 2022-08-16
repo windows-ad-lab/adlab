@@ -10,7 +10,7 @@
 
 3\. Look for the template "Kerberos Auithentication" and select "Duplicate Template".
 
-![](<../../../../../.gitbook/assets/image (17).png>)
+![](<../../../../../.gitbook/assets/image (17) (1).png>)
 
 4\. Open the tab "General" and give the template name `LDAPS` and select "Public certificate Active Directory".
 
@@ -18,11 +18,11 @@
 
 5\. Open the tab "Request Handling" and select "Allow private key to be exported".
 
-![](<../../../../../.gitbook/assets/image (16).png>)
+![](<../../../../../.gitbook/assets/image (16) (2).png>)
 
 6\. Open the tab "Subject Name" and select "User Principal Name" and "Serviec Principal Name".
 
-![](<../../../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../../../.gitbook/assets/image (11) (1) (1).png>)
 
 7\. Click on "Apply" and "OK" and the template should be created.
 
@@ -114,4 +114,4 @@ Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Cryptography\Services\NTDS\SystemC
 
 ![](<../../../../../.gitbook/assets/image (2) (3).png>)
 
-![](<../../../../../.gitbook/assets/image (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (1) (1) (1).png>)

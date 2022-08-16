@@ -46,8 +46,8 @@ We recommend completing the pages in order.
 [page-2.md](../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/acl-abuses/page-2.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3/" %}
-[page-3](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3/)
+{% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3.md" %}
+[page-3.md](../../../vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../../vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/priviliged-groups/backup-operators.md" %}

@@ -13,7 +13,7 @@
 1. Login on `DC02` with the username `Administrator` and password `Welcome01!`.
 2. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (3).png>)
 
 3\. Open the "Users" OU and then right click it, select "New" and "User".
 
@@ -64,7 +64,7 @@ We know the password of the user `testreset`, this is `Testing123Testing!`.  It'
 
 3\. Within the script where we found the testreset user, we also noticed the account `sa_transfer_test` account.  If we run `net user /domain` command within PowerShell, we see the `sa_transfer` account. It might be that we have the same permissions on this account with our testreset user.
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)
 
 We can confirm this by loading in PowerView and check the ACL's on the sa\_transfer account. We will run the following command to check this out.
 

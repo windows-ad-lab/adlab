@@ -12,9 +12,9 @@ description: >-
 2. Open the "Active Directory Users and Computers" management tool and open the "Users" directory. Right click the "Users" directory and click "New User"
 3. Create a user with the name `sa_backup` and the password `LS6RV5o8T9`. Make sure you deselect "User must change password at next logon" and select "Password never expires".
 
-![](<../../../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (67) (1) (1) (1) (1).png>)
 
-![](<../../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (62) (1) (1) (1) (1) (1) (1).png>)
 
 4\. Add the user to the "Account operator" and "Backup Operator" groups via the interface, memberof section or run the following command:
 
@@ -28,11 +28,11 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 
 6\. Click start and open the "Credential Manager".
 
-![](<../../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (64) (1) (1) (1) (1).png>)
 
 7\. Click on the "Windows Credentials" tab and select "Add a Windows credential".
 
-![](<../../../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
 
 8\. Fill in the following information:
 
@@ -40,7 +40,7 @@ Add-ADGroupMember "Server Operators" -Members sa_backup
 * User Name: `sa_backup`
 * Password: `LS6RV5o8T9`
 
-![](<../../../../.gitbook/assets/image (21) (1) (1).png>)
+![](<../../../.gitbook/assets/image (21) (1) (1).png>)
 
 ## Attacking
 
@@ -69,7 +69,7 @@ The tool is great for detecting DPAPI secrets.
 
 3\. In the output of the section WindowsCredentialFiles we can see that the user `sa_sql` has some credentials saved:
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
 
 4\. We can find the master encryption key id and some information about the saved credentials with the following Mimikatz command using the previous path and FileName:
 
@@ -78,7 +78,7 @@ The tool is great for detecting DPAPI secrets.
 dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD
 ```
 
-![](<../../../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (12) (1) (1) (1).png>)
 
 The `pbData` field contains the encrypted data and the `guidMasterKey` contains the GUID of the key needed to decrypt it.
 
@@ -92,7 +92,7 @@ The latest compiled version of Mimikatz doesn't work on server 2022. Compiling t
 dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-1498997062-1091976085-892328878-1106\e1f462bb-9a65-40f0-a144-4f64bea97ce2 /sid:S-1-5-21-1498997062-1091976085-892328878-1106 /password:Iloveyou2 /protected
 ```
 
-![](<../../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1) (1) (1).png>)
 
 6\. We were able to retrieve the Masterkey, it it shown at the end of the output. Now we can read the saved credentials with the masterkey using the following Mimikatz command:
 
@@ -100,13 +100,13 @@ dpapi::masterkey /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Protect\S-1-5-21-
 dpapi::cred /in:C:\Users\sa_sql\AppData\Roaming\Microsoft\Credentials\02BF8752741C7A447536E822E53153CD /masterkey:b3e8630e96acba990f836b4462a9285a4c987776f17f11b2559d9fdf67d03cf6b99dd89445d5641aef6f4477f7354eb6f19e3053e1d56712f45bc227249cdea2
 ```
 
-![](<../../../../.gitbook/assets/image (2) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 First we get the output of the first mimikatz command we ran, some information about the credentials. The output shows is the saved credential for the `sa_backup` user with the password `LS6RV5o8T9`.
 
 7\. With the help of PowerView we can quickly check if this user has any value:
 
-![](<../../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (3).png>)
 
 In PowerView we can see that `sa_backup` is member of the `Account Operators` en `Backup Operators` groups. These groups are interesting!
 

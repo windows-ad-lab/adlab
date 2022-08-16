@@ -6,8 +6,8 @@
 
 The membership of the "Account Operators" group is configured in the Dumping DPAPI page.
 
-{% content-ref url="../../misc/different-methods-of-dumping-credentials/page-3/" %}
-[page-3](../../misc/different-methods-of-dumping-credentials/page-3/)
+{% content-ref url="../../misc/different-methods-of-dumping-credentials/page-3.md" %}
+[page-3.md](../../misc/different-methods-of-dumping-credentials/page-3.md)
 {% endcontent-ref %}
 
 ![](<../../../.gitbook/assets/image (54) (1) (1) (1).png>)

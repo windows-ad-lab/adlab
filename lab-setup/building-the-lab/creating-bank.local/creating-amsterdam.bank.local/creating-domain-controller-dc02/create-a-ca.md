@@ -16,7 +16,7 @@
 
 5\. Click "Next" and finish the installation.
 
-![](<../../../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../../../.gitbook/assets/image (1) (1) (1) (3).png>)
 
 6\. Click on the "Flag" in the "Server Manager" it should have an exclamation mark and click the "Configure Active Directory Certificate Services on the...."
 
@@ -26,7 +26,7 @@
 
 7\. In the step "Credentials" fill in the credentials for the `bank\Administrator` user. The password should be `Welcome01!`.
 
-![](<../../../../../.gitbook/assets/image (18).png>)
+![](<../../../../../.gitbook/assets/image (18) (1).png>)
 
 8\. Click on "Next" and in the step "Role Services" select "Certificate Authority" and "Certificate Authority Web Enrollment" and click "Next".
 
@@ -38,7 +38,7 @@
 
 10\. In the step "Private Key" select "Create a new private key" and click "Next". In the step "Cryptography" make sure sha256 is selected and key length 2048 and click "Next".
 
-![](<../../../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../../../.gitbook/assets/image (12) (1) (3).png>)
 
 11\. In the step "CA Name" fill in the name `amsterdambank-ca` and click "Next".
 

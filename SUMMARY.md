@@ -114,7 +114,7 @@
   * [Password on shares](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-1.md)
   * [Different methods of dumping credentials](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials.md)
     * [LSASS](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/lsass.md)
-    * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3/README.md)
+    * [Dumping DPAPI](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3.md)
       * [Browser passwords](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3/page-3.md)
     * [Scheduled tasks](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/scheduled-tasks.md)
     * [Services](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/services.md)
