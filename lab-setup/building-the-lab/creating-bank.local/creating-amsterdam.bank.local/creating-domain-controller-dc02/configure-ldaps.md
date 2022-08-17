@@ -14,7 +14,7 @@
 
 4\. Open the tab "General" and give the template name `LDAPS` and select "Public certificate Active Directory".
 
-![](<../../../../../.gitbook/assets/image (9) (2) (1).png>)
+![](<../../../../../.gitbook/assets/image (9) (2).png>)
 
 5\. Open the tab "Request Handling" and select "Allow private key to be exported".
 

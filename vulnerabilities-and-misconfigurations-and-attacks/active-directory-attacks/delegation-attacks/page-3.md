@@ -30,7 +30,7 @@ setspn -A HTTP/FILE01.amsterdam.bank.local amsterdam\sa_transfer
 
 3\. Open the "Active Directory Users and Computers" administration tool on `DC02`.
 
-![](<../../../.gitbook/assets/image (37).png>)
+![](<../../../.gitbook/assets/image (37) (1).png>)
 
 4\. Open the "Users" directory and right click the `sa_transfer` user and select "Properties".
 

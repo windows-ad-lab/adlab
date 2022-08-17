@@ -80,7 +80,7 @@ crackmapexec mssql 10.0.0.5 -u sa -p sa --local-auth -q "select @@version;"
 mssql-cli -S 10.0.0.5 -U sa -P sa
 ```
 
-![](<../../.gitbook/assets/image (4) (1) (1) (2).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 Check the executing commands page under SQL Server Attacks to learn to execute cmd commands:
 
