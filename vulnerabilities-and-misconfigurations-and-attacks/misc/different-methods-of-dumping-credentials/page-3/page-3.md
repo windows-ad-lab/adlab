@@ -15,7 +15,7 @@
 net user bob CredentialDumping01! /add /domain
 ```
 
-![](<../../../../.gitbook/assets/image (4).png>)
+![](<../../../../.gitbook/assets/image (4) (1).png>)
 
 4\. Login with the user `Bob` and the password `CredentialDumping01!` on `DATA01`.
 
@@ -24,11 +24,11 @@ net user bob CredentialDumping01! /add /domain
 1. Open FireFox, go to the settings by opening the menu in the right top and clicking "Settings".
 2. Open the "Privacy and Security" tab and scroll down to the "Login and Passwords" section.
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (2).png>)
 
 3\. Click on "Saved Logins" and click in the bottom on "Create New Login". Fill in the following information to save something within the Browser:
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (2).png>)
 
 ### Google Chrome
 
@@ -66,7 +66,7 @@ To execute the attack administrator privileges to the machine and user credentia
 python3 DonPAPI.py Administrator:'Welcome01!'@10.0.0.101 -local_auth -credz creds.txt
 ```
 
-![](../../../../.gitbook/assets/image.png)
+![](<../../../../.gitbook/assets/image (1).png>)
 
 We discovered the saved credentials in Chrome and Firefox.
 

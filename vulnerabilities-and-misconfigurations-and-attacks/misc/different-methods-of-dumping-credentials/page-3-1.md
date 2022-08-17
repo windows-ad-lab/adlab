@@ -49,7 +49,7 @@ cd \\dc02\c$\temp
 
 ![](<../../../.gitbook/assets/image (12) (1).png>)
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (2).png>)
 
 5\. Copy the files to your Kali and execute the following command to extract the credentials.
 
@@ -59,7 +59,7 @@ python3 /opt/impacket/examples/secretsdump.py -system SYSTEM -security SECURITY 
 
 ![](<../../../.gitbook/assets/image (11).png>)
 
-![](<../../../.gitbook/assets/image (14).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 
 

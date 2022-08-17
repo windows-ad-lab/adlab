@@ -121,6 +121,7 @@
     * [Vssadmin Shadow Copy](vulnerabilities-and-misconfigurations-and-attacks/misc/different-methods-of-dumping-credentials/page-3-1.md)
   * [ms-ds-machineaccountquota](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-2.md)
   * [add DNS Records](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-3.md)
+  * [Bypassing UAC](vulnerabilities-and-misconfigurations-and-attacks/misc/page-3-4.md)
 * [Template page](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/page-3-3.md)
 
 ## Defence

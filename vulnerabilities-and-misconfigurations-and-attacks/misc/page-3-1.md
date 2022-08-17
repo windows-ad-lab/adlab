@@ -94,7 +94,7 @@ We can easily test this by starting a new PowerShell session as this user by ope
 
 6\. Copy and paste the credentials and click on "OK". A PowerShell window opens, type `whoami` to check if we are running as the `testreset` user:
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (19) (2).png>)
 
 On the following page the ACL's this account has will be abused by resetting a password from another user:
 

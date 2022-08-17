@@ -31,7 +31,7 @@
 
 7\. Click on "Add" and then "Select a principal" and fill in the name testreset and click "Check Names" .
 
-![](<../../../.gitbook/assets/image (6) (1).png>)
+![](<../../../.gitbook/assets/image (6) (1) (3).png>)
 
 8\. Click on "OK" and select the privilege "Reset Password".
 
@@ -56,7 +56,7 @@ We know the password of the user `testreset`, this is `Testing123Testing!`.  It'
 1. Start PowerShell and within the taskbar right click on PowerShell and then shift+ right click on Windows PowerShell. If we do this correctly it's possible to select 'Run as different user'.\
 
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
 2\. Fill in the login details of the `testreset` user and click on 'OK'. Now a PowerShell window will open and we can confirm it's running under the testreset user, by typing `whoami`.
 
@@ -64,7 +64,7 @@ We know the password of the user `testreset`, this is `Testing123Testing!`.  It'
 
 3\. Within the script where we found the testreset user, we also noticed the account `sa_transfer_test` account.  If we run `net user /domain` command within PowerShell, we see the `sa_transfer` account. It might be that we have the same permissions on this account with our testreset user.
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+![](<../../../.gitbook/assets/image (4) (1) (1).png>)
 
 We can confirm this by loading in PowerView and check the ACL's on the sa\_transfer account. We will run the following command to check this out.
 
@@ -90,7 +90,7 @@ Set-DomainUserPassword -Identity sa_transfer -AccountPassword (ConvertTo-SecureS
 ```
 {% endcode %}
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2) (2).png>)
 
 ## Defending
 
