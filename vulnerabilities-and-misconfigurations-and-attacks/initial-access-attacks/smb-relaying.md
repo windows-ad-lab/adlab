@@ -2,9 +2,9 @@
 
 ## Configuring
 
-Login to WS01 with an account, which has administrator privileges. In our example, we use the domain Administrator of AMSTERDAM.
+1. Login to `WS01` with the username `Administrator` and the password `Welcome01!`.&#x20;
 
-With this attack we need some kind of 'user behaviour', so simulate this we're going to make use of a 'scheduled task' which is running a batch file every 5 minutes. Within the batch file we need to simulate that an user is going to a wrong share within the network. Inside the batch file is the following code:
+2\. With this attack we need some kind of 'user behaviour', so simulate this we're going to make use of a 'scheduled task' which is running a batch file every 5 minutes. Within the batch file we need to simulate that an user is going to a wrong share within the network. Inside the batch file is the following code:
 
 ```
 @ECHO OFF
@@ -24,7 +24,7 @@ copy \\%BaseRange%.%%A\laptop_data c:\users\pukcab\documents\old_data >nul 2>&1 
 
 The for loop is going to loop through the IP-range and tries to 'copy' a file from a non-existing share. This will result in leaking the NTLM-hash.
 
-We need to save this file to a location accessible for the user who's going to run the bat-file. In our example the user who's going to run the scheduled task is `pukcab`. We have put the file inside the documents folder.
+3\. Save this file to a location accessible for the user who's going to run the bat-file. In our example the user who's going to run the scheduled task is `pukcab`. We put the file inside the documents folder (`C:\users\pubcab\Documents`).
 
 {% hint style="info" %}
 The range in our ESXI lab for our kali machines is different because we get access by VPN. For recreating the lab the following settings should be used:
@@ -79,7 +79,7 @@ An attacker can take advantage of this and place on every network device he has 
 ### Tools
 
 * [Responder](https://github.com/lgandx/Responder)
-* CrackMapExec
+* [CrackMapExec](https://github.com/Porchetta-Industries/CrackMapExec)
 * [Impacket-ntlmrelayx](https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/ntlmrelayx.py)
 * smbclient
 * proxychains
