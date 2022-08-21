@@ -6,8 +6,8 @@
 
 * The user _noah_ which has been made on the below page
 
-{% content-ref url="different-methods-of-dumping-credentials/services.md" %}
-[services.md](different-methods-of-dumping-credentials/services.md)
+{% content-ref url="different-methods-of-dumping-credentials/services-todo.md" %}
+[services-todo.md](different-methods-of-dumping-credentials/services-todo.md)
 {% endcontent-ref %}
 
 * Server with File and Storage services installed. And created a share, which can be used for the configuration part.
@@ -90,8 +90,8 @@ smbmap
 
 Within this attack, we're going to use the NTLM-hash from the user `noah`, which we got from dumping the hashes on WS01
 
-{% content-ref url="different-methods-of-dumping-credentials/services.md" %}
-[services.md](different-methods-of-dumping-credentials/services.md)
+{% content-ref url="different-methods-of-dumping-credentials/services-todo.md" %}
+[services-todo.md](different-methods-of-dumping-credentials/services-todo.md)
 {% endcontent-ref %}
 
 The hash we can use with a tool called CrackMapExec. CrackMapExec has the ability to list the shares, which we can see and where we have permissions on.

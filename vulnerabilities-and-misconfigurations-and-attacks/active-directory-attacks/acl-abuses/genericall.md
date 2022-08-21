@@ -10,8 +10,8 @@ GenericAll ACL is basicly all permissions. There are different ways of attacking
 
 With these permission on a group you can add anyone to the group.
 
-{% content-ref url="add-user-to-group.md" %}
-[add-user-to-group.md](add-user-to-group.md)
+{% content-ref url="add-user-to-group-todo.md" %}
+[add-user-to-group-todo.md](add-user-to-group-todo.md)
 {% endcontent-ref %}
 
 #### Users
@@ -21,8 +21,8 @@ With GenericAll permission on a user you can do two things:
 * Targeted kerberoast (set spn to user and kerberoast it)
 * Change their password (This will deny access to the user and may raise red flags)
 
-{% content-ref url="targeted-kerberoast.md" %}
-[targeted-kerberoast.md](targeted-kerberoast.md)
+{% content-ref url="targeted-kerberoast-todo.md" %}
+[targeted-kerberoast-todo.md](targeted-kerberoast-todo.md)
 {% endcontent-ref %}
 
 {% content-ref url="forcechangepassword.md" %}
