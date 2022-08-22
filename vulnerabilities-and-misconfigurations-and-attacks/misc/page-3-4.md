@@ -23,7 +23,7 @@ git clone https://github.com/hfiref0x/UACME
 
 3\. Open the UACME project by clicking on `uacme.sln`.
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (3).png>)
 
 4\. In the "Solution Explorer" right click on "Akagi" and click on "Properties". Make sure the "Platform Toolset" is set to V142 and click on "Apply" and "OK".
 
@@ -53,7 +53,7 @@ git clone https://github.com/hfiref0x/UACME
 .\Akagi64.exe 34 cmd.exe
 ```
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (3).png>)
 
 2\. And an elevatged prompt started.
 

@@ -35,7 +35,7 @@ net user bob CredentialDumping01! /add /domain
 1. Open Google Chrome, go to the settings by opening the menu in the right top and clicking "Settings".
 2. Click on "Autofill" and then on "Passwords"
 
-![](<../../../../.gitbook/assets/image (3).png>)
+![](<../../../../.gitbook/assets/image (3) (1).png>)
 
 3\. In the "Save Passwords" section click on "Add". Fill in the following information and click "Save".
 

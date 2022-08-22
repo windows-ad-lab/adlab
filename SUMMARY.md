@@ -52,7 +52,7 @@
     * [AS-REP Roasting](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/as-rep-roasting.md)
     * [Empty Password](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/username-enumeration/empty-password.md)
   * [SMB Relaying](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/smb-relaying.md)
-  * [SMB Null-Session (todo)](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/smb-null-session.md)
+  * [SMB Null-Session (To-Do)](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/page-3.md)
   * [SQL Server default login](vulnerabilities-and-misconfigurations-and-attacks/initial-access-attacks/sql-server-default-login.md)
 * [Active Directory Attacks](vulnerabilities-and-misconfigurations-and-attacks/active-directory-attacks/README.md)
   * [Password spraying](vulnerabilities-misconfigurations/active-directory-attacks/password-spraying.md)

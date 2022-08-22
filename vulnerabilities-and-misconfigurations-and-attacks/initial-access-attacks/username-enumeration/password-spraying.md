@@ -24,7 +24,7 @@ net user john Welcome2022! /domain
 net user chris Summer2022! /domain
 ```
 
-![](<../../../.gitbook/assets/image (3) (1) (2).png>)
+![](<../../../.gitbook/assets/image (3) (1) (2) (1).png>)
 
 ## Attacking
 
